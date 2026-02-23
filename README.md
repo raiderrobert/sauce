@@ -33,4 +33,4 @@ Fetch and follow instructions from https://raw.githubusercontent.com/raiderrober
 
 | Skill | Description |
 |-------|-------------|
-| _coming soon_ | |
+| writing-skills | Writing, creating, editing, improving, reviewing, and auditing Claude Code skills |
