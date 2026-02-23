@@ -1,6 +1,6 @@
 # Sauce
 
-Personal skills and prompts for Claude Code. Private repository.
+Personal skills and prompts for agents. Private repository.
 
 ## Installation
 
