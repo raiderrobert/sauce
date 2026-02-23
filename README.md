@@ -33,4 +33,5 @@ Fetch and follow instructions from https://raw.githubusercontent.com/raiderrober
 
 | Skill | Description |
 |-------|-------------|
+| convention-mining | Extract implicit coding conventions from merged PR review history |
 | writing-skills | Writing, creating, editing, improving, reviewing, and auditing Claude Code skills |
