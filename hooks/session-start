@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# SessionStart hook for sauce plugin
+
+set -euo pipefail
+
+cat <<EOF
+{
+  "additional_context": "You have sauce skills available. Use the Skill tool to invoke them when relevant.",
+  "hookSpecificOutput": {
+    "hookEventName": "SessionStart",
+    "additionalContext": "You have sauce skills available. Use the Skill tool to invoke them when relevant."
+  }
+}
+EOF
+
+exit 0

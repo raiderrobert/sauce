@@ -1,0 +1,15 @@
+{
+  "name": "sauce-dev",
+  "description": "Development marketplace for sauce skills",
+  "owner": {
+    "name": "raiderrobert"
+  },
+  "plugins": [
+    {
+      "name": "sauce",
+      "description": "Personal skills and prompts for Claude Code",
+      "version": "0.1.0",
+      "source": "./"
+    }
+  ]
+}
