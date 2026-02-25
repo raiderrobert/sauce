@@ -1,12 +1,16 @@
 {
   "name": "sauce",
   "description": "Personal skills and prompts for Claude Code",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "raiderrobert"
   },
   "homepage": "https://github.com/raiderrobert/sauce",
   "repository": "https://github.com/raiderrobert/sauce",
   "license": "UNLICENSED",
-  "keywords": ["skills", "prompts", "workflows"]
+  "keywords": [
+    "skills",
+    "prompts",
+    "workflows"
+  ]
 }
