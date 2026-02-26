@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2](https://github.com/raiderrobert/sauce/compare/v0.1.1...v0.1.2) (2026-02-26)
+
+
+### Features
+
+* add auditing-convention-skills skill ([544666a](https://github.com/raiderrobert/sauce/commit/544666aa5f5d2ccea99e619ebb38c7ab33bc5915))
+* add auditing-convention-skills skill ([07fcc2b](https://github.com/raiderrobert/sauce/commit/07fcc2bcc6d6ee3ccb35cef55ab9108dd4e757d1))
+
 ## [0.1.1](https://github.com/raiderrobert/sauce/compare/v0.1.0...v0.1.1) (2026-02-25)
 
 
