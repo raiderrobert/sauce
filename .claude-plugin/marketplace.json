@@ -8,7 +8,7 @@
     {
       "name": "sauce",
       "description": "Personal skills and prompts for Claude Code",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "source": "./"
     }
   ]
