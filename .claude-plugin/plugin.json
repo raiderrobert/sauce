@@ -1,13 +1,13 @@
 {
   "name": "sauce",
-  "description": "Personal skills and prompts for Claude Code",
+  "description": "My skills for skills",
   "version": "0.1.4",
   "author": {
-    "name": "raiderrobert"
+    "name": "Robert Roskam"
   },
   "homepage": "https://github.com/raiderrobert/sauce",
   "repository": "https://github.com/raiderrobert/sauce",
-  "license": "UNLICENSED",
+  "license": "ALL RIGHTS Rserved",
   "keywords": [
     "skills",
     "prompts",

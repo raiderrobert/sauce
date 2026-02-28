@@ -8,7 +8,7 @@ Personal skills and prompts for agents. Private repository.
 
 ```bash
 /plugin marketplace add raiderrobert/sauce
-/plugin install sauce@sauce-dev
+/plugin install sauce@sauce
 ```
 
 ### Cursor

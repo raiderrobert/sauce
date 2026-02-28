@@ -1,8 +1,8 @@
 {
-  "name": "sauce-dev",
-  "description": "Development marketplace for sauce skills",
+  "name": "sauce",
+  "description": "Robert's secret sauce skills",
   "owner": {
-    "name": "raiderrobert"
+    "name": "Robert Roskam"
   },
   "plugins": [
     {
