@@ -67,7 +67,7 @@ Files: {list of files in the directory}
 ## Instructions
 Read every file in the skill directory from disk using the Read tool.
 Do NOT rely on any skill contents provided inline — always read the current state from disk.
-Report ALL issues you find against ALL criteria. Do not hold back or deprioritize any findings.
+Report genuine issues against all criteria. Do not hold back findings, but do not manufacture them either — if the skill is clean, say so.
 
 ## Output Format
 For each issue found, produce:

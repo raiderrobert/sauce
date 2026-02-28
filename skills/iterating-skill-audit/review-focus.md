@@ -1,6 +1,6 @@
 # Skill Audit Review Focus
 
-Structured review criteria for skill audits. Check all sections on every pass — report everything you find.
+Structured review criteria for skill audits. Check all sections on every pass. Report genuine issues — do not hold back findings, but do not nitpick or manufacture them either.
 
 ## Structure & References
 
