@@ -1,8 +1,8 @@
 # Skill Audit Review Focus
 
-Structured review criteria for iterative skill audits, organized by priority. Early iterations catch structural and accuracy issues. Later iterations focus on design and efficiency.
+Structured review criteria for skill audits. Check all sections on every pass — report everything you find.
 
-## Pass 1 — Structure & References
+## Structure & References
 
 ### SKILL.md as Router
 - SKILL.md routes to reference files, does NOT duplicate their content
@@ -25,7 +25,7 @@ Structured review criteria for iterative skill audits, organized by priority. Ea
 ### File Size
 - No single file exceeds 500 lines
 
-## Pass 2 — Content Accuracy
+## Content Accuracy
 
 ### Tool & API References
 - Tool names match actual Claude Code tool names (e.g., `Agent`, `Bash`, `Grep`, `Glob`, `Read`, `Edit`, `Write`)
@@ -43,7 +43,7 @@ Structured review criteria for iterative skill audits, organized by priority. Ea
 - No deprecated API patterns (check against known staleness patterns in the ecosystem)
 - No references to non-existent commands, flags, or options
 
-## Pass 3 — Design & Consistency
+## Design & Consistency
 
 ### Internal Consistency
 - Instructions don't contradict each other across sections
@@ -66,7 +66,7 @@ Structured review criteria for iterative skill audits, organized by priority. Ea
 - High freedom (guidance) for context-dependent judgment calls
 - Structured transformations get explicit steps; free-form tasks get destination specs, not journey constraints
 
-## Pass 4 — Value & Token Efficiency
+## Value & Token Efficiency
 
 ### LLM Overlap
 - Does each section teach something Claude doesn't already know?

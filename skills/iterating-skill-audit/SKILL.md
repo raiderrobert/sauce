@@ -55,7 +55,7 @@ Launch a read-only subagent:
 **Reviewer prompt:**
 
 ```
-You are performing audit pass {N} of an iterative skill audit.
+You are auditing a skill for quality issues.
 
 ## Skill Under Review
 Directory: {skill directory absolute path}
@@ -67,11 +67,7 @@ Files: {list of files in the directory}
 ## Instructions
 Read every file in the skill directory from disk using the Read tool.
 Do NOT rely on any skill contents provided inline — always read the current state from disk.
-
-## Prioritization
-Early passes (1-2): focus on Structure & References and Content Accuracy.
-Later passes (3+): focus on Design & Consistency and Value & Token Efficiency.
-Always prioritize findings most likely to still exist based on what previous passes fixed.
+Report ALL issues you find against ALL criteria. Do not hold back or deprioritize any findings.
 
 ## Output Format
 For each issue found, produce:
