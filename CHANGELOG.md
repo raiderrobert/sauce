@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/raiderrobert/sauce/compare/v0.1.3...v0.1.4) (2026-02-28)
+
+
+### Features
+
+* add iterating-skill-audit skill ([#9](https://github.com/raiderrobert/sauce/issues/9)) ([a9b4f4d](https://github.com/raiderrobert/sauce/commit/a9b4f4df2978c5b134309fb469c79e7df1df0180))
+
 ## [0.1.3](https://github.com/raiderrobert/sauce/compare/v0.1.2...v0.1.3) (2026-02-28)
 
 
