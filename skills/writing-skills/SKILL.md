@@ -63,7 +63,8 @@ description: "Use when implementing any feature or bugfix, before writing implem
 - Start with "Use when..." followed by a one-line objective ("Ensures X" / "Prevents Y")
 - Write in third person
 - Include specific symptoms, situations, error messages, tool names
-- Max 1024 characters total (name + description)
+- Must be a single line (no YAML multi-line strings)
+- **HARD LIMIT: description must be under 1024 characters.** Skills exceeding this are silently dropped from discovery at session start — they will not appear in the available skills list and will never auto-trigger. The user can still invoke them manually with `/skill-name`, but automatic routing is completely broken. There is no error message. If you need extensive trigger keywords, put them in the SKILL.md body, not the frontmatter.
 
 ### 2. SKILL.md is a Router
 
@@ -172,3 +173,4 @@ What goes wrong + fixes.
 | Generic labels (helper1, step2, pattern3) | Labels need semantic meaning | Name by what it does: `validate_field_mapping` |
 | Duplicating reference content in SKILL.md | Maintenance divergence, wasted tokens | Route to the reference file with a one-line summary |
 | Description summarizing workflow | Claude shortcuts the body | Triggers + one-line objective only |
+| Description over 1024 chars or multi-line | Skill silently dropped from discovery — no error, just invisible | Condense to single line under 1024 chars; put keyword lists in body |
