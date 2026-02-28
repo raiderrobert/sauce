@@ -58,14 +58,15 @@ Launch a read-only subagent:
 You are performing audit pass {N} of an iterative skill audit.
 
 ## Skill Under Review
-Directory: {skill directory path}
+Directory: {skill directory absolute path}
 Files: {list of files in the directory}
 
 ## Review Criteria
 {contents of review-focus.md}
 
-## Skill Contents
-{contents of SKILL.md and all reference files}
+## Instructions
+Read every file in the skill directory from disk using the Read tool.
+Do NOT rely on any skill contents provided inline — always read the current state from disk.
 
 ## Prioritization
 Early passes (1-2): focus on Structure & References and Content Accuracy.
@@ -84,7 +85,7 @@ For each issue found, produce:
 If no issues found, respond with exactly: NO_FINDINGS
 ```
 
-**Include the full skill contents in the prompt.** The reviewer is read-only and cannot access the filesystem — it needs the text inline.
+**The reviewer must read files from disk each pass.** The `Explore` subagent has access to Read, Glob, and Grep. Providing file paths (not contents) ensures each pass reviews the post-fix state, not a stale snapshot from before the fixer ran.
 
 #### 2b. Parse findings
 
@@ -181,8 +182,8 @@ Remaining findings:
 
 | Mistake | Fix |
 |---------|-----|
-| Not including skill file contents in reviewer prompt | Reviewer is read-only — inline the text |
+| Inlining skill contents in reviewer prompt instead of file paths | Reviewer reads a stale snapshot — give paths so it reads current state from disk |
 | Reviewer uses different titles for same issue across passes | Prompt for stable titles based on the problem |
 | Fixer modifies unrelated files outside the skill directory | Prompt explicitly: only fix what's in the findings |
 | Skipping early-pass criteria on later iterations | Reviewer should still check structure if previous fixes could have broken it |
-| Not reading review-focus.md before dispatching | Always read and inline the full criteria |
+| Not reading review-focus.md before dispatching | Always read and inline the criteria — this is static and won't change between passes |
