@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.3](https://github.com/raiderrobert/sauce/compare/v0.1.2...v0.1.3) (2026-02-28)
+
+
+### Documentation
+
+* document hard 1024-char limit on skill description field ([b1162db](https://github.com/raiderrobert/sauce/commit/b1162dbc6ced599d477147cf80db9be0344b047c))
+* document hard 1024-char limit on skill description field ([d3169e3](https://github.com/raiderrobert/sauce/commit/d3169e3b0964a326f78249a860a2e767b81f84bd))
+
 ## [0.1.2](https://github.com/raiderrobert/sauce/compare/v0.1.1...v0.1.2) (2026-02-26)
 
 
