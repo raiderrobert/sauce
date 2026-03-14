@@ -4,13 +4,16 @@ on:
   pull_request:
     types: [opened, edited, synchronize, reopened]
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   validate:
     permissions:
       pull-requests: read
     runs-on: ubuntu-latest
     steps:
-      - uses: amannn/action-semantic-pull-request@e32d7e603df1aa1ba07e981f2a23455dee596825 # v5
+      - uses: amannn/action-semantic-pull-request@v6
         env:
           # Required: token isn't auto-injected into env, must be passed explicitly
           # https://docs.github.com/en/actions/security-guides/automatic-token-authentication
