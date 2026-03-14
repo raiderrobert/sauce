@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.1.5](https://github.com/raiderrobert/sauce/compare/v0.1.4...v0.1.5) (2026-03-14)
+
+
+### Features
+
+* add CI validation for skill frontmatter descriptions ([#14](https://github.com/raiderrobert/sauce/issues/14)) ([f50ce1e](https://github.com/raiderrobert/sauce/commit/f50ce1eb931afd1a302ce3e4bf60df89b466161a))
+* expand skill validation to cover full Agent Skills spec ([#15](https://github.com/raiderrobert/sauce/issues/15)) ([102d4b0](https://github.com/raiderrobert/sauce/commit/102d4b01e4d9dce78b3b65054455312562765825))
+* merge auditing-convention-skills into convention-mining ([#13](https://github.com/raiderrobert/sauce/issues/13)) ([c4bb378](https://github.com/raiderrobert/sauce/commit/c4bb3781425730194bb3875204aa4cfe048516fa))
+* reorganize craft.md around five named pattern categories ([#12](https://github.com/raiderrobert/sauce/issues/12)) ([4c94bb7](https://github.com/raiderrobert/sauce/commit/4c94bb7f5c7adc70805389d7a7ca8a9c199272ad))
+
+
+### Code Refactoring
+
+* renamed and described what this is ([d9b69e3](https://github.com/raiderrobert/sauce/commit/d9b69e3a4794d5d7a564c4009fa94df6eb882068))
+
 ## [0.1.4](https://github.com/raiderrobert/sauce/compare/v0.1.3...v0.1.4) (2026-02-28)
 
 
