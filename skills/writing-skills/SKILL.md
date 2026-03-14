@@ -13,9 +13,9 @@ A **skill** is a reference guide that teaches future Claude instances proven tec
 
 ## Routing
 
-| Phase | Reference |
+| Topic | Reference |
 |-------|-----------|
-| Structuring and writing a skill | `./craft.md` |
+| Skill patterns (conductor, expert, composition, workflow, output) | `./craft.md` |
 | Testing discipline-enforcing skills | `./testing.md` |
 | Auditing existing skills for issues | `./review-criteria.md` |
 
