@@ -1,6 +1,6 @@
 # Run all checks
 check: validate-skills
 
-# Validate skill frontmatter descriptions are within the 1024 character limit
+# Validate skill frontmatter against the Agent Skills spec
 validate-skills:
-    bash scripts/validate-skill-descriptions.sh
+    bash scripts/validate-skills.sh
