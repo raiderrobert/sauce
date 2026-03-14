@@ -1,8 +1,3 @@
----
-name: auditing-convention-skills
-description: Use when reviewing, auditing, or hardening a skill that was mined from PR review comments, or when verifying that a conventions skill is accurate before merging. Trigger on "audit this skill", "verify the conventions", "check if these quotes are real", "review this mined skill", "harden the conventions", or "is this skill accurate". Ensures convention skills are factually correct, internally consistent, non-redundant with existing docs, and free of codebase-reality errors like wrong import paths or non-existent types.
----
-
 # Auditing Convention Skills
 
 Verify and harden skills that were extracted from PR review history. Convention-mined skills have a specific failure mode: they look authoritative (real quotes, plausible rules) but may contain factual errors that are invisible without checking against the actual codebase and GitHub API.
