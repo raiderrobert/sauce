@@ -3,6 +3,7 @@ set -euo pipefail
 
 MAX_LENGTH=1024
 errors=0
+checked=0
 
 for skill_file in skills/*/SKILL.md; do
   [ -f "$skill_file" ] || continue
@@ -25,16 +26,24 @@ for skill_file in skills/*/SKILL.md; do
   fi
 
   length=${#description}
+  checked=$((checked + 1))
   if [ "$length" -gt "$MAX_LENGTH" ]; then
     echo "FAIL: $skill_file — description is $length chars (max $MAX_LENGTH)"
     errors=$((errors + 1))
+  else
+    echo "  OK: $skill_file — $length chars"
   fi
 done
 
-if [ "$errors" -gt 0 ]; then
-  echo ""
-  echo "$errors skill(s) have descriptions exceeding $MAX_LENGTH characters"
+echo ""
+if [ "$checked" -eq 0 ]; then
+  echo "No skills found to validate"
   exit 1
 fi
 
-echo "All skill descriptions are within the $MAX_LENGTH character limit"
+if [ "$errors" -gt 0 ]; then
+  echo "$errors of $checked skill(s) have descriptions exceeding $MAX_LENGTH characters"
+  exit 1
+fi
+
+echo "$checked skill(s) validated — all within $MAX_LENGTH character limit"
