@@ -10,5 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - run: curl -sSf https://just.systems/install.sh | bash -s -- --to /usr/local/bin
-      - run: just validate-skills
+      - run: bash scripts/validate-skills.sh
