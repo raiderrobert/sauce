@@ -1,6 +1,6 @@
 # Sauce
 
-Personal skills and prompts for agents. Private repository.
+The secret sauce. Skills that know when to slow down and think — baked with research so reflection doesn't mean starting from scratch.
 
 ## Installation
 
