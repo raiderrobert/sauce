@@ -1,6 +1,6 @@
 ---
 name: writing-skills
-description: "Use when writing, creating, editing, improving, reviewing, or auditing Claude Code skills. Triggers on: write a skill, create a skill, new skill, skill template, skill structure, skill authoring, edit skill, improve skill, review skill, audit skill, skill quality, SKILL.md, skill frontmatter, skill description, skill triggers, make a skill for, how to write a good skill"
+description: "Use when writing, creating, editing, improving, reviewing, or auditing Claude Code skills. Triggers on: write a skill, create a skill, new skill, skill template, skill structure, skill authoring, edit skill, improve skill, review skill, audit skill, skill quality, SKILL.md, skill frontmatter, skill description, skill triggers, make a skill for, how to write a good skill, audit until clean, keep auditing, iterate on skills, iterative skill audit, converge skill quality"
 ---
 
 # Writing Skills
@@ -18,6 +18,7 @@ A **skill** is a reference guide that teaches future Claude instances proven tec
 | Skill patterns (conductor, expert, composition, workflow, output) | `./craft.md` |
 | Testing discipline-enforcing skills | `./testing.md` |
 | Auditing existing skills for issues | `./review-criteria.md` |
+| Iterative audit-fix loop until clean | `./iterating-audit.md` |
 
 ## When to Create a Skill
 

@@ -1,11 +1,4 @@
----
-name: iterating-skill-audit
-description: "Use when skills need repeated audit-fix cycles until clean. Reviews skill files against quality criteria, fixes findings, and repeats until the audit pass comes back clean. Triggers on: audit skills iteratively, keep auditing, iterate on skills, audit until clean, repeated skill review, converge skill quality."
----
-
 # Iterating Skill Audit
-
-## Overview
 
 Serial audit-fix loop for skill files: dispatch a read-only reviewer against baked-in quality criteria, then a fixer, commit, repeat until findings hit zero, plateau, or an iteration cap.
 
@@ -18,8 +11,8 @@ Serial audit-fix loop for skill files: dispatch a read-only reviewer against bak
 - A single audit pass found issues and the user wants autonomous convergence
 
 **When NOT to use:**
-- Writing a new skill from scratch — use `writing-skills`
-- Single-pass review with no iteration needed — use `writing-skills` review-criteria routing
+- Writing a new skill from scratch — use the craft routing
+- Single-pass review with no iteration needed — use `./review-criteria.md`
 - Auditing convention-mined skills specifically — use `auditing-convention-skills`
 
 ## Inputs
