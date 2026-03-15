@@ -1,6 +1,6 @@
 # Sauce
 
-Personal skills and prompts for agents. Private repository.
+The secret sauce. Skills and workflows that make the difference.
 
 ## Installation
 
