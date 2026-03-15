@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.7](https://github.com/raiderrobert/sauce/compare/v0.1.6...v0.1.7) (2026-03-15)
+
+
+### Features
+
+* add cite-check, review-with-research, merge iterating-skill-audit ([#18](https://github.com/raiderrobert/sauce/issues/18)) ([6bbe225](https://github.com/raiderrobert/sauce/commit/6bbe225b0fc5211fc4374aca4cf8a19556be44ce))
+
 ## [0.1.6](https://github.com/raiderrobert/sauce/compare/v0.1.5...v0.1.6) (2026-03-15)
 
 
