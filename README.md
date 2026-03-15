@@ -1,6 +1,6 @@
 # Sauce
 
-The secret sauce. Skills and workflows that make the difference.
+The secret sauce. Skills that know when to slow down and think — baked with research so reflection doesn't mean starting from scratch.
 
 ## Installation
 
