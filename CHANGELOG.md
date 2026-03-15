@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.6](https://github.com/raiderrobert/sauce/compare/v0.1.5...v0.1.6) (2026-03-15)
+
+
+### Bug Fixes
+
+* update README description ([#16](https://github.com/raiderrobert/sauce/issues/16)) ([52fc89b](https://github.com/raiderrobert/sauce/commit/52fc89be45b6ce54202fc43ce4bdb2f721dfcf36))
+
 ## [0.1.5](https://github.com/raiderrobert/sauce/compare/v0.1.4...v0.1.5) (2026-03-14)
 
 
