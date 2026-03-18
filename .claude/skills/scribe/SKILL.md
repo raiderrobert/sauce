@@ -88,15 +88,42 @@ After adding, confirm:
 - Effect Sizes table has rows for all quantitative findings in the review (if table exists)
 - Papers Reviewed table count matches actual paper sections (if table exists)
 
-## Creating a New References Directory
+## Bootstrapping
 
-When starting research in a new area:
+If the target directory has no `references/` yet, create the scaffold before adding the first paper:
 
-1. Create `references/` in the appropriate location
-2. Create `index.md` explaining the structure
-3. Create `bibliography.md` with the header
-4. Create the first `quotes-{topic}.md` and `review-{topic}.md`
-5. Add the location to the Known References Directories table above
+```
+references/
+  index.md
+  bibliography.md
+```
+
+**index.md:**
+```markdown
+# References
+
+Research backing the principles in this skill.
+
+| File | What it is |
+|------|------------|
+| `bibliography.md` | All papers — one entry per paper, keyed by `[Author Year]` |
+| `quotes-*.md` | Direct quotes organized by theme, each citing a bibliography key |
+| `review-*.md` | Detailed per-paper analysis with effect sizes and principle implications |
+
+Quotes and reviews reference bibliography keys.
+Add new papers via the `/scribe` skill.
+```
+
+**bibliography.md:**
+```markdown
+# Bibliography
+
+All papers referenced across reviews and quotes files. Keyed by `[Author Year]`, alphabetical.
+
+---
+```
+
+Then create `quotes-{topic}.md` and `review-{topic}.md` as needed when adding the first paper. Add the new location to the Known References Directories table in this skill.
 
 ## Common Mistakes
 
