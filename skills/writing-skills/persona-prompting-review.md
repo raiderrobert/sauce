@@ -21,6 +21,7 @@ Companion to `literature-review.md`. Focused question: **Does framing prompts wi
 | 13 | [Bias Runs Deep](https://arxiv.org/abs/2311.04892) | Nov 2023 (updated 2024) | Bias/safety |
 | 14 | [Role Confusion](https://arxiv.org/abs/2603.12277) | Mar 2026 | Mechanistic |
 | 15 | [Persona Survey Respondents](https://arxiv.org/abs/2602.18462) | Feb 2026 (ACM WWW '26) | Persona effect |
+| 16 | [PersonaGym](https://arxiv.org/abs/2407.18416) | Jul 2024 (updated Sep 2025) | Benchmark |
 
 ---
 
@@ -249,6 +250,23 @@ Companion to `literature-review.md`. Focused question: **Does framing prompts wi
 
 ---
 
+### Paper 16: [PersonaGym: Evaluating Persona Agents and LLMs](https://arxiv.org/abs/2407.18416)
+**Citation:** Samuel et al., Jul 2024 (updated Sep 2025), [arXiv:2407.18416](https://arxiv.org/abs/2407.18416)
+**Key findings relevant to persona prompting:**
+- **Benchmark designed to measure persona compliance, not task performance.** 10 LLMs, 200 personas, 10,000 questions across 5 tasks (Expected Action, Linguistic Habits, Persona Consistency, Action Justification, Toxicity Control). Measures "can the model act like this persona convincingly?" — NOT "does persona improve output quality."
+- **PersonaScores (1-5 scale):** Claude 3 Haiku: 3.64 (lowest). LLaMA-2-13b: 3.98. GPT-3.5: 4.38. LLaMA-3-8b: 4.49. Claude 3.5 Sonnet: 4.51 (tied top). GPT-4.5: 4.51 (tied top).
+- **"Model size and capacity is not correlated with performance on PersonaGym."** LLaMA-3-8b outperformed larger 70B variants. GPT-4.1 matched LLaMA-3-8b despite being more advanced. Being a better model doesn't make you better at personas.
+- **Claude 3 Haiku refusal rate was 8.5× higher than second-place model.** Scored lowest on Action Justification (2.47) and Persona Consistency (3.47). "Claude 3 Haiku strongly resists persona agent roles." The more safety-trained model refused to play along.
+- **"No single model consistently excels in all tasks"** — personas amplified existing model limitations rather than universally improving performance.
+- **Linguistic Habits was a universal weakness** — all but three models scored below 4.0. LLMs struggle pairing personas with appropriate jargon/tone regardless of model size.
+- **Human evaluation validated methodology:** Spearman ρ = 75.1% average.
+
+**Supports principle:** Capability-Aware Constraints (model size uncorrelated with persona compliance), Persona Is Cosmetic (benchmark measures style compliance, not reasoning improvement)
+**Challenges principle:** None directly — but the paper *intended* to advocate for persona capabilities. Its own data shows that persona compliance (mimicking the persona) is orthogonal to task performance (doing the job well). Models can adopt personas without that adoption improving their work.
+**New principle suggested:** Compliance ≠ Quality (a model successfully adopting a persona does not mean the persona improves output — it means the model changed its presentation style)
+
+---
+
 ## Effect Sizes Reference Table
 
 | Finding | Effect Size | Paper |
@@ -274,6 +292,8 @@ Companion to `literature-review.md`. Focused question: **Does framing prompts wi
 | Polite vs commanding prompts | No significant aggregate difference | [2503.04818](https://arxiv.org/abs/2503.04818) |
 | Qwen3-32B with personas on HateXplain | ALL personas worse than baseline; -9.2% label prediction | [Yang 2026](https://arxiv.org/abs/2601.20757) |
 | Inter-persona agreement (political view) | α=0.52 (Qwen3) to 0.81 (GPT-OSS) — low steering | [Yang 2026](https://arxiv.org/abs/2601.20757) |
+| Claude 3 Haiku persona refusal rate | 8.5× higher than second-place model | [Samuel 2024/2025](https://arxiv.org/abs/2407.18416) |
+| Model size vs persona capability | Not correlated (LLaMA-3-8b beat 70B variants) | [Samuel 2024/2025](https://arxiv.org/abs/2407.18416) |
 | Style vs tag for role assignment | 85% CoTness retained despite wrong tags | [2603.12277](https://arxiv.org/abs/2603.12277) |
 | Persona conditioning for surveys | No aggregate improvement (Llama-2: -0.004 HS, Qwen: +0.007 HS) | [2602.18462](https://arxiv.org/abs/2602.18462) |
 
