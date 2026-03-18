@@ -19,6 +19,7 @@ A **skill** is a reference guide that teaches future Claude instances proven tec
 | Testing discipline-enforcing skills | `./testing.md` |
 | Auditing existing skills for issues | `./review-criteria.md` |
 | Iterative audit-fix loop until clean | `./iterating-audit.md` |
+| Research backing these principles | `./references/index.md` |
 
 ## When to Create a Skill
 
@@ -76,25 +77,28 @@ SKILL.md routes the agent to the right reference file. It does NOT duplicate ref
 - Reference files should be self-contained (usable without SKILL.md context)
 - Keep references **one level deep** — SKILL.md -> reference files, never reference -> reference
 
-### 3. Only Teach What Claude Doesn't Know — But DO Activate
+### 3. Only Teach What Claude Doesn't Know — Specify Audience, Not Identity
 
 The context window is a shared resource. Every token competes with conversation history, other skills, and the actual request.
 
-Distinguish *information* from *activation framing*:
 - **Skip known facts.** Don't explain what PDFs are or how HTTP works.
-- **Include activation framing.** Role, audience, intent, failure modes, and edge cases cost few tokens but dramatically improve output. Emotion Prompting adds zero information yet yields +115% on BIG-Bench.
+- **Specify audience and output context.** State who consumes the output and what they need — this outperforms identity/role assignment. "Answer as if explaining to a doctor" beats "You are a doctor."
+- **Do NOT assign personas or roles.** "You are a senior engineer" / "Act as a brutal critic" does not improve task performance on capable models. 162 personas showed no improvement; o1 maintains 99.0% accuracy across all personas; irrelevant details cause up to 30pp drops; demographic personas cause up to 69pp drops. See `references/quotes-persona.md` for the full evidence and `references/review-persona.md` for detailed analysis (16 papers).
 - **Err toward including domain heuristics.** Over-compressing loses failure modes and edge cases — the model is better at ignoring irrelevant context than we are at predicting what it needs.
 
 ```markdown
+# BAD: persona assignment (0% improvement, risk of bias activation)
+You are a document processing specialist. Users need precise text extraction.
+
 # BAD: teaching known facts (150 tokens wasted)
 PDF (Portable Document Format) files are a common file format...
 
-# GOOD: activation framing + tool-specific knowledge (80 tokens)
-You are a document processing specialist. Users need precise text extraction.
+# GOOD: audience + task-specific knowledge (60 tokens)
+Users need precise text extraction from complex PDFs.
 Use pdfplumber — handles multi-column layouts that PyPDF2 misses:
 ```
 
-Challenge each paragraph: "Is this a *fact Claude knows*, or *framing that shapes behavior*?" Keep framing, cut facts.
+Challenge each paragraph: "Is this a *fact Claude knows*, a *persona assignment* (cut it), or *task context that shapes the output*?" Keep task context, cut facts and personas.
 
 ### 4. Degrees of Freedom
 
@@ -122,11 +126,15 @@ When possible, pair with a labeled counter-example showing what NOT to do. Contr
 
 ### 6. Constrain Outputs, Not Reasoning
 
-Specify what the deliverable looks like (format, structure, sections). Never constrain how the model thinks to get there.
+Specify what the deliverable looks like (format, structure, sections). Never constrain how the model thinks to get there. This is the single most empirically supported principle in this skill.
 
-- **Structured transformation** (math, code generation, data migration): explicit steps help.
+- **Output format specification is the one universal win.** Removing formatting constraints: -8.6pp to -12.1pp (p<0.001). Removing the system prompt entirely had no noticeable effect. Format is load-bearing; identity framing is not.
+- **Free reasoning → constrained output beats constrained-throughout** by +12pp to +27.2pp on classification tasks. Let the model reason freely, then enforce structure only at output time.
+- **Structured transformation** (math, code generation, data migration): explicit steps help. CoT provides +14.2% on symbolic reasoning.
 - **Everything else** (analysis, writing, design): specify the destination, not the journey. CoT adds +0.7% on non-symbolic tasks — near zero. Pre-planning *hurts* free-form generation.
-- Over-constraining reasoning backfires on capable models (-2.36% on GPT-5 vs simple prompting). Target model blind spots, not general correctness.
+- **More constraints ≠ better.** Code generation peaked at 48 tokens of constraint, then declined at 117 tokens. Few-shot examples caused a -25.22pp DROP on Java. Over-constraining reasoning backfires on capable models (-2.36% on GPT-5 vs simple prompting).
+
+See `references/quotes-constraints.md` for all sources.
 
 ### 7. Examples Set the Output Register
 
@@ -175,3 +183,5 @@ What goes wrong + fixes.
 | Duplicating reference content in SKILL.md | Maintenance divergence, wasted tokens | Route to the reference file with a one-line summary |
 | Description summarizing workflow | Claude shortcuts the body | Triggers + one-line objective only |
 | Description over 1024 chars or multi-line | Skill silently dropped from discovery — no error, just invisible | Condense to single line under 1024 chars; put keyword lists in body |
+| Persona/role assignment ("You are a senior engineer") | No improvement on factual tasks (162 personas × 9 models); irrelevant details cause up to -30pp; zero effect on capable models (o1 at 99% across all personas); activates irrelevant associations on judgment tasks. See `references/quotes-persona.md` | Specify audience and output context: "Users need X" not "You are X." Use output templates and structural scaffolds instead. See `references/review-persona.md` |
+| Cognitive pattern lists ("How Great Xs Think") | Constrains reasoning process, which hurts free-form tasks (+0.7% on non-symbolic); becomes handcuffs on capable models. See `references/quotes-constraints.md` | Let output structure (tables, checklists, scoring rubrics) drive thoroughness instead of telling the model how to think |
