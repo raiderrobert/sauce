@@ -1,6 +1,6 @@
 ---
-name: managing-citations
-description: "Use when adding research papers, managing bibliography entries, adding quotes to the quotes file, or maintaining citation consistency across literature review files. Triggers on: add paper, add citation, new source, add quote, update bibliography, cite this, catalog this paper, add to references."
+name: scribe
+description: "Use when adding research papers, managing bibliography entries, adding quotes to the quotes file, or maintaining citation consistency across literature review files. Ensures papers are cataloged consistently across bibliography, quotes, and review files so research is findable and citable. Triggers on: add paper, add citation, new source, add quote, update bibliography, cite this, catalog this paper, add to references."
 ---
 
 # Managing Citations
