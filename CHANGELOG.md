@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.8](https://github.com/raiderrobert/sauce/compare/v0.1.7...v0.1.8) (2026-03-18)
+
+
+### Features
+
+* add diverge-critique-converge skill ([#20](https://github.com/raiderrobert/sauce/issues/20)) ([701572a](https://github.com/raiderrobert/sauce/commit/701572a0e155979e0f4f3bb186e1fc65c1f91ef9))
+
 ## [0.1.7](https://github.com/raiderrobert/sauce/compare/v0.1.6...v0.1.7) (2026-03-15)
 
 
