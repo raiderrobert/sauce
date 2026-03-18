@@ -19,6 +19,7 @@ A **skill** is a reference guide that teaches future Claude instances proven tec
 | Testing discipline-enforcing skills | `./testing.md` |
 | Auditing existing skills for issues | `./review-criteria.md` |
 | Iterative audit-fix loop until clean | `./iterating-audit.md` |
+| Research backing these principles | `./references/index.md` |
 
 ## When to Create a Skill
 
@@ -81,17 +82,8 @@ SKILL.md routes the agent to the right reference file. It does NOT duplicate ref
 The context window is a shared resource. Every token competes with conversation history, other skills, and the actual request.
 
 - **Skip known facts.** Don't explain what PDFs are or how HTTP works.
-- **Specify audience and output context.** State who consumes the output and what they need — this outperforms identity/role assignment. "Answer as if explaining to a doctor" beats "You are a doctor" ([Zheng 2026](https://arxiv.org/abs/2311.10054), 162 personas × 9 models × 2,410 MMLU questions: no improvement over no-persona control; audience-specific prompts outperformed speaker-specific prompts).
-- **Do NOT assign personas or roles.** "You are a senior engineer" / "Act as a brutal critic" does not improve task performance on capable models:
-  - 162 personas, no improvement over control ([Zheng 2026](https://arxiv.org/abs/2311.10054))
-  - o1 maintains 99.0% accuracy across ALL personas — zero effect ([2504.06460](https://arxiv.org/abs/2504.06460))
-  - Irrelevant persona details cause up to 30pp drops ([Dong 2025](https://arxiv.org/abs/2508.19764), 9 LLMs, 27 tasks)
-  - Demographic personas cause up to 69pp drops from bias activation ([2311.04892](https://arxiv.org/abs/2311.04892))
-  - Political personas induce motivated reasoning — 90% more likely correct when evidence aligns with beliefs ([Costello 2025](https://arxiv.org/abs/2506.20020))
-  - Personas degrade reasoning in 7/12 datasets on Llama3 ([Gupta 2024](https://arxiv.org/abs/2408.08631))
-  - Same persona helps Mistral, hurts Qwen3, does nothing on GPT-OSS — effects are unpredictable ([Yang 2026](https://arxiv.org/abs/2601.20757))
-  - Persona changes writing style, not reasoning quality — cosmetic on capable models ([2603.12277](https://arxiv.org/abs/2603.12277))
-  - See `persona-prompting-review.md` for the full evidence base (15 papers).
+- **Specify audience and output context.** State who consumes the output and what they need — this outperforms identity/role assignment. "Answer as if explaining to a doctor" beats "You are a doctor."
+- **Do NOT assign personas or roles.** "You are a senior engineer" / "Act as a brutal critic" does not improve task performance on capable models. 162 personas showed no improvement; o1 maintains 99.0% accuracy across all personas; irrelevant details cause up to 30pp drops; demographic personas cause up to 69pp drops. See `references/quotes-persona.md` for the full evidence and `references/review-persona.md` for detailed analysis (16 papers).
 - **Err toward including domain heuristics.** Over-compressing loses failure modes and edge cases — the model is better at ignoring irrelevant context than we are at predicting what it needs.
 
 ```markdown
@@ -136,11 +128,13 @@ When possible, pair with a labeled counter-example showing what NOT to do. Contr
 
 Specify what the deliverable looks like (format, structure, sections). Never constrain how the model thinks to get there. This is the single most empirically supported principle in this skill.
 
-- **Output format specification is the one universal win.** Removing formatting constraints: -8.6pp on GPT-4o, -12.1pp on GPT-4o-mini (p<0.001) ([2503.04818](https://arxiv.org/abs/2503.04818)). Meanwhile, removing the system prompt entirely had no noticeable effect on average performance. Format is load-bearing; identity framing is not.
-- **Free reasoning → constrained output beats constrained-throughout** by +12pp to +27.2pp on classification tasks ([2601.07525](https://arxiv.org/abs/2601.07525)). Let the model reason freely, then enforce structure only at output time.
-- **Structured transformation** (math, code generation, data migration): explicit steps help. CoT provides +14.2% on symbolic reasoning ([Sprague 2024](https://arxiv.org/abs/2409.12183)).
+- **Output format specification is the one universal win.** Removing formatting constraints: -8.6pp to -12.1pp (p<0.001). Removing the system prompt entirely had no noticeable effect. Format is load-bearing; identity framing is not.
+- **Free reasoning → constrained output beats constrained-throughout** by +12pp to +27.2pp on classification tasks. Let the model reason freely, then enforce structure only at output time.
+- **Structured transformation** (math, code generation, data migration): explicit steps help. CoT provides +14.2% on symbolic reasoning.
 - **Everything else** (analysis, writing, design): specify the destination, not the journey. CoT adds +0.7% on non-symbolic tasks — near zero. Pre-planning *hurts* free-form generation.
-- **More constraints ≠ better.** Code generation peaked at 48 tokens of constraint, then declined at 117 tokens. Few-shot examples caused a -25.22pp DROP on Java ([2602.15228](https://arxiv.org/abs/2602.15228)). Over-constraining reasoning backfires on capable models (-2.36% on GPT-5 vs simple prompting, [Khan 2025](https://arxiv.org/abs/2510.22251)).
+- **More constraints ≠ better.** Code generation peaked at 48 tokens of constraint, then declined at 117 tokens. Few-shot examples caused a -25.22pp DROP on Java. Over-constraining reasoning backfires on capable models (-2.36% on GPT-5 vs simple prompting).
+
+See `references/quotes-constraints.md` for all sources.
 
 ### 7. Examples Set the Output Register
 
@@ -189,5 +183,5 @@ What goes wrong + fixes.
 | Duplicating reference content in SKILL.md | Maintenance divergence, wasted tokens | Route to the reference file with a one-line summary |
 | Description summarizing workflow | Claude shortcuts the body | Triggers + one-line objective only |
 | Description over 1024 chars or multi-line | Skill silently dropped from discovery — no error, just invisible | Condense to single line under 1024 chars; put keyword lists in body |
-| Persona/role assignment ("You are a senior engineer") | No improvement on factual tasks ([Zheng 2026](https://arxiv.org/abs/2311.10054), 162 personas × 9 models); irrelevant details cause up to -30pp ([Dong 2025](https://arxiv.org/abs/2508.19764)); zero effect on capable models ([2504.06460](https://arxiv.org/abs/2504.06460), o1 at 99% across all personas); imports bias on judgment tasks ([Costello 2025](https://arxiv.org/abs/2506.20020), 90% motivated reasoning) | Specify audience and output context: "Users need X" not "You are X." Use output templates and structural scaffolds instead. See `persona-prompting-review.md` |
-| Cognitive pattern lists ("How Great Xs Think") | Constrains reasoning process, which hurts free-form tasks ([Sprague 2024](https://arxiv.org/abs/2409.12183), +0.7% on non-symbolic); becomes handcuffs on capable models ([Khan 2025](https://arxiv.org/abs/2510.22251)) | Let output structure (tables, checklists, scoring rubrics) drive thoroughness instead of telling the model how to think |
+| Persona/role assignment ("You are a senior engineer") | No improvement on factual tasks (162 personas × 9 models); irrelevant details cause up to -30pp; zero effect on capable models (o1 at 99% across all personas); activates irrelevant associations on judgment tasks. See `references/quotes-persona.md` | Specify audience and output context: "Users need X" not "You are X." Use output templates and structural scaffolds instead. See `references/review-persona.md` |
+| Cognitive pattern lists ("How Great Xs Think") | Constrains reasoning process, which hurts free-form tasks (+0.7% on non-symbolic); becomes handcuffs on capable models. See `references/quotes-constraints.md` | Let output structure (tables, checklists, scoring rubrics) drive thoroughness instead of telling the model how to think |

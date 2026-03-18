@@ -1,6 +1,6 @@
-# Persona Prompting Research — Quotes by Theme
+# Quotes: Persona Prompting
 
-Each quote references a citation key from `persona-paper-index.md`.
+Direct quotes organized by theme. Each cites a key from `bibliography.md`.
 
 ---
 
@@ -11,9 +11,6 @@ Each quote references a citation key from `persona-paper-index.md`.
 
 > "OpenAI o1 maintains 99.0% accuracy across all personas"
 > — [Veselovsky 2025]
-
-> "No evidence that removing the system prompt noticeably affects average performance."
-> — [Miller 2025], GPT-4o and GPT-4o-mini on GPQA Diamond, 19,800 runs per condition
 
 > "Persona prompting does not yield a consistent aggregate improvement in survey alignment."
 > — [Schmidt 2026], Llama-2-13B and Qwen3-4B
@@ -107,9 +104,6 @@ Each quote references a citation key from `persona-paper-index.md`.
 
 ## More capable models are more resistant to persona
 
-> "OpenAI o1 maintains 99.0% accuracy across all personas" — zero effect
-> — [Veselovsky 2025]
-
 > Claude-3.5: 99.0%→74.0% with low-performer persona (-25pp). GPT-3.5-turbo: only -1.7pp. o1: 0pp.
 > — [Veselovsky 2025], capability gradient from susceptible to immune
 
@@ -118,9 +112,6 @@ Each quote references a citation key from `persona-paper-index.md`.
 
 > "Claude 3 Haiku strongly resists persona agent roles" — refusal rate 8.5× higher than second-place
 > — [Samuel 2024], more safety-trained models refuse to play along
-
-> "Sculpting provides advantages on gpt-4o... but becomes detrimental on gpt-5"
-> — [Khan 2025], guardrail-to-handcuff transition
 
 > Mitigation strategies: "generally worsened smaller models" but "improve Robustness and preserve the Expertise Advantage of the largest models" (70B+)
 > — [Dong 2025]
@@ -137,38 +128,6 @@ Each quote references a citation key from `persona-paper-index.md`.
 
 ---
 
-## Constraints don't monotonically help
-
-> GPT-20B Java zero-shot: Struct 42.17% (peak at 48 tokens) → Edge 37.83% (decline at 117 tokens)
-> — [Cheng 2026]
-
-> Few-shot on Java: "Base plummets to 14.35% Pass@1... introducing fixed examples undermines Java performance on the whole"
-> — [Cheng 2026], -25.22pp from adding examples
-
-> "Java exhibiting significantly greater sensitivity to system prompt variations than Python"
-> — [Cheng 2026]
-
-> "Specific prompting techniques might work for specific questions for unclear reasons"
-> — [Miller 2025]
-
----
-
-## What works instead
-
-> "Audience-specific prompts statistically significantly outperformed speaker-specific prompts"
-> — [Zheng 2026], "explain to a doctor" > "you are a doctor"
-
-> Removing output formatting: -8.6pp GPT-4o, -12.1pp GPT-4o-mini (p<0.001). Removing system prompt: no effect.
-> — [Miller 2025], format specification is the one universal win
-
-> In-Writing (free reasoning → constrained output): DDXPlus "LLaMA from 12% to 30%; Gemma from 22.9% to 50.1%"
-> — [Li 2026], +18pp to +27.2pp from letting the model reason freely then constraining output
-
-> "No significant improvements in rationale quality for any model-persona pair, and significant degradation in several cases."
-> — [Yang 2026], even when persona helped classification, it hurt the reasoning behind it
-
----
-
 ## Persona compliance ≠ task quality
 
 > "No single model consistently excels in all tasks" — personas amplified existing model limitations rather than universally improving performance.
@@ -181,4 +140,4 @@ Each quote references a citation key from `persona-paper-index.md`.
 > — [Samuel 2024]
 
 > "Persona prompting can redistribute errors unevenly across groups, undermining subgroup fidelity."
-> — [Schmidt 2026], even when aggregate metrics look neutral, personas shift which subgroups the model gets right/wrong
+> — [Schmidt 2026]
