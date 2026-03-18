@@ -5,24 +5,27 @@ description: "Use when adding research papers, managing bibliography entries, or
 
 # Scribe
 
-Catalog research papers into a three-file citation system: bibliography, quotes by theme, and detailed review. Each research topic gets its own set of three files.
+Catalog research papers into a citation system under `skills/writing-skills/references/`. See `skills/writing-skills/references/index.md` for the full structure.
 
-## Research Topics
+All files live in one directory. One shared bibliography; quotes and reviews split by topic.
 
-| Topic | Bibliography | Quotes | Review |
-|-------|-------------|--------|--------|
-| Persona prompting | `skills/writing-skills/persona-paper-index.md` | `skills/writing-skills/persona-prompting-quotes.md` | `skills/writing-skills/persona-prompting-review.md` |
-| Prompting techniques (general) | `skills/writing-skills/literature-review.md` | — | `skills/writing-skills/literature-review.md` |
+## File Layout
 
-When adding a paper, determine which topic it belongs to. If no topic fits, create a new set of three files following the same conventions.
+| File | What it is |
+|------|------------|
+| `references/bibliography.md` | All papers — one entry per paper, keyed by `[Author Year]` |
+| `references/quotes-*.md` | Direct quotes organized by theme, each citing a bibliography key |
+| `references/review-*.md` | Detailed per-paper analysis with effect sizes and principle implications |
 
-## The Three-File Pattern
+## Current Topics
 
-| File | Contains | Keyed by |
-|------|----------|----------|
-| **Bibliography** | One entry per paper: citation key, authors, title, date, URL | `[Author Year]` alphabetical |
-| **Quotes** | Direct passages organized by theme, each citing a bibliography key | Theme sections |
-| **Review** | Per-paper analysis: findings, effect sizes, principle implications | Paper sections |
+| Topic | Quotes | Review |
+|-------|--------|--------|
+| Persona prompting | `quotes-persona.md` | `review-persona.md` |
+| Constraint specificity | `quotes-constraints.md` | (covered in review-persona.md) |
+| Skill authoring techniques | `quotes-skill-authoring.md` | `review-prompting.md` |
+
+Papers can span multiple topics — they have one bibliography entry but quotes in multiple files.
 
 ## Adding a New Paper
 
@@ -35,7 +38,7 @@ Read the full paper (not just the abstract). Extract:
 
 ### 2. Add bibliography entry
 
-Add to the topic's bibliography file, alphabetical by author surname:
+Read `references/bibliography.md`. Add an entry in alphabetical order by author surname:
 
 ```
 **[Surname Year]** Surname, A. et al. "Paper Title." Month Year. https://arxiv.org/abs/XXXX.XXXXX
@@ -45,7 +48,7 @@ Disambiguation: `[Surname 2025a]`, `[Surname 2025b]` for same author, same year.
 
 ### 3. Add review section
 
-Add to the topic's review file:
+Add to the appropriate `references/review-*.md` file:
 
 ```
 ### Paper N: [Title](url)
@@ -62,19 +65,19 @@ Update the Papers Reviewed table and Effect Sizes Reference Table.
 
 ### 4. Add quotes
 
-Add to the topic's quotes file under the appropriate theme section:
+Add to the appropriate `references/quotes-*.md` file under the right theme section:
 
 ```
 > "Exact quote from the paper"
 > — [Surname Year], context if needed
 ```
 
-Create a new theme section if no existing one fits.
+Create a new theme section if no existing one fits. If the paper spans multiple topics, add quotes to multiple quotes files.
 
 ### 5. Consistency check
 
 After adding, confirm:
-- Bibliography key exists in the index for every `[Author Year]` referenced in quotes
+- Bibliography key exists in `bibliography.md` for every `[Author Year]` referenced in quotes
 - Effect Sizes table has rows for all quantitative findings in the review
 - Papers Reviewed table count matches actual paper sections
 
@@ -86,4 +89,4 @@ After adding, confirm:
 | Missing effect sizes in the review | Go back to the paper and extract numbers |
 | Citation key not in bibliography | Add the bibliography entry first |
 | Adding quotes from the abstract only | Read the full paper — abstracts miss the important numbers |
-| Putting a paper in the wrong topic | Check the Research Topics table; create a new topic if needed |
+| Creating a separate bibliography per topic | One `bibliography.md` — papers span topics |
