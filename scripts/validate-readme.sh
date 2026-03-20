@@ -23,7 +23,8 @@ while IFS= read -r line; do
   # Skip header and separator rows
   [[ "$line" =~ ^\|[[:space:]]*Skill ]] && continue
   [[ "$line" =~ ^\|[-]+\| ]] && continue
-  skill_name=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2); print $2}')
+  # Extract first column, strip markdown link syntax [name](#anchor) -> name
+  skill_name=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2); print $2}' | sed 's/^\[//;s/\](.*$//')
   [ -n "$skill_name" ] && readme_skills+=("$skill_name")
 done < <(grep -E '^\|' "$readme")
 
