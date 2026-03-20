@@ -33,8 +33,9 @@ Fetch and follow instructions from https://raw.githubusercontent.com/raiderrober
 
 | Skill | Description |
 |-------|-------------|
-| convention-mining | Extract implicit coding conventions from merged PR review history |
-| writing-skills | Writing, creating, editing, improving, reviewing, and auditing Claude Code skills |
 | cite-check | Deep source research — find original provenance for claims, quotes, and attributions |
+| convention-mining | Extract implicit coding conventions from merged PR review history |
+| diverge-critique-converge | Generate high-quality analysis, plans, or designs by running a structured bakeoff |
 | review-with-research | Evidence-based code review that researches ecosystem best practices before judging |
 | reviewing-abstraction-boundaries | Identify leaked implementation details in public surfaces |
+| writing-skills | Writing, creating, editing, improving, reviewing, and auditing Claude Code skills |
