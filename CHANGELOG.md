@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.1.9](https://github.com/raiderrobert/sauce/compare/v0.1.8...v0.1.9) (2026-03-20)
+
+
+### Features
+
+* add anchor links to README skills catalog and lychee CI ([#27](https://github.com/raiderrobert/sauce/issues/27)) ([56b5cd7](https://github.com/raiderrobert/sauce/commit/56b5cd7e68c8288bea5190c585de64303841914d))
+* add CI check for README skills catalog ([#26](https://github.com/raiderrobert/sauce/issues/26)) ([1102d1a](https://github.com/raiderrobert/sauce/commit/1102d1adfe792194c68e5831b3e0667a8cd1a28b))
+* add diverge-critique-converge skill ([#24](https://github.com/raiderrobert/sauce/issues/24)) ([e686386](https://github.com/raiderrobert/sauce/commit/e686386c7fb7201d310e8e4c65ccee45b0087891))
+* add scribe skill for citation management ([#23](https://github.com/raiderrobert/sauce/issues/23)) ([91fedb1](https://github.com/raiderrobert/sauce/commit/91fedb14f3b0e378146a9e6fe24925a8f427cfa1))
+* persona prompting research and skill writer updates ([#22](https://github.com/raiderrobert/sauce/issues/22)) ([5941bf9](https://github.com/raiderrobert/sauce/commit/5941bf9f8a31405892236706b3d2920f8068ceb0))
+
 ## [0.1.8](https://github.com/raiderrobert/sauce/compare/v0.1.7...v0.1.8) (2026-03-18)
 
 
