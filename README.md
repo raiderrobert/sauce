@@ -47,6 +47,7 @@ Fetch and follow instructions from https://raw.githubusercontent.com/raiderrober
 
 > I needed a plan. I took a moment to mentally step back, to
 assess my situation. Think.
+>
 > You are standing on the thin, cool crust of a gigantic ball of molten rock
 hurtling through frozen space at 496,105 miles an hour. 
 >
