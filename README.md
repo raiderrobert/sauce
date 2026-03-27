@@ -60,3 +60,7 @@ Fetch and follow instructions from https://raw.githubusercontent.com/raiderrober
 | [review-with-research](skills/review-with-research/SKILL.md) | Evidence-based code review that researches ecosystem best practices before judging |
 | [reviewing-abstraction-boundaries](skills/reviewing-abstraction-boundaries/SKILL.md) | Identify leaked implementation details in public surfaces |
 | [writing-skills](skills/writing-skills/SKILL.md) | Writing, creating, editing, improving, reviewing, and auditing [Agent skills](https://agentskills.io/home) |
+
+## License
+
+[MIT](LICENSE)
