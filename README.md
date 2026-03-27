@@ -54,9 +54,9 @@ Fetch and follow instructions from https://raw.githubusercontent.com/raiderrober
 
 | Skill | Description |
 |-------|-------------|
-| [cite-check](#cite-check) | Deep source research — find original provenance for claims, quotes, and attributions |
-| [convention-mining](#convention-mining) | Extract implicit coding conventions from merged PR review history |
-| [diverge-critique-converge](#diverge-critique-converge) | Generate high-quality analysis, plans, or designs by running a structured bakeoff |
-| [review-with-research](#review-with-research) | Evidence-based code review that researches ecosystem best practices before judging |
-| [reviewing-abstraction-boundaries](#reviewing-abstraction-boundaries) | Identify leaked implementation details in public surfaces |
-| [writing-skills](#writing-skills) | Writing, creating, editing, improving, reviewing, and auditing [Agent skills](https://agentskills.io/home) |
+| [cite-check](skills/cite-check/SKILL.md) | Deep source research — find original provenance for claims, quotes, and attributions |
+| [convention-mining](skills/convention-mining/SKILL.md) | Extract implicit coding conventions from merged PR review history |
+| [diverge-critique-converge](skills/diverge-critique-converge/SKILL.md) | Generate high-quality analysis, plans, or designs by running a structured bakeoff |
+| [review-with-research](skills/review-with-research/SKILL.md) | Evidence-based code review that researches ecosystem best practices before judging |
+| [reviewing-abstraction-boundaries](skills/reviewing-abstraction-boundaries/SKILL.md) | Identify leaked implementation details in public surfaces |
+| [writing-skills](skills/writing-skills/SKILL.md) | Writing, creating, editing, improving, reviewing, and auditing [Agent skills](https://agentskills.io/home) |
