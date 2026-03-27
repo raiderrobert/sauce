@@ -1,7 +1,8 @@
 # Sauce
 
-Skills that make you feel like you're on the sauce, able to slow down and see all of the universe in all its expanse, the eternity past and future. It all exists for you now.
+Skills for when you need [a plan, a moment to mentally step back, to assess your situation. Think.](#inspiration) 
 
+Skills that make you feel like you're on the sauce, able to slow down and see all of the universe in all its expanse, the eternity past and future
 
 ## Skills Catalog
 
