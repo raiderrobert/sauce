@@ -8,7 +8,7 @@
   },
   "homepage": "https://github.com/raiderrobert/sauce",
   "repository": "https://github.com/raiderrobert/sauce",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "keywords": ["skills", "prompts", "workflows"],
   "skills": "./skills/",
   "agents": "./agents/",
