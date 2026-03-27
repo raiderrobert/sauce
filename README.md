@@ -23,6 +23,17 @@ Thus it is physically impossible for you to deviate—
 
 — John Dies at the End by Jason Pargin, [Libro.fm](https://libro.fm/audiobooks/9781609982416-john-dies-at-the-end)
 
+## Skills Catalog
+
+| Skill | Description |
+|-------|-------------|
+| [cite-check](skills/cite-check/SKILL.md) | Deep source research — find original provenance for claims, quotes, and attributions |
+| [convention-mining](skills/convention-mining/SKILL.md) | Extract implicit coding conventions from merged PR review history |
+| [diverge-critique-converge](skills/diverge-critique-converge/SKILL.md) | Generate high-quality analysis, plans, or designs by running a structured bakeoff |
+| [review-with-research](skills/review-with-research/SKILL.md) | Evidence-based code review that researches ecosystem best practices before judging |
+| [reviewing-abstraction-boundaries](skills/reviewing-abstraction-boundaries/SKILL.md) | Identify leaked implementation details in public surfaces |
+| [writing-skills](skills/writing-skills/SKILL.md) | Writing, creating, editing, improving, reviewing, and auditing [Agent skills](https://agentskills.io/home) |
+
 ## Installation
 
 ### Claude Code (via Plugin Marketplace)
@@ -49,17 +60,6 @@ Fetch and follow instructions from https://raw.githubusercontent.com/raiderrober
 ```
 Fetch and follow instructions from https://raw.githubusercontent.com/raiderrobert/sauce/refs/heads/main/.opencode/INSTALL.md
 ```
-
-## Skills Catalog
-
-| Skill | Description |
-|-------|-------------|
-| [cite-check](skills/cite-check/SKILL.md) | Deep source research — find original provenance for claims, quotes, and attributions |
-| [convention-mining](skills/convention-mining/SKILL.md) | Extract implicit coding conventions from merged PR review history |
-| [diverge-critique-converge](skills/diverge-critique-converge/SKILL.md) | Generate high-quality analysis, plans, or designs by running a structured bakeoff |
-| [review-with-research](skills/review-with-research/SKILL.md) | Evidence-based code review that researches ecosystem best practices before judging |
-| [reviewing-abstraction-boundaries](skills/reviewing-abstraction-boundaries/SKILL.md) | Identify leaked implementation details in public surfaces |
-| [writing-skills](skills/writing-skills/SKILL.md) | Writing, creating, editing, improving, reviewing, and auditing [Agent skills](https://agentskills.io/home) |
 
 ## License
 
