@@ -2,7 +2,7 @@
 
 Skills for when you need a plan, [a moment to mentally step back.](#inspiration) 
 
-Skills that make you feel like you're on the sauce, able to slow down and see all of the universe in all its expanse, the eternity past and future
+Skills that make you feel like you're able to slow down and see all of the universe in all its expanse and the eternity past and future in a moment.
 
 ## Skills Catalog
 
