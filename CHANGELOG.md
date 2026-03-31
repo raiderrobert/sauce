@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.1.10](https://github.com/raiderrobert/sauce/compare/v0.1.9...v0.1.10) (2026-03-27)
+
+
+### Bug Fixes
+
+* point README skill links to actual SKILL.md files ([#28](https://github.com/raiderrobert/sauce/issues/28)) ([cd66309](https://github.com/raiderrobert/sauce/commit/cd66309ffbd46c6241265d57fdc62ec5266ea6b6))
+
+
+### Documentation
+
+* add license section to README ([#30](https://github.com/raiderrobert/sauce/issues/30)) ([71db8e3](https://github.com/raiderrobert/sauce/commit/71db8e34ae737c18a1989868188e69c104b97c86))
+* move skills catalog above installation in README ([72062f6](https://github.com/raiderrobert/sauce/commit/72062f6e052ce5739a566258dc9fa6045ec37b27))
+
 ## [0.1.9](https://github.com/raiderrobert/sauce/compare/v0.1.8...v0.1.9) (2026-03-20)
 
 
