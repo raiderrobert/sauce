@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.11](https://github.com/raiderrobert/sauce/compare/v0.1.10...v0.1.11) (2026-04-03)
+
+
+### Bug Fixes
+
+* exclude dead changelog compare link from lychee check ([#31](https://github.com/raiderrobert/sauce/issues/31)) ([d9626e9](https://github.com/raiderrobert/sauce/commit/d9626e9e9ab039b825fe48a98b68ebddcd1d0f42))
+
 ## [0.1.10](https://github.com/raiderrobert/sauce/compare/v0.1.9...v0.1.10) (2026-03-27)
 
 
