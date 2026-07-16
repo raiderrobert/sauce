@@ -1,25 +1,8 @@
 # Document Structure
 
-Skeletons and section conventions, compared across seven specifications.
-
-## What the studied specs contain
-
-| Section | RFC 8200 | RFC 7489 | RFC 10008 | TOML | GraphQL | OKF | Agent Skills |
-|---|---|---|---|---|---|---|---|
-| Purpose/overview intro | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Terminology/definitions | ✓ (§2) | ✓ (§3) | ✓ (§1.1) | inline | appendix | ✓ | inline |
-| Out of scope / non-goals | — | ✓ (§2.2) | — | — | — | ✓ (§1) | — |
-| Requirements by actor/role | ✓ | ✓ (Receiver/Owner) | ✓ (server/client) | ✓ | ✓ | ✓ (producer/consumer) | ✓ |
-| Formal grammar | — | ABNF | ABNF | ABNF companion | productions + appendix | — | — |
-| Conformance section | implicit | implicit | implicit | implicit | ✓ (appendix) | ✓ (§9) | validation tool |
-| Security/operational considerations | ✓ | ✓ | ✓ (§4) | — | — | — | — |
-| Registry/IANA | ✓ | ✓ | ✓ | — | — | — | — |
-| Worked examples | appendix | appendix | appendix | inline pairs | inline labeled | §4 + appendix | inline cards |
-| Versioning/change policy | obsoletes chain | obsoletes chain | — | versioned files | GitHub WG | ✓ (§11) | — |
-
-Two reliable observations: every spec opens with purpose → terminology →
-requirements-by-role, and the mature ones make conformance and change policy
-explicit rather than implied.
+Skeletons and section conventions. The studied sources, and a
+section-by-section comparison of what each contains, live in `sources.md`;
+the skeleton below is derived from that comparison.
 
 ## General-purpose skeleton
 

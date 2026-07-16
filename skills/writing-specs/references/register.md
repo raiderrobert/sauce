@@ -1,8 +1,7 @@
 # Requirement Language and Voice
 
 How conforming specs phrase requirements, definitions, and everything else.
-Patterns drawn from RFC 8200 (IPv6), RFC 7489 (DMARC), RFC 10008 (HTTP QUERY),
-TOML v1.1, GraphQL, Google OKF, and the Agent Skills spec.
+Source specs cited below are cataloged in `sources.md`.
 
 ## Keyword discipline
 

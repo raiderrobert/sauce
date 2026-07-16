@@ -12,9 +12,9 @@ enforces. Every sentence is a requirement, a definition, or explicitly
 non-normative. The register test: if a sentence could be mistaken for
 persuasion, it does not belong.
 
-Patterns throughout are harvested from seven source specs: RFC 8200 (IPv6),
-RFC 7489 (DMARC), RFC 10008 (HTTP QUERY), TOML v1.1, GraphQL, Google's OKF,
-and the Agent Skills spec. Each reference file cites which source
+Patterns throughout are harvested from studied source specs, cataloged with
+links and per-source highlights in `references/sources.md` — extend that file
+when adding a new source. Each thematic reference cites which source
 demonstrates which pattern.
 
 **Scope**: a spec is a living contract that implementations conform to. An
@@ -32,6 +32,7 @@ conventions — this skill applies when the deliverable defines what something
 | Conformance clauses, reject-vs-tolerate strictness, extensibility/registries, versioning policy, validation tooling | `references/conformance.md` |
 | Normative vs non-normative machinery: notes, example/counter-example pairs, Today callouts, gap tables, deferral discipline | `references/examples-and-notes.md` |
 | Field tables, value-space precision, enums, formal grammar, diagrams, interface contracts | `references/defining-data.md` |
+| Catalog of studied source specs: links, distinctive patterns, section comparison; how to add a source | `references/sources.md` |
 
 ## Quick reference
 
