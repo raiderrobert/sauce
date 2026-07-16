@@ -1,6 +1,6 @@
 ---
 name: writing-specs
-description: "Use when writing or reviewing a specification document — a normative definition of a format, protocol, interface, schema, or contract. Triggers: write a spec, SPEC.md, docs/spec/, RFC-style doc, formalize this design, define what X is, conformance, normative. Ensures spec-grade register and conformance structure; prevents marketing prose, coined jargon, and speccing the status quo instead of the target."
+description: "Use when writing or reviewing a specification document — a normative definition of a format, protocol, interface, schema, or contract. Triggers: write a spec, SPEC.md, docs/spec/, RFC-style doc, formalize this design, define what X is, conformance, normative, this reads like marketing, make it more RFC-like, spec register. Ensures spec-grade register and conformance structure; prevents marketing prose, coined jargon, and speccing the status quo instead of the target."
 ---
 
 # Writing Specs
@@ -14,6 +14,12 @@ persuasion, it does not belong.
 
 Conventions below are drawn from IETF RFCs (8200, 7489), the TOML v1.1 spec,
 the GraphQL spec, Google's OKF spec, and the Agent Skills spec.
+
+**Scope**: a spec is a living contract that implementations conform to. An ADR
+records one decision and its context (immutable once accepted); a design doc or
+plan proposes work. Those are different documents with different conventions —
+this skill applies when the deliverable defines what something *is* and others
+will build against it.
 
 ## Register
 
