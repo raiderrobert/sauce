@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.12](https://github.com/raiderrobert/sauce/compare/v0.1.11...v0.1.12) (2026-07-16)
+
+
+### Features
+
+* add writing-specs skill ([#33](https://github.com/raiderrobert/sauce/issues/33)) ([6a6c8ca](https://github.com/raiderrobert/sauce/commit/6a6c8cab541d83541b4103b53151c581b47b2dd2))
+
 ## [0.1.11](https://github.com/raiderrobert/sauce/compare/v0.1.10...v0.1.11) (2026-04-03)
 
 
