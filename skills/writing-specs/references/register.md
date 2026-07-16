@@ -97,11 +97,12 @@ banned for that concept).
 
 ## Coined terms
 
-A one-off metaphor ("seam", "spine", "the golden path") reads as a normative
-term the reader failed to find in Terminology. Either define it as a real
-term or use a plain descriptive name. Test: would the term survive translation
-into another spec's vocabulary without losing meaning? "Contract boundary"
-does; "seam" does not.
+A one-off metaphor ("the golden path", "the spine", "the handshake" for
+something that isn't a protocol handshake) reads as a normative term the
+reader failed to find in Terminology. Either define it as a real term or use
+a plain descriptive name. Test: would the term survive translation into
+another spec's vocabulary without losing meaning? "Required directory layout"
+does; "the spine" does not.
 
 ## Voice
 
@@ -125,13 +126,13 @@ matters, its MUST carries the weight. Calibration pair:
 
 ```markdown
 # Non-conforming: coined term, rhetoric, actorless fragment
-## The seam: work items in, outcomes out
+## The golden path: requests in, responses out
 This is the heart of the spec. Silence is a defect.
 
 # Conforming: descriptive title, actor-named requirement
-## Contract boundary for inputs and outputs
-The skill MUST emit exactly one outcome per work item, including on failure.
-A run that terminates without emitting an outcome is non-conforming.
+## Contract boundary for requests and responses
+The server MUST return exactly one response per request, including on
+failure. A request that produces no response is non-conforming.
 ```
 
 Mark justification explicitly — "Rationale:" prefix, a parenthetical note

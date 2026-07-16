@@ -36,26 +36,13 @@ conventions — this skill applies when the deliverable defines what something
 
 ## Quick reference
 
-Skeleton (parenthesized = when relevant; full guidance in
-`references/structure.md`):
+Skeleton, by section name (parenthesized = when relevant; per-section
+guidance and exemplar sources live in `references/structure.md`):
 
-1. Header — status, version, audience, RFC 2119 declaration, normativity
-   statement
-2. Definition — the thing in one sentence, then its components
-3. Terminology — single-line entries, defined before first use
-4. Conformance — per-role clauses; who verifies what; change process
-5. Out of scope — non-goals with reasons or pointers
-6. (Applicability) — positioning vs adjacent mechanisms
-7. Contract sections — field tables, invariants, both directions of every
-   interface
-8. (Recommended conventions) — SHOULDs separated from MUSTs
-9. (Validation) — layered tooling checks
-10. (Security/operational considerations)
-11. Worked example — one complete conforming instance
-12. (Current-state gaps) — gap / violates §N / resolved-by table
-13. (Procedures) — imperative how-tos, one per audience
-14. (Deferred-design index) — open question → issue/owner
-15. References
+Header · Definition · Terminology · Conformance · Out of scope ·
+(Applicability) · Contract sections · (Recommended conventions) ·
+(Validation) · (Security/operational considerations) · Worked example ·
+(Current-state gaps) · (Procedures) · (Deferred-design index) · References
 
 Register in one line: actor-named third-person requirements with exact
 RFC 2119 force, noun-phrase titles, no coined metaphors, no rhetoric, second
@@ -67,7 +54,7 @@ person only inside quoted example content. Calibration pair in
 | Mistake | Fix |
 |---|---|
 | Formalizing the current implementation as the definition | Spec the target; move reality to a current-state gap table (`references/examples-and-notes.md`) |
-| Coined term used as if defined ("seam") | Plain descriptive name, defined in Terminology (`references/register.md`) |
+| Coined metaphor used as if defined ("the golden path", "the spine") | Plain descriptive name, defined in Terminology (`references/register.md`) |
 | Hedged requirements ("should probably", "ideally") | Choose MUST / SHOULD / MAY — hedge table in `references/register.md` |
 | Actorless or second-person requirements | Name the conforming component: "The mount MUST NOT carry behavior" |
 | No conformance section — "conforming" never defined | Per-role conformance clauses (`references/conformance.md`) |
