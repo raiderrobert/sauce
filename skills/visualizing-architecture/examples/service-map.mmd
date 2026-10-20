@@ -1,0 +1,30 @@
+%% Illustrative example, not evidence of any real implementation or deployment.
+%% Replace these fictional components with source-grounded project facts.
+flowchart LR
+  accTitle: Example document-processing architecture
+  accDescr: A fictional baseline with one proposed responsibility. Boxes do not necessarily represent separate services.
+
+  web["Web application<br/>Existing · Browser UI"]
+  subgraph processing["Document processing system"]
+    direction TB
+    api["Application API<br/>Existing · Request handling"]
+    state[("Application state<br/>Existing · Metadata and history")]
+    queue["Job queue<br/>Existing · Background dispatch"]
+    worker["Document worker<br/>Existing · Execution"]
+    api -->|read / write| state
+    api -->|submit job| queue
+    queue -->|deliver| worker
+    worker -->|record result| state
+  end
+  access["Workspace access<br/>Proposed · Could be an API module"]
+  storage[("Object storage<br/>Existing · External dependency")]
+  web -->|request| api
+  api -.->|proposed access check| access
+  worker -->|store output| storage
+
+  classDef existing fill:#edf5f1,stroke:#6d9287,color:#203330;
+  classDef proposed fill:#fff4df,stroke:#b1843e,color:#80521b,stroke-dasharray:5 4;
+  classDef external fill:#f0f2f2,stroke:#a1afb3,color:#203330;
+  class web,api,state,queue,worker existing;
+  class access proposed;
+  class storage external;

@@ -1,0 +1,25 @@
+{
+  "name": "@raiderrobert/visualizing-architecture",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
+  "engines": { "node": ">=22" },
+  "bin": { "visualize-architecture": "dist/cli.mjs" },
+  "files": ["dist", "assets/canvas.html", "SKILL.md", "reference", "examples"],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "esbuild src/client.ts --bundle --format=iife --platform=browser --outfile=dist/canvas.js && esbuild src/cli.ts --bundle --format=esm --platform=node --packages=external --outfile=dist/cli.mjs",
+    "render": "node dist/cli.mjs",
+    "test": "vitest run",
+    "test:browser": "playwright test"
+  },
+  "dependencies": { "pele": "1.7.0" },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/node": "22.20.5",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5"
+  }
+}
