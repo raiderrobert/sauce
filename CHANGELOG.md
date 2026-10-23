@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.13](https://github.com/raiderrobert/sauce/compare/v0.1.12...v0.1.13) (2026-10-23)
+
+
+### Features
+
+* add Mermaid architecture visualization skill ([#35](https://github.com/raiderrobert/sauce/issues/35)) ([9e02a5b](https://github.com/raiderrobert/sauce/commit/9e02a5bbc737246a6e12e16aae800cb93e99e982))
+
 ## [0.1.12](https://github.com/raiderrobert/sauce/compare/v0.1.11...v0.1.12) (2026-07-16)
 
 
