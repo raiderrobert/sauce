@@ -13,6 +13,7 @@ Skills that make you feel like you're able to slow down and see all of the unive
 | [diverge-critique-converge](skills/diverge-critique-converge/SKILL.md) | Generate high-quality analysis, plans, or designs by running a structured bakeoff |
 | [review-with-research](skills/review-with-research/SKILL.md) | Evidence-based code review that researches ecosystem best practices before judging |
 | [reviewing-abstraction-boundaries](skills/reviewing-abstraction-boundaries/SKILL.md) | Identify leaked implementation details in public surfaces |
+| [visualizing-architecture](skills/visualizing-architecture/SKILL.md) | Collaboratively edit Mermaid architecture diagrams with a local Pele preview |
 | [writing-skills](skills/writing-skills/SKILL.md) | Writing, creating, editing, improving, reviewing, and auditing [Agent skills](https://agentskills.io/home) |
 | [writing-specs](skills/writing-specs/SKILL.md) | Write specification documents with spec-grade register, conformance structure, and honest current-state gaps |
 
@@ -67,6 +68,14 @@ Thus it is physically impossible for you to deviate—
 > I never finished this thought.
 
 — John Dies at the End by Jason Pargin, [Libro.fm](https://libro.fm/audiobooks/9781609982416-john-dies-at-the-end)
+
+## Development
+
+`just check` validates skill metadata and the catalog. For the self-contained
+TypeScript architecture skill, run `just setup-architecture` followed by
+`just check-architecture`. See its [README](skills/visualizing-architecture/README.md)
+for browser tests and local CLI usage. Its dependencies, source and tests all live
+under its own skill directory.
 
 ## License
 

@@ -1,0 +1,46 @@
+name: Architecture Skill
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/visualizing-architecture/**'
+      - '.github/workflows/architecture-skill.yml'
+      - 'justfile'
+  pull_request:
+    paths:
+      - 'skills/visualizing-architecture/**'
+      - '.github/workflows/architecture-skill.yml'
+      - 'justfile'
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: skills/visualizing-architecture
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: skills/visualizing-architecture/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - run: pnpm typecheck
+      - run: pnpm build
+      - run: pnpm test
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm test:browser
+      - name: Exercise packaged CLI through dlx
+        run: pnpm --package="file:$PWD" dlx visualize-architecture examples/service-map.mmd --output "$RUNNER_TEMP/architecture.html" --document-id ci-example
