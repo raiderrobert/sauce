@@ -1,7 +1,5 @@
 # README feature bullets
 
-Source: [Ahoy PR #27](https://github.com/raiderrobert/ahoy/pull/27). The user revised the existing README opening. Their wording is preserved below; only the pasted quote-margin markers were removed.
-
 ## Preferred — user's rewrite
 
 ```markdown

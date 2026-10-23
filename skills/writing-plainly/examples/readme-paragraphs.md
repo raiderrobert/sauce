@@ -1,7 +1,5 @@
 # README paragraph break
 
-Source: [napoln PR #123](https://github.com/raiderrobert/napoln/pull/123). The user kept the existing wording and asked only to separate the first sentence into its own paragraph.
-
 ## Preferred — user's edit
 
 ```markdown

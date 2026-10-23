@@ -1,7 +1,5 @@
 # PR description
 
-Source: [Sauce PR #35](https://github.com/raiderrobert/sauce/pull/35). The original was captured before the user replaced it. The rewrite below preserves the user's wording.
-
 ## After — user's preferred version
 
 ```markdown

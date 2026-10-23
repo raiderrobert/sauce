@@ -1,7 +1,5 @@
 # README prose instead of feature bullets
 
-Source: [graft PR #18](https://github.com/raiderrobert/graft/pull/18). The user replaced the feature bullets with paragraphs. Their wording is preserved below; only pasted margin markers and incidental whitespace were removed.
-
 ## Preferred — user's rewrite
 
 ```markdown
