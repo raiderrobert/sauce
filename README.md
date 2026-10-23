@@ -14,6 +14,7 @@ Skills that make you feel like you're able to slow down and see all of the unive
 | [review-with-research](skills/review-with-research/SKILL.md) | Evidence-based code review that researches ecosystem best practices before judging |
 | [reviewing-abstraction-boundaries](skills/reviewing-abstraction-boundaries/SKILL.md) | Identify leaked implementation details in public surfaces |
 | [visualizing-architecture](skills/visualizing-architecture/SKILL.md) | Collaboratively edit Mermaid architecture diagrams with a local Pele preview |
+| [writing-plainly](skills/writing-plainly/SKILL.md) | Write plain, natural prose in the user's voice |
 | [writing-skills](skills/writing-skills/SKILL.md) | Writing, creating, editing, improving, reviewing, and auditing [Agent skills](https://agentskills.io/home) |
 | [writing-specs](skills/writing-specs/SKILL.md) | Write specification documents with spec-grade register, conformance structure, and honest current-state gaps |
 
