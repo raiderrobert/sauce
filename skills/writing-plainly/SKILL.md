@@ -15,6 +15,7 @@ Read these pairs before drafting or editing. The preferred versions show the int
 - [README opening](examples/readme-opening.md): a generated opening and the existing version the user prefers.
 - [README feature bullets](examples/readme-feature-bullets.md): an existing opening and the user's more conversational rewrite.
 - [README personality](examples/readme-personality.md): a generated opening and the deliberately dramatic version the user enjoys.
+- [README paragraph break](examples/readme-paragraphs.md): an existing paragraph and the user's spacing-only edit.
 
 Explain what the reader needs to know. Keep useful requirements and precise names. Leave out an inventory of the work unless the reader needs it.
 
