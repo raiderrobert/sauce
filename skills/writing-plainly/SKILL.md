@@ -13,6 +13,7 @@ Read these pairs before drafting or editing. The preferred versions show the int
 
 - [PR description](examples/pr-description.md): the original and the user's rewrite.
 - [README opening](examples/readme-opening.md): a generated opening and the existing version the user prefers.
+- [README feature bullets](examples/readme-feature-bullets.md): an existing opening and the user's more conversational rewrite.
 
 Explain what the reader needs to know. Keep useful requirements and precise names. Leave out an inventory of the work unless the reader needs it.
 
