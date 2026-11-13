@@ -2,7 +2,7 @@
 
 Marketing and SaaS landing pages: product visuals, hero sections, copy, section structure, social proof and footers. Pricing pages live in data-and-dashboards.md.
 
-Practitioner heuristics; accessibility and the product's design system take precedence. Tags, *Note:* text and citations are explained in `SKILL.md`.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/video timestamp`) link to that moment; definitions are at the end of the file.
 
 Contents: Product visuals · Hero sections · Copy · Page structure and footers · Social proof and trust
 
@@ -16,12 +16,12 @@ Contents: Product visuals · Hero sections · Copy · Page structure and footers
 ## Hero sections
 
 - **Marketing:** Write one actionable hero headline (~7 words) promising exactly what the product does, with ~14-word subtext that directly supports it. Communicates the message as fast as possible. ([jain/landing-page-levels 3:04], [jain/learn-ui-in-10-minutes 1:04], [jain/vibe-coding-cant-fix 1:23])
-- **Marketing:** Choose from the standard hero layouts (text left/image right, text over a full-screen image, text above an image); a stacked hero with big text above a big product image and plenty of space reads most modern. Don't let the text block dominate. Only a handful of layouts exist; the stacked hero lets the page breathe and invites scrolling. ([jain/landing-page-levels 2:28], [jain/learn-ui-in-10-minutes 0:41], [jain/modern-layouts 2:37])
+- **Marketing:** Choose from the standard hero layouts (text left/image right, text over a full-screen image, text above an image); a stacked hero with big text above a big product image and plenty of space reads most modern as of 2026. Don't let the text block dominate. Only a handful of layouts exist; the stacked hero lets the page breathe and invites scrolling. ([jain/landing-page-levels 2:28], [jain/learn-ui-in-10-minutes 0:41], [jain/modern-layouts 2:37])
 - **Marketing:** Differentiate the standard hero with a distinctive display font, an inline diagram, a live or animated product image (e.g. an AI thinking state), or a 3D focal point. Everyone uses the same layout; a live product moment is eye-catching. ([jain/google-ai-redesign 1:57], [jain/modern-layouts 2:45], [jain/no-code-3d-website 1:04])
 - **Marketing:** Pair the hero headline with subtext plus one primary and one secondary CTA, and give the nav CTA and hero CTA the same label. Matching labels build the right mental model that both go to the same place. ([jain/landing-page-levels 3:28], [jain/skincare-redesign 5:08])
 - **Marketing:** Consider a type-in prompt or search bar as the hero CTA instead of a plain button. A user already engaged in an action is more likely to finish it. ([jain/google-ai-redesign 1:08])
 - **Marketing:** Keep contextual illustrations around a centered core message rather than stripping them for clarity. They explain the product without reading; without them the hero feels empty. ([jain/boring-design-hacks 0:27])
-- **Marketing:** Arrange 'scattered' hero images deliberately: larger elements lower, smaller on top, with a safe margin around the text. It should feel random but isn't. ([jain/vibe-coding-cant-fix 5:54])
+- **Marketing:** Arrange 'scattered' hero images deliberately, then check: larger elements sit lower, smaller ones on top, and none enters a safe margin around the text. The scatter reads as random only when the size order and the text margin hold. ([jain/vibe-coding-cant-fix 5:54])
 
 ## Copy
 
@@ -40,8 +40,8 @@ Contents: Product visuals · Hero sections · Copy · Page structure and footers
 
 ## Social proof and trust
 
-- **Marketing:** Include a row of well-recognized customer logos: put only the most important in one row, or use a slow marquee whose edges fade out with a gradient and progressive blur. 41 of 50 software sites had one; visitors read logos as important companies using the product. ([jain/landing-page-levels 5:54], [jain/modern-layouts 0:38])
-- **Marketing:** Add social proof beyond the logo row: testimonials, badges, and a link to a dedicated proof page. Strengthens the brand. ([jain/landing-page-levels 5:54], [jain/vibe-coding-cant-fix 3:57])
+- **Marketing:** If the product has well-recognized customers, show a row of their logos: put only the most important in one row, or use a slow marquee whose edges fade out with a gradient and progressive blur. 41 of 50 software sites had one; visitors read logos as important companies using the product. ([jain/landing-page-levels 5:54], [jain/modern-layouts 0:38])
+- **Marketing:** If the product has testimonials, badges or a dedicated proof page, add them as social proof beyond the logo row. Strengthens the brand. ([jain/landing-page-levels 5:54], [jain/vibe-coding-cant-fix 3:57])
 - **Marketing:** Include a privacy and security section for any product that handles user data. Users need reassurance. ([jain/google-ai-redesign 5:32])
 
 [jain/awful-to-amazing 2:38]: https://youtu.be/ulSOdTgoGeY?t=158

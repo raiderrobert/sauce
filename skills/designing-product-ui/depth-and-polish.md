@@ -2,7 +2,7 @@
 
 Shadows, borders, corner radii, icons, imagery, gradients, texture and decorative touches that add depth and finish without clutter.
 
-Practitioner heuristics; accessibility and the product's design system take precedence. Tags, *Note:* text and citations are explained in `SKILL.md`.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/video timestamp`) link to that moment; definitions are at the end of the file.
 
 Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imagery and text over images · Style and decoration · Gradients, texture and effects
 
@@ -14,9 +14,8 @@ Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imag
 
 ## Shadows
 
-- Soften shadows: lower the opacity (the source drops Figma's 25% default to 15-20%) and increase the blur significantly. For subtle shadows, such as under popovers, the source's alternative to transparent black is a light-gray shadow color. Most shadows, including Figma's defaults, are too strong; lowering opacity alone can still look harsh. *Note: In CSS, e.g. box-shadow: 0 4px 16px rgb(0 0 0 / 0.08); a light-gray shadow color (e.g. #e5e5e5) is the opaque equivalent and only suits a white or near-white background.* ([jain/animated-sidebar 0:50], [jain/beginner-mistakes 1:37], [jain/every-ui-concept 6:25], [jain/web-design-hacks 6:14])
+- Soften shadows: keep the x-offset at or below the y-offset, set the blur to 1.3-2× the y-offset, and keep opacity low (source: 15-20% in Figma, down from its 25% default). For subtle shadows, such as under popovers, the source's alternative to transparent black is a light-gray shadow color. Most shadows, including Figma's defaults, are too strong; lowering opacity alone can still look harsh. *Note: In CSS, e.g. box-shadow: 0 4px 8px rgb(0 0 0 / 0.1): blur 2× the y-offset, opacity about 8-12%. A light-gray shadow color (e.g. #e5e5e5) is the opaque equivalent and only suits a white or near-white background.* ([jain/animated-sidebar 0:50], [jain/beginner-mistakes 1:37], [jain/every-ui-concept 6:25], [jain/web-design-hacks 6:03])
 - Scale shadow strength to elevation: lightest on cards, stronger on popovers and menus. For dark backgrounds, see also the dark-mode rule in color.md. Strength should reflect what sits above what. ([jain/every-ui-concept 6:33], [jain/web-design-hacks 6:14])
-- Keep shadow x-offset at or below the y-offset, and blur at 1.3-2× the y-offset. ([jain/web-design-hacks 6:03])
 - Combine an inner and an outer shadow to make buttons feel raised and tactile. *Note: In CSS, an inset box-shadow plus an outer one.* ([jain/every-ui-concept 6:41])
 
 ## Surfaces, borders and corners
@@ -35,19 +34,19 @@ Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imag
 
 - Put a linear gradient (or a subtle overlay) beneath text on photos rather than darkening the whole image; on image cards, let the image fill ~3/4 of the card height with a smooth gradient rising from its bottom. Text needs contrast, but full overlays don't do the image justice; smoother gradients look better. ([jain/crucial-ui-elements 4:03], [jain/every-ui-concept 8:44], [jain/skincare-redesign 4:39], [jain/website-layouts 2:03])
 - Choose images that aren't busy behind text, and never put text or UI over the image's focal point; for full-screen heroes pick a zoomed-out shot that leaves room for overlays. Busy or crowded backgrounds make overlaid text chaotic and hard to read. ([jain/learn-ui-in-10-minutes 1:26], [jain/tesla-wannabe-redesign 2:49])
-- For a more modern image gradient, layer a progressive blur on top of it. *Note: In CSS, backdrop-filter: blur() with a gradient mask-image.* ([jain/every-ui-concept 8:57])
+- For a more modern image gradient (as of 2026), layer a progressive blur on top of it. *Note: In CSS, backdrop-filter: blur() with a gradient mask-image.* ([jain/every-ui-concept 8:57])
 - Keep image treatment consistent; don't place cut-out images next to images with backgrounds. Mixed treatments feel disjointed. ([jain/tesla-wannabe-redesign 3:57])
 - **Marketing:** Vary image treatment on marketing pages: cut single objects out of their background, crop into a detail, or mask images into shapes that match the site's style. Draws attention to the object and breaks the boxy layout. ([jain/awful-to-amazing 2:22])
 
 ## Style and decoration
 
 - **Marketing:** Match playfulness to the intended feel, e.g. blobs, doodles and fun colors for a playful consumer brand, realistic imagery for a professional tool such as invoicing; drop decorative shapes that look messy against a clean brand. Nailing the feel of a site matters as much as layout. ([jain/boring-design-hacks 1:55], [jain/google-ai-redesign 1:52])
-- For a friendly feel use warm backgrounds, colorful visuals, rounded corners and large rounded buttons; for a modern, premium feel use tighter radii, less colorful premium imagery and subtle background noise. The same layout feels completely different with a different flavor. ([jain/crucial-ui-elements 3:35], [jain/learn-ui-in-10-minutes 5:39])
+- Pick one flavor and apply it to every corner, button and image: for a friendly feel, warm backgrounds, colorful visuals, well-rounded corners and large rounded buttons; for a modern, professional feel (as of 2026), much less rounded corners, less colorful premium imagery and subtle background noise. The same layout feels completely different with a different flavor. *Note: Editorial: e.g. friendly radii around 16-24px with pill buttons; modern radii around 4-8px.* ([jain/crucial-ui-elements 3:35], [jain/learn-ui-in-10-minutes 5:39])
 
 ## Gradients, texture and effects
 
 - Add subtle noise texture to image or color backgrounds, sparingly and never across the whole site. Adds texture and helps text contrast; too much looks like TV static. ([jain/google-ai-redesign 3:12], [jain/vibe-coding-cant-fix 5:30])
-- Build glass surfaces (e.g. a dark-mode tab bar) from a semi-transparent fill, a subtle gradient, a background blur, a 1px border and a soft inner shadow. Reads as polished, technical material. *Note: In CSS, the background blur is backdrop-filter: blur().* ([jain/ai-startup-components 5:59], [jain/crucial-ui-elements 1:48])
+- Build glass surfaces (e.g. a dark-mode tab bar; a common AI-startup style as of 2025) from a semi-transparent fill, a subtle gradient, a background blur, a 1px border and a soft inner shadow. Reads as polished, technical material. *Note: In CSS, the background blur is backdrop-filter: blur().* ([jain/ai-startup-components 5:59], [jain/crucial-ui-elements 1:48])
 - **Marketing:** Behind a hero, add a very subtle background gradient and darken its edges to pull attention to the center. Without it the section looks bland. ([jain/modern-layouts 3:15], [jain/vibe-coding-cant-fix 6:07])
 - **Marketing:** Build mesh gradients for a hero or section background, never the whole page, from 8-10 or more overlapping, semi-transparent, blurred circles. More overlapping layers give brighter, more vibrant results. *Note: In CSS, blur the circles with filter: blur(). The hero-or-section scope is editorial (see also the page-background rule in color.md).* ([jain/figma-web-effects 3:19])
 

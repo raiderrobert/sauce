@@ -2,7 +2,7 @@
 
 Platform-specific rules for mobile apps (thumb reach, navigation, layout, gestures, contextual actions) and native-feeling desktop apps.
 
-Practitioner heuristics; accessibility and the product's design system take precedence. Tags, *Note:* text and citations are explained in `SKILL.md`.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/video timestamp`) link to that moment; definitions are at the end of the file.
 
 Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures and feedback · Contextual mobile actions · Native-feeling desktop apps
 
@@ -13,7 +13,7 @@ Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures a
 ## Mobile navigation
 
 - Don't make the tab bar's add button stick up in a circle; keep it inline with the other tabs unless it is truly the main action. Users tap other tabs far more than add. ([jain/crucial-ui-elements 0:34], [jain/mobile-app-ui 0:27])
-- Use a bottom tab bar (often floating) when navigation fits a few key icons: five links at most, three or four ideally. Keeps every tap target above 44px. ([jain/mobile-app-ui 0:27])
+- Use a bottom tab bar (often floating, as of 2026) when navigation fits a few key icons: five links at most, three or four ideally. Keeps every tap target above 44px. ([jain/mobile-app-ui 0:27])
 - Give the active tab a distinct state (e.g. swap to a filled icon), and keep inactive tab icons clearly visible rather than dimmed to near-invisibility. The active indicator already shows the selection. ([jain/crucial-ui-elements 1:04])
 - When there are too many important nav items for a bottom bar, turn the sidebar into a home page of links, balanced with recent items on top, counts on the right, and a big search bar or primary button at the bottom. A lopsided list feels unfinished. ([jain/mobile-app-ui 0:59])
 - Use bottom sheets for secondary tasks, such as picking a template, to keep the user in context. Keeps context and is easy to dismiss with a gesture. ([jain/mobile-app-ui 4:06])
@@ -27,8 +27,8 @@ Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures a
 
 ## Gestures and feedback
 
-- On touch devices, swiping can replace carousel arrows, but keep the arrows available on pointer devices; for less familiar swipe actions, also offer a visible button or a long-press menu. Arrows are clutter where users can swipe, but the uninitiated need a visible path. *Note: For accessibility, keep a visible pause control for any autoplay, even where tap-to-pause is familiar (WCAG 2.2.2), and show arrows on keyboard focus. See also the carousel rule in components-and-states.md and the auto-rotate rule in motion.md.* ([jain/beginner-mistakes 5:05], [jain/mobile-swipe-interactions 1:50])
 - Use swipes to replace buttons, reveal context or trigger actions (e.g. swipe up to search), and teach users the swipe exists. Once learned, swiping is faster. *Note: Keep a tap-based alternative (button or menu) for each swipe action.* ([jain/mobile-app-ui 5:32], [jain/mobile-swipe-interactions 4:14])
+- For less familiar swipe actions, also offer a visible button or a long-press menu; for carousel arrows on touch, see the carousel rule in components-and-states.md. The uninitiated need a visible path, though swiping is faster once learned. ([jain/mobile-swipe-interactions 1:50])
 - Reveal useful secondary actions on swipe left or right while keeping the primary action visible. ([jain/dashboard-flaws 3:38])
 - Use swipe-to-confirm sliders for high-impact or irreversible actions like sending money or purchasing. It's far easier to tap a button by accident than to slide a slider across. *Note: Offer a single-pointer alternative, e.g. a press-and-hold or tap-then-confirm button.* ([jain/mobile-swipe-interactions 5:11])
 - Make gestures show progress toward commit and stay reversible until release, as in pull-to-refresh and swipe-to-delete. Users can back out at any point. ([jain/software-must-lie 8:38])
@@ -42,12 +42,11 @@ Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures a
 ## Native-feeling desktop apps
 
 - Make a desktop app a system available where it's needed, not a destination: design its popovers, extra windows and notifications too, keep utility apps focused on one job, and treat the app as a container for user content rather than a fixed-content page. The best desktop UX feels like it belongs on the computer, beyond the main window. ([jain/macos-apps 0:24])
-- Open quick-capture panels with a global keyboard shortcut (like Spotlight or Raycast) and keep utility windows minimal: no traffic lights, just a drop area, an input and a few buttons. Users are mid-task in other apps; the window should get out of the way. ([jain/macos-apps 1:02])
+- If the app has quick-capture panels, open them with a global keyboard shortcut (like Spotlight or Raycast) and keep utility windows minimal: no traffic lights, just a drop area, an input and a few buttons. Users are mid-task in other apps; the window should get out of the way. ([jain/macos-apps 1:02])
 - Integrate the window traffic lights into the top bar or sidebar, and keep the top ~50px of a Mac window uncluttered. That strip is used for dragging the window. ([jain/macos-apps 2:54])
-- Show keyboard shortcut hints on buttons. ([jain/macos-apps 1:37])
-- Support drag and drop of content both into and out of the app. Makes the app feel native. ([jain/macos-apps 7:24])
+- If actions have keyboard shortcuts, show the hints on their buttons. ([jain/macos-apps 1:37])
+- If the app holds user content, support dragging it both into and out of the app. Makes the app feel native. ([jain/macos-apps 7:24])
 
-[jain/beginner-mistakes 5:05]: https://youtu.be/AH_ugxmLeUM?t=305
 [jain/crucial-ui-elements 0:34]: https://youtu.be/gKM6b2EnW1k?t=34
 [jain/crucial-ui-elements 1:04]: https://youtu.be/gKM6b2EnW1k?t=64
 [jain/dashboard-flaws 3:38]: https://youtu.be/Ksx9C2-3yMo?t=218

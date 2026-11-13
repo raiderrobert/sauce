@@ -2,19 +2,19 @@
 
 How to approach the work: working from real product references, handling generated UI, and reviewing at real size.
 
-Practitioner heuristics; accessibility and the product's design system take precedence. Tags, *Note:* text and citations are explained in `SKILL.md`.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/video timestamp`) link to that moment; definitions are at the end of the file.
 
 Contents: Working from references · Generated UI · Review and polish
 
 ## Working from references
 
-- Work from real, simple product references (e.g. realistic sites rather than busy Dribbble shots), and study real software for how it handles intent, disclosure and onboarding. Real products show the answers; busy shots hide them. ([jain/dashboard-flaws 4:20], [jain/every-ui-concept 4:24], [jain/google-ai-redesign 2:44], [jain/software-must-lie 4:32], [jain/vibe-coding-pro-ui 0:59])
+- If the user supplies or names a reference product or image, follow its patterns, including how it handles intent, disclosure and onboarding; take the simple, realistic parts rather than busy showcase detail. Real products show the answers; busy shots hide them. ([jain/dashboard-flaws 4:20], [jain/every-ui-concept 4:24], [jain/google-ai-redesign 2:44], [jain/software-must-lie 4:32], [jain/vibe-coding-pro-ui 0:59])
 - Before reusing an attractive component from a showcase site such as Dribbble, check it for usability, color and contrast problems. Showcase shots often have contrast and usability issues. ([jain/crucial-ui-elements 0:05])
 
 ## Generated UI
 
-- Your first layout is the default one: before building, choose the layout and card design and state why, then check fonts, alignment and color. Generated UI is weakest at complex layouts and cards, where a little effort makes the biggest change; fonts, alignment and color are the next biggest fixes. ([jain/saas-vibe-code-mistakes 1:22], [jain/vibe-coding-pro-ui 5:06])
-- Before building, list the specific elements the UI needs (e.g. a sidebar with icons, a Gantt chart), not just its purpose. Concrete context produces far more fitting UI. ([jain/vibe-coding-pro-ui 2:54])
+- Check the layout first: if the result is the default sidebar + KPI row + one chart (or another stock layout and card design), confirm the content actually ranks that way and change the layout if it doesn't; then check fonts, alignment and color. Generated UI is weakest at complex layouts and cards, where a little effort makes the biggest change; fonts, alignment and color are the next biggest fixes. ([jain/saas-vibe-code-mistakes 1:22], [jain/vibe-coding-pro-ui 5:06])
+- Check the result for the specific elements the request implies (e.g. a sidebar with icons, a Gantt chart), not just its purpose; if it could fit any product with the same purpose, it is too generic. Concrete elements produce far more fitting UI. ([jain/vibe-coding-pro-ui 2:54])
 
 ## Review and polish
 

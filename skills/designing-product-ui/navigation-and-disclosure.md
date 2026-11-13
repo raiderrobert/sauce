@@ -2,7 +2,7 @@
 
 Progressive disclosure, sidebars and app navigation, page structure, onboarding and engagement, website nav bars and search.
 
-Practitioner heuristics; accessibility and the product's design system take precedence. Tags, *Note:* text and citations are explained in `SKILL.md`.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/video timestamp`) link to that moment; definitions are at the end of the file.
 
 Contents: Progressive disclosure · Sidebar and app navigation · Page structure and wayfinding · Onboarding and engagement · Website nav bars and menus · Search
 
@@ -21,11 +21,11 @@ Contents: Progressive disclosure · Sidebar and app navigation · Page structure
 
 - **App UI:** Use the standard app frame: persistent, global elements (navigation, profile, search, team, settings) in the sidebar, page-level actions in a top bar that changes with the current page, content in the center. The sidebar is the product's spine and frees vertical space; actions are contextual per page. ([jain/dashboard-ui 0:20], [jain/finance-dashboard-redesign 1:01], [jain/macos-apps 2:42], [jain/mobile-app-ui 0:51])
 - **App UI:** Give each sidebar link a recognizable icon and a short title so the sidebar can collapse to icons; for when icons need visible labels or tooltips, see also components-and-states.md. Icons make a sidebar scannable and collapsible. ([jain/animated-sidebar 0:25], [jain/beginner-mistakes 4:20], [jain/crucial-ui-elements 1:34], [jain/dashboard-ui 0:43])
-- **App UI:** Put an account card at the top of the sidebar: avatar, name and switcher chevrons, opening a popover of account links. Avoid gradient letter-circle avatars. A picture is identifiable and chevrons show it's clickable; gradient letter circles were an AI-generated cliché as of 2026. *Note: Editorial: when there is no photo, fall back to flat neutral initials.* ([jain/dashboard-ui 0:35], [jain/saas-vibe-code-mistakes 1:39], [jain/vibe-coding-pro-ui 5:18])
+- **App UI:** Put an account card at the top of the sidebar: avatar, name and switcher chevrons, opening a popover of account links. Avoid gradient letter-circle avatars. A picture is identifiable and chevrons show it's clickable; gradient letter circles were an AI-generated cliché as of 2026. *Note: For the no-photo fallback, see the avatar rule in data-and-dashboards.md.* ([jain/dashboard-ui 0:35], [jain/saas-vibe-code-mistakes 1:39], [jain/vibe-coding-pro-ui 5:18])
 - **App UI:** Move rarely used links such as Settings and Help to the bottom of the sidebar, and drop needless group labels like 'Menu'. ([jain/dashboard-ui 1:03], [jain/vibe-coding-pro-ui 5:23])
 - **App UI:** Use tabs for related views (e.g. settings, billing) instead of more sidebar links. Keeps users in context; new sections become another tab as the product grows. ([jain/dashboard-ui 6:59], [jain/saas-vibe-code-mistakes 4:43])
 - **App UI:** Group navigation links by relevance and nest them into collapsible groups as they grow. Navigation is about reducing cognitive load. ([jain/dashboard-ui 0:57])
-- **App UI:** Expand a collapsed sidebar only after the pointer dwells at the edge. Avoids accidental pop-outs from fast mouse movement. ([jain/software-must-lie 3:46])
+- **App UI:** If a collapsed sidebar expands on hover, expand it only after the pointer dwells at the edge. Avoids accidental pop-outs from fast mouse movement. ([jain/software-must-lie 3:46])
 - **App UI:** In app menus, separate keyboard shortcuts from item labels with alignment and type, e.g. right-aligned in secondary text. The structure tells users what is clickable and what is a hint. ([jain/captivating-sections 4:22])
 
 ## Page structure and wayfinding
@@ -42,9 +42,9 @@ Contents: Progressive disclosure · Sidebar and app navigation · Page structure
 - **App UI:** Offer a skip button on optional onboarding steps, plus search or an 'Other' option next to preset choices. Some users won't fit the presets. ([jain/beginner-mistakes 0:30])
 - **App UI:** If the product serves both teams and individuals, ask team size early in onboarding and branch the flow; skip invite-teammates for individuals. It shapes every following step. ([jain/learn-ui-in-10-minutes 7:00])
 - **App UI:** Show the app's value during onboarding (e.g. insights from the user's own data) before introducing gamification, and reassure users about safety when asking for a sensitive connection like a bank account. Demonstrates value before asking for engagement or trust. ([jain/gamifying-apps 4:28])
-- **App UI:** Teach keyboard shortcuts by having users press the key shortcut to dismiss onboarding, and provide a shortcut cheat sheet (e.g. in settings). Doing it teaches it; shortcuts are easy to forget. ([jain/macos-apps 8:34])
-- **App UI:** In products that already use gamification, center it on one currency (XP, karma) that shows progress and unlocks features, and tie rewards to users' real goals. Progress and unlocks keep users going; meaningless rewards don't. ([jain/gamifying-apps 0:57])
-- **App UI:** In products that already use gamification, add leaderboards and public badges so users can compare with friends; normalize leaderboards to a local cohort when users' resources differ widely. Comparison motivates, but only when it's fair across currencies and incomes. ([jain/gamifying-apps 1:22])
+- **App UI:** If the product has keyboard shortcuts, teach them by having users press a shortcut to dismiss onboarding, and provide a shortcut cheat sheet (e.g. in settings). Doing it teaches it; shortcuts are easy to forget. ([jain/macos-apps 8:34])
+- **App UI:** If the product already uses gamification, center it on one currency (XP, karma) that shows progress and unlocks features, and tie rewards to users' real goals. Progress and unlocks keep users going; meaningless rewards don't. ([jain/gamifying-apps 0:57])
+- **App UI:** If the product already uses gamification and users benefit from comparing with friends, add leaderboards and public badges; normalize leaderboards to a local cohort when users' resources differ widely. Comparison motivates, but only when it's fair across currencies and incomes. ([jain/gamifying-apps 1:22])
 
 ## Website nav bars and menus
 

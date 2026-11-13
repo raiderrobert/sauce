@@ -2,19 +2,19 @@
 
 Choosing and restraining color: accents, icons, neutrals and backgrounds, dark mode, semantic colors, contrast and palette building.
 
-Practitioner heuristics; accessibility and the product's design system take precedence. Tags, *Note:* text and citations are explained in `SKILL.md`.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/video timestamp`) link to that moment; definitions are at the end of the file.
 
 Contents: Restraint and purpose · Neutrals and backgrounds · Dark mode · Semantic and status colors · Contrast · Palettes and scales
 
 ## Restraint and purpose
 
 - Use color to communicate status or data meaning, not decoration; remove any color that is there just for color's sake. A reduced palette creates clarity. ([jain/color-mistakes 0:14], [jain/dashboard-flaws 1:50], [jain/every-ui-concept 5:41])
-- Reserve the accent for the one component you most want users to act on; don't let several accents compete on sibling cards. On marketing pages, keep the buttons themselves neutral and bring the bright accent in only on hover or a CTA reveal (see the landing-page color rule below). Being the only accent-colored element is what makes it stand out. ([jain/color-mistakes 0:46], [jain/tesla-wannabe-redesign 4:15], [jain/weirdly-perfect-ui 6:54])
-- Keep UI icons (nav, buttons, inputs, list rows) neutral. Color an icon only when the color carries status or meaning, for feature-illustration icons on marketing pages (e.g. in accent colors), or for a splash of color in analytics and stat rows. UI icons work as recognizable symbols; color there is noise. ([jain/color-mistakes 1:09], [jain/saas-vibe-code-mistakes 5:12], [jain/vibe-coding-cant-fix 2:43])
+- Reserve the accent for the primary action and active or selected states; don't let several accents compete on sibling cards. For marketing pages, see the landing-page color rule below. Being the only accent-colored element is what makes it stand out. ([jain/color-mistakes 0:46], [jain/weirdly-perfect-ui 6:54])
+- Keep UI icons (nav, buttons, inputs, list rows) neutral. Color an icon only when the color carries status or meaning, or for feature-illustration icons on marketing pages (e.g. in accent colors); on dashboards, add color through charts instead (see data-and-dashboards.md). UI icons work as recognizable symbols; color there is noise. ([jain/color-mistakes 1:09], [jain/vibe-coding-cant-fix 2:43])
 - Don't put the brand color on everything that can take it; give low-importance elements or cards a light tint of it with dark text. Full-strength brand color dominates the page and causes contrast problems. ([jain/color-mistakes 0:56], [jain/landing-page-levels 1:44])
 - **App UI:** Use brand color on active states, such as the active tab or nav item, for a controlled pop of color. ([jain/color-mistakes 1:12], [jain/crucial-ui-elements 1:21])
 - In product UI, skip 60-30-10 and stay almost entirely neutral with a tiny accent: e.g. Vercel's dark UI was roughly 90% black, 8% white and 2% red accent by screen area, as of 2026. Use 60-30-10 (dominant neutral, secondary, accent) on marketing pages. Product UI is a frame for content. *Note: The 90/8/2 example is a dark-mode UI; in light mode the large share is the light neutral.* ([jain/60-30-10-rule 0:08], [jain/color-mistakes 0:29])
-- **Marketing:** On landing pages, let color come from product screenshots and curated imagery and keep buttons neutral (e.g. white on dark); there, neutral buttons win over an accent-filled CTA, with the accent held back for hover (see the accent rule above). A more vibrant, professional way to add color. ([jain/landing-page-levels 2:46])
+- **Marketing:** On landing pages, let color come from product screenshots and curated imagery and keep buttons neutral (e.g. white on dark), bringing the bright accent in only on hover or a CTA reveal. A more vibrant, professional way to add color, and the accent stays tasteful rather than overpowering. ([jain/landing-page-levels 2:46], [jain/tesla-wannabe-redesign 4:15])
 
 ## Neutrals and backgrounds
 
@@ -26,8 +26,8 @@ Contents: Restraint and purpose · Neutrals and backgrounds · Dark mode · Sema
 ## Dark mode
 
 - **App UI:** Create depth in dark mode with lighter raised surfaces and borders: each elevation step gets a lighter fill. Shadows barely read on dark backgrounds; if you use one, make it stronger than in light mode. Surfaces lighten as they elevate; a light-mode shadow disappears against a dark page. ([jain/60-30-10-rule 4:14], [jain/color-mistakes 1:52], [jain/every-ui-concept 5:57], [jain/ui-cheat-codes 7:29], [jain/web-design-hacks 6:14])
-- Space dark-mode neutrals about twice as far apart as light mode: about 4-6% white between adjacent layers versus about 2% (per layer, not total). In HSB, the source raises brightness about 4-6 and lowers saturation about 10-20 per layer, starting from a saturated dark blue. Dark colors look more alike, so they need more distance. *Note: Editorial: lightly tinted neutrals need far less saturation change, or none.* ([jain/60-30-10-rule 3:29], [jain/color-mistakes 5:03], [jain/macos-apps 5:05], [jain/ui-cheat-codes 7:36])
-- Use the 300-400 step of the accent ramp as the dark-mode primary (hover at 400-500) and lighten over-saturated colors; e.g. with Tailwind scales, light mode = 50 background + 500 accent, dark mode = 950 background + 300 primary. Primary colors are usually far too saturated on dark backgrounds. *Note: For accessibility, fills as light as 300-400 need dark text, not white. In light mode, use the 500 step only for non-text accents; links and white-text fills need the step that passes 4.5:1 (see the ramp rule below).* ([jain/60-30-10-rule 3:56], [jain/awful-to-amazing 4:37], [jain/ui-cheat-codes 7:07])
+- Space dark-mode neutrals about twice as far apart as light mode: about 4-6% white between adjacent layers versus about 2% (per layer, not total). In HSB, raise brightness about 4-6 per layer and lower saturation only for a saturated base (source: 10-20 per layer from a saturated dark blue; lightly tinted neutrals need little or none). Dark colors look more alike, so they need more distance. ([jain/60-30-10-rule 3:29], [jain/color-mistakes 5:03], [jain/macos-apps 5:05], [jain/ui-cheat-codes 7:36])
+- Use the 300-400 step of the accent ramp as the dark-mode primary (hover at 400-500), with dark text on fills that light, and lighten over-saturated colors; e.g. with Tailwind scales, light mode = 50 background + 500 for non-text accents, dark mode = 950 background + 300 primary (source: light mode 50 + 500 accent). Primary colors are usually far too saturated on dark backgrounds. *Note: In light mode, links and white-text fills need the step that passes 4.5:1 (see the ramp rule below).* ([jain/60-30-10-rule 3:56], [jain/awful-to-amazing 4:37], [jain/ui-cheat-codes 7:07])
 - Brighten borders and surfaces enough that layers stay distinguishable, but lower border contrast when light borders look harsh against dark cards. Dark layers need bigger differences, yet bright outlines glare. ([jain/60-30-10-rule 4:03], [jain/color-mistakes 5:03], [jain/every-ui-concept 5:52])
 - Don't build dark mode by inverting light mode; design both as distinct but consistent palettes. Inversion gives light mode too much contrast and dark mode too little separation. ([jain/color-mistakes 4:55], [jain/macos-apps 5:05])
 - Dim text in dark mode: use light grays for most text and reserve pure white for the most important text and actions. Dark mode is about reducing eye strain. *Note: Editorial: e.g. secondary text as white at about 60-70% opacity; check 4.5:1 against the actual surface.* ([jain/60-30-10-rule 4:03], [jain/color-mistakes 4:37])
@@ -35,19 +35,18 @@ Contents: Restraint and purpose · Neutrals and backgrounds · Dark mode · Sema
 
 ## Semantic and status colors
 
-- Include semantic colors even in a neutral or monochrome palette: green for success, red for danger or urgency (e.g. a red chip on an urgent item in an activity log), yellow for warning, blue for trust. Semantic colors are signifiers, so they override a monochrome palette. *Note: Don't rely on color alone; pair it with an icon or text label (WCAG 1.4.1).* ([jain/60-30-10-rule 4:35], [jain/color-mistakes 5:55], [jain/dashboard-flaws 1:58], [jain/every-ui-concept 5:30])
-- Color destructive actions such as delete red, never the brand color. Brand color draws attention without signaling destruction. ([jain/60-30-10-rule 4:50], [jain/color-mistakes 5:51])
+- Color destructive actions such as delete red, never the brand color, and keep semantic colors even in a neutral or monochrome palette: green for success, red for danger or urgency, yellow for warning, blue for trust. Brand color draws attention without signaling destruction; semantic colors are signifiers, so they override a monochrome palette. *Note: Don't rely on color alone; pair it with an icon or text label (WCAG 1.4.1).* ([jain/60-30-10-rule 4:35], [jain/color-mistakes 5:51], [jain/dashboard-flaws 1:58], [jain/every-ui-concept 5:30])
 - **App UI:** Notification badges may use the brand color instead of red. Notifications are far more flexible than destructive actions. ([jain/color-mistakes 6:03])
 
 ## Contrast
 
-- Check every colored pair (chips, icons on tinted backgrounds, tab labels) against WCAG contrast and fix any that fail; make labels dark enough to read. The whole point of color is that people can see it. *Note: Compute the ratio with a script or tool rather than eyeballing it. WCAG AA requires 4.5:1 for body text and 3:1 for large text and UI graphics.* ([jain/color-mistakes 0:23], [jain/crucial-ui-elements 0:49], [jain/vibe-coding-pro-ui 5:38])
+- Colored pairs fail contrast most often on chips, icons on tinted backgrounds and tab labels: check those pairs and darken the label or icon until it passes. The whole point of color is that people can see it. *Note: WCAG AA requires 4.5:1 for text and 3:1 for large text and UI graphics; compute the ratio with a tool rather than eyeballing it.* ([jain/color-mistakes 0:23], [jain/crucial-ui-elements 0:49], [jain/vibe-coding-pro-ui 5:38])
 - If a brand color fails WCAG with white text, darken it or switch to a passing complementary color; adapt brand colors for UI rather than using them raw. Many brands pair a primary with an adapted secondary for exactly this reason. ([jain/color-mistakes 3:06])
 
 ## Palettes and scales
 
 - Start the palette from one base color (from the brand or its imagery) and extend it with slightly rotated analogous hues and one complementary color, not opacity variations alone. Opacity variations alone feel bland. ([jain/color-mistakes 2:49], [jain/every-ui-concept 4:59], [jain/ui-cheat-codes 3:27], [jain/vibe-coding-cant-fix 2:06])
-- Build the accent as a 50-950 ramp rather than one color: the source uses the 500 or 600 step as the main color, 700 for hover and 400 or 500 for links, with light tints for chips and backgrounds; take hover and pressed colors from adjacent steps (see also components-and-states.md). Large design systems build components from ramps. *Note: For accessibility on white, use the 500 step for non-text accents only; links and white-text fills need the first step that passes 4.5:1, often 600-700 for blues and darker for greens and yellows.* ([jain/60-30-10-rule 2:19], [jain/every-ui-concept 5:14])
+- Build the accent as a 50-950 ramp rather than one color: use the 500 step for non-text accents, the first step that passes 4.5:1 on white (often 600-700 for blues, darker for greens and yellows) for links and white-text fills, and a darker adjacent step for hover, with light tints for chips and backgrounds (source: 500 or 600 main, 700 hover, 400 or 500 links). Take hover and pressed colors from adjacent steps (see also components-and-states.md). Large design systems build components from ramps. ([jain/60-30-10-rule 2:19], [jain/every-ui-concept 5:14])
 - Derive a few darker shades from a base color in HSB, per shade: +20 saturation, -10 brightness, and hue ~20° toward blue (the source derives two shades this way). Shifting toward blue matches perceived darkness: blues and purples read darkest, yellows lightest. *Note: Values are per step; across a full 50-950 ramp, shrink the hue shift so the total stays small.* ([jain/ui-cheat-codes 3:20])
 - Theme neutrals in OKLCH: from a gray, drop lightness by ~0.03, raise chroma by ~0.02, then set the hue to the brand's. Consistently themes any design, including dark mode. ([jain/60-30-10-rule 5:53])
 
@@ -60,7 +59,6 @@ Contents: Restraint and purpose · Neutrals and backgrounds · Dark mode · Sema
 [jain/60-30-10-rule 4:03]: https://youtu.be/66oOi9OLMCw?t=243
 [jain/60-30-10-rule 4:14]: https://youtu.be/66oOi9OLMCw?t=254
 [jain/60-30-10-rule 4:35]: https://youtu.be/66oOi9OLMCw?t=275
-[jain/60-30-10-rule 4:50]: https://youtu.be/66oOi9OLMCw?t=290
 [jain/60-30-10-rule 5:53]: https://youtu.be/66oOi9OLMCw?t=353
 [jain/awful-to-amazing 4:37]: https://youtu.be/ulSOdTgoGeY?t=277
 [jain/awful-to-amazing 5:04]: https://youtu.be/ulSOdTgoGeY?t=304
@@ -83,7 +81,6 @@ Contents: Restraint and purpose · Neutrals and backgrounds · Dark mode · Sema
 [jain/color-mistakes 5:03]: https://youtu.be/EOcY3hPMQkk?t=303
 [jain/color-mistakes 5:26]: https://youtu.be/EOcY3hPMQkk?t=326
 [jain/color-mistakes 5:51]: https://youtu.be/EOcY3hPMQkk?t=351
-[jain/color-mistakes 5:55]: https://youtu.be/EOcY3hPMQkk?t=355
 [jain/color-mistakes 6:03]: https://youtu.be/EOcY3hPMQkk?t=363
 [jain/crucial-ui-elements 0:49]: https://youtu.be/gKM6b2EnW1k?t=49
 [jain/crucial-ui-elements 1:21]: https://youtu.be/gKM6b2EnW1k?t=81
@@ -100,7 +97,6 @@ Contents: Restraint and purpose · Neutrals and backgrounds · Dark mode · Sema
 [jain/landing-page-levels 1:44]: https://youtu.be/eMMiLeo_UGI?t=104
 [jain/landing-page-levels 2:46]: https://youtu.be/eMMiLeo_UGI?t=166
 [jain/macos-apps 5:05]: https://youtu.be/Vy0KKvZJRH8?t=305
-[jain/saas-vibe-code-mistakes 5:12]: https://youtu.be/PDcQJOPby1k?t=312
 [jain/tesla-wannabe-redesign 4:15]: https://youtu.be/V3Omp1hm0Sg?t=255
 [jain/ui-cheat-codes 3:20]: https://youtu.be/c1TvOcKdBVE?t=200
 [jain/ui-cheat-codes 3:27]: https://youtu.be/c1TvOcKdBVE?t=207
