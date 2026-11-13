@@ -2,23 +2,23 @@
 
 Purpose, easing and timing, hover and press feedback, transitions, gestures, loaders and entrances, and scroll and ambient motion.
 
-Practitioner heuristics, not standards: accessibility requirements (WCAG contrast, keyboard access, `prefers-reduced-motion`) and the product's own design system take precedence. Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. *Note:* text is an uncited editorial caveat. Each citation (`author/video timestamp`) links to that moment in the source; the link definitions at the end of the file can be skipped, and full entries are in `references/bibliography.md`.
+Practitioner heuristics; accessibility and the product's design system take precedence. Tags, *Note:* text and citations are explained in `SKILL.md`.
 
 Contents: Purpose and restraint · Easing and timing · Hover and press feedback · Transitions and overlays · Gestures and input timing · Loaders and entrances · Scroll and ambient motion
 
 ## Purpose and restraint
 
-- Animate only to add clarity, feedback or focus, e.g. to direct the eye to the product or key text; never motion for its own sake. Purposeless animation distracts instead of supporting clarity. *Note: Honor prefers-reduced-motion: reduce or remove non-essential animation.* ([jain/boring-design-hacks 5:08], [jain/captivating-sections 2:22], [jain/genius-designer 3:32], [jain/vibe-coding-cant-fix 7:37])
-- Keep animations subtle and simple: prefer a fade, a short slide (about 8-24px) or a slight scale (about 0.95-1.05) over large sweeps, spins and bounces, and execute them cleanly at full quality. Flashy animations slow the site and overwhelm people; blurry assets look sloppy. *Note: The distance and scale figures are editorial examples.* ([jain/captivating-sections 4:06], [jain/modern-layouts 4:24], [jain/think-like-product-designer 0:47], [jain/trendy-web-animations 0:06])
+- Animate only to add clarity, feedback or focus, e.g. to direct the eye to the product or key text; not motion for its own sake. Purposeless animation distracts instead of supporting clarity. *Note: Honor prefers-reduced-motion: reduce or remove non-essential animation.* ([jain/boring-design-hacks 5:08], [jain/captivating-sections 2:22], [jain/genius-designer 3:32], [jain/vibe-coding-cant-fix 7:37])
+- Keep animations subtle and simple rather than big or flashy, and execute them cleanly at full quality. Flashy animations slow the site and overwhelm people; blurry assets look sloppy. *Note: Editorial examples: a fade, a short slide (about 8-24px) or a slight scale (about 0.95-1.05) rather than large sweeps, spins and bounces.* ([jain/captivating-sections 4:06], [jain/modern-layouts 4:24], [jain/think-like-product-designer 0:47], [jain/trendy-web-animations 0:06])
 - **Marketing:** Expressive motion belongs on marketing pages: there, motion can be used even where static would work, built from a few repeated themes (e.g. consistent section transitions) that become the brand's animation identity. Repeated animations, not one-offs, form a motion identity. ([jain/boring-design-hacks 2:50], [jain/vibe-coding-cant-fix 7:27])
 - **App UI:** Keep dashboard animation tame; spend creativity on chart hovers such as value bubbles or dimming the other bars. ([jain/dashboard-ui 7:23])
 
 ## Easing and timing
 
-- Always apply easing, almost never linear, and map the curve to the tone: snappy = a short ease-out, springy = a spring with visible overshoot, smooth = a longer ease-in-out. Real objects speed up and slow down, so eased motion feels natural; the easing defines how an animation feels. ([jain/boring-design-hacks 3:40], [jain/mobile-swipe-interactions 0:44])
-- **Marketing:** On marketing pages and load sequences, move large elements (reveals, expansions, wipes) with an exponential ease-in-out, e.g. cubic-bezier(0.87, 0, 0.13, 1) over ~0.8-1.3s. Large movements need a strong curve. ([jain/load-animations-code 5:32], [jain/load-animations-figma 4:55])
-- **App UI:** In app UI, fade and transition elements with a simple ease-in-out around 200ms, keeping most transitions within about 150-300ms. Small fades and state changes need speed; long curves make product screens feel slow. *Note: The 150-300ms bound is editorial; the source gives ~200ms for fades.* ([jain/load-animations-figma 4:55])
-- **Marketing:** Use a spring rather than default easing for hover pop-ups, e.g. in the Motion library { type: 'spring', stiffness: 636, damping: 24 } (about 0.5s with a visible bounce). The spring is what makes the pop-up feel alive. ([jain/micro-animations 3:06])
+- Apply easing, almost never linear, and choose the curve for the tone you want: snappy and performant, fun and springy, or slow and smooth. Real objects speed up and slow down, so eased motion feels natural; the easing defines how an animation feels. *Note: Editorial mapping: snappy = a short ease-out, springy = a spring with visible overshoot, smooth = a longer ease-in-out.* ([jain/boring-design-hacks 3:40], [jain/mobile-swipe-interactions 0:44])
+- **Marketing:** On marketing pages and load sequences, move large elements (reveals, expansions, wipes) with an exponential ease-in-out; the sources use about 1.3s for a full-screen slide-up and about 400ms for an expanding navbar. Large movements need a strong curve. *Note: In CSS, an expo ease-in-out is about cubic-bezier(0.87, 0, 0.13, 1).* ([jain/load-animations-code 5:32], [jain/load-animations-figma 4:55])
+- Fade and transition small elements with a simple ease-in-out of about 200-300ms; keep the exponential curve for large movements. *Note: Editorial: in app UI, keep most transitions within about 150-300ms; long curves make product screens feel slow.* ([jain/load-animations-figma 4:55])
+- **Marketing:** Use a spring rather than default easing for hover pop-ups, e.g. the source's 500ms spring with stiffness 636 and damping 24. The spring is what makes the pop-up feel alive. *Note: In the Motion library, { type: 'spring', stiffness: 636, damping: 24 }; Figma and code springs may not match exactly.* ([jain/micro-animations 3:06])
 
 ## Hover and press feedback
 
@@ -35,7 +35,7 @@ Contents: Purpose and restraint · Easing and timing · Hover and press feedback
 - **App UI:** Use motion direction to situate users: temporary actions slide up from the bottom, progress slides in from the side, and page transitions follow the swipe direction. Direction tells users where they are in the flow. ([jain/captivating-sections 4:58], [jain/mobile-swipe-interactions 3:19])
 - **App UI:** For swipe-back transitions, offset the background screen about 35% left and slide it right as the top screen leaves. Makes the transition feel continuous. ([jain/mobile-app-ui 5:17])
 - **Marketing:** On marketing pages and hero moments, transition by zooming a shared image into the next page's hero instead of sliding a new page in; app navigation follows the swipe direction instead. Creates continuity between screens. ([jain/mobile-swipe-interactions 4:03])
-- **Marketing:** Add a brief filter: blur() to tab and section content transitions. A small change that makes switches feel much smoother. ([jain/landing-page-levels 8:36])
+- **Marketing:** Add a brief blur to tab and section content transitions. A small change that makes switches feel much smoother. *Note: In CSS, filter: blur().* ([jain/landing-page-levels 8:36])
 
 ## Gestures and input timing
 
@@ -53,7 +53,7 @@ Contents: Purpose and restraint · Easing and timing · Hover and press feedback
 
 ## Scroll and ambient motion
 
-- **Marketing:** Auto-rotate important images only with a visible pause control; stop rotation on hover and focus, turn the active dot into a progress timer, and add a slight zoom on hover. Encourages users to see every image without trapping those bothered by motion. ([jain/crucial-ui-elements 10:25], [jain/micro-animations 4:10], [jain/vibe-coding-cant-fix 8:14])
+- **Marketing:** Auto-rotate important images on a timer with a visible pause control; turn the active dot into a progress timer and add a slight zoom on hover. Encourages users to see every image; the pause control serves those bothered by the motion. *Note: For accessibility (WCAG 2.2.2), also pause rotation on hover and keyboard focus. On touch, swiping can replace carousel arrows; keep them on pointer devices (see also the carousel rule in components-and-states.md and the touch rule in mobile-and-desktop.md).* ([jain/crucial-ui-elements 10:25], [jain/micro-animations 4:10], [jain/vibe-coding-cant-fix 8:14])
 - Use scrolljacking very sparingly, if ever; prefer a well-built hover animation that demonstrates the product over complex scroll animations. Complex scroll animation makes navigation harder and adds little. ([jain/captivating-sections 2:52], [jain/genius-designer 4:20])
 - **Marketing:** Keep looping and ambient motion slow and simple: marquees slow enough to read, gentle photo zooms in or out; weigh the usability cost before adding them. Complicated or fast loops are distracting. ([jain/awful-to-amazing 5:32], [jain/trendy-web-animations 4:06])
 - **Marketing:** Apply subtle parallax on scroll to elements placed in spacious margins. A lifelike depth effect without busy backgrounds. ([jain/boring-design-hacks 3:48])

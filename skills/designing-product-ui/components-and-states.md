@@ -2,7 +2,7 @@
 
 Component behavior and UI states: feedback, empty/loading/error states, buttons, chips, icons, cards, carousels, overlays, destructive actions, forms and AI interfaces.
 
-Practitioner heuristics, not standards: accessibility requirements (WCAG contrast, keyboard access, `prefers-reduced-motion`) and the product's own design system take precedence. Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. *Note:* text is an uncited editorial caveat. Each citation (`author/video timestamp`) links to that moment in the source; the link definitions at the end of the file can be skipped, and full entries are in `references/bibliography.md`.
+Practitioner heuristics; accessibility and the product's design system take precedence. Tags, *Note:* text and citations are explained in `SKILL.md`.
 
 Contents: Feedback and states · Empty, loading and error states · Buttons, chips and icons · Cards and carousels · Overlays, destructive actions and saving · Forms and inputs · AI interfaces
 
@@ -14,13 +14,13 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 - Design button states up front: default, hover, pressed, disabled, plus a loading state with spinner where needed. Otherwise state colors get picked at random at the end. ([jain/every-ui-concept 7:35], [jain/micro-animations 0:22])
 - Keep off and default states visually quiet and reserve color for changed or active states; mark the selected toggle option with a background highlight and gray out inactive options and default values in settings. Color is the signal that something changed; non-default values should catch the eye. ([jain/every-ui-concept 0:18], [jain/weirdly-perfect-ui 6:07])
 - Use toasts to confirm changes made in a modal and to surface warnings and errors without taking over the screen; give them loading and success states, not just a slide-up. Users can't see the page behind a modal, and warnings are frequently missed. ([jain/dashboard-ui 5:16], [jain/micro-animations 1:52])
-- Derive interaction states along the base color's scale: hover one step, pressed one step further, in a consistent direction for the theme. Make disabled a muted fill with muted but still readable text, defined separately for each theme. Consistent steps keep states predictable. ([jain/color-mistakes 6:16])
-- Show selected states with a brighter, heavier border plus a soft glow behind, e.g. box-shadow: 0 0 24px in the accent at low opacity. *Note: Give keyboard focus a separate indicator that reaches 3:1 against adjacent colors and looks different from selected.* ([jain/animated-sidebar 6:08])
+- Derive interaction states from the base color: hover slightly lighter or brighter, pressed slightly darker, disabled desaturated (the source's example is a light-gray fill with white text). On mobile, which has no hover, a slightly darker press state is enough. Small shifts in the base color are enough to read as hover, press and disabled. *Note: Editorial: keep disabled text readable (white on light gray often isn't) and define the disabled style separately for each theme.* ([jain/color-mistakes 6:16])
+- Show selected states with a brighter, heavier border plus a soft glow behind (the source blurs a duplicate shape by about 24px). *Note: In CSS, e.g. box-shadow: 0 0 24px in the accent at low opacity. Give keyboard focus a separate indicator that reaches 3:1 against adjacent colors and looks different from selected.* ([jain/animated-sidebar 6:08])
 
 ## Empty, loading and error states
 
 - Design beyond the happy path: give every screen empty, loading, success and error states. Never show a blank list, dashboard or new object; show a message and a CTA that starts the first task. Users aren't left staring at a blank screen and know the next step. ([jain/dashboard-ui 3:18], [jain/macos-apps 3:31], [jain/think-like-product-designer 0:42])
-- Keep functional loaders as short as the work allows, looping and fluid. A deliberate intro loader is a marketing device only (see also motion.md). People are impatient and the product should feel fast. ([jain/ai-startup-components 1:37], [jain/trendy-web-animations 1:57])
+- Keep loading indicators short, looping and fluid, and keep any decorative preloader short too, so users aren't waiting to see content (see also motion.md). People are impatient and the product should feel fast. ([jain/ai-startup-components 1:37], [jain/trendy-web-animations 1:57])
 - **App UI:** For long-running actions (builds, deploys, integrations), show an informative loading state, then report success or error immediately. Users are never left guessing. ([jain/think-like-product-designer 1:28])
 - Use skeleton placeholders with a shimmer that match the final layout so content slots into place. The layout feels alive while loading. ([jain/ai-startup-components 4:45])
 - For no-results states, show imagery, say that nothing matched, suggest alternatives for likely typos, and offer an exit action. ([jain/mobile-app-ui 6:52])
@@ -33,18 +33,18 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 - Remove duplicate controls that do the same thing (e.g. two search bars); merge similar actions into one button with options (e.g. share slide, chapter or all). Two buttons that look like they do the same thing confuse users. ([jain/finance-dashboard-redesign 1:23], [jain/spotify-wrapped-redesign 6:14])
 - Use chips for breadcrumbs and categories, and let users swap a tag inline from its chip instead of a hidden menu. Chips are recognizable and expose functionality otherwise buried in a menu. ([jain/crucial-ui-elements 9:02], [jain/weirdly-perfect-ui 4:19])
 - **App UI:** Delay the first tooltip (~1s of hover), then show tooltips on adjacent items instantly. After one wait, assume the user wants information on nearby controls. ([jain/micro-animations 4:25], [jain/software-must-lie 3:36])
-- Distinguish chips from buttons: never the primary CTA color, always slimmer, with vertical padding a half or quarter of horizontal (e.g. 16px horizontal with 8px or 4px vertical). Too little background looks wrong; too much turns the chip into a button. ([jain/crucial-ui-elements 9:18])
-- Set button horizontal padding to about twice the vertical padding (e.g. 12px vertical, 24px horizontal) so the width follows the label. ([jain/every-ui-concept 7:21])
+- Distinguish chips from buttons: almost never the primary CTA color, always slimmer, with vertical padding a half or a quarter of the horizontal (e.g. 20px horizontal with 10px or 5px vertical). Too little background looks wrong; too much turns the chip into a button. *Note: Editorial: on a 4px grid, e.g. 16px horizontal with 8px or 4px vertical.* ([jain/crucial-ui-elements 9:18])
+- Set button horizontal padding to about twice the vertical padding. *Note: Editorial example: 12px vertical, 24px horizontal.* ([jain/every-ui-concept 7:21])
 - Use ghost buttons (no background until hover) for sidebar links and secondary actions beside a primary. ([jain/every-ui-concept 7:05])
 - **App UI:** Trigger buttons on release, not press, so users can cancel by moving off; open menus and popovers on press so users can press, drag and release on an item in one motion. Release-triggering gives every button a built-in cancel. ([jain/software-must-lie 7:46])
 - Size icons to the text's line height (e.g. 24px) and tighten the gap to the text next to them. Most icons are too large. ([jain/every-ui-concept 6:56])
 
 ## Cards and carousels
 
-- Show carousel dots for count and position with arrows beside them, but make the carousel draggable or give it large nav buttons rather than relying on tiny dots to navigate; keep controls legible over any image (e.g. on a dark blurred backing or below the image). Dots show how many items there are and where you are, but users can't be expected to hit tiny circles, and a new image can hide overlaid controls. ([jain/crucial-ui-elements 10:04], [jain/finance-dashboard-redesign 5:38], [jain/mobile-swipe-interactions 1:09], [jain/website-layouts 4:38])
+- Show carousel dots for count and position with arrows beside them, but make the carousel draggable or give it large nav buttons rather than relying on tiny dots to navigate; keep controls legible over any image (e.g. on a dark blurred backing or below the image). On touch, swiping can replace the arrows, but keep them available on pointer devices. Dots show how many items there are and where you are, but users can't be expected to hit tiny circles, and a new image can hide overlaid controls. *Note: For accessibility, any autoplay needs a visible pause control. See also the auto-rotate rule in motion.md and the touch rule in mobile-and-desktop.md.* ([jain/crucial-ui-elements 10:04], [jain/finance-dashboard-redesign 5:38], [jain/mobile-swipe-interactions 1:09], [jain/website-layouts 4:38])
 - Use a carousel when you want to show every card but lack room, for about 3-10 items. Beyond 10 it's tedious to click through; choose another format. ([jain/skincare-redesign 4:31], [jain/website-layouts 7:49])
 - Show minor card details as a single row of icons with values instead of labeled fields. Icons add context at a glance; labels make users read more and browse slower. ([jain/beginner-mistakes 3:43], [jain/ui-cheat-codes 5:11])
-- Place card titles above images (spatially above, not overlaid on them) and prefer standard image-plus-text cards over gradient-overlay cards when images vary. Overlay text only works with some images; standard cards always work. ([jain/crucial-ui-elements 4:23], [jain/tesla-wannabe-redesign 4:05])
+- Keep card titles outside the image, not overlaid, when images vary; standard image-plus-text cards work with any image (for when text must sit on an image, see also depth-and-polish.md). Overlay text only works with some images and colors; standard cards always work. ([jain/crucial-ui-elements 4:23], [jain/tesla-wannabe-redesign 4:05])
 - On repeating cards, make the whole card the link (fade in an arrow on hover as the cue) and drop per-card CTA buttons; keep an explicit button only for a specific action like 'Try it out'. With many repeated cards, the whole card is the link anyway. ([jain/crucial-ui-elements 3:41])
 - Drop field labels the content already implies, but keep them where values could be confused, like check-in versus check-out dates. If the UI can't imply a label it isn't clear enough; confusable values still need one. ([jain/ui-cheat-codes 4:42])
 - Group related card data: stack paired fields (name over location) and right-align the secondary pair (price over rating). Makes the card read as structured information, not a flat list. ([jain/ui-cheat-codes 4:47])
@@ -54,24 +54,24 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 
 - **App UI:** Pick the surface by task: a popover for simple, non-blocking context (display settings, sharing); a modal for focused tasks tied to the current page, including create forms with only a few fields; a new page only for permanent or very large context, always with a back button or breadcrumb. Popovers can be dismissed without consequence; modals keep users in place; sparse flyouts waste space. ([jain/dashboard-flaws 2:40], [jain/dashboard-ui 4:50], [jain/saas-vibe-code-mistakes 2:06])
 - Give the primary button in dialogs to the non-destructive action, except in an explicit delete confirmation: there Delete is the primary red button and Cancel has no fill (ghost or outline). Users learn to trust the primary button; once they chose to delete, Cancel shouldn't compete. ([jain/think-like-product-designer 3:38], [jain/web-design-hacks 4:24])
-- Don't interrupt with stacked pop-ups, content-blocking paywalls or repeated upsells; give every intrusive or optional feature an off switch. They make products annoying. ([jain/unhinged-ui-upgrades 0:00])
+- Give every optional or intrusive feature an off switch, and tell users how to turn it off. Even an annoying feature shouldn't ignore good UX. ([jain/unhinged-ui-upgrades 2:39])
 - **App UI:** Skip confirmation modals for routine deletes: delete immediately and show an undo toast. Keep warning modals for truly irreversible actions, like a bulk email to 10,000 recipients or sending money. Confirmations make 99% of users confirm intended actions to protect 1%; undo protects everyone. ([jain/software-must-lie 5:35])
 - **App UI:** Autosave editors and low-risk settings instead of using save/cancel buttons, and pair autosave with version history. Autosave removes cancel, so users need another way back. *Note: Not for billing, permissions or validated forms; those need an explicit save.* ([jain/software-must-lie 6:16])
 
 ## Forms and inputs
 
 - Give inputs a warning state, distinct from the error state, for optional or non-blocking issues. Inputs need feedback even more than buttons do. ([jain/every-ui-concept 7:44])
-- Style input fields with an off-white background and a visible stroke. *Note: Keep input borders at 3:1 against the background.* ([jain/crucial-ui-elements 7:35])
+- Style input fields with an off-white background and a softened stroke (the source reduces it to 40% opacity). *Note: For accessibility, input borders need 3:1 against the background; a 40%-opacity stroke often falls short, so darken it until it passes.* ([jain/crucial-ui-elements 7:35])
 
 ## AI interfaces
 
-- **App UI:** Never make users wait on AI without feedback: stream responses word by word and show the work (steps taken, documents retrieved, sources cited), fading steps in one by one. Turns delay into anticipation and makes the AI feel like a collaborator, not a black box. ([jain/ai-startup-components 3:51])
-- **App UI:** Lead prompt-based AI tools with a large prompt box above the fold. Gets users trying the tool immediately. ([jain/ai-startup-components 0:20])
-- **App UI:** Preview attached PDFs and images inside the prompt box, and collapse large pastes such as code into compact, expandable blocks. Large inputs shouldn't take over the chat. ([jain/ai-startup-components 0:51])
-- **App UI:** Let users attach context to a prompt (integration buttons for sources like Google Drive or GitHub) and switch modes with context chips (brainstorm, data, email). Gives confidence the AI knows what is wanted and gets better answers. ([jain/ai-startup-components 1:03])
-- **App UI:** Support inline editing of AI output: let users highlight part of a response and type the change, with a few quick selectors and keyboard shortcuts. Feels like revision rather than regeneration. ([jain/ai-startup-components 2:47])
-- **App UI:** Expose persistent AI memory in a dedicated panel with storage usage, bulk delete and add-fact controls, not buried in settings. Users must be able to see and control what is remembered. ([jain/ai-startup-components 2:26])
-- **App UI:** Show confidence on AI output as a pill label (e.g. 'High confidence', 'Unverified') that reveals the numeric score on click. AI output sounds confident even when it isn't. ([jain/ai-startup-components 5:12])
+- **App UI:** If the product generates AI output, don't make users wait without feedback: stream responses word by word and show the work (steps taken, documents retrieved, sources cited), fading steps in one by one. Turns delay into anticipation and makes the AI feel like a collaborator, not a black box. ([jain/ai-startup-components 3:51])
+- **App UI:** If the product is a prompt-based AI tool, lead with a large prompt box above the fold. Gets users trying the tool immediately. ([jain/ai-startup-components 0:20])
+- **App UI:** If the product has an AI prompt box, preview attached PDFs and images inside it, and collapse large pastes such as code into compact, expandable blocks. Large inputs shouldn't take over the chat. ([jain/ai-startup-components 0:51])
+- **App UI:** If the AI has broad use cases, let users switch modes with context chips (brainstorm, data, email); if it integrates with other tools, add buttons to attach context from sources like Google Drive or GitHub. Gives confidence the AI knows what is wanted and gets better answers. ([jain/ai-startup-components 1:03])
+- **App UI:** If the product generates text with AI, support inline editing of the output: let users highlight part of a response and type the change, with a few quick selectors and keyboard shortcuts. Feels like revision rather than regeneration. ([jain/ai-startup-components 2:47])
+- **App UI:** If the AI has persistent memory, expose it in a dedicated panel with storage usage, bulk delete and add-fact controls, not buried in settings. Users must be able to see and control what is remembered. ([jain/ai-startup-components 2:26])
+- **App UI:** If the model returns a real confidence score, show it on AI output as a pill label (e.g. 'High confidence', 'Unverified') that reveals the numeric score on click. AI output sounds confident even when it isn't. ([jain/ai-startup-components 5:12])
 
 [jain/ai-startup-components 0:20]: https://youtu.be/If7iCPDy2vk?t=20
 [jain/ai-startup-components 0:51]: https://youtu.be/If7iCPDy2vk?t=51
@@ -140,7 +140,7 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 [jain/ui-cheat-codes 4:42]: https://youtu.be/c1TvOcKdBVE?t=282
 [jain/ui-cheat-codes 4:47]: https://youtu.be/c1TvOcKdBVE?t=287
 [jain/ui-cheat-codes 5:11]: https://youtu.be/c1TvOcKdBVE?t=311
-[jain/unhinged-ui-upgrades 0:00]: https://youtu.be/BUDipdbKK7Y?t=0
+[jain/unhinged-ui-upgrades 2:39]: https://youtu.be/BUDipdbKK7Y?t=159
 [jain/web-design-hacks 4:24]: https://youtu.be/Lp6ey4AyDzA?t=264
 [jain/website-layouts 4:38]: https://youtu.be/P2ksReDwWkE?t=278
 [jain/website-layouts 7:49]: https://youtu.be/P2ksReDwWkE?t=469

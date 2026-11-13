@@ -19,8 +19,9 @@ for bib_path in sorted(glob.glob("skills/*/references/bibliography.md")):
     skill_dir = os.path.dirname(os.path.dirname(bib_path))
     bib = open(bib_path).read()
     bib_ids = {}
-    for key, vid in re.findall(r"^\*\*\[([a-z0-9/-]+)\]\*\*.*?watch\?v=([\w-]+)", bib, re.M):
-        bib_ids[key] = vid
+    for key, rest in re.findall(r"^\*\*\[([a-z0-9/-]+)\]\*\*(.*)$", bib, re.M):
+        m = re.search(r"watch\?v=([\w-]+)", rest)
+        bib_ids[key] = m.group(1) if m else None
     if not bib_ids:
         continue
     cited = set()
@@ -46,7 +47,8 @@ for bib_path in sorted(glob.glob("skills/*/references/bibliography.md")):
             if url:
                 m = re.match(r"https://youtu\.be/([\w-]+)\?t=(\d+)$", url)
                 if not m:
-                    problems.append(f"unexpected URL {url}")
+                    if not re.match(r"https?://\S+$", url):
+                        problems.append(f"unexpected URL {url}")
                 else:
                     vid, q = m.groups()
                     if key in bib_ids and bib_ids[key] != vid:

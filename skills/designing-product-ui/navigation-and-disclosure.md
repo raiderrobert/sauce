@@ -2,7 +2,7 @@
 
 Progressive disclosure, sidebars and app navigation, page structure, onboarding and engagement, website nav bars and search.
 
-Practitioner heuristics, not standards: accessibility requirements (WCAG contrast, keyboard access, `prefers-reduced-motion`) and the product's own design system take precedence. Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. *Note:* text is an uncited editorial caveat. Each citation (`author/video timestamp`) links to that moment in the source; the link definitions at the end of the file can be skipped, and full entries are in `references/bibliography.md`.
+Practitioner heuristics; accessibility and the product's design system take precedence. Tags, *Note:* text and citations are explained in `SKILL.md`.
 
 Contents: Progressive disclosure · Sidebar and app navigation · Page structure and wayfinding · Onboarding and engagement · Website nav bars and menus · Search
 
@@ -21,7 +21,7 @@ Contents: Progressive disclosure · Sidebar and app navigation · Page structure
 
 - **App UI:** Use the standard app frame: persistent, global elements (navigation, profile, search, team, settings) in the sidebar, page-level actions in a top bar that changes with the current page, content in the center. The sidebar is the product's spine and frees vertical space; actions are contextual per page. ([jain/dashboard-ui 0:20], [jain/finance-dashboard-redesign 1:01], [jain/macos-apps 2:42], [jain/mobile-app-ui 0:51])
 - **App UI:** Give each sidebar link a recognizable icon and a short title so the sidebar can collapse to icons; for when icons need visible labels or tooltips, see also components-and-states.md. Icons make a sidebar scannable and collapsible. ([jain/animated-sidebar 0:25], [jain/beginner-mistakes 4:20], [jain/crucial-ui-elements 1:34], [jain/dashboard-ui 0:43])
-- **App UI:** Put an account card at the top of the sidebar: avatar, name and switcher chevrons, opening a popover of account links. Avoid gradient letter-circle avatars. A picture is identifiable and chevrons show it's clickable; gradient letter circles were an AI-generated cliché as of 2026. ([jain/dashboard-ui 0:35], [jain/saas-vibe-code-mistakes 1:39], [jain/vibe-coding-pro-ui 5:18])
+- **App UI:** Put an account card at the top of the sidebar: avatar, name and switcher chevrons, opening a popover of account links. Avoid gradient letter-circle avatars. A picture is identifiable and chevrons show it's clickable; gradient letter circles were an AI-generated cliché as of 2026. *Note: Editorial: when there is no photo, fall back to flat neutral initials.* ([jain/dashboard-ui 0:35], [jain/saas-vibe-code-mistakes 1:39], [jain/vibe-coding-pro-ui 5:18])
 - **App UI:** Move rarely used links such as Settings and Help to the bottom of the sidebar, and drop needless group labels like 'Menu'. ([jain/dashboard-ui 1:03], [jain/vibe-coding-pro-ui 5:23])
 - **App UI:** Use tabs for related views (e.g. settings, billing) instead of more sidebar links. Keeps users in context; new sections become another tab as the product grows. ([jain/dashboard-ui 6:59], [jain/saas-vibe-code-mistakes 4:43])
 - **App UI:** Group navigation links by relevance and nest them into collapsible groups as they grow. Navigation is about reducing cognitive load. ([jain/dashboard-ui 0:57])
@@ -30,17 +30,17 @@ Contents: Progressive disclosure · Sidebar and app navigation · Page structure
 
 ## Page structure and wayfinding
 
-- With one main product, skip the separate marketing landing page and open straight into the product interface (or, for a single-product marketing site, straight into that product's page). Very effective; ChatGPT and Gemini did this as of 2026. ([jain/ai-startup-components 0:43], [jain/tesla-wannabe-redesign 2:05])
-- Integrate new features into existing UI rather than giving each its own page, and never build pages whose only purpose is redirecting elsewhere, e.g. a single-section page whose only content is a link to the page with the real information. Structure should make sense, not just look good. ([jain/dashboard-flaws 5:52], [jain/tesla-wannabe-redesign 1:55])
+- If the product is a single tool users come to use directly (e.g. a prompt-based AI tool), you can skip the separate marketing landing page and open straight into the interface; if a marketing site covers a single product, skip the generic homepage and open on that product's page. The moment you land, you're in the interface; ChatGPT and Gemini did this as of 2025. ([jain/ai-startup-components 0:43], [jain/tesla-wannabe-redesign 2:05])
+- Integrate new features into existing UI rather than giving each its own page, and don't build pages whose only purpose is redirecting elsewhere, e.g. a single-section page whose only content is a link to the page with the real information. Structure should make sense, not just look good. ([jain/dashboard-flaws 5:52], [jain/tesla-wannabe-redesign 1:55])
 - Break long sequential content into chapters with a jump menu; skip section navigators on short pages. Users can skip to the part they want; short pages don't need it. ([jain/skincare-redesign 0:46], [jain/spotify-wrapped-redesign 2:37])
 
 ## Onboarding and engagement
 
 - **App UI:** Don't drop first-time users onto a fully loaded dashboard; design a first-login empty state that highlights the main action with an explanatory popover. They'll wonder where to start. ([jain/dashboard-flaws 3:50], [jain/mobile-app-ui 6:27])
-- **App UI:** Sequence onboarding: one tooltip on the most important action, then the next or a checklist; never a modal with six bullets explaining everything. Users aren't overwhelmed; modal content is forgotten the moment it closes. ([jain/dashboard-flaws 3:56])
+- **App UI:** Sequence onboarding: one tooltip on the most important action, then the next or a checklist, not a modal with six bullets explaining everything. Users aren't overwhelmed; modal content is forgotten the moment it closes. ([jain/dashboard-flaws 3:56])
 - **App UI:** In consumer feed or content apps, keep onboarding minimal (pick interests, shortest possible tutorial, then the core experience) and infer preferences from behavior rather than relying on stated answers. Figure out what users want before they do. ([jain/tiktok-ux 1:10])
 - **App UI:** Offer a skip button on optional onboarding steps, plus search or an 'Other' option next to preset choices. Some users won't fit the presets. ([jain/beginner-mistakes 0:30])
-- **App UI:** Ask team size early in onboarding and branch the flow; skip invite-teammates for individuals. It shapes every following step. ([jain/learn-ui-in-10-minutes 7:00])
+- **App UI:** If the product serves both teams and individuals, ask team size early in onboarding and branch the flow; skip invite-teammates for individuals. It shapes every following step. ([jain/learn-ui-in-10-minutes 7:00])
 - **App UI:** Show the app's value during onboarding (e.g. insights from the user's own data) before introducing gamification, and reassure users about safety when asking for a sensitive connection like a bank account. Demonstrates value before asking for engagement or trust. ([jain/gamifying-apps 4:28])
 - **App UI:** Teach keyboard shortcuts by having users press the key shortcut to dismiss onboarding, and provide a shortcut cheat sheet (e.g. in settings). Doing it teaches it; shortcuts are easy to forget. ([jain/macos-apps 8:34])
 - **App UI:** In products that already use gamification, center it on one currency (XP, karma) that shows progress and unlocks features, and tie rewards to users' real goals. Progress and unlocks keep users going; meaningless rewards don't. ([jain/gamifying-apps 0:57])

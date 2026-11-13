@@ -2,7 +2,7 @@
 
 Font choice and pairing, text color tiers and weights, type scale, letter spacing and line height, and display text.
 
-Practitioner heuristics, not standards: accessibility requirements (WCAG contrast, keyboard access, `prefers-reduced-motion`) and the product's own design system take precedence. Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. *Note:* text is an uncited editorial caveat. Each citation (`author/video timestamp`) links to that moment in the source; the link definitions at the end of the file can be skipped, and full entries are in `references/bibliography.md`.
+Practitioner heuristics; accessibility and the product's design system take precedence. Tags, *Note:* text and citations are explained in `SKILL.md`.
 
 Contents: Font selection and pairing · Text color and weight · Type scale and sizes · Letter spacing and line height · Display text
 
@@ -15,22 +15,22 @@ Contents: Font selection and pairing · Text color and weight · Type scale and 
 
 ## Text color and weight
 
-- Use two text tiers for most UI: primary text at full strength and one secondary tier at ~55-70% opacity on light backgrounds, verified at 4.5:1. Add a third, dimmer tier (dark gray, not black) only for metadata such as file details and labels. More tiers blur the hierarchy. *Note: The source range starts at 40%, which fails WCAG AA on white; 55-70% is an editorial adjustment.* ([jain/color-mistakes 4:21], [jain/typography 5:21], [jain/web-design-hacks 0:52])
-- Use at most two font weights, at least two steps apart on the weight scale (e.g. 400 and 600, skipping 500); avoid ultra-bold and ultra-thin for regular text. Too many weights look messy. ([jain/typography 5:13], [jain/web-design-hacks 0:40])
+- Use two text tiers for most UI: primary text at 100% opacity and a secondary tier at reduced opacity (the sources give 40-70% and 45-70%). Minor metadata, such as file details and labels, may take a third tier in gray rather than black. Two text colors are generally the maximum for clear hierarchy; metadata isn't important enough for full strength. *Note: For accessibility, every tier, metadata included, must still pass 4.5:1 (WCAG AA). On white, black text below about 55% opacity fails, so raise the low end of the sources' range; set metadata apart by size, weight or placement rather than by dropping below that floor.* ([jain/color-mistakes 4:21], [jain/typography 5:21], [jain/web-design-hacks 0:52])
+- Use at most two font weights, separated by at least one weight on the font's scale; avoid ultra-bold and ultra-thin for regular text. Too many weights look messy. *Note: In CSS, e.g. 400 and 600, skipping 500.* ([jain/typography 5:13], [jain/web-design-hacks 0:40])
 - Keep body paragraphs at full strength; don't give the smallest text the lowest contrast too. Small, low-contrast text is neither usable nor attractive. ([jain/typography 6:15])
 
 ## Type scale and sizes
 
-- Keep text above size floors: body text 14-16px, metadata and dense tables no smaller than 12px, marketing nav links no smaller than 14px; native macOS apps may use the platform's 13px default body. A marketing header may set nav links small (at the 14px floor) beneath giant display text to make it feel more important. The size gap emphasizes the display text; below ~14px nav stops being readable. *Note: The body and metadata floors are editorial; the source gives only the ~14px nav floor.* ([jain/google-ai-redesign 7:01], [jain/website-layouts 3:03])
+- Avoid tiny text. On a marketing header, very small nav text set beneath giant display text can make the display text feel more important. The size discrepancy is what makes such a header work. *Note: Editorial floors: body text 14-16px, metadata and dense tables at least 12px, nav links at least about 14px; native macOS apps use a 13pt default body.* ([jain/google-ai-redesign 7:01], [jain/website-layouts 3:03])
 - Derive font sizes from a ratio instead of eyeballing: header = body × 1.62 for a simple pair; for a multi-level scale from a 16px base, use √1.62 ≈ 1.27 per step. 1.62 per step grows too fast (the fifth size hits ~110px). ([jain/typography 7:17])
 - **App UI:** On dashboards and dense mobile screens use tighter steps, e.g. ∛1.62 ≈ 1.17 per step, and keep dashboard text at or below 24px. Dense screens fit more on screen, which shrinks the size range. ([jain/dashboard-ui 1:58], [jain/every-ui-concept 4:14], [jain/typography 9:15])
-- Scale font sizes fluidly with CSS clamp() combining a rem term and a viewport term, e.g. clamp(2rem, 1rem + 4vw, 5rem), tuned for ~320px to 1920px viewports, instead of per-breakpoint sizes. Breakpoints get messy; the clamp() minimum and maximum stop sizes running away on the smallest and largest screens. *Note: The rem term keeps browser text zoom working; viewport-only sizes ignore it.* ([jain/typography 9:46])
+- Scale font sizes fluidly with a single CSS formula between a smallest and a largest viewport width (the source uses 320px and 1920px), capped with a minimum and maximum, instead of per-breakpoint sizes. Breakpoints get messy; the cap stops sizes running away on the smallest and largest screens. *Note: In CSS, use clamp() with a rem term plus a viewport term, e.g. clamp(2rem, 1rem + 4vw, 5rem); the rem term keeps browser text zoom working, which viewport-only sizes ignore.* ([jain/typography 9:46])
 - **Marketing:** Use no more than six font sizes on a landing page or website. ([jain/every-ui-concept 4:09])
 
 ## Letter spacing and line height
 
-- Tighten letter spacing on large headings (especially above 70-80px) to about -0.02em to -0.03em, one setting for the heading rather than a per-step change; leave body and small text at default or slightly positive spacing, since smaller text needs relatively more space. Try this before rejecting a font that looks disjointed at large sizes. Default spacing looks loose at large sizes; tightening instantly looks professional. ([jain/every-ui-concept 3:49], [jain/typography 2:20], [jain/ui-cheat-codes 0:32])
-- Set heading line height explicitly around 1.1-1.3 (1.1-1.2 for very large text) rather than leaving it automatic; raise paragraph line height for small text or long lines. Automatic line height drifts at extreme sizes; small text and long lines need more room to read. ([jain/every-ui-concept 3:49], [jain/typography 11:33])
+- Tighten letter spacing on large headings (especially above 70-80px) by about -2% to -3%; leave body and small text at the default, since smaller text needs proportionately more space. Try this before rejecting a font that looks disjointed at large sizes. Default spacing looks loose at large sizes; tightening instantly looks professional. *Note: In CSS, -2% to -3% is letter-spacing: -0.02em to -0.03em.* ([jain/every-ui-concept 3:49], [jain/typography 2:20], [jain/ui-cheat-codes 0:32])
+- Set heading line height explicitly at about 110-130% (110-120% for very large text) rather than leaving it automatic; keep paragraphs around 150% and raise line height for small text or long lines. Automatic line height drifts at extreme sizes; small text and long lines need more room to read. ([jain/every-ui-concept 3:49], [jain/typography 11:33])
 
 ## Display text
 

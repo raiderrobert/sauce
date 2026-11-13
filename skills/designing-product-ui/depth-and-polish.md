@@ -2,7 +2,7 @@
 
 Shadows, borders, corner radii, icons, imagery, gradients, texture and decorative touches that add depth and finish without clutter.
 
-Practitioner heuristics, not standards: accessibility requirements (WCAG contrast, keyboard access, `prefers-reduced-motion`) and the product's own design system take precedence. Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. *Note:* text is an uncited editorial caveat. Each citation (`author/video timestamp`) links to that moment in the source; the link definitions at the end of the file can be skipped, and full entries are in `references/bibliography.md`.
+Practitioner heuristics; accessibility and the product's design system take precedence. Tags, *Note:* text and citations are explained in `SKILL.md`.
 
 Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imagery and text over images · Style and decoration · Gradients, texture and effects
 
@@ -14,11 +14,10 @@ Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imag
 
 ## Shadows
 
-- Soften shadows: low opacity and a large blur. Most shadows are too strong. *Note: Source figure is 15-20% opacity against Figma's 25% default; in CSS that usually means about 5-10% black, layered.* ([jain/beginner-mistakes 1:37], [jain/every-ui-concept 6:25], [jain/web-design-hacks 6:14])
+- Soften shadows: lower the opacity (the source drops Figma's 25% default to 15-20%) and increase the blur significantly. For subtle shadows, such as under popovers, the source's alternative to transparent black is a light-gray shadow color. Most shadows, including Figma's defaults, are too strong; lowering opacity alone can still look harsh. *Note: In CSS, e.g. box-shadow: 0 4px 16px rgb(0 0 0 / 0.08); a light-gray shadow color (e.g. #e5e5e5) is the opaque equivalent and only suits a white or near-white background.* ([jain/animated-sidebar 0:50], [jain/beginner-mistakes 1:37], [jain/every-ui-concept 6:25], [jain/web-design-hacks 6:14])
 - Scale shadow strength to elevation: lightest on cards, stronger on popovers and menus. For dark backgrounds, see also the dark-mode rule in color.md. Strength should reflect what sits above what. ([jain/every-ui-concept 6:33], [jain/web-design-hacks 6:14])
-- Tint subtle shadows (e.g. under popovers) a light gray rather than transparent black. Lower opacity alone still looks harsh. ([jain/animated-sidebar 0:50], [jain/beginner-mistakes 1:37])
 - Keep shadow x-offset at or below the y-offset, and blur at 1.3-2× the y-offset. ([jain/web-design-hacks 6:03])
-- Combine an inset and an outer box-shadow to make buttons feel raised and tactile. ([jain/every-ui-concept 6:41])
+- Combine an inner and an outer shadow to make buttons feel raised and tactile. *Note: In CSS, an inset box-shadow plus an outer one.* ([jain/every-ui-concept 6:41])
 
 ## Surfaces, borders and corners
 
@@ -28,15 +27,15 @@ Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imag
 
 ## Icons
 
-- Use one icon library (e.g. Phosphor or Lucide) with matching fill, stroke width, corner style and size; never use emojis as UI icons. Mixed sources produce mismatched icons; swapping emojis for real icons immediately looks better. ([jain/beginner-mistakes 3:55], [jain/google-ai-redesign 5:25], [jain/saas-vibe-code-mistakes 0:24], [jain/vibe-coding-pro-ui 3:23], [jain/web-design-hacks 2:00])
-- Keep icons simple and match detail to size: at UI sizes (16-24px) use simple glyphs from the icon library; reserve interior detail for large feature icons (about 48px and up). An icon is a symbol, not a piece of art. *Note: The pixel thresholds are editorial.* ([jain/web-design-hacks 2:29])
+- Use one icon library (e.g. Phosphor or Lucide) with matching fill, stroke width, corner style and size, and replace emojis used as UI icons with real icons. Mixed sources produce mismatched icons; swapping emojis for real icons immediately looks better. ([jain/beginner-mistakes 3:55], [jain/google-ai-redesign 5:25], [jain/saas-vibe-code-mistakes 0:24], [jain/vibe-coding-pro-ui 3:23], [jain/web-design-hacks 2:00])
+- Keep icons simple and match detail to size: the smaller the icon, the less detail it needs; use simple glyphs from the icon library at UI sizes and reserve interior detail for large icons. An icon is a symbol, not a piece of art. *Note: Editorial thresholds: UI sizes are about 16-24px; large feature icons start around 48px.* ([jain/web-design-hacks 2:29])
 - Mix icon styles only when they sit in visually separate areas serving different purposes. Separation lets different styles coexist. ([jain/beginner-mistakes 4:36])
 
 ## Imagery and text over images
 
 - Put a linear gradient (or a subtle overlay) beneath text on photos rather than darkening the whole image; on image cards, let the image fill ~3/4 of the card height with a smooth gradient rising from its bottom. Text needs contrast, but full overlays don't do the image justice; smoother gradients look better. ([jain/crucial-ui-elements 4:03], [jain/every-ui-concept 8:44], [jain/skincare-redesign 4:39], [jain/website-layouts 2:03])
 - Choose images that aren't busy behind text, and never put text or UI over the image's focal point; for full-screen heroes pick a zoomed-out shot that leaves room for overlays. Busy or crowded backgrounds make overlaid text chaotic and hard to read. ([jain/learn-ui-in-10-minutes 1:26], [jain/tesla-wannabe-redesign 2:49])
-- For a more modern image gradient, layer a progressive blur over it (backdrop-filter: blur() with a gradient mask-image). ([jain/every-ui-concept 8:57])
+- For a more modern image gradient, layer a progressive blur on top of it. *Note: In CSS, backdrop-filter: blur() with a gradient mask-image.* ([jain/every-ui-concept 8:57])
 - Keep image treatment consistent; don't place cut-out images next to images with backgrounds. Mixed treatments feel disjointed. ([jain/tesla-wannabe-redesign 3:57])
 - **Marketing:** Vary image treatment on marketing pages: cut single objects out of their background, crop into a detail, or mask images into shapes that match the site's style. Draws attention to the object and breaks the boxy layout. ([jain/awful-to-amazing 2:22])
 
@@ -48,9 +47,9 @@ Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imag
 ## Gradients, texture and effects
 
 - Add subtle noise texture to image or color backgrounds, sparingly and never across the whole site. Adds texture and helps text contrast; too much looks like TV static. ([jain/google-ai-redesign 3:12], [jain/vibe-coding-cant-fix 5:30])
-- Build glass surfaces (e.g. a dark-mode tab bar) from a semi-transparent fill, a subtle gradient, backdrop-filter: blur(), a 1px border and a soft inset shadow. Reads as polished, technical material. ([jain/ai-startup-components 5:59], [jain/crucial-ui-elements 1:48])
+- Build glass surfaces (e.g. a dark-mode tab bar) from a semi-transparent fill, a subtle gradient, a background blur, a 1px border and a soft inner shadow. Reads as polished, technical material. *Note: In CSS, the background blur is backdrop-filter: blur().* ([jain/ai-startup-components 5:59], [jain/crucial-ui-elements 1:48])
 - **Marketing:** Behind a hero, add a very subtle background gradient and darken its edges to pull attention to the center. Without it the section looks bland. ([jain/modern-layouts 3:15], [jain/vibe-coding-cant-fix 6:07])
-- **Marketing:** Build mesh gradients from 8-10 or more overlapping, semi-transparent circles with filter: blur(). More overlapping layers give brighter, more vibrant results. ([jain/figma-web-effects 3:19])
+- **Marketing:** Build mesh gradients for a hero or section background, never the whole page, from 8-10 or more overlapping, semi-transparent, blurred circles. More overlapping layers give brighter, more vibrant results. *Note: In CSS, blur the circles with filter: blur(). The hero-or-section scope is editorial (see also the page-background rule in color.md).* ([jain/figma-web-effects 3:19])
 
 [jain/60-30-10-rule 1:36]: https://youtu.be/66oOi9OLMCw?t=96
 [jain/ai-startup-components 5:59]: https://youtu.be/If7iCPDy2vk?t=359

@@ -2,7 +2,7 @@
 
 Platform-specific rules for mobile apps (thumb reach, navigation, layout, gestures, contextual actions) and native-feeling desktop apps.
 
-Practitioner heuristics, not standards: accessibility requirements (WCAG contrast, keyboard access, `prefers-reduced-motion`) and the product's own design system take precedence. Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. *Note:* text is an uncited editorial caveat. Each citation (`author/video timestamp`) links to that moment in the source; the link definitions at the end of the file can be skipped, and full entries are in `references/bibliography.md`.
+Practitioner heuristics; accessibility and the product's design system take precedence. Tags, *Note:* text and citations are explained in `SKILL.md`.
 
 Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures and feedback · Contextual mobile actions · Native-feeling desktop apps
 
@@ -20,14 +20,14 @@ Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures a
 
 ## Mobile screen layout
 
-- Lay out each mobile section in one direction: stack vertically or scroll horizontally, never both. Use horizontal scrollers for browsable sets of similar cards; stack content users must read in full. Desktop can use two directions; mobile can't. ([jain/mobile-app-ui 2:28], [jain/mobile-swipe-interactions 0:28])
+- Lay out each mobile section in one direction: stack vertically or scroll horizontally, never both. Desktop can use two directions; mobile can't. *Note: Editorial: horizontal scrollers suit browsable sets of similar cards; stack content users must read in full.* ([jain/mobile-app-ui 2:28], [jain/mobile-swipe-interactions 0:28])
 - Don't shrink type and spacing to cram content on mobile; keep them similar to desktop or larger (base text ~17px on iOS versus ~13px on macOS). Text actually gets larger on smaller screens. ([jain/mobile-app-ui 1:32])
 - Make each mobile screen do one thing with one primary content block (home excepted); add a page rather than a new layout. Mobile is too space-constrained for more. ([jain/mobile-app-ui 2:03])
 - Build mobile screens from four blocks (cards, text/links, images, inputs), using cards to group content. Cards group content where mobile lacks room for white space. ([jain/mobile-app-ui 2:49])
 
 ## Gestures and feedback
 
-- On touch devices, remove buttons that duplicate a gesture users already know (carousel arrows, tap-to-pause); for less familiar swipe actions, also offer a visible button or a long-press menu. Duplicate controls are clutter, but uninitiated users need a visible path. *Note: Keep a single-pointer alternative, e.g. arrows on keyboard focus and a pause control for autoplay.* ([jain/beginner-mistakes 5:05], [jain/mobile-swipe-interactions 1:50], [jain/spotify-wrapped-redesign 2:04])
+- On touch devices, swiping can replace carousel arrows, but keep the arrows available on pointer devices; for less familiar swipe actions, also offer a visible button or a long-press menu. Arrows are clutter where users can swipe, but the uninitiated need a visible path. *Note: For accessibility, keep a visible pause control for any autoplay, even where tap-to-pause is familiar (WCAG 2.2.2), and show arrows on keyboard focus. See also the carousel rule in components-and-states.md and the auto-rotate rule in motion.md.* ([jain/beginner-mistakes 5:05], [jain/mobile-swipe-interactions 1:50])
 - Use swipes to replace buttons, reveal context or trigger actions (e.g. swipe up to search), and teach users the swipe exists. Once learned, swiping is faster. *Note: Keep a tap-based alternative (button or menu) for each swipe action.* ([jain/mobile-app-ui 5:32], [jain/mobile-swipe-interactions 4:14])
 - Reveal useful secondary actions on swipe left or right while keeping the primary action visible. ([jain/dashboard-flaws 3:38])
 - Use swipe-to-confirm sliders for high-impact or irreversible actions like sending money or purchasing. It's far easier to tap a button by accident than to slide a slider across. *Note: Offer a single-pointer alternative, e.g. a press-and-hold or tap-then-confirm button.* ([jain/mobile-swipe-interactions 5:11])
@@ -73,5 +73,4 @@ Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures a
 [jain/software-must-lie 8:38]: https://youtu.be/S8DcTJm8pYM?t=518
 [jain/spotify-wrapped-redesign 1:31]: https://youtu.be/goWOAFqJHpA?t=91
 [jain/spotify-wrapped-redesign 1:40]: https://youtu.be/goWOAFqJHpA?t=100
-[jain/spotify-wrapped-redesign 2:04]: https://youtu.be/goWOAFqJHpA?t=124
 [jain/tiktok-ux 4:57]: https://youtu.be/ixUq4HM4FNg?t=297

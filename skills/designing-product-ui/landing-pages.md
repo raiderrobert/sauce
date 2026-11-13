@@ -2,13 +2,13 @@
 
 Marketing and SaaS landing pages: product visuals, hero sections, copy, section structure, social proof and footers. Pricing pages live in data-and-dashboards.md.
 
-Practitioner heuristics, not standards: accessibility requirements (WCAG contrast, keyboard access, `prefers-reduced-motion`) and the product's own design system take precedence. Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. *Note:* text is an uncited editorial caveat. Each citation (`author/video timestamp`) links to that moment in the source; the link definitions at the end of the file can be skipped, and full entries are in `references/bibliography.md`.
+Practitioner heuristics; accessibility and the product's design system take precedence. Tags, *Note:* text and citations are explained in `SKILL.md`.
 
 Contents: Product visuals · Hero sections · Copy · Page structure and footers · Social proof and trust
 
 ## Product visuals
 
-- **Marketing:** Show the real product (actual UI, lightly edited screenshots, even simple skewed product cards) instead of stock images or generic feature icons; never bury what the product is in small text. Unrelated stock throws the page off; graphics elevate a page more than anything else. ([jain/captivating-sections 1:23], [jain/landing-page-levels 0:44], [jain/saas-vibe-code-mistakes 5:48])
+- **Marketing:** Show the real product (actual UI, lightly edited screenshots, even simple skewed product cards) instead of stock images or generic feature icons; don't bury what the product is in small text. Unrelated stock throws the page off; graphics elevate a page more than anything else. ([jain/captivating-sections 1:23], [jain/landing-page-levels 0:44], [jain/saas-vibe-code-mistakes 5:48])
 - **Marketing:** Use imagery that visibly relates to the audience's world, and show images of products or options so visitors can tell unfamiliar names apart. Builds trust and explains options without reading, like a picture menu. ([jain/slept-on-trends 7:51], [jain/vibe-coding-cant-fix 0:58])
 - **Marketing:** Crop and zoom screenshots to the important parts, or better, craft visuals that show exactly what the product does. Curates what visitors see. ([jain/landing-page-levels 4:59])
 - **Marketing:** Pick images for the layout's aspect ratio and expect heavy cropping; for cutout-text layouts, keep nothing important in the corner that gets cut off. ([jain/website-layouts 2:13])
@@ -22,7 +22,6 @@ Contents: Product visuals · Hero sections · Copy · Page structure and footers
 - **Marketing:** Consider a type-in prompt or search bar as the hero CTA instead of a plain button. A user already engaged in an action is more likely to finish it. ([jain/google-ai-redesign 1:08])
 - **Marketing:** Keep contextual illustrations around a centered core message rather than stripping them for clarity. They explain the product without reading; without them the hero feels empty. ([jain/boring-design-hacks 0:27])
 - **Marketing:** Arrange 'scattered' hero images deliberately: larger elements lower, smaller on top, with a safe margin around the text. It should feel random but isn't. ([jain/vibe-coding-cant-fix 5:54])
-- **Marketing:** In text-only hero layouts, give the body text three or more lines. Shorter text leaves too much empty space. ([jain/website-layouts 11:29])
 
 ## Copy
 
@@ -82,7 +81,6 @@ Contents: Product visuals · Hero sections · Copy · Page structure and footers
 [jain/vibe-coding-cant-fix 3:49]: https://youtu.be/RCneB_MQ7qs?t=229
 [jain/vibe-coding-cant-fix 3:57]: https://youtu.be/RCneB_MQ7qs?t=237
 [jain/vibe-coding-cant-fix 5:54]: https://youtu.be/RCneB_MQ7qs?t=354
-[jain/website-layouts 11:29]: https://youtu.be/P2ksReDwWkE?t=689
 [jain/website-layouts 1:31]: https://youtu.be/P2ksReDwWkE?t=91
 [jain/website-layouts 2:13]: https://youtu.be/P2ksReDwWkE?t=133
 [jain/website-layouts 6:21]: https://youtu.be/P2ksReDwWkE?t=381

@@ -1,6 +1,6 @@
 ---
 name: designing-product-ui
-description: "Use when designing a new screen, choosing the visual design of a web app, SaaS product, dashboard, landing page, or mobile or desktop app, or when asked to make a UI look better, give design or UX feedback, or do a design review of a UI that looks ugly, generic, amateur, cluttered, or AI-generated. Gives cited, opinionated heuristics for spacing, layout, hierarchy, typography, color, dark mode, icons, charts, tables, pricing pages, forms, modals, sidebars, empty and loading states, navigation, search, onboarding, AI chat interfaces, and animation. Not for pure frontend logic or bug fixes."
+description: "Use when designing a new screen, choosing the visual design of a web app, SaaS product, dashboard, landing page, or mobile or desktop app, or when asked to redesign, restyle, polish, or make a UI look better, critique a mockup, give design or UX feedback, or do a design review or UX audit of a UI that looks ugly, generic, amateur, cluttered, or AI-generated. Gives cited, testable heuristics (spacing values, chart rules, dark-mode steps, state coverage) rather than an aesthetic direction, covering layout, hierarchy, typography, color, dark mode, icons, charts, tables, pricing pages, forms, modals, sidebars, empty and loading states, navigation, search, onboarding, AI chat interfaces, and animation. Not for pure frontend logic or bug fixes."
 ---
 
 # Designing Product UI
@@ -15,13 +15,12 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 2. The product's existing design system.
 3. These rules.
 
-Last tested November 2026 with Claude Opus 5.5, in review mode only: given a deliberately flawed dashboard, it reported 35 findings in the format below, and every citation label matched a rule in the topic files. Not yet tested in build mode or against a no-skill baseline.
-
 ## How the topic files work
 
 - Read each file whose topic the task touches; a single component often spans several (a button touches components, color and motion).
 - Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. All current sources are videos by one designer, so count reflects how often the advice recurs, not independent agreement.
 - **App UI** tags rules for product screens only; **Marketing** tags rules for landing pages and websites only; untagged rules apply to both.
+- *Note:* text is an editorial caveat (usually accessibility or a CSS translation) that the source did not state. Where it corrects a source number, follow the Note.
 - Each rule ends with citations like `[jain/dashboard-flaws 0:44]`. The link definitions at the bottom of each file open the source at that moment.
 
 ## Routing
@@ -44,32 +43,34 @@ Last tested November 2026 with Claude Opus 5.5, in review mode only: given a del
 
 ## Core Checklist
 
-High-impact rules, each recurring in three or more videos. Check these first on any screen. The routed file holds the details and citations.
+Rules a capable model tends to miss without this skill, found by comparing reviews and builds with and without it. Check these on any screen; the routed file holds details and citations.
 
-- Rank every element by importance, then show rank with weight, color and opacity contrast, not size alone. (`layout-and-hierarchy.md`)
-- Put all spacing on a 4px or 8px grid; group with spacing rather than containers and dividers. (`layout-and-hierarchy.md`)
-- Use one sans-serif font for product UI and two text tiers: primary at full strength, secondary at ~55-70% opacity that still passes 4.5:1. (`typography.md`)
-- Tint neutrals toward the brand hue instead of pure black or white. (`color.md`)
-- Use color for meaning (status, urgency, the one primary action), never decoration; keep UI icons neutral. (`color.md`)
-- Include semantic colors even in monochrome palettes, and check every colored pair against WCAG contrast. (`color.md`)
-- In dark mode, make raised surfaces lighter and space neutral steps about twice as far apart as in light mode. (`color.md`)
-- Soften shadows (low opacity, large blur) and use one icon library throughout. (`depth-and-polish.md`)
-- Give every action a visible response, and every screen empty, loading, success and error states. (`components-and-states.md`)
-- Give charts grid lines and axis values; let the data the dashboard must show decide its layout. (`data-and-dashboards.md`)
-- Show only what users need now; keep primary actions visible and labeled and reveal minor ones on hover or focus. (`navigation-and-disclosure.md`)
-- Animate only for clarity, feedback or focus, and keep it subtle. (`motion.md`)
-- On landing pages, show the real product and lead with a short headline that says exactly what it does. (`landing-pages.md`)
+- Use only assets, data and social proof the user supplied. Where a rule calls for a product screenshot, customer logos or testimonials and none were given, leave a labeled placeholder and say so; never invent them. (editorial)
+- Rank each dashboard module as high, mid or low priority before arranging; put the most important higher and farther left. (`data-and-dashboards.md`)
+- Draw line charts with straight segments, never smoothed or faded; give full charts grid lines, axis values and a time-frame control. (`data-and-dashboards.md`)
+- Show each piece of data once: no KPI repeated across cards, pages or the sidebar. (`data-and-dashboards.md`)
+- Build hierarchy with weight and color/opacity contrast before size; large headings rely on size, not extra bold. (`layout-and-hierarchy.md`)
+- Tint grays, borders and dark surfaces toward the brand hue; a white or near-white page is fine in light mode. (`color.md`)
+- In product UI stay almost entirely neutral with a tiny accent, and reserve the accent for the one action that matters. (`color.md`)
+- In dark mode, make each raised surface lighter, and space neutral steps about twice as far apart as in light mode. (`color.md`)
+- Soften shadows (lower opacity, much larger blur), and set a nested element's radius to the outer radius minus the gap. (`depth-and-polish.md`)
+- Skip confirmation modals for routine deletes: delete immediately and offer undo. (`components-and-states.md`)
+- Place each action on a spectrum of explicitness: primary actions visible and labeled, minor ones revealed on hover or focus. (`navigation-and-disclosure.md`)
+- On landing pages, lead with one ~7-word headline saying exactly what the product does, and show the real product. (`landing-pages.md`)
 
 ## Reviewing a screen
 
-Report each problem as one line: the element, the rule it breaks, and the rule's first citation. For an accessibility failure, cite the WCAG success criterion instead (for example WCAG 1.4.3 for text contrast). Group by severity:
+Report each problem as one line: the element, what is wrong, the rule it breaks in your own words, and the rule's first citation. Rules are paraphrases, so don't quote them. If the violated part is a *Note:* (editorial, usually accessibility), cite the WCAG success criterion or write "editorial" instead of the source.
+
+Group by severity, most impactful first within each group:
 
 - **Blocks use:** anything that stops a user from understanding or completing a task: accessibility failures, missing states, misleading signals (a destructive action that doesn't look destructive, an unreadable chart), broken hierarchy, navigation or disclosure.
-- **Looks unfinished:** everything else: spacing, typography, color harmony, depth, motion polish.
+- **Looks unfinished:** everything else: spacing, typography, color harmony, depth, motion polish. Report the ten most visible; collapse the rest into one summary line.
 
 ```markdown
-- Blocks use: Delete button uses the brand color, so it doesn't signal destruction. "Color destructive actions such as delete red, never the brand color." [jain/color-mistakes 5:51]
-- Looks unfinished: Card padding varies between 12px and 20px across the row. "Keep card and chip padding generous and identical across a view." [jain/dashboard-ui 6:36]
+- Blocks use: The Delete button is brand purple like Edit and Share, so it doesn't signal destruction. Breaks: color destructive actions red. [jain/60-30-10-rule 4:50]
+- Blocks use: Body text is #999 on white, about 2.8:1. Breaks: text contrast. WCAG 1.4.3
+- Looks unfinished: Card padding varies between 12px and 20px across the row. Breaks: identical card padding within a view. [jain/beginner-mistakes 2:38]
 ```
 
 ## Common Mistakes
@@ -82,6 +83,6 @@ Tells that a UI was built by a beginner or generated without design review, beyo
 | The same KPIs repeated across pages | Show each piece of data once, where it is used (`data-and-dashboards.md`) |
 | Two equal filled buttons in one hero or header | One primary action; make the second an outline or text button (`layout-and-hierarchy.md`) |
 | Centered paragraphs, lists or table data | Left-align text, right-align numbers; center only short display text (`layout-and-hierarchy.md`) |
-| Generated layout and colors accepted as is | Decide layout and color deliberately, then build (`process.md`) |
+| The first layout that came to mind, built as is | Choose the layout and card design and state why before building (`process.md`) |
 | Disabled buttons that are unreadable, or focus that looks like selected | Muted but readable disabled text; a distinct focus ring at 3:1 (`components-and-states.md`) |
 | Status shown by color alone | Pair the color with an icon or label (`color.md`) |

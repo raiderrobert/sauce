@@ -29,3 +29,16 @@ Each rule in a topic file ends with one or more reference-style citations, defin
 4. Add a bibliography entry, keyed `author/short-title`, in alphabetical order.
 5. Merge each new rule into the topic file it belongs to. If it repeats an existing rule, add the citation to that rule instead of duplicating it. If it conflicts with one, keep both and say when each applies.
 6. Do not commit full transcripts. Cite and summarize only.
+
+## Testing
+
+Tested November 2026 with Claude Opus 5.5:
+
+- **Review mode.** Given a deliberately flawed dashboard, the review with the skill cited real rules for every finding. The review without it caught the obvious problems but missed smoothed chart lines, the missing time-frame control, nested corner radii, shadow values, module priority, and account placement. The Core Checklist in `SKILL.md` is built from those gaps.
+- **Build mode.** A B2B dashboard was built from the same prompt with and without the skill. Both used straight line segments, grid lines and undo. Only the build with the skill:
+  - deleted rows without a confirmation dialog;
+  - kept shadow opacity at 3-12% (the other build used 25-45%);
+  - added a 3/6/12-month range control, KPI sparklines and a prior-period comparison line;
+  - showed each figure once, with no total-revenue card that repeated the chart.
+
+  Straight chart lines are on the Core Checklist anyway, because the review without the skill missed them.
