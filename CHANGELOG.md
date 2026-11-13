@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.13](https://github.com/raiderrobert/sauce/compare/v0.1.12...v0.1.13) (2026-11-13)
+
+
+### Features
+
+* add designing-product-ui skill ([#38](https://github.com/raiderrobert/sauce/issues/38)) ([d4af024](https://github.com/raiderrobert/sauce/commit/d4af02449f5d7e72a16edc88e0e3b4d42026ddc0))
+* add Mermaid architecture visualization skill ([#35](https://github.com/raiderrobert/sauce/issues/35)) ([9e02a5b](https://github.com/raiderrobert/sauce/commit/9e02a5bbc737246a6e12e16aae800cb93e99e982))
+* add writing-plainly skill ([#37](https://github.com/raiderrobert/sauce/issues/37)) ([f696297](https://github.com/raiderrobert/sauce/commit/f6962978579872674ea245f10c68c2305896b118))
+
 ## [0.1.12](https://github.com/raiderrobert/sauce/compare/v0.1.11...v0.1.12) (2026-07-16)
 
 
