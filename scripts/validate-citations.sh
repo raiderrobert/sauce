@@ -4,61 +4,80 @@ set -euo pipefail
 python3 - <<'EOF'
 import glob, os, re, sys
 
+KEY = r"[a-z0-9-]+/[a-z0-9-]+"
+LOCATOR = r"(?:\d+(?::\d\d)+|¶[a-z0-9-]+)"
+LABEL = rf"{KEY} {LOCATOR}"
+
 def secs(t):
-    parts = [int(p) for p in t.split(":")]
     total = 0
-    for p in parts:
-        total = total * 60 + p
+    for p in t.split(":"):
+        total = total * 60 + int(p)
     return total
+
+def check_video(t, url, bib_url):
+    m = re.match(r"https://youtu\.be/([\w-]+)\?t=(\d+)$", url)
+    if not m:
+        return [f"timestamp citation needs a youtu.be link, got {url}"]
+    vid, q = m.groups()
+    problems = []
+    b = re.search(r"watch\?v=([\w-]+)", bib_url or "")
+    if not b or b.group(1) != vid:
+        problems.append("video ID differs from bibliography")
+    if secs(t) != int(q):
+        problems.append(f"t={q} does not match {t}")
+    return problems
+
+def check_text(url, bib_url):
+    base, _, fragment = url.partition("#")
+    problems = []
+    if base != bib_url:
+        problems.append("link does not match the bibliography URL")
+    if not fragment.startswith(":~:text="):
+        problems.append("text citation needs a #:~:text= fragment")
+    return problems
 
 errors = 0
 checked = 0
-print("=== Validating timestamped citations ===")
+print("=== Validating citations ===")
 print("")
 for bib_path in sorted(glob.glob("skills/*/references/bibliography.md")):
     skill_dir = os.path.dirname(os.path.dirname(bib_path))
     bib = open(bib_path).read()
-    bib_ids = {}
-    for key, rest in re.findall(r"^\*\*\[([a-z0-9/-]+)\]\*\*(.*)$", bib, re.M):
-        m = re.search(r"watch\?v=([\w-]+)", rest)
-        bib_ids[key] = m.group(1) if m else None
-    if not bib_ids:
+    bib_urls = {}
+    for key, rest in re.findall(rf"^\*\*\[({KEY})\]\*\*(.*)$", bib, re.M):
+        urls = re.findall(r"https?://\S+", rest)
+        bib_urls[key] = urls[-1].rstrip(".") if urls else None
+    if not bib_urls:
         continue
     cited = set()
     for path in sorted(glob.glob(f"{skill_dir}/*.md")):
         if path.endswith("SKILL.md"):
             continue
         text = open(path).read()
-        defs = dict(re.findall(r"^\[([a-z0-9/-]+ [\d:]+)\]: (\S+)$", text, re.M))
-        body = re.sub(r"^\[[a-z0-9/-]+ [\d:]+\]: \S+$", "", text, flags=re.M)
-        uses = set(re.findall(r"\[([a-z0-9/-]+/[a-z0-9-]+ [\d:]+)\](?!\()", body))
+        defs = dict(re.findall(rf"^\[({LABEL})\]: (\S+)$", text, re.M))
+        body = re.sub(rf"^\[{LABEL}\]: \S+$", "", text, flags=re.M)
+        uses = set(re.findall(rf"\[({LABEL})\](?!\()", body))
         for label in sorted(uses | set(defs)):
             checked += 1
-            key, t = label.split(" ")
+            key, locator = label.split(" ")
             cited.add(key)
             problems = []
             if label not in defs:
                 problems.append("no link definition")
             if label not in uses:
                 problems.append("unused link definition")
-            if key not in bib_ids:
+            if key not in bib_urls:
                 problems.append("key missing from bibliography")
             url = defs.get(label)
-            if url:
-                m = re.match(r"https://youtu\.be/([\w-]+)\?t=(\d+)$", url)
-                if not m:
-                    if not re.match(r"https?://\S+$", url):
-                        problems.append(f"unexpected URL {url}")
+            if url and key in bib_urls:
+                if locator.startswith("¶"):
+                    problems += check_text(url, bib_urls[key])
                 else:
-                    vid, q = m.groups()
-                    if key in bib_ids and bib_ids[key] != vid:
-                        problems.append("video ID differs from bibliography")
-                    if secs(t) != int(q):
-                        problems.append(f"t={q} does not match {t}")
+                    problems += check_video(locator, url, bib_urls[key])
             for p in problems:
                 print(f"FAIL: {path}: [{label}] {p}")
                 errors += 1
-    for key in sorted(set(bib_ids) - cited):
+    for key in sorted(set(bib_urls) - cited):
         print(f"FAIL: {bib_path}: [{key}] is never cited")
         errors += 1
 print("")

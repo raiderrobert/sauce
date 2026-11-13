@@ -1,6 +1,6 @@
 ---
 name: designing-product-ui
-description: "Use when designing a new screen, choosing the visual design of a web app, SaaS product, dashboard, landing page, or mobile or desktop app, or when asked to redesign, restyle, polish, or make a UI look better, critique a mockup, give design or UX feedback, or do a design review or UX audit of a UI that looks ugly, generic, amateur, cluttered, or AI-generated. Gives cited, testable heuristics (spacing values, chart rules, dark-mode steps, state coverage) rather than an aesthetic direction, covering layout, hierarchy, typography, color, dark mode, icons, charts, tables, pricing pages, forms, modals, sidebars, empty and loading states, navigation, search, onboarding, AI chat interfaces, and animation. Not for pure frontend logic or bug fixes."
+description: "Use when designing a new screen, choosing the visual design of a web app, SaaS product, dashboard, landing page, or mobile or desktop app, or when asked to redesign, restyle, polish, or make a UI look better, critique a mockup, give design or UX feedback, or do a design review or UX audit of a UI that looks ugly, generic, amateur, cluttered, or AI-generated. Gives cited, testable heuristics (spacing values, chart rules, dark-mode steps, state coverage) rather than an aesthetic direction, covering layout, hierarchy, typography, color, dark mode, icons, charts, tables, pricing pages, forms, modals, sidebars, empty and loading states, navigation, search, onboarding, AI chat interfaces, animation, and interaction feel (feedback, microinteractions, haptics, game feel, delight, loading states). Not for pure frontend logic or bug fixes."
 ---
 
 # Designing Product UI
@@ -18,11 +18,11 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 
 ## How the topic files work
 
-- Read each file whose topic the task touches; a single component often spans several (a button touches components, color and motion).
-- Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. All current sources are videos by one designer, so count reflects how often the advice recurs, not independent agreement.
-- **App UI** tags rules for product screens only; **Marketing** tags rules for landing pages and websites only; untagged rules apply to both.
-- *Note:* text is an editorial caveat (usually accessibility or a CSS translation) that the source did not state. Where it corrects a source number, follow the Note.
-- Each rule ends with citations like `[jain/dashboard-flaws 0:44]`. The link definitions at the bottom of each file open the source at that moment.
+- Read each file whose topic the task touches; a single component often spans several (a button touches components, color, motion and interaction feel).
+- Within a section, rules backed by more distinct sources come first, and a base rule comes before its exceptions. Sources are one designer's videos (Kole Jain), several designers and teams (Apple, Nielsen Norman Group, Steve Schoger, Erik Kennedy, Chris Raroque, Linear, Superhuman, Slack, Rauno Freiberg, Emil Kowalski), game designers (Valve, Blizzard, Vlambeer and others) and one research paper; the bibliography lists them all.
+- **App UI** tags rules for product screens only; **Marketing** tags rules for landing pages and websites only; **From games** tags a game-design principle whose *Note:* translates it to product UI; untagged rules apply to both.
+- *Note:* text is an editorial caveat (usually accessibility, a CSS translation, or how a game principle applies to apps) that the source did not state. Where it corrects a source number, follow the Note.
+- Each rule ends with citations: `[jain/dashboard-flaws 0:44]` for a video timestamp, or `[freiberg/invisible-details ¶the-selected-item-briefly]` for a passage in an essay, paper or talk transcript. The link definitions at the bottom of each file open the source at that moment or passage.
 
 ## Routing
 
@@ -36,6 +36,7 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 | Dashboards, charts, KPIs, tables, lists, pricing pages and billing | `./data-and-dashboards.md` |
 | Sidebars, tabs, overflow menus, search, what to show versus hide, onboarding and first run, gamification, website navbars, dropdowns and mega menus | `./navigation-and-disclosure.md` |
 | Animation, transitions, easing and durations, hover effects, drag and swipe feedback, loaders, scroll effects | `./motion.md` |
+| How each action feels: acknowledging every click and keypress, speed and flow, layered feedback, haptics, motion that shows where things came from, keyboard-shortcut feedback, waits and loading messages, delight and when to hold back | `./interaction-feel.md` |
 | Mobile apps, gestures, thumb zones, tab bars, bottom sheets, macOS and desktop apps | `./mobile-and-desktop.md` |
 | Landing pages, heroes, marketing copy, footers, social proof (navbars are in navigation-and-disclosure) | `./landing-pages.md` |
 | How to approach the work: references, generated UI, reviewing at real size | `./process.md` |

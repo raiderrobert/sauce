@@ -1,10 +1,10 @@
 # Mobile and desktop apps
 
-Platform-specific rules for mobile apps (thumb reach, navigation, layout, gestures, contextual actions) and native-feeling desktop apps.
+Platform-specific rules for mobile apps (thumb reach, navigation, layout, gestures, contextual actions), native-feeling desktop apps, touch on Mac, and adapting layouts across devices.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/video timestamp`) link to that moment; definitions are at the end of the file.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a game-design principle whose *Note* translates it to product UI, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
 
-Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures and feedback · Contextual mobile actions · Native-feeling desktop apps
+Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures and feedback · Contextual mobile actions · Native-feeling desktop apps · Touch on Mac · Across screen sizes
 
 ## Thumb reach
 
@@ -13,22 +13,28 @@ Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures a
 ## Mobile navigation
 
 - Don't make the tab bar's add button stick up in a circle; keep it inline with the other tabs unless it is truly the main action. Users tap other tabs far more than add. ([jain/crucial-ui-elements 0:34], [jain/mobile-app-ui 0:27])
+- **App UI:** On iOS, prefer putting search in the bottom toolbar (use the top toolbar when the bottom is occupied, e.g. by a sheet), and auto-open the keyboard when the user navigates to a dedicated search screen. In the bottom toolbar the field animates up over the keyboard, optimizing for reachability and keyboard input. ([apple/intuitive-search 3:22], [raroque/app-design-process 9:37])
 - Use a bottom tab bar (often floating, as of 2026) when navigation fits a few key icons: five links at most, three or four ideally. Keeps every tap target above 44px. ([jain/mobile-app-ui 0:27])
 - Give the active tab a distinct state (e.g. swap to a filled icon), and keep inactive tab icons clearly visible rather than dimmed to near-invisibility. The active indicator already shows the selection. ([jain/crucial-ui-elements 1:04])
 - When there are too many important nav items for a bottom bar, turn the sidebar into a home page of links, balanced with recent items on top, counts on the right, and a big search bar or primary button at the bottom. A lopsided list feels unfinished. ([jain/mobile-app-ui 0:59])
 - Use bottom sheets for secondary tasks, such as picking a template, to keep the user in context. Keeps context and is easy to dismiss with a gesture. ([jain/mobile-app-ui 4:06])
+- On mobile, keep the header condensed: move low-priority links (about, social) to the bottom, collapse page navigation into an expand/collapse menu, and for long sectioned content consider accordions over a dropdown. Users come for core details; a dropdown is compact, but with long content it means repeatedly scrolling back to the top. ([schoger/wss 11:35])
 
 ## Mobile screen layout
 
 - Lay out each mobile section in one direction: stack vertically or scroll horizontally, never both. Desktop can use two directions; mobile can't. *Note: Editorial: horizontal scrollers suit browsable sets of similar cards; stack content users must read in full.* ([jain/mobile-app-ui 2:28], [jain/mobile-swipe-interactions 0:28])
+- Make each mobile screen do one thing with one primary content block (home excepted); show subtasks on sub-screens, adding a page rather than a new layout. Mobile is too space-constrained for more. ([jain/mobile-app-ui 2:03], [kennedy/wodify-redesign 1:37])
 - Don't shrink type and spacing to cram content on mobile; keep them similar to desktop or larger (base text ~17px on iOS versus ~13px on macOS). Text actually gets larger on smaller screens. ([jain/mobile-app-ui 1:32])
-- Make each mobile screen do one thing with one primary content block (home excepted); add a page rather than a new layout. Mobile is too space-constrained for more. ([jain/mobile-app-ui 2:03])
 - Build mobile screens from four blocks (cards, text/links, images, inputs), using cards to group content. Cards group content where mobile lacks room for white space. ([jain/mobile-app-ui 2:49])
+- On mobile, make buttons and almost all form controls full width minus about a 16px side margin, with buttons 44px tall. 44px is the smallest default iOS tap target; full width gives big, easy targets. ([kennedy/wodify-redesign 2:09])
+- When a wide table has too much detail to fit on mobile, consider letting it scroll horizontally instead of stacking every column; hint the scroll by fading the content or cutting it off at the edge, and avoid view tabs that would interfere with existing tabs. Everything can't fit in one view; stacking every column can cause excessive scrolling, and a second tab set can be confusing. *Note: The table scrolls on one axis inside a vertically stacked page, consistent with the one-direction rule.* ([schoger/wss 12:30])
+- **App UI:** Blur app contents in the app switcher when they may be sensitive, like medical records or bank statements. Conceals possibly sensitive data. ([freiberg/invisible-details ¶its-a-deliberate-attempt])
 
 ## Gestures and feedback
 
-- Use swipes to replace buttons, reveal context or trigger actions (e.g. swipe up to search), and teach users the swipe exists. Once learned, swiping is faster. *Note: Keep a tap-based alternative (button or menu) for each swipe action.* ([jain/mobile-app-ui 5:32], [jain/mobile-swipe-interactions 4:14])
+- Use swipes to replace buttons, reveal context or trigger actions (e.g. swipe up to search), teach users the swipe exists, and duplicate each gesture's action elsewhere, e.g. in a menu (for less familiar swipes, make that alternative visible; see the next rule). Once learned, swiping is faster. *Note: Keep a tap-based alternative (button or menu) for each swipe action.* ([apple/touch-on-mac 7:37], [jain/mobile-app-ui 5:32], [jain/mobile-swipe-interactions 4:14])
 - For less familiar swipe actions, also offer a visible button or a long-press menu; for carousel arrows on touch, see the carousel rule in components-and-states.md. The uninitiated need a visible path, though swiping is faster once learned. ([jain/mobile-swipe-interactions 1:50])
+- **App UI:** On touch screens, establish the pinch-zoom anchor where the fingers start (starting with fingers together picks it precisely), and apply zoom and rotate to the object under the fingers or cursor. Zooming is an act of precision; an anchor is easier and more precise to pick with fingers pinched together. ([apple/touch-on-mac 4:47], [freiberg/invisible-details ¶the-interface-needs-to])
 - Reveal useful secondary actions on swipe left or right while keeping the primary action visible. ([jain/dashboard-flaws 3:38])
 - Use swipe-to-confirm sliders for high-impact or irreversible actions like sending money or purchasing. It's far easier to tap a button by accident than to slide a slider across. *Note: Offer a single-pointer alternative, e.g. a press-and-hold or tap-then-confirm button.* ([jain/mobile-swipe-interactions 5:11])
 - Make gestures show progress toward commit and stay reversible until release, as in pull-to-refresh and swipe-to-delete. Users can back out at any point. ([jain/software-must-lie 8:38])
@@ -47,6 +53,34 @@ Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures a
 - If actions have keyboard shortcuts, show the hints on their buttons. ([jain/macos-apps 1:37])
 - If the app holds user content, support dragging it both into and out of the app. Makes the app feel native. ([jain/macos-apps 7:24])
 
+## Touch on Mac
+
+- **App UI:** Don't redesign a Mac app or drastically change its layout for touch; keep keyboard and mouse primary, and make it look identical on touch and non-touch Macs. Touch is secondary; a little touch polish still makes a big difference. ([apple/touch-on-mac 7:14])
+- **App UI:** Allow modeless selection: single tap or click selects, double opens, and tap-and-hold shows the context menu beside the item, dismissed once dragging starts. Tapping matches clicking, so users switch easily between trackpad and touch. ([apple/touch-on-mac 2:42])
+- **App UI:** Make custom gestures work with touch and trackpad (and possibly Magic Mouse) rather than touch only, using a modifier key where gestures conflict; support keyboard modifiers during touch drags, and don't rely on system gestures. Easily switching inputs on Mac is sometimes more important than parity with iOS; system gestures are controlled by macOS and unavailable to apps. ([apple/touch-on-mac 4:13])
+- **App UI:** On touch-screen Macs, put dense, precise controls like inspectors and navigation sidebars at the window's left and right sides; reserve the center for coarse gestures like pan and pinch. Hands anchor on the display edge for precision but hang unsupported mid-screen. ([apple/touch-on-mac 6:29])
+- **App UI:** Use 36pt touch targets on macOS (physically equal to 44pt on iOS) and FormStyle, whose rows default to 36pt, for list- and settings-based views; for non-framework controls, consider enlarging the invisible touch area rather than the control. Framework controls' touch targets are invisible, so layouts needn't change; very dense apps may keep small or mini controls as long as touch works. ([apple/touch-on-mac 9:17])
+- **App UI:** Adapt to the invoking input: show slightly larger menu rows when opened by touch, keep hover affordances like carousel scroll arrows hidden where touch can already do the action, and don't require informational hover like tooltips to work with touch. Larger rows ease touch selection; hover actions that purely show information aren't required to work with touch. *Note: For accessibility, keep essential information out of hover-only tooltips so touch and keyboard users can still reach it.* ([apple/touch-on-mac 11:23])
+
+## Across screen sizes
+
+- Keep tablet and desktop experiences closely aligned, but give phones their own design for quick touch interactions; don't just scale mobile-first layouts up to desktop, and keep spacious, dispersed sections to a few. Each device deserves a solution that uses what makes it unique; widespread content dispersion on desktop makes long pages with higher interaction cost and cognitive load. *Note: Hearthstone's team found desktop and tablet pretty similar but the phone version a complete overhaul. In product UI, plan a dedicated phone layout, splitting some screens, rather than shrinking the desktop or tablet layout.* ([apple/intuitive-search 7:57], [apple/principles-of-great-design 9:46], [nngroup/content-dispersion-mobile 1:02], [sakamoto/hearthstone-immersive-ui 16:09])
+- **App UI:** Collapse the dashboard sidebar (e.g. behind a hamburger button) once it no longer fits, typically below 1024px; on phones, consider turning range toggles into dropdowns, stacking stat rows earlier, and keeping chart height while showing fewer x-axis items. A sidebar stops fitting at smaller widths; the AI-generated dashboard came out squishy with no responsive navigation. ([schoger/dashboard-with-ai 0:04:25])
+- **App UI:** On mobile, fetch only the data needed to render the first screen, such as the conversation a notification opened. Mobile devices and connections are slower; users get in, do the task, get out. ([slack/incremental-boot ¶our-mobile-apps-just])
+
+[apple/intuitive-search 3:22]: https://youtu.be/lx45sKEnZkU?t=202
+[apple/intuitive-search 7:57]: https://youtu.be/lx45sKEnZkU?t=477
+[apple/principles-of-great-design 9:46]: https://youtu.be/Xa9L2yx_QH8?t=586
+[apple/touch-on-mac 11:23]: https://youtu.be/2cq3ytwLrLk?t=683
+[apple/touch-on-mac 2:42]: https://youtu.be/2cq3ytwLrLk?t=162
+[apple/touch-on-mac 4:13]: https://youtu.be/2cq3ytwLrLk?t=253
+[apple/touch-on-mac 4:47]: https://youtu.be/2cq3ytwLrLk?t=287
+[apple/touch-on-mac 6:29]: https://youtu.be/2cq3ytwLrLk?t=389
+[apple/touch-on-mac 7:14]: https://youtu.be/2cq3ytwLrLk?t=434
+[apple/touch-on-mac 7:37]: https://youtu.be/2cq3ytwLrLk?t=457
+[apple/touch-on-mac 9:17]: https://youtu.be/2cq3ytwLrLk?t=557
+[freiberg/invisible-details ¶its-a-deliberate-attempt]: https://rauno.me/craft/interaction-design#:~:text=it%27s%20a%20deliberate%20attempt%20to%20conceal
+[freiberg/invisible-details ¶the-interface-needs-to]: https://rauno.me/craft/interaction-design#:~:text=the%20interface%20needs%20to%20first%20establish
 [jain/crucial-ui-elements 0:34]: https://youtu.be/gKM6b2EnW1k?t=34
 [jain/crucial-ui-elements 1:04]: https://youtu.be/gKM6b2EnW1k?t=64
 [jain/dashboard-flaws 3:38]: https://youtu.be/Ksx9C2-3yMo?t=218
@@ -73,3 +107,12 @@ Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures a
 [jain/spotify-wrapped-redesign 1:31]: https://youtu.be/goWOAFqJHpA?t=91
 [jain/spotify-wrapped-redesign 1:40]: https://youtu.be/goWOAFqJHpA?t=100
 [jain/tiktok-ux 4:57]: https://youtu.be/ixUq4HM4FNg?t=297
+[kennedy/wodify-redesign 1:37]: https://youtu.be/OdS7fOS7bTk?t=97
+[kennedy/wodify-redesign 2:09]: https://youtu.be/OdS7fOS7bTk?t=129
+[nngroup/content-dispersion-mobile 1:02]: https://youtu.be/-3xbwQt4MGQ?t=62
+[raroque/app-design-process 9:37]: https://youtu.be/H0czeRyXPxA?t=577
+[sakamoto/hearthstone-immersive-ui 16:09]: https://youtu.be/axkPXCNjOh8?t=969
+[schoger/dashboard-with-ai 0:04:25]: https://youtu.be/lQCWuOT5ENQ?t=265
+[schoger/wss 11:35]: https://youtu.be/ZJj7uNdzPpM?t=695
+[schoger/wss 12:30]: https://youtu.be/ZJj7uNdzPpM?t=750
+[slack/incremental-boot ¶our-mobile-apps-just]: https://slack.engineering/getting-to-slack-faster-with-incremental-boot/#:~:text=our%20mobile%20apps%20just%20fetch%20the

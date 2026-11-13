@@ -1,17 +1,18 @@
 # Data and dashboards
 
-Dashboard layout, charts and chart color, KPIs and stats, tables and lists, and pricing and billing displays.
+Dashboard layout, charts and chart styling, KPIs and stats, tables, lists and feeds, and pricing and comparison tables.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/video timestamp`) link to that moment; definitions are at the end of the file.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a game-design principle whose *Note* translates it to product UI, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
 
-Contents: Dashboard layout · Charts · Chart color · KPIs and stats · Tables and lists · Pricing and billing
+Contents: Dashboard layout · Charts · Chart styling and color · KPIs and stats · Tables · Lists and feeds · Pricing and comparison tables
 
 ## Dashboard layout
 
-- **App UI:** Make each dashboard do one thing well and let the data it must show drive its UI; cut bulky elements that give no real value. Disorganized, overloaded dashboards are unusable. *Note: Editorial: e.g. frame that one thing as a primary question such as 'how is revenue trending?'.* ([jain/dashboard-flaws 0:22], [jain/dashboard-ui 1:46], [jain/finance-dashboard-redesign 2:38])
+- **App UI:** Make each dashboard do one thing well and let the data it must show drive its UI; cut bulky elements and trivia that give no real value. Disorganized, overloaded dashboards are unusable. *Note: Editorial: e.g. frame that one thing as a primary question such as 'how is revenue trending?'.* ([jain/dashboard-flaws 0:22], [jain/dashboard-ui 1:46], [jain/finance-dashboard-redesign 2:38], [kennedy/timezones-redesign 1:46])
+- **App UI:** If users need trends from time-based logs or tables, add a roll-up chart above them; if content uses a click-through story format, add a summary dashboard beside it. Shows trends at a glance instead of hunting through timestamps or slides. ([apple/principles-of-great-design 12:47], [jain/dashboard-flaws 2:10], [jain/spotify-wrapped-redesign 0:44])
 - **App UI:** Rank each module as high, mid or low priority before arranging: put the most important information higher and farther left in the main area, low-priority information lower, and reserve the very top for page actions or simple navigation. The main area should reflect what matters most to the user. ([jain/dashboard-ui 2:20], [jain/finance-dashboard-redesign 3:44])
-- **App UI:** If users need trends from time-based logs or tables, add a roll-up chart above them; if content uses a click-through story format, add a summary dashboard beside it. Shows trends at a glance instead of hunting through timestamps or slides. ([jain/dashboard-flaws 2:10], [jain/spotify-wrapped-redesign 0:44])
 - **App UI:** Give every card enough context (amount, date, place) to be understood; merge small related widgets into the card they belong to, and remove cards that do nothing. Fragments and purposeless cards look useless; integrated, they make sense. ([jain/finance-dashboard-redesign 2:19], [jain/saas-vibe-code-mistakes 3:28])
+- **App UI:** Make entry points such as app icons or widgets show real data, not static placeholders like a weather icon that always reads 73 and sunny. An entry point should bring the data forward. ([saffer/microinteractions 18:41])
 
 ## Charts
 
@@ -21,38 +22,60 @@ Contents: Dashboard layout · Charts · Chart color · KPIs and stats · Tables 
 - Pick the chart type to fit the data, e.g. two-sided bars for income (up) versus expenses (down), a pie for credit utilization, a shaded map with listed values for geography. Data representation makes or breaks a dashboard. ([jain/finance-dashboard-redesign 6:57], [jain/saas-vibe-code-mistakes 5:20])
 - If a chart's data spans more than one useful time frame, let users switch the time frame or date range: a dropdown when space is short, otherwise separate buttons. ([jain/crucial-ui-elements 2:47], [jain/dashboard-ui 3:46])
 - Label chart values so the numbers mean something, and add a legend for comparison lines unless the encoding is obvious. Without labels the numbers don't mean anything. *Note: Editorial: label values directly when there are few data points (e.g. a handful of bars); for dense series rely on axes and show values on hover.* ([jain/crucial-ui-elements 3:08], [jain/finance-dashboard-redesign 4:08])
+- Instead of a separate legend, put small 4×4px colored squares beside the labels in the series toggle. Round dots looked clunky; squares look clean. *Note: This still serves as the legend the rule above asks for; keep the text labels so series aren't identified by color alone (WCAG 1.4.1).* ([schoger/dashboard-with-ai 0:37:14])
 - **App UI:** If users need to compare business metrics against the previous period (e.g. last month's sales), show that period as a gray comparison line on the same chart. It is the usual comparison for business income. ([jain/crucial-ui-elements 2:56])
 - Match bar count to the data periods (7 days = 7 bars) and keep bar tops square. Extra bars make no sense, and rounded tops hide where the value ends. ([jain/beginner-mistakes 6:43])
+- **App UI:** When short-term data looks alarming, e.g. a portfolio drop, show a longer time horizon such as 5 years instead of 90 days. Zooming out turns a 'grand canyon' into a pothole and discourages fearful, harmful actions. *Note: Editorial: keep the shorter range available through the time-frame switch.* ([walter/designing-for-emotion 0:17:26])
 
-## Chart color
+## Chart styling and color
 
 - For multi-series charts, use a full spectrum of hues at the same perceived brightness rather than one brand ramp: in OKLCH, fix lightness and chroma and step the hue about 40-60° or more per series (source: 25-30°, often too close for color-blind users). Brand-ramp series look too similar; OKLCH keeps perceived brightness even across hues. *Note: For color-blind users, also label series directly, and vary lightness where hue alone doesn't separate them. Editorial: a ramp from the accent suits single-series emphasis.* ([jain/60-30-10-rule 2:19], [jain/every-ui-concept 5:14])
+- Draw chart lines 1px thick and remove data-point dots whose meaning is unclear. Thinner lines look more refined; unexplained dots confuse more than they help. *Note: Editorial: keep the line at 3:1 contrast against the background (WCAG 1.4.11); dots can still appear on hover.* ([schoger/dashboard-with-ai 0:32:02])
+- Draw gridlines solid and styled like the page's other dividers (e.g. white at 10% opacity), not dotted. Dotted lines are distracting. ([schoger/dashboard-with-ai 0:33:10])
+- Rest y-axis values just below their gridlines, right-aligned to the chart; put x-axis labels just left of their gridlines; show one shared zero at the origin, on the same baseline as the x-axis labels. Inconsistently placed labels don't line up with their lines. ([schoger/dashboard-with-ai 0:34:31])
 
 ## KPIs and stats
 
+- Make stat values large (e.g. text-5xl) and high-contrast so they scan at a glance, but set them in regular weight, not bold. Bold stat numbers look clunky; regular weight looks clean. *Note: Editorial: text-5xl is Tailwind's 3rem (48px).* ([schoger/bad-about 3:10], [schoger/dashboard-with-ai 0:26:08], [schoger/designing-with-claude-code 0:44:55])
 - **App UI:** Don't repeat the same data: no duplicated KPI rows across pages, no chart restating percentages already shown. Repetition wastes space; duplicated KPI rows were a common tell of AI-generated UI as of 2026. ([jain/finance-dashboard-redesign 4:15], [jain/saas-vibe-code-mistakes 1:15])
 - **App UI:** Add color to dashboards through charts rather than colored buttons and icons, and where a reference value exists, put comparison text beneath stats (e.g. percent change from last year). The color then carries information, and a number needs a reference point. ([jain/saas-vibe-code-mistakes 0:55], [jain/spotify-wrapped-redesign 4:04])
 - **App UI:** Show progress concretely: an actual percentage, or what's done and what's left (e.g. a course percentage or a profile-completion meter), instead of a vague 'In progress' label; use completed and incomplete status colors consistently. 'In progress' says nothing; visible progress and the urge to complete drive users to finish, and inconsistent status colors misrepresent progress. *Note: Don't rely on color alone; pair it with an icon or text label (WCAG 1.4.1).* ([jain/gamifying-apps 0:42], [jain/vibe-coding-pro-ui 5:45])
 - **App UI:** On usage pages, prefer a simple two-column layout with small donut charts over a generic row of KPI cards. Generic KPI rows looked templated and AI-generated as of 2026. ([jain/saas-vibe-code-mistakes 3:40])
+- Left-align stats across the full container width, add a divider between adjacent stats, and set labels in a soft but legible gray (e.g. gray-600). *Note: Editorial: labels must still meet 4.5:1 contrast (WCAG 1.4.3); Tailwind gray-600 on white does.* ([schoger/designing-with-claude-code 0:44:26])
+- **App UI:** In stat blocks, drop decorative icons and show deltas with the font's plus and minus characters in the value instead of trending icons. The icons aren't doing anything; signed values look cleaner. *Note: Editorial: use the true minus sign (U+2212); if color marks direction, the sign keeps meaning from being color-only.* ([schoger/dashboard-with-ai 0:24:15])
 
-## Tables and lists
+## Tables
 
-- Show only scan-critical fields on list items and overview data (e.g. location, rating, price); leave details for the detail page. Users scan with specifics and click in for details. ([jain/dashboard-ui 2:54], [jain/genius-designer 2:48])
+- Give table headers a 2px bottom border, rows liberal padding (e.g. about 60px tall), and no outer padding so the first and last columns reach the table's edge. Liberal padding gives everything more room to breathe. *Note: Editorial: the 60px came from a plan-comparison table; dense product tables often use 40-48px rows.* ([schoger/dashboard-with-ai 0:43:19], [schoger/resolute 3:59], [schoger/wss 8:11])
+- In right-aligned number columns, use tabular (equal-width) or monospaced digits so values line up. Numbers of equal length don't line up if digits differ in width. *Note: In CSS, font-variant-numeric: tabular-nums.* ([kennedy/spendweek-redesign 9:31])
+- **App UI:** In tables, truncate long cell text, render fixed-set values such as department or status as chips, and shade inactive or deactivated rows. Gives the other columns room and makes state visible at a glance. ([jain/dashboard-flaws 0:41])
+- Attach a table's 'show more' link to it with a border and subtle gray background, using dark bold text instead of a blue link. Gray marks it as a de-emphasized table extension; dark bold text still looks clickable. ([schoger/resolute 5:22])
+- Don't give tables a fixed height with an inner scrollbar; remove the max height so rows scroll with the page. Fitting a table to the viewport creates an awkward nested scrollbar. *Note: Editorial: a sticky header keeps column labels visible on long pages.* ([schoger/wss 0:56])
+
+## Lists and feeds
+
+- Show only scan-critical fields on list items and overview data (e.g. location, rating, price); leave details for the detail page. Users scan with specifics and click in for details. ([jain/dashboard-ui 2:54], [jain/genius-designer 2:48], [raroque/app-design-process 8:14])
 - Show a collection as one list rather than separate bordered cards; when rows must be tight, use subtle alternating row backgrounds instead of divider lines. Lists also make empty states easier. For separating items with spacing, see also layout-and-hierarchy.md. ([jain/dashboard-ui 3:12], [jain/ui-cheat-codes 5:54])
 - Show avatars wherever people are referenced in lists or activity logs. The eye links who did what faster than it reads a name. *Note: Editorial: when there is no photo, fall back to flat neutral initials, not a gradient letter circle.* ([jain/dashboard-flaws 2:03], [jain/weirdly-perfect-ui 2:28])
-- **App UI:** In tables, truncate long cell text, render fixed-set values such as department or status as chips, and shade inactive or deactivated rows. Gives the other columns room and makes state visible at a glance. ([jain/dashboard-flaws 0:41])
+- Use one date format across sections (e.g. month, day and year), and flag converted times that fall on another day with a small '+1 day' marker. The marker draws attention to the day difference. ([kennedy/timezones-redesign 7:19], [schoger/resolute 6:52])
 - **App UI:** Show time-delineated data as a timeline rather than a time-sorted table, e.g. in a sidebar popout or second column. A timeline is much easier to follow. ([jain/dashboard-flaws 1:14])
+- **App UI:** In a narrow event list, stack timestamp and status on line one and the description on line two, showing severity as a small colored square; details on click-through. Status stays visible at a glance and looks cleaner than a table with text badges. *Note: Color alone can't carry severity (WCAG 1.4.1): give the square a text alternative or distinct shape, and show the label in the detail view. In wide tables, use status chips instead (see Tables).* ([schoger/dashboard-with-ai 0:40:50])
 - Group list items by a meaningful key, such as due date, so any item can be found in about a second. Grouping makes density work for you. ([jain/weirdly-perfect-ui 2:33])
+- **App UI:** Don't group search results by type if grouping breaks relevance order. The order matters; grouping can push the best match down. ([raroque/app-design-process 5:13])
 - **App UI:** If users need to act on many list items at once, allow multi-select that reveals a contextual bulk-actions button. Real applications need to manage data efficiently. ([jain/dashboard-ui 3:25])
 
-## Pricing and billing
+## Pricing and comparison tables
 
 - On pricing cards, shrink the plan name and make the price large; if the button moves up near the price, make it an outline button. The cost is what people look for; a filled button up top throws off the hierarchy. ([jain/crucial-ui-elements 4:46], [jain/every-ui-concept 1:23], [jain/saas-vibe-code-mistakes 4:14])
+- Build comparison tables with competing products as columns and attributes as rows, one bordered cell per point so comparable values line up. Allows quick comparison; independent columns misalign when text wraps in one. ([nngroup/comparison-tables 0:00], [schoger/wss 7:47])
+- Skip a comparison table when users decide on one factor, buy several, or the items are simple, cheap, replaceable, or unique with subjective attributes. A table in the wrong situation confuses; base the choice on how users actually decide. ([nngroup/comparison-tables 0:35])
+- In comparison tables, add one label column instead of repeating labels in every column; style section-title rows shorter, with a subtle gray background and no horizontal borders. Repeated labels add text and busyness; distinct styling marks section titles. ([schoger/wss 8:33])
 - Give each plan a name and a short description, and list features with check marks, including at least one feature the plan doesn't get. Makes plans easy to tell apart and compare. ([jain/crucial-ui-elements 4:55])
 - If the product has paid plans, offer fewer than five; if it has a tier for high-volume buyers, name it 'Enterprise'. Five plans is too many; high-volume buyers usually need more than a fixed plan. ([jain/saas-vibe-code-mistakes 3:59])
 - When plans carry discounts, show the actual discount and order plans so a lower tier never looks pricier than a higher one. A cheaper-looking higher tier confuses until users notice the discount. ([jain/saas-vibe-code-mistakes 3:51])
 - Disclose billing terms under the price, e.g. the billed-annually total. Users feel misled when they discover the real price later. ([jain/crucial-ui-elements 5:14])
 
+[apple/principles-of-great-design 12:47]: https://youtu.be/Xa9L2yx_QH8?t=767
 [jain/60-30-10-rule 2:19]: https://youtu.be/66oOi9OLMCw?t=139
 [jain/beginner-mistakes 6:38]: https://youtu.be/AH_ugxmLeUM?t=398
 [jain/beginner-mistakes 6:43]: https://youtu.be/AH_ugxmLeUM?t=403
@@ -102,3 +125,30 @@ Contents: Dashboard layout · Charts · Chart color · KPIs and stats · Tables 
 [jain/vibe-coding-pro-ui 5:45]: https://youtu.be/xHD01_Onac0?t=345
 [jain/weirdly-perfect-ui 2:28]: https://youtu.be/neE6wOuBIP8?t=148
 [jain/weirdly-perfect-ui 2:33]: https://youtu.be/neE6wOuBIP8?t=153
+[kennedy/spendweek-redesign 9:31]: https://youtu.be/LHs6vx4QEE4?t=571
+[kennedy/timezones-redesign 1:46]: https://youtu.be/B4XHaboNMOI?t=106
+[kennedy/timezones-redesign 7:19]: https://youtu.be/B4XHaboNMOI?t=439
+[nngroup/comparison-tables 0:00]: https://youtu.be/POsaV2YzRr8?t=0
+[nngroup/comparison-tables 0:35]: https://youtu.be/POsaV2YzRr8?t=35
+[raroque/app-design-process 5:13]: https://youtu.be/H0czeRyXPxA?t=313
+[raroque/app-design-process 8:14]: https://youtu.be/H0czeRyXPxA?t=494
+[saffer/microinteractions 18:41]: https://youtu.be/9CEtqnPdWoI?t=1121
+[schoger/bad-about 3:10]: https://youtu.be/S6-q5BheEYU?t=190
+[schoger/dashboard-with-ai 0:24:15]: https://youtu.be/lQCWuOT5ENQ?t=1455
+[schoger/dashboard-with-ai 0:26:08]: https://youtu.be/lQCWuOT5ENQ?t=1568
+[schoger/dashboard-with-ai 0:32:02]: https://youtu.be/lQCWuOT5ENQ?t=1922
+[schoger/dashboard-with-ai 0:33:10]: https://youtu.be/lQCWuOT5ENQ?t=1990
+[schoger/dashboard-with-ai 0:34:31]: https://youtu.be/lQCWuOT5ENQ?t=2071
+[schoger/dashboard-with-ai 0:37:14]: https://youtu.be/lQCWuOT5ENQ?t=2234
+[schoger/dashboard-with-ai 0:40:50]: https://youtu.be/lQCWuOT5ENQ?t=2450
+[schoger/dashboard-with-ai 0:43:19]: https://youtu.be/lQCWuOT5ENQ?t=2599
+[schoger/designing-with-claude-code 0:44:26]: https://youtu.be/lkKGQVHrXzE?t=2666
+[schoger/designing-with-claude-code 0:44:55]: https://youtu.be/lkKGQVHrXzE?t=2695
+[schoger/resolute 3:59]: https://youtu.be/BMHUKij1yUE?t=239
+[schoger/resolute 5:22]: https://youtu.be/BMHUKij1yUE?t=322
+[schoger/resolute 6:52]: https://youtu.be/BMHUKij1yUE?t=412
+[schoger/wss 0:56]: https://youtu.be/ZJj7uNdzPpM?t=56
+[schoger/wss 7:47]: https://youtu.be/ZJj7uNdzPpM?t=467
+[schoger/wss 8:11]: https://youtu.be/ZJj7uNdzPpM?t=491
+[schoger/wss 8:33]: https://youtu.be/ZJj7uNdzPpM?t=513
+[walter/designing-for-emotion 0:17:26]: https://youtu.be/2umE6CHfHYc?t=1046

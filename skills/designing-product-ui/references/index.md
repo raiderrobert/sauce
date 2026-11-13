@@ -8,27 +8,30 @@ Where the rules in this skill come from. Read this when adding a new source or c
 
 ## Citation format
 
-Each rule in a topic file ends with one or more reference-style citations, defined at the bottom of the same file:
+Each rule in a topic file ends with one or more reference-style citations, defined at the bottom of the same file. Videos are cited by timestamp; essays, papers and talk or podcast transcripts by a ¶ anchor built from the first words of the supporting passage:
 
 ```markdown
-- Color destructive actions such as delete red, never the brand color. ([jain/60-30-10-rule 4:50], [jain/color-mistakes 5:51])
+- Make every transition interruptible. ([apple/designing-fluid-interfaces ¶we-want-to-allow], [freiberg/invisible-details ¶great-interactions-are-modeled])
 
 [jain/color-mistakes 5:51]: https://youtu.be/EOcY3hPMQkk?t=351
+[freiberg/invisible-details ¶great-interactions-are-modeled]: https://rauno.me/craft/interaction-design#:~:text=Great%20interactions%20are%20modeled%20after%20properties
 ```
 
-- The label is the bibliography key plus a timestamp in the source.
-- The link opens the video at that moment, so the claim can be checked in seconds.
-- A rule backed by several sources lists each one, earliest timestamp per source. Rules with more sources are listed first within their section.
-- Text marked *Note:* is an editorial caveat (usually accessibility) that the source did not state. It carries no citation.
+- The label is the bibliography key plus a locator: a timestamp for video, or ¶ and a slug for text.
+- Video links open the video at that moment. Text links use a `#:~:text=` fragment, so supporting browsers scroll to and highlight the passage (browsers can't do this inside PDFs).
+- A rule backed by several sources lists each one, earliest timestamp per video. Rules with more distinct sources are listed first within their section.
+- Text marked *Note:* is an editorial caveat (accessibility, a CSS translation, or how a game principle applies to apps) that the source did not state. It carries no citation.
 
 ## Adding a source
 
-1. Get a timestamped transcript. For YouTube: `yt-dlp --skip-download --write-auto-subs --sub-langs en-orig --sub-format vtt <url>`. Confirm the transcript is in the original language; some transcript tools pick an auto-translated track instead.
-2. Extract only advice the source states or explains. Do not turn something merely shown on screen into a rule.
-3. Check every timestamp against the transcript before citing it: the cited line must contain the advice. Then run `just validate-citations` from the repo root; it checks that every citation has a link definition, that the link's `t=` matches the timestamp, and that the video ID matches the bibliography entry. It cannot check what the video says, so step 3's transcript check is still required.
+1. Get the source text.
+   - For YouTube, get a timestamped transcript: `yt-dlp --skip-download --write-auto-subs --sub-langs en-orig,en --sub-format vtt <url>`, or the `yt-summarizer` tool, which prefers original-language English tracks. Confirm it is in the original language; some tools pick an auto-translated track.
+   - For essays, papers and transcripts, save the text locally.
+2. Extract only advice the source states or explains. Do not turn something merely shown on screen into a rule. For game-design sources, state the rule about games and put the product-UI translation in a *Note:*.
+3. Check every citation against the source before using it: the cited transcript line, or the quoted passage, must contain the advice. Then run `just validate-citations` from the repo root. It checks that every citation has a link definition, that video links match their timestamp and bibliography video, and that text links point at the bibliography URL with a `#:~:text=` fragment. It cannot check what the source says, so the manual check is still required.
 4. Add a bibliography entry, keyed `author/short-title`, in alphabetical order.
 5. Merge each new rule into the topic file it belongs to. If it repeats an existing rule, add the citation to that rule instead of duplicating it. If it conflicts with one, keep both and say when each applies.
-6. Do not commit full transcripts. Cite and summarize only.
+6. Do not commit full transcripts or articles. Cite and summarize only.
 
 ## Testing
 

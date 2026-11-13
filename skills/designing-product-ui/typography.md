@@ -2,40 +2,58 @@
 
 Font choice and pairing, text color tiers and weights, type scale, letter spacing and line height, and display text.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/video timestamp`) link to that moment; definitions are at the end of the file.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a game-design principle whose *Note* translates it to product UI, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
 
-Contents: Font selection and pairing · Text color and weight · Type scale and sizes · Letter spacing and line height · Display text
+Contents: Font selection and pairing · Text color and weight · Type scale and sizes · Spacing, line height and line length · Uppercase and labels · Numbers and code · Display text
 
 ## Font selection and pairing
 
-- Use at most two fonts (three is pushing it); when pairing two, use display + sans-serif or sans-serif + serif (a handwritten font may stand in for the display font), and choose a serif for an older, more authoritative tone. Many industry-standard sites use a single font; add a second only when the brand needs personality. ([jain/every-ui-concept 3:23], [jain/landing-page-levels 1:00], [jain/typography 0:44], [jain/vibe-coding-cant-fix 2:35])
-- Never set paragraph text in display or handwritten fonts; reserve them for large text. Their ornamentation becomes impractical at paragraph size. ([jain/typography 1:21])
+- Use at most two fonts (three is pushing it); when pairing two, use display + sans-serif or sans-serif + serif (a handwritten font may stand in for the display font), and choose a serif for an older, more authoritative tone. Many industry-standard sites use a single font; add a second only when the brand needs personality. A large number of typefaces makes text harder to scan. ([jain/every-ui-concept 3:23], [jain/landing-page-levels 1:00], [jain/typography 0:44], [jain/vibe-coding-cant-fix 2:35], [kennedy/advanced-ui-tips 2:24], [kennedy/timezones-redesign 3:32], [nngroup/theory-of-user-delight ¶the-text-is-difficult])
+- Pick fonts whose letterforms match brand adjectives: often grotesque sans for clean, sans for friendly, serif for fancy, serif or humanist sans for trustworthy, squared-off sans or monospace for techy. Most projects fit one of about five broad brands; convey it subtly, since over-the-top themed fonts like Papyrus suit games and movies, not most UI. ([kennedy/advanced-ui-tips 1:14], [kennedy/pairing-fonts 1:02], [kennedy/spendweek-redesign 1:40], [kennedy/starting-a-ui-project 13:47], [kennedy/wodify-redesign 2:36], [schoger/wss 9:43])
+- When pairing fonts, give each a different brand facet, e.g. a serif headline with small uppercase sans or terminal-style labels; don't pair near-identical fonts like Inter and Figtree. Similar fonts send no coherent message and give no reason to use two; uppercase looks less reliable in serifs. *Note: 'Pair a serif with a sans' is a heuristic: two sans serifs work if they convey different facets.* ([kennedy/advanced-ui-tips 4:02], [kennedy/pairing-fonts 8:30], [kennedy/starting-a-ui-project 22:29])
+- Never set paragraph text in display or handwritten fonts, including display faces without lowercase like Cinzel; reserve them for large text. Their ornamentation becomes impractical at paragraph size. ([jain/typography 1:21], [kennedy/pairing-fonts 8:10])
+- Pick a body font legible at small sizes, e.g. a sans with a large x-height and medium width and weight; look for descriptions like legible, body, text, book, editorial or workhorse. Body text carries an extra legibility constraint; imagine reading it for 10 minutes straight to check its tone still fits. ([kennedy/pairing-fonts 6:25], [schoger/wss 10:14])
 - If a third font is needed, confine it to small details such as image captions, e.g. a monospace. ([jain/typography 4:12])
 
 ## Text color and weight
 
 - Use two text tiers for most UI: primary text at 100% opacity and a secondary tier at about 55-70% opacity on white (source: 40-70% and 45-70%). Minor metadata, such as file details and labels, may take a third tier in gray rather than black. Two text colors are generally the maximum for clear hierarchy; metadata isn't important enough for full strength. *Note: Below about 55% opacity, black text on white fails 4.5:1 (WCAG AA). Every tier, metadata included, must pass, so set metadata apart by size, weight or placement rather than lower contrast.* ([jain/color-mistakes 4:21], [jain/typography 5:21], [jain/web-design-hacks 0:52])
 - Use at most two font weights, separated by at least one weight on the font's scale; avoid ultra-bold and ultra-thin for regular text. Too many weights look messy. *Note: In CSS, e.g. 400 and 600, skipping 500.* ([jain/typography 5:13], [jain/web-design-hacks 0:40])
+- Drop bold where size already gives emphasis: set a large page title in regular weight, and unbold a secondary line competing with the main headline. A bold title is stronger than needed and pulls focus from the content. ([schoger/resolute 13:47], [schoger/tuple 2:34])
 - Keep body paragraphs at full strength; don't give the smallest text the lowest contrast too. Small, low-contrast text is neither usable nor attractive. ([jain/typography 6:15])
 
 ## Type scale and sizes
 
-- Avoid tiny text: keep body text at 14-16px, and metadata and dense tables no smaller than 12px. Tiny text is a visible flaw even on major sites. *Note: The pixel floors are editorial; the source only calls out tiny text. Native macOS apps use a 13pt default body.* ([jain/google-ai-redesign 7:01])
-- **Marketing:** On a marketing header, set small nav text beneath giant display text, no smaller than 14px; the size contrast and the nav's position beneath make the display text feel more important. The size discrepancy is what makes such a header work. *Note: The 14px floor is editorial.* ([jain/website-layouts 3:03])
-- Derive font sizes from a ratio instead of eyeballing: header = body × 1.62 for a simple pair; for a multi-level scale from a 16px base, use √1.62 ≈ 1.27 per step. 1.62 per step grows too fast (the fifth size hits ~110px). ([jain/typography 7:17])
+- Avoid tiny, hard-to-read text: prefer a 16px (1rem) base font size over 14px, and bump up small text such as navigation labels. Tiny text is a visible flaw even on major sites. *Note: For legibility, keep body text at 14-16px and metadata and dense tables no smaller than 12px; these pixel floors are editorial. Native macOS apps use a 13pt default body.* ([jain/google-ai-redesign 7:01], [schoger/resolute 11:18], [schoger/transistor 1:48])
+- Derive font sizes from a ratio instead of eyeballing: header = body × 1.62 for a simple pair; for a multi-level scale from a 16px base, use √1.62 ≈ 1.27 per step. Use only sizes on the scale, not in-between ones like 12.5px. 1.62 per step grows too fast (the fifth size hits ~110px). ([apple/design-foundations 14:42], [jain/typography 7:17], [schoger/dashboard-with-ai 0:41:36])
 - **App UI:** On dashboards and dense mobile screens use tighter steps, e.g. ∛1.62 ≈ 1.17 per step, and keep dashboard text at or below 24px. Dense screens fit more on screen, which shrinks the size range. ([jain/dashboard-ui 1:58], [jain/every-ui-concept 4:14], [jain/typography 9:15])
+- **App UI:** On iPhone, start from platform defaults: 17pt regular for body and input text, 17pt centered screen titles in a slightly heavier weight, and 11pt tab bar labels with slightly wider letter spacing. Matches native iPhone apps; extra letter spacing makes the smallest text easier to read. *Note: 11pt tab labels are the platform exception to the 12px floor above. Apple's guidelines specify semibold for navigation bar titles.* ([kennedy/advanced-design-tips 5:26], [kennedy/spendweek-redesign 1:32])
+- **Marketing:** On a marketing header, set small nav text beneath giant display text, no smaller than 14px; the size contrast and the nav's position beneath make the display text feel more important. The size discrepancy is what makes such a header work. *Note: The 14px floor is editorial.* ([jain/website-layouts 3:03])
 - Scale font sizes fluidly with a single CSS formula between a smallest and a largest viewport width (the source uses 320px and 1920px), capped with a minimum and maximum, instead of per-breakpoint sizes. Breakpoints get messy; the cap stops sizes running away on the smallest and largest screens. *Note: In CSS, use clamp() with a rem term plus a viewport term, e.g. clamp(2rem, 1rem + 4vw, 5rem); the rem term keeps browser text zoom working, which viewport-only sizes ignore.* ([jain/typography 9:46])
 - **Marketing:** Use no more than six font sizes on a landing page or website. ([jain/every-ui-concept 4:09])
 
-## Letter spacing and line height
+## Spacing, line height and line length
 
-- Tighten letter spacing on large headings (especially above 70-80px) by about -2% to -3%; leave body and small text at the default, since smaller text needs proportionately more space. Try this before rejecting a font that looks disjointed at large sizes. Default spacing looks loose at large sizes; tightening instantly looks professional. *Note: In CSS, -2% to -3% is letter-spacing: -0.02em to -0.03em.* ([jain/every-ui-concept 3:49], [jain/typography 2:20], [jain/ui-cheat-codes 0:32])
-- Set heading line height explicitly at about 110-130% (110-120% for very large text) rather than leaving it automatic; keep paragraphs around 150% and raise line height for small text or long lines. Automatic line height drifts at extreme sizes; small text and long lines need more room to read. ([jain/every-ui-concept 3:49], [jain/typography 11:33])
+- Tighten letter spacing on headings from about 24-30px up, by about -1% to -3% (-2% to -3% especially above 70-80px); leave sentence-case body and small text at the default, since smaller text needs proportionately more space. Try this before rejecting a font that looks disjointed at large sizes. Default spacing looks loose at large sizes; tightening instantly looks professional. *Note: In CSS, -2% to -3% is letter-spacing: -0.02em to -0.03em.* ([jain/every-ui-concept 3:49], [jain/typography 2:20], [jain/ui-cheat-codes 0:32], [kennedy/advanced-ui-tips 5:24], [schoger/designing-with-claude-code 0:09:27])
+- Add positive letter spacing to all-uppercase text, about 3-4% for small labels; 6-7% can be too much. Uppercase lacks varied letter shapes, so tightly set caps are harder to read and scan. *Note: In CSS, 3-4% is letter-spacing: 0.03em to 0.04em. This is the exception to leaving small text at default spacing.* ([kennedy/advanced-ui-tips 5:40], [kennedy/spendweek-redesign 2:04], [schoger/bad-about 3:44], [schoger/designing-with-claude-code 0:28:51])
+- Set heading line height explicitly at about 110-130% (110-120% for very large text, down to about 100% for a big H1 if descenders don't collide) rather than leaving it automatic; keep paragraphs around 150% and raise line height for small text or long lines. Automatic line height drifts at extreme sizes; small text and long lines need more room to read. ([jain/every-ui-concept 3:49], [jain/typography 11:33], [kennedy/advanced-ui-tips 6:23], [kennedy/starting-a-ui-project 38:30])
+- Aim for about 70-80 characters per line in paragraphs, using a ch max-width on the element that sets the font size; to shorten lines, you can also enlarge the text (e.g. 18px) instead of narrowing one block. Lines that fill the page or are too narrow are uncomfortable to read; ch resolves against that element's font size; a block narrower than every other container looks odd. *Note: In CSS, e.g. max-width: 75ch on the paragraph itself. Short display text can go narrower; one source uses about 40ch.* ([schoger/designing-with-claude-code 0:26:25], [schoger/transistor 4:44], [schoger/tuple 1:44])
+
+## Uppercase and labels
+
+- **App UI:** Avoid all caps on form labels, tab labels and stat labels in app UI. Uppercase can work stylistically for short eyebrows (e.g. monospace on a marketing site) with really wide tracking, or for small repeated labels balanced as in the next rule. All caps reduce legibility. ([nngroup/better-tabs 4:00], [schoger/dashboard-with-ai 0:25:17], [schoger/transistor 11:07])
+- Balance 'up pop' (uppercase, bolder weight) against 'down pop' (smaller size, lower opacity), e.g. small uppercase labels slightly lighter at about 80% opacity so they don't compete with titles. Repeated labels need some emphasis, but a single label is nowhere near as important as the page title. *Note: Check that reduced-opacity labels still meet 4.5:1 contrast (WCAG AA).* ([kennedy/spendweek-redesign 3:09], [kennedy/wodify-redesign 5:27], [schoger/bad-about 3:30])
+
+## Numbers and code
+
+- Set code-like values such as HTTP methods (GET, POST) in monospace at regular weight, one size smaller than the surrounding sans (e.g. 11px beside 12px); monospace also suits small eyebrows. Mono fonts look bigger than regular fonts at the same size; monospace eyebrows look a little more designed. *Note: The 11px example falls below this file's 12px floor; pairing 12px mono with 13px sans keeps both legible.* ([schoger/dashboard-with-ai 0:45:12], [schoger/designing-with-claude-code 0:28:20])
+- Use a font with tabular figures for numbers that must align, such as times; test by typing rows of zeros and ones and checking they line up. Equal-width digits keep the numbers aligned with one another. *Note: In CSS, font-variant-numeric: tabular-nums enables them where the font supports it.* ([kennedy/timezones-redesign 3:39])
 
 ## Display text
 
 - **Marketing:** Use a display font at very large sizes as a visual, storytelling element, like an image (e.g. Unbounded, Cabinet Grotesk or Oswald at ~290px), but only once or twice per page. A good display font can carry as much weight as an image; overuse dilutes it. ([jain/slept-on-trends 3:25], [jain/web-design-hacks 4:43], [jain/website-layouts 3:39])
 
+[apple/design-foundations 14:42]: https://youtu.be/dGcqqA3Sl-o?t=882
 [jain/color-mistakes 4:21]: https://youtu.be/EOcY3hPMQkk?t=261
 [jain/dashboard-ui 1:58]: https://youtu.be/B7k5rOgmOGY?t=118
 [jain/every-ui-concept 3:23]: https://youtu.be/EcbgbKtOELY?t=203
@@ -63,3 +81,45 @@ Contents: Font selection and pairing · Text color and weight · Type scale and 
 [jain/web-design-hacks 4:43]: https://youtu.be/Lp6ey4AyDzA?t=283
 [jain/website-layouts 3:03]: https://youtu.be/P2ksReDwWkE?t=183
 [jain/website-layouts 3:39]: https://youtu.be/P2ksReDwWkE?t=219
+[kennedy/advanced-design-tips 5:26]: https://youtu.be/6jiq5g_bXB8?t=326
+[kennedy/advanced-ui-tips 1:14]: https://youtu.be/-2vzMH8iqsg?t=74
+[kennedy/advanced-ui-tips 2:24]: https://youtu.be/-2vzMH8iqsg?t=144
+[kennedy/advanced-ui-tips 4:02]: https://youtu.be/-2vzMH8iqsg?t=242
+[kennedy/advanced-ui-tips 5:24]: https://youtu.be/-2vzMH8iqsg?t=324
+[kennedy/advanced-ui-tips 5:40]: https://youtu.be/-2vzMH8iqsg?t=340
+[kennedy/advanced-ui-tips 6:23]: https://youtu.be/-2vzMH8iqsg?t=383
+[kennedy/pairing-fonts 1:02]: https://youtu.be/zJH3SXlyi1A?t=62
+[kennedy/pairing-fonts 6:25]: https://youtu.be/zJH3SXlyi1A?t=385
+[kennedy/pairing-fonts 8:10]: https://youtu.be/zJH3SXlyi1A?t=490
+[kennedy/pairing-fonts 8:30]: https://youtu.be/zJH3SXlyi1A?t=510
+[kennedy/spendweek-redesign 1:32]: https://youtu.be/LHs6vx4QEE4?t=92
+[kennedy/spendweek-redesign 1:40]: https://youtu.be/LHs6vx4QEE4?t=100
+[kennedy/spendweek-redesign 2:04]: https://youtu.be/LHs6vx4QEE4?t=124
+[kennedy/spendweek-redesign 3:09]: https://youtu.be/LHs6vx4QEE4?t=189
+[kennedy/starting-a-ui-project 13:47]: https://youtu.be/JOQJO_V7sew?t=827
+[kennedy/starting-a-ui-project 22:29]: https://youtu.be/JOQJO_V7sew?t=1349
+[kennedy/starting-a-ui-project 38:30]: https://youtu.be/JOQJO_V7sew?t=2310
+[kennedy/timezones-redesign 3:32]: https://youtu.be/B4XHaboNMOI?t=212
+[kennedy/timezones-redesign 3:39]: https://youtu.be/B4XHaboNMOI?t=219
+[kennedy/wodify-redesign 2:36]: https://youtu.be/OdS7fOS7bTk?t=156
+[kennedy/wodify-redesign 5:27]: https://youtu.be/OdS7fOS7bTk?t=327
+[nngroup/better-tabs 4:00]: https://youtu.be/hPxrudx1iXg?t=240
+[nngroup/theory-of-user-delight ¶the-text-is-difficult]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=The%20text%20is%20difficult%20to%20scan
+[schoger/bad-about 3:30]: https://youtu.be/S6-q5BheEYU?t=210
+[schoger/bad-about 3:44]: https://youtu.be/S6-q5BheEYU?t=224
+[schoger/dashboard-with-ai 0:25:17]: https://youtu.be/lQCWuOT5ENQ?t=1517
+[schoger/dashboard-with-ai 0:41:36]: https://youtu.be/lQCWuOT5ENQ?t=2496
+[schoger/dashboard-with-ai 0:45:12]: https://youtu.be/lQCWuOT5ENQ?t=2712
+[schoger/designing-with-claude-code 0:09:27]: https://youtu.be/lkKGQVHrXzE?t=567
+[schoger/designing-with-claude-code 0:26:25]: https://youtu.be/lkKGQVHrXzE?t=1585
+[schoger/designing-with-claude-code 0:28:20]: https://youtu.be/lkKGQVHrXzE?t=1700
+[schoger/designing-with-claude-code 0:28:51]: https://youtu.be/lkKGQVHrXzE?t=1731
+[schoger/resolute 11:18]: https://youtu.be/BMHUKij1yUE?t=678
+[schoger/resolute 13:47]: https://youtu.be/BMHUKij1yUE?t=827
+[schoger/transistor 11:07]: https://youtu.be/ZT4WRRhacWk?t=667
+[schoger/transistor 1:48]: https://youtu.be/ZT4WRRhacWk?t=108
+[schoger/transistor 4:44]: https://youtu.be/ZT4WRRhacWk?t=284
+[schoger/tuple 1:44]: https://youtu.be/RC9cYdbQ-_c?t=104
+[schoger/tuple 2:34]: https://youtu.be/RC9cYdbQ-_c?t=154
+[schoger/wss 10:14]: https://youtu.be/ZJj7uNdzPpM?t=614
+[schoger/wss 9:43]: https://youtu.be/ZJj7uNdzPpM?t=583
