@@ -2,7 +2,7 @@
 
 Visual hierarchy, spacing and grouping, containers, alignment edges, grids, view choice and content focus for product UI and marketing pages.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a game-design principle whose *Note* translates it to product UI, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
 
 Contents: Visual hierarchy · Spacing and grouping · Containers and dividers · Alignment and edges · Grids and page structure · Layout variety and bento grids · Views, grouping and placement · Focus and simplicity
 
@@ -194,4 +194,4 @@ Contents: Visual hierarchy · Spacing and grouping · Containers and dividers ·
 [schoger/wss 7:29]: https://youtu.be/ZJj7uNdzPpM?t=449
 [vohra/beyond-gamification 13:25]: https://youtu.be/zaxAdRlyZQ8?t=805
 [vohra/designing-for-flow ¶if-i-had-to]: https://blog.superhuman.com/how-to-design-for-flow/#:~:text=If%20I%20had%20to%20remove%20just
-[vohra/designing-for-flow ¶in-superhuman-you-cant]: https://blog.superhuman.com/how-to-design-for-flow/#:~:text=In%20Superhuman%20you%20can%27t%20see%20the
+[vohra/designing-for-flow ¶in-superhuman-you-cant]: https://blog.superhuman.com/how-to-design-for-flow/#:~:text=In%20Superhuman%2C%20you%20can%27t%20see%20the

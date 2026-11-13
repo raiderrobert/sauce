@@ -2,7 +2,7 @@
 
 Progressive disclosure, sidebars and app navigation, page structure, onboarding and engagement, website nav bars and search.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a game-design principle whose *Note* translates it to product UI, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
 
 Contents: Progressive disclosure · Sidebar and app navigation · Tabs · Page structure and wayfinding · Onboarding and engagement · Website nav bars and menus · Search
 
@@ -29,11 +29,10 @@ Contents: Progressive disclosure · Sidebar and app navigation · Tabs · Page s
 - **App UI:** Move rarely used links such as Settings and Help to the bottom of the sidebar, separated from frequent links by a divider, and drop needless group labels like 'Menu'. ([jain/dashboard-ui 1:03], [jain/vibe-coding-pro-ui 5:23], [schoger/resolute 12:56])
 - Mark the active nav item with color, not weight: a light or white background, a 4px brand-color left border and brand-colored icon, with other links slightly lighter. A bolder active state shifts layout between pages; hints of color draw attention. *Note: Tabs differ: a bolder label is an accepted selected-tab cue (see Tabs). For accessibility, keep lightened links at 4.5:1 text contrast and mark the active link with aria-current="page".* ([schoger/bad-about 9:55], [schoger/resolute 12:31], [schoger/transistor 4:04])
 - **App UI:** Use tabs for related views (e.g. settings, billing) instead of more sidebar links. Keeps users in context; new sections become another tab as the product grows. ([jain/dashboard-ui 6:59], [jain/saas-vibe-code-mistakes 4:43])
-- **App UI:** Show each action's keyboard shortcut in app and context menus, separated from the label by alignment and type, e.g. right-aligned in secondary text. Teaches and reminds users of shortcuts; the structure shows what is clickable and what is a hint. ([eldh/invisible-details ¶contextual-menus-are-also], [jain/captivating-sections 4:22])
+- **App UI:** Show each action's keyboard shortcut in app and context menus, separated from the label by alignment and type, e.g. right-aligned in secondary text. Teaches and reminds users of shortcuts; the structure shows what is clickable and what is a hint. *Note: For the Cmd/Ctrl+K command menu, see interaction-feel.md.* ([eldh/invisible-details ¶contextual-menus-are-also], [jain/captivating-sections 4:22])
 - Bring data forward onto entry points: show item counts beside nav links and key live status on icons or tiles, so users needn't open them. Counts clarify what hides behind show-more; users shouldn't have to go all the way in. ([saffer/microinteractions 18:30], [schoger/bad-about 9:43])
 - **App UI:** Group navigation links by relevance and nest them into collapsible groups as they grow. Navigation is about reducing cognitive load. ([jain/dashboard-ui 0:57])
 - **App UI:** If a collapsed sidebar expands on hover, expand it only after the pointer dwells at the edge. Avoids accidental pop-outs from fast mouse movement. ([jain/software-must-lie 3:46])
-- **App UI:** Provide a command menu (Cmd/Ctrl+K) where users type to find actions and their shortcuts. Lets users find actions and shortcuts they forgot. ([eldh/invisible-details ¶open-the-command-menu])
 - Use real links, not buttons, for navigation so users can open destinations in a new tab, copy or bookmark them. Buttons don't support those behaviors. ([nngroup/buttons-vs-links 1:02])
 
 ## Tabs
@@ -47,34 +46,32 @@ Contents: Progressive disclosure · Sidebar and app navigation · Tabs · Page s
 - Break long sequential content into chapters with a jump menu, e.g. a sticky left nav of anchor links when sections sit below the fold; skip section navigators on short pages. Users skip to what they want and learn sections exist below the fold; short pages don't need it. ([jain/skincare-redesign 0:46], [jain/spotify-wrapped-redesign 2:37], [schoger/bad-about 6:46])
 - If the product is a single tool users come to use directly (e.g. a prompt-based AI tool), you can skip the separate marketing landing page and open straight into the interface; if a marketing site covers a single product, skip the generic homepage and open on that product's page. The moment you land, you're in the interface; ChatGPT and Gemini did this as of 2025. ([jain/ai-startup-components 0:43], [jain/tesla-wannabe-redesign 2:05])
 - Integrate new features into existing UI rather than giving each its own page, and don't build pages whose only purpose is redirecting elsewhere, e.g. a single-section page whose only content is a link to the page with the real information. Structure should make sense, not just look good. ([jain/dashboard-flaws 5:52], [jain/tesla-wannabe-redesign 1:55])
-- When a list item or section opens its own screen, slide the new view in from it and arrange content the same way, so it feels like an expansion. The new screen feels connected to the previous one. *Note: For accessibility, under prefers-reduced-motion use a crossfade or instant swap.* ([apple/design-foundations 9:27], [ording/rubber-band ¶when-he-selected-a])
-- Use the scrollbar for wayfinding in long content: mark find-in-page matches on it, and let users drop a landmark (e.g. double-tap) to jump back to. Users see where matches occur and keep their place when scrolling back to check something. *Note: For accessibility, also offer a keyboard way to set and return to the landmark.* ([freiberg/invisible-details ¶double-tapping-the-scrollbar], [saffer/microinteractions 28:23])
-- Give every screen orientation: a toolbar titled with the screen's name, not branding, holding only essential screen-specific actions and a back button; don't open on a menu. Users shouldn't wonder where they are or how they got here; menus are vague and unpredictable. ([apple/design-foundations 2:03])
+- Use the scrollbar for wayfinding in long content: mark find-in-page matches on it, and let users drop a landmark to jump back to. Users see where matches occur and keep their place when scrolling back to check something. *Note: For accessibility, also offer a keyboard way to set and return to the landmark.* ([freiberg/invisible-details ¶double-tapping-the-scrollbar], [saffer/microinteractions 28:23])
+- Give every screen orientation: a toolbar titled with the screen's name, not branding, holding only essential screen-specific actions and a back button; don't open on a menu. Users shouldn't wonder where they are or how they got here; menus are vague and unpredictable. *Note: For animating a new screen out of the item that opened it, see motion.md.* ([apple/design-foundations 2:03])
 - **App UI:** Inside a task flow, remove the bottom nav and alert icons, but give a back button to exit the flow. They might distract; users still need a way to navigate out. *Note: Contrasts with keeping the nav bar on checkout pages reached from promo links (see Website nav bars): hide chrome only in flows users entered from within the app.* ([kennedy/wodify-redesign 2:26])
 - Organize large sets by LATCH (location, alphabet, time, category, hierarchy): alphabetical when users know exact names, reverse-chronological feeds, category filters; offer two schemes, like list plus map, where useful. Turns an overwhelming dataset into meaningful organization; alphabetical order lets users skip irrelevant entries. ([nngroup/latch 0:39])
-- **From games:** Design navigation for flavor over efficiency (folding box, sliding drawers) to keep players' sense of place, but compromise once it costs players too many clicks. A point of view is nice until it starts affecting the player. *Note: In product UI, spatial transitions can preserve sense of place, but drop stylistic navigation when it costs users extra steps on common tasks.* ([sakamoto/hearthstone-immersive-ui 15:13])
+- **From games:** Use spatial transitions to preserve a sense of place, but drop stylistic navigation once it costs users extra steps on common tasks. A point of view helps until it slows the user down. Source principle: Design navigation for flavor over efficiency (a folding box, sliding drawers) to keep players' sense of place, but compromise once it costs players too many clicks. *Note: Under prefers-reduced-motion, use an instant swap or a crossfade.* ([sakamoto/hearthstone-immersive-ui 15:13])
 
 ## Onboarding and engagement
 
 - **App UI:** Don't drop first-time users onto a fully loaded dashboard; design a first-login empty state that highlights the main action with an explanatory popover. They'll wonder where to start. ([jain/dashboard-flaws 3:50], [jain/mobile-app-ui 6:27])
 - **App UI:** Sequence onboarding: one tooltip on the most important action, then the next or a checklist, not a modal with six bullets explaining everything. Users aren't overwhelmed; modal content is forgotten the moment it closes. ([jain/dashboard-flaws 3:56])
-- **From games:** Give each new enemy a scene where it's the sole focus, escalate threat gradually, and keep exposition in-game, adding cues (dialogue, color stripes) where playtesters get lost. A focused introduction makes it memorable; playtests reveal where people get lost. *Note: In product UI, introduce a new feature in a focused moment where it's the only thing asking for attention, sequence simple features before advanced ones, and put guidance inline where testing shows users get stuck rather than in external docs.* ([valve/half-life-documentary 0:22:53])
+- **From games:** Introduce each new feature alone, simple before advanced, and add inline guidance where testing shows users get stuck. A focused introduction is memorable, and testing reveals where people get lost. Source principle: Give each new enemy a scene where it's the sole focus, escalate threat gradually, and keep exposition in-game, adding cues where playtesters get lost. ([valve/half-life-documentary 0:22:53])
 - **App UI:** In consumer feed or content apps, keep onboarding minimal (pick interests, shortest possible tutorial, then the core experience) and infer preferences from behavior rather than relying on stated answers. Figure out what users want before they do. ([jain/tiktok-ux 1:10])
 - **App UI:** Offer a skip button on optional onboarding steps, plus search or an 'Other' option next to preset choices. Some users won't fit the presets. ([jain/beginner-mistakes 0:30])
 - **App UI:** If the product serves both teams and individuals, ask team size early in onboarding and branch the flow; skip invite-teammates for individuals. It shapes every following step. ([jain/learn-ui-in-10-minutes 7:00])
 - **App UI:** Show the app's value during onboarding (e.g. insights from the user's own data) before introducing gamification, and reassure users about safety when asking for a sensitive connection like a bank account. Demonstrates value before asking for engagement or trust. ([jain/gamifying-apps 4:28])
 - **App UI:** If the product has keyboard shortcuts, teach them by having users press a shortcut to dismiss onboarding, and provide a shortcut cheat sheet (e.g. in settings). Doing it teaches it; shortcuts are easy to forget. ([jain/macos-apps 8:34])
-- **App UI:** If the product already uses gamification, center it on one currency (XP, karma) that shows progress and unlocks features, and tie rewards to users' real goals. Progress and unlocks keep users going; meaningless rewards don't. ([jain/gamifying-apps 0:57])
-- **App UI:** If the product already uses gamification and users benefit from comparing with friends, add leaderboards and public badges; normalize leaderboards to a local cohort when users' resources differ widely. Comparison motivates, but only when it's fair across currencies and incomes. ([jain/gamifying-apps 1:22])
+- **App UI:** If the product already uses gamification, center it on one currency (XP, karma) that shows progress and unlocks features, and tie rewards to users' real goals. Progress and unlocks keep users going; meaningless rewards don't. *Note: Only for products with a progress loop users already care about; bolted-on points and badges hurt (see interaction-feel.md).* ([jain/gamifying-apps 0:57])
+- **App UI:** If the product already uses gamification and users benefit from comparing with friends, add leaderboards and public badges; normalize leaderboards to a local cohort when users' resources differ widely. Comparison motivates, but only when it's fair across currencies and incomes. *Note: Same condition: leaderboards and badges suit an existing progress loop users care about, not a bolted-on one.* ([jain/gamifying-apps 1:22])
 
 ## Website nav bars and menus
 
 - Show navigation up front when there's room rather than burying it to look clean; if you must hide it, use the standard three-line icon, top-left, without borders. Hidden navigation is less discoverable and costs an extra click; icon variants and borders confuse users. ([apple/principles-of-great-design 11:20], [nngroup/hamburger-icon 0:43], [nngroup/theory-of-user-delight ¶the-hidden-links-with])
 - **Marketing:** Keep the navbar small and out of the way but give it hierarchy: let one element, like an outlined sign-up CTA, stand out. Flat menus don't draw the eye to the most important action. ([jain/landing-page-levels 1:26], [jain/learn-ui-in-10-minutes 1:11])
 - **Marketing:** Balance the nav bar: center the main links rather than weighting everything right; a search bar can even it out. Right-heavy menus unbalance the page. ([jain/landing-page-levels 1:36], [jain/skincare-redesign 4:16])
-- **Marketing:** Add images to dropdown and mega menus instead of plain lists of text links. Images give quick context before clicking. ([jain/modern-layouts 6:36], [jain/slept-on-trends 8:44])
+- **Marketing:** Add images to dropdown and mega menus instead of plain lists of text links. Images give quick context before clicking. *Note: For keeping submenus open on diagonal pointer moves, see components-and-states.md.* ([jain/modern-layouts 6:36], [jain/slept-on-trends 8:44])
 - **Marketing:** Use a mega menu only when there are enough destinations to fill it (e.g. several products or resource groups). With real depth, it signals the product is worth exploring; with few links it's empty. ([jain/landing-page-levels 6:08])
-- Keep submenus open while the pointer heads toward them, using a hover-intent triangle based on pointer position and speed. Diagonal mouse moves otherwise close the submenu. ([jain/software-must-lie 3:02])
 - Keep the nav bar on checkout and other pages users may reach from promotional links, so they have context. Without navigation, users are cut off from the rest of the site. ([schoger/wp-pusher-checkout 4:04])
 - Left-align top-bar nav links snug with the logo instead of centering them between logo and actions. Three separated groups feel busy. *Note: Disagrees with centering links to balance a right-heavy marketing navbar (above): left-align in app headers and simple bars; center when a heavy right side needs balancing.* ([schoger/designing-with-claude-code 0:18:42])
 
@@ -89,14 +86,12 @@ Contents: Progressive disclosure · Sidebar and app navigation · Tabs · Page s
 [apple/design-foundations 5:22]: https://youtu.be/dGcqqA3Sl-o?t=322
 [apple/design-foundations 6:01]: https://youtu.be/dGcqqA3Sl-o?t=361
 [apple/design-foundations 9:01]: https://youtu.be/dGcqqA3Sl-o?t=541
-[apple/design-foundations 9:27]: https://youtu.be/dGcqqA3Sl-o?t=567
 [apple/designing-fluid-interfaces ¶you-can-clip-the]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=you%20can%20clip%20the%20content%20off
 [apple/intuitive-search 3:41]: https://youtu.be/lx45sKEnZkU?t=221
 [apple/intuitive-search 6:20]: https://youtu.be/lx45sKEnZkU?t=380
 [apple/principles-of-great-design 11:20]: https://youtu.be/Xa9L2yx_QH8?t=680
 [apple/touch-on-mac 13:05]: https://youtu.be/2cq3ytwLrLk?t=785
 [eldh/invisible-details ¶contextual-menus-are-also]: https://linear.app/now/invisible-details#:~:text=contextual%20menus%20are%20also%20a%20great
-[eldh/invisible-details ¶open-the-command-menu]: https://linear.app/now/invisible-details#:~:text=open%20the%20command%20menu%20with%20Cmd
 [freiberg/invisible-details ¶double-tapping-the-scrollbar]: https://rauno.me/craft/interaction-design#:~:text=double%20tapping%20the%20scrollbar%20will%20place
 [jain/ai-startup-components 0:43]: https://youtu.be/If7iCPDy2vk?t=43
 [jain/ai-startup-components 1:28]: https://youtu.be/If7iCPDy2vk?t=88
@@ -148,7 +143,6 @@ Contents: Progressive disclosure · Sidebar and app navigation · Tabs · Page s
 [jain/skincare-redesign 0:46]: https://youtu.be/BvbFPzLjWcU?t=46
 [jain/skincare-redesign 4:16]: https://youtu.be/BvbFPzLjWcU?t=256
 [jain/slept-on-trends 8:44]: https://youtu.be/EHwZzWd-OnQ?t=524
-[jain/software-must-lie 3:02]: https://youtu.be/S8DcTJm8pYM?t=182
 [jain/software-must-lie 3:46]: https://youtu.be/S8DcTJm8pYM?t=226
 [jain/spotify-wrapped-redesign 2:37]: https://youtu.be/goWOAFqJHpA?t=157
 [jain/tesla-wannabe-redesign 1:55]: https://youtu.be/V3Omp1hm0Sg?t=115
@@ -176,7 +170,6 @@ Contents: Progressive disclosure · Sidebar and app navigation · Tabs · Page s
 [nngroup/tabs-humble-powerful 4:40]: https://youtu.be/7ntSojFW5Jg?t=280
 [nngroup/theory-of-user-delight ¶advanced-options-appear-when]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=Advanced%20options%20appear%20when%20the%20user
 [nngroup/theory-of-user-delight ¶the-hidden-links-with]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=the%20hidden%20links%20with%20little%20information
-[ording/rubber-band ¶when-he-selected-a]: https://www.cultofmac.com/news/bas-ording-rubber-band-effect-iphone#:~:text=When%20he%20selected%20a%20name%20it
 [saffer/microinteractions 16:02]: https://youtu.be/9CEtqnPdWoI?t=962
 [saffer/microinteractions 18:30]: https://youtu.be/9CEtqnPdWoI?t=1110
 [saffer/microinteractions 28:23]: https://youtu.be/9CEtqnPdWoI?t=1703
@@ -195,4 +188,4 @@ Contents: Progressive disclosure · Sidebar and app navigation · Tabs · Page s
 [schoger/wss 0:51]: https://youtu.be/ZJj7uNdzPpM?t=51
 [slack/easter-eggs ¶include-features-in-the]: https://www.slackstory.com/p/easter-eggs-in-slack#:~:text=include%20features%20in%20the%20product%20that
 [valve/half-life-documentary 0:22:53]: https://youtu.be/TbZ3HzvFEto?t=1373
-[vohra/designing-for-flow ¶make-functions-visible-and]: https://blog.superhuman.com/how-to-design-for-flow/#:~:text=Make%20functions%20visible%20and%20limit%20alternative
+[vohra/designing-for-flow ¶make-functions-visible-and]: https://blog.superhuman.com/how-to-design-for-flow/#:~:text=Make%20functions%20visible%2C%20and%20limit%20alternative

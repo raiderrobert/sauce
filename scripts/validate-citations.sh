@@ -3,6 +3,7 @@ set -euo pipefail
 
 python3 - <<'EOF'
 import glob, os, re, sys
+from urllib.parse import unquote
 
 KEY = r"[a-z0-9-]+/[a-z0-9-]+"
 LOCATOR = r"(?:\d+(?::\d\d)+|¶[a-z0-9-]+)"
@@ -27,13 +28,28 @@ def check_video(t, url, bib_url):
         problems.append(f"t={q} does not match {t}")
     return problems
 
-def check_text(url, bib_url):
+def slug_words(text):
+    words = (re.sub(r"[^a-z0-9]", "", w.lower().replace("\u2019", "").replace("'", "")) for w in text.split())
+    return [w for w in words if w]
+
+def check_text(slug, url, bib_url):
     base, _, fragment = url.partition("#")
     problems = []
     if base != bib_url:
         problems.append("link does not match the bibliography URL")
+    if bib_url.endswith(".pdf"):
+        m = re.fullmatch(r"page=(\d+)", fragment)
+        if not m:
+            problems.append("PDF citation needs a #page=N fragment")
+        elif slug != f"p{m.group(1)}":
+            problems.append(f"slug {slug} does not match page {m.group(1)}")
+        return problems
     if not fragment.startswith(":~:text="):
         problems.append("text citation needs a #:~:text= fragment")
+        return problems
+    quoted = unquote(fragment[len(":~:text="):])
+    if slug.split("-") != slug_words(quoted)[:len(slug.split("-"))]:
+        problems.append(f"slug {slug} does not match the fragment text")
     return problems
 
 errors = 0
@@ -71,7 +87,7 @@ for bib_path in sorted(glob.glob("skills/*/references/bibliography.md")):
             url = defs.get(label)
             if url and key in bib_urls:
                 if locator.startswith("¶"):
-                    problems += check_text(url, bib_urls[key])
+                    problems += check_text(locator[1:], url, bib_urls[key])
                 else:
                     problems += check_video(locator, url, bib_urls[key])
             for p in problems:

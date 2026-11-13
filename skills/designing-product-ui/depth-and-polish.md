@@ -2,7 +2,7 @@
 
 Shadows, borders, corner radii, icons, imagery, materials, gradients, texture and decorative touches that add depth and finish without clutter.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a game-design principle whose *Note* translates it to product UI, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
 
 Contents: Restraint · Shadows and elevation · Surfaces, borders and corners · Icons · Imagery and text over images · Style and decoration · Materials and light · Gradients and texture
 

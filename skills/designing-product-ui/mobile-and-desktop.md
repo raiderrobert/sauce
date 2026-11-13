@@ -2,7 +2,7 @@
 
 Platform-specific rules for mobile apps (thumb reach, navigation, layout, gestures, contextual actions), native-feeling desktop apps, touch on Mac, and adapting layouts across devices.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a game-design principle whose *Note* translates it to product UI, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
 
 Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures and feedback · Contextual mobile actions · Native-feeling desktop apps · Touch on Mac · Across screen sizes
 
@@ -56,7 +56,7 @@ Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures a
 ## Touch on Mac
 
 - **App UI:** Don't redesign a Mac app or drastically change its layout for touch; keep keyboard and mouse primary, and make it look identical on touch and non-touch Macs. Touch is secondary; a little touch polish still makes a big difference. ([apple/touch-on-mac 7:14])
-- **App UI:** Allow modeless selection: single tap or click selects, double opens, and tap-and-hold shows the context menu beside the item, dismissed once dragging starts. Tapping matches clicking, so users switch easily between trackpad and touch. ([apple/touch-on-mac 2:42])
+- **App UI:** Allow modeless selection by click and tap, and on tap-and-hold show the context menu beside the item, dismissed once dragging starts. Tapping matches clicking, so users switch easily between trackpad and touch. *Note: For single versus double tap, see the double-tap rule in interaction-feel.md.* ([apple/touch-on-mac 2:42])
 - **App UI:** Make custom gestures work with touch and trackpad (and possibly Magic Mouse) rather than touch only, using a modifier key where gestures conflict; support keyboard modifiers during touch drags, and don't rely on system gestures. Easily switching inputs on Mac is sometimes more important than parity with iOS; system gestures are controlled by macOS and unavailable to apps. ([apple/touch-on-mac 4:13])
 - **App UI:** On touch-screen Macs, put dense, precise controls like inspectors and navigation sidebars at the window's left and right sides; reserve the center for coarse gestures like pan and pinch. Hands anchor on the display edge for precision but hang unsupported mid-screen. ([apple/touch-on-mac 6:29])
 - **App UI:** Use 36pt touch targets on macOS (physically equal to 44pt on iOS) and FormStyle, whose rows default to 36pt, for list- and settings-based views; for non-framework controls, consider enlarging the invisible touch area rather than the control. Framework controls' touch targets are invisible, so layouts needn't change; very dense apps may keep small or mini controls as long as touch works. ([apple/touch-on-mac 9:17])
@@ -64,9 +64,8 @@ Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures a
 
 ## Across screen sizes
 
-- Keep tablet and desktop experiences closely aligned, but give phones their own design for quick touch interactions; don't just scale mobile-first layouts up to desktop, and keep spacious, dispersed sections to a few. Each device deserves a solution that uses what makes it unique; widespread content dispersion on desktop makes long pages with higher interaction cost and cognitive load. *Note: Hearthstone's team found desktop and tablet pretty similar but the phone version a complete overhaul. In product UI, plan a dedicated phone layout, splitting some screens, rather than shrinking the desktop or tablet layout.* ([apple/intuitive-search 7:57], [apple/principles-of-great-design 9:46], [nngroup/content-dispersion-mobile 1:02], [sakamoto/hearthstone-immersive-ui 16:09])
+- Keep tablet and desktop experiences closely aligned, but give phones their own design for quick touch interactions; don't just scale mobile-first layouts up to desktop, and keep spacious, dispersed sections to a few. Each device deserves a solution that uses what makes it unique; Hearthstone's phone version was a complete overhaul, and dispersed desktop content raises interaction cost and cognitive load. *Note: In product UI, plan a dedicated phone layout, splitting some screens, rather than shrinking the desktop or tablet layout.* ([apple/intuitive-search 7:57], [apple/principles-of-great-design 9:46], [nngroup/content-dispersion-mobile 1:02], [sakamoto/hearthstone-immersive-ui 16:09])
 - **App UI:** Collapse the dashboard sidebar (e.g. behind a hamburger button) once it no longer fits, typically below 1024px; on phones, consider turning range toggles into dropdowns, stacking stat rows earlier, and keeping chart height while showing fewer x-axis items. A sidebar stops fitting at smaller widths; the AI-generated dashboard came out squishy with no responsive navigation. ([schoger/dashboard-with-ai 0:04:25])
-- **App UI:** On mobile, fetch only the data needed to render the first screen, such as the conversation a notification opened. Mobile devices and connections are slower; users get in, do the task, get out. ([slack/incremental-boot ¶our-mobile-apps-just])
 
 [apple/intuitive-search 3:22]: https://youtu.be/lx45sKEnZkU?t=202
 [apple/intuitive-search 7:57]: https://youtu.be/lx45sKEnZkU?t=477
@@ -115,4 +114,3 @@ Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures a
 [schoger/dashboard-with-ai 0:04:25]: https://youtu.be/lQCWuOT5ENQ?t=265
 [schoger/wss 11:35]: https://youtu.be/ZJj7uNdzPpM?t=695
 [schoger/wss 12:30]: https://youtu.be/ZJj7uNdzPpM?t=750
-[slack/incremental-boot ¶our-mobile-apps-just]: https://slack.engineering/getting-to-slack-faster-with-incremental-boot/#:~:text=our%20mobile%20apps%20just%20fetch%20the

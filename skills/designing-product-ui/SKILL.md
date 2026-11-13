@@ -1,6 +1,6 @@
 ---
 name: designing-product-ui
-description: "Use when designing a new screen, choosing the visual design of a web app, SaaS product, dashboard, landing page, or mobile or desktop app, or when asked to redesign, restyle, polish, or make a UI look better, critique a mockup, give design or UX feedback, or do a design review or UX audit of a UI that looks ugly, generic, amateur, cluttered, or AI-generated. Gives cited, testable heuristics (spacing values, chart rules, dark-mode steps, state coverage) rather than an aesthetic direction, covering layout, hierarchy, typography, color, dark mode, icons, charts, tables, pricing pages, forms, modals, sidebars, empty and loading states, navigation, search, onboarding, AI chat interfaces, animation, and interaction feel (feedback, microinteractions, haptics, game feel, delight, loading states). Not for pure frontend logic or bug fixes."
+description: "Use when designing a new screen, choosing the visual design of a web app, SaaS product, dashboard, landing page, or mobile or desktop app, or when asked to redesign, restyle, polish, or make a UI look better, critique a mockup, give design or UX feedback, or do a design review or UX audit of a UI that looks ugly, generic, amateur, cluttered, or AI-generated. Gives cited, testable heuristics (spacing values, chart rules, dark-mode steps, state coverage) rather than an aesthetic direction, covering layout, hierarchy, typography, color, dark mode, icons, charts, tables, pricing pages, forms, modals, sidebars, empty states, navigation, search, onboarding, AI chat interfaces, animation, and interaction feel in apps (feedback, microinteractions, haptics, waits and loading, delight). Not for pure frontend logic, bug fixes, or building games."
 ---
 
 # Designing Product UI
@@ -19,8 +19,8 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 ## How the topic files work
 
 - Read each file whose topic the task touches; a single component often spans several (a button touches components, color, motion and interaction feel).
-- Within a section, rules backed by more distinct sources come first, and a base rule comes before its exceptions. Sources are one designer's videos (Kole Jain), several designers and teams (Apple, Nielsen Norman Group, Steve Schoger, Erik Kennedy, Chris Raroque, Linear, Superhuman, Slack, Rauno Freiberg, Emil Kowalski), game designers (Valve, Blizzard, Vlambeer and others) and one research paper; the bibliography lists them all.
-- **App UI** tags rules for product screens only; **Marketing** tags rules for landing pages and websites only; **From games** tags a game-design principle whose *Note:* translates it to product UI; untagged rules apply to both.
+- Within a section, base rules come first, then refinements and exceptions; rules backed by more distinct sources rank higher. `references/bibliography.md` lists every source.
+- **App UI** tags rules for product screens only; **Marketing** tags rules for landing pages and websites only; untagged rules apply to both. **From games** marks a product-UI rule translated from a game-design principle; the cited "Source principle" after it is what the source said, and the rule is the translation to follow.
 - *Note:* text is an editorial caveat (usually accessibility, a CSS translation, or how a game principle applies to apps) that the source did not state. Where it corrects a source number, follow the Note.
 - Each rule ends with citations: `[jain/dashboard-flaws 0:44]` for a video timestamp, or `[freiberg/invisible-details ¶the-selected-item-briefly]` for a passage in an essay, paper or talk transcript. The link definitions at the bottom of each file open the source at that moment or passage.
 
@@ -57,16 +57,19 @@ Rules chosen because a capable model tends to skip them. Some come from with/wit
 - In dark mode, make each raised surface lighter, and space neutral steps about twice as far apart as in light mode. (`color.md`)
 - Soften shadows (lower opacity, much larger blur), and set a nested element's radius to the outer radius minus the gap. (`depth-and-polish.md`)
 - Skip confirmation modals for routine deletes: delete immediately and offer undo. (`components-and-states.md`)
+- Acknowledge every input, including no-ops: a key that can't act, an empty undo or a disabled control gets a brief, specific response, never silence. (`interaction-feel.md`)
+- Give keyboard-triggered and very frequent actions feedback without motion (a state change or brief highlight); animate pointer-opened panels and menus out of the element that opened them. (`interaction-feel.md`, `motion.md`)
 - Place each action on a spectrum of explicitness: primary actions visible and labeled, minor ones revealed on hover or focus. (`navigation-and-disclosure.md`)
 - On landing pages, lead with one ~7-word headline saying exactly what the product does, and show the real product. (`landing-pages.md`)
 
 ## Reviewing a screen
 
-Report each problem as one line: the element, what is wrong, the rule it breaks in your own words, and the rule's first citation as an inline link (copy the URL from the link definition at the bottom of the topic file). Rules are paraphrases, so don't quote them. If the violated part is a *Note:* (editorial, usually accessibility), cite the WCAG success criterion or write "editorial" instead of the source.
+Report each problem as one line: the element, what is wrong, the rule it breaks in your own words, and the rule's first citation as an inline link (copy the URL from the link definition at the bottom of the topic file). Rules are paraphrases, so don't quote them. If the violated part is a *Note:* (editorial, usually accessibility), cite the WCAG success criterion or write "editorial" instead of the source. For a **From games** rule, cite the source principle's citation and say the rule is a translation.
 
-Group by severity, most impactful first within each group:
+Group by severity, in this order and most impactful first within each group:
 
 - **Blocks use:** anything that stops a user from understanding or completing a task: accessibility failures, missing states, misleading signals (a destructive action that doesn't look destructive, an unreadable chart), broken hierarchy, navigation or disclosure.
+- **Feels unresponsive:** actions with no visible acknowledgement, slow or blocking feedback, motion on keyboard or high-frequency actions, unannounced changes. Judge feel from the running app or the event handlers and states in code; a screenshot can't show it. If you couldn't run or read it, say "feel not verified".
 - **Looks unfinished:** everything else: spacing, typography, color harmony, depth, motion polish. Report the ten most visible; collapse the rest into one summary line.
 
 ```markdown

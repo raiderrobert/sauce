@@ -2,14 +2,13 @@
 
 Component behavior and UI states: feedback, empty/loading/error states, buttons, chips, icons, cards, carousels, overlays, destructive actions, forms and AI interfaces.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a game-design principle whose *Note* translates it to product UI, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
 
 Contents: Feedback and states · Empty, loading and error states · Buttons, chips and icons · Cards and carousels · Overlays, destructive actions and saving · Forms and inputs · AI interfaces · Search, menus and tabs
 
 ## Feedback and states
 
-- Give every action an immediate visible response: a pressed state on click, a spinner or progress label ('Processing your order') if it runs long, and a confirmation when done (e.g. a 'Done' label, or a 'Copied' chip sliding up after copy). Keyboard shortcuts need visible feedback too. Without feedback, a slow action looks like the click didn't register. ([jain/beginner-mistakes 5:39], [jain/every-ui-concept 7:31], [jain/macos-apps 6:46], [jain/tiktok-ux 4:06], [saffer/microinteractions 27:45])
-- Define interaction states up front, derived from the base color: hover slightly lighter or brighter, pressed slightly darker, disabled desaturated with text that stays readable in each theme (source: a light-gray fill with white text, which often isn't readable). Don't make active buttons look disabled (gray). On mobile, which has no hover, a slightly darker press state is enough. Otherwise state colors get picked at random at the end; small shifts read as hover, press and disabled, and users read gray as inactive. *Note: Sources differ on hover direction: one darkens the button slightly on hover and switches to a hand cursor. Either works if hover, pressed and selected stay distinguishable.* ([jain/color-mistakes 6:16], [jain/every-ui-concept 7:35], [jain/micro-animations 0:22], [nngroup/button-states 0:38], [nngroup/disabled-buttons 1:27])
+- Define interaction states up front, derived from the base color: hover slightly lighter or brighter, pressed slightly darker, disabled desaturated with text that stays readable in each theme (source: a light-gray fill with white text, which often isn't readable). Don't make active buttons look disabled (gray). On mobile, which has no hover, a slightly darker press state is enough. Otherwise state colors get picked at random at the end; small shifts read as hover, press and disabled, and users read gray as inactive. *Note: Sources differ on hover direction: one darkens the button slightly on hover and switches to a hand cursor. Either works if hover, pressed and selected stay distinguishable. For acknowledging every action, see interaction-feel.md.* ([jain/color-mistakes 6:16], [jain/every-ui-concept 7:35], [jain/micro-animations 0:22], [nngroup/button-states 0:38], [nngroup/disabled-buttons 1:27])
 - Apply changes optimistically: show deletes or sends as done immediately and run the request in the background; where undo matters, briefly delay execution (e.g. a 5s send delay). Avoids awkward pauses while leaving time to undo. *Note: If the request fails, roll back the change and show an error message.* ([jain/dashboard-ui 7:45], [jain/macos-apps 1:57], [jain/software-must-lie 5:57])
 - Design the product's hidden components and states as carefully as visible UI: drawers, modals, every tab's content, and any new-feature announcements. Dense products get much of their functionality from parts you can't see at first; these are the most often missed. ([jain/beginner-mistakes 0:55], [jain/dashboard-flaws 5:00], [jain/modern-layouts 3:54])
 - Keep off and default states visually quiet and reserve color for changed or active states; mark the selected toggle option with a background highlight and gray out inactive options and default values in settings. Color is the signal that something changed; non-default values should catch the eye. ([jain/every-ui-concept 0:18], [jain/weirdly-perfect-ui 6:07])
@@ -105,10 +104,10 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 - Keep a search field's core parts: a leading magnifying-glass icon, placeholder text saying what to search, and a clear button once text is entered; custom icons should resemble the standard ones. The magnifying glass is universally recognized as search. *Note: On iOS, also show Cancel while focused to exit search and dismiss the keyboard.* ([apple/intuitive-search 1:50])
 - On focus, show a selective list of recent searches users can remove individually or clear all; keep predictive suggestions few, styling typed text differently from the predicted part. Recents get people back to results without typing; few suggestions keep results front and center. ([apple/intuitive-search 10:56])
 - Show only filters relevant to the current search; use a scope bar for lightweight filtering, and offer search tokens alongside visible filters, not instead of them. Irrelevant filters overwhelm, and tokens are less discoverable. ([apple/intuitive-search 12:53])
-- **App UI:** Let the pointer move diagonally to a submenu: keep it open while the pointer crosses a triangle between the cursor and the submenu. Otherwise the submenu closes before users reach it, forcing a slower upside-down L path. ([eldh/invisible-details ¶it-feels-more-natural])
+- Let the pointer move diagonally to a submenu: keep it open while the pointer crosses a triangle between the cursor and the submenu, based on pointer position and speed. Otherwise the submenu closes before users reach it, forcing a slower upside-down L path. ([eldh/invisible-details ¶it-feels-more-natural], [jain/software-must-lie 3:02])
 
 [apple/design-foundations 6:42]: https://youtu.be/dGcqqA3Sl-o?t=402
-[apple/designing-fluid-interfaces ¶but-we-shouldnt-confirm]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=But%20we%20shouldn%27t%20confirm%20the%20tap
+[apple/designing-fluid-interfaces ¶but-we-shouldnt-confirm]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=But%2C%20we%20shouldn%27t%20confirm%20the%20tap
 [apple/designing-fluid-interfaces ¶the-next-thing-to]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=The%20next%20thing%20to%20remember%20is
 [apple/intuitive-search 10:56]: https://youtu.be/lx45sKEnZkU?t=656
 [apple/intuitive-search 12:53]: https://youtu.be/lx45sKEnZkU?t=773
@@ -136,7 +135,6 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 [jain/beginner-mistakes 2:55]: https://youtu.be/AH_ugxmLeUM?t=175
 [jain/beginner-mistakes 3:43]: https://youtu.be/AH_ugxmLeUM?t=223
 [jain/beginner-mistakes 5:05]: https://youtu.be/AH_ugxmLeUM?t=305
-[jain/beginner-mistakes 5:39]: https://youtu.be/AH_ugxmLeUM?t=339
 [jain/color-mistakes 6:16]: https://youtu.be/EOcY3hPMQkk?t=376
 [jain/crucial-ui-elements 10:04]: https://youtu.be/gKM6b2EnW1k?t=604
 [jain/crucial-ui-elements 3:41]: https://youtu.be/gKM6b2EnW1k?t=221
@@ -155,7 +153,6 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 [jain/every-ui-concept 6:56]: https://youtu.be/EcbgbKtOELY?t=416
 [jain/every-ui-concept 7:05]: https://youtu.be/EcbgbKtOELY?t=425
 [jain/every-ui-concept 7:21]: https://youtu.be/EcbgbKtOELY?t=441
-[jain/every-ui-concept 7:31]: https://youtu.be/EcbgbKtOELY?t=451
 [jain/every-ui-concept 7:35]: https://youtu.be/EcbgbKtOELY?t=455
 [jain/every-ui-concept 7:44]: https://youtu.be/EcbgbKtOELY?t=464
 [jain/finance-dashboard-redesign 1:23]: https://youtu.be/Yr2uIcFZDDQ?t=83
@@ -163,7 +160,6 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 [jain/genius-designer 3:12]: https://youtu.be/HE4rLEQpiXY?t=192
 [jain/macos-apps 1:57]: https://youtu.be/Vy0KKvZJRH8?t=117
 [jain/macos-apps 3:31]: https://youtu.be/Vy0KKvZJRH8?t=211
-[jain/macos-apps 6:46]: https://youtu.be/Vy0KKvZJRH8?t=406
 [jain/micro-animations 0:22]: https://youtu.be/ld1zhQMXxXU?t=22
 [jain/micro-animations 1:52]: https://youtu.be/ld1zhQMXxXU?t=112
 [jain/micro-animations 4:10]: https://youtu.be/ld1zhQMXxXU?t=250
@@ -173,6 +169,7 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 [jain/modern-layouts 3:54]: https://youtu.be/VPeTgU7la34?t=234
 [jain/saas-vibe-code-mistakes 2:06]: https://youtu.be/PDcQJOPby1k?t=126
 [jain/skincare-redesign 4:31]: https://youtu.be/BvbFPzLjWcU?t=271
+[jain/software-must-lie 3:02]: https://youtu.be/S8DcTJm8pYM?t=182
 [jain/software-must-lie 3:36]: https://youtu.be/S8DcTJm8pYM?t=216
 [jain/software-must-lie 5:35]: https://youtu.be/S8DcTJm8pYM?t=335
 [jain/software-must-lie 5:57]: https://youtu.be/S8DcTJm8pYM?t=357
@@ -185,7 +182,6 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 [jain/think-like-product-designer 2:27]: https://youtu.be/ADaQuZS04Rc?t=147
 [jain/think-like-product-designer 3:38]: https://youtu.be/ADaQuZS04Rc?t=218
 [jain/think-like-product-designer 3:46]: https://youtu.be/ADaQuZS04Rc?t=226
-[jain/tiktok-ux 4:06]: https://youtu.be/ixUq4HM4FNg?t=246
 [jain/trendy-web-animations 1:57]: https://youtu.be/ZsP20PN14O0?t=117
 [jain/ui-cheat-codes 4:42]: https://youtu.be/c1TvOcKdBVE?t=282
 [jain/ui-cheat-codes 4:47]: https://youtu.be/c1TvOcKdBVE?t=287
@@ -219,13 +215,12 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 [nngroup/icon-recognizability 1:50]: https://youtu.be/B_EVgNHBalY?t=110
 [nngroup/principles-stripe 1:29]: https://youtu.be/qooOXNmdCH4?t=89
 [nngroup/tabs-humble-powerful 1:05]: https://youtu.be/7ntSojFW5Jg?t=65
-[nngroup/theory-of-user-delight ¶everything-looks-misleadingly-clickable]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=Everything%20looks%20misleadingly%20clickable%20and%20the
+[nngroup/theory-of-user-delight ¶everything-looks-misleadingly-clickable]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=Everything%20looks%20misleadingly%20clickable%2C%20and%20the
 [raroque/apps-feel-10x-better 2:49]: https://youtu.be/8mMH6Pq8qnE?t=169
 [raroque/apps-feel-10x-better 8:13]: https://youtu.be/8mMH6Pq8qnE?t=493
 [saffer/microinteractions 15:34]: https://youtu.be/9CEtqnPdWoI?t=934
 [saffer/microinteractions 22:18]: https://youtu.be/9CEtqnPdWoI?t=1338
 [saffer/microinteractions 23:03]: https://youtu.be/9CEtqnPdWoI?t=1383
-[saffer/microinteractions 27:45]: https://youtu.be/9CEtqnPdWoI?t=1665
 [saffer/microinteractions 29:11]: https://youtu.be/9CEtqnPdWoI?t=1751
 [schoger/bad-about 10:35]: https://youtu.be/S6-q5BheEYU?t=635
 [schoger/dashboard-with-ai 0:15:40]: https://youtu.be/lQCWuOT5ENQ?t=940
@@ -252,4 +247,4 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 [schoger/wp-pusher-checkout 2:07]: https://youtu.be/5gdYHlYAKDY?t=127
 [schoger/wss 7:02]: https://youtu.be/ZJj7uNdzPpM?t=422
 [slack/easter-eggs ¶replace-it-with-something]: https://www.slackstory.com/p/easter-eggs-in-slack#:~:text=replace%20it%20with%20something%20more%20helpful
-[slack/incremental-boot ¶we-enable-the-user]: https://slack.engineering/getting-to-slack-faster-with-incremental-boot/#:~:text=we%20enable%20the%20user%20interface%20connect
+[slack/incremental-boot ¶we-enable-the-user]: https://slack.engineering/getting-to-slack-faster-with-incremental-boot/#:~:text=we%20enable%20the%20user%20interface%2C%20connect
