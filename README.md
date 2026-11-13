@@ -10,6 +10,7 @@ Skills that make you feel like you're able to slow down and see all of the unive
 |-------|-------------|
 | [cite-check](skills/cite-check/SKILL.md) | Deep source research — find original provenance for claims, quotes, and attributions |
 | [convention-mining](skills/convention-mining/SKILL.md) | Extract implicit coding conventions from merged PR review history |
+| [designing-product-ui](skills/designing-product-ui/SKILL.md) | Cited UI/UX heuristics for layout, color, typography, dashboards, states, navigation, and motion |
 | [diverge-critique-converge](skills/diverge-critique-converge/SKILL.md) | Generate high-quality analysis, plans, or designs by running a structured bakeoff |
 | [review-with-research](skills/review-with-research/SKILL.md) | Evidence-based code review that researches ecosystem best practices before judging |
 | [reviewing-abstraction-boundaries](skills/reviewing-abstraction-boundaries/SKILL.md) | Identify leaked implementation details in public surfaces |

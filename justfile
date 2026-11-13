@@ -1,5 +1,5 @@
 # Run all checks
-check: validate-skills validate-readme
+check: validate-skills validate-readme validate-citations
 
 # Validate skill frontmatter against the Agent Skills spec
 validate-skills:
@@ -22,3 +22,7 @@ check-architecture:
 # Requires Playwright Chromium or ARCHITECTURE_TEST_BROWSER; see skill README
 check-architecture-browser:
     pnpm --dir skills/visualizing-architecture test:browser
+
+# Validate timestamped citations against each skill's bibliography
+validate-citations:
+    bash scripts/validate-citations.sh
