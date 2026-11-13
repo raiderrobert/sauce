@@ -1,59 +1,82 @@
-# Mobile and Desktop Apps
+# Mobile and desktop apps
 
-Platform-specific heuristics for mobile apps (thumb reach, navigation, layout, gestures) and native-feeling desktop apps.
+Platform-specific rules for mobile apps (thumb reach, navigation, layout, gestures, contextual actions) and native-feeling desktop apps.
 
-Each rule cites its source as `author/video timestamp`; the link opens the video at that moment. Full source details are in `references/bibliography.md`.
+Rules within a section are ordered by how many sources back them. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. Each citation (`author/video timestamp`) links to that moment in the source; full entries are in `references/bibliography.md`.
+
+Contents: Thumb reach and touch targets · Mobile navigation · Mobile screen layout · Gestures and feedback · Contextual mobile actions · Native-feeling desktop apps
 
 ## Thumb reach and touch targets
 
-- Place important controls and frequent action icons at the bottom and along the right side, inside the comfortable thumb zone. Easier to reach; right side serves the 70-80% who are right-handed. Top-placed controls only look good. ([jain/spotify-wrapped-redesign 1:40](https://youtu.be/goWOAFqJHpA?t=100), [jain/tiktok-ux 5:18](https://youtu.be/ixUq4HM4FNg?t=318))
-- Keep mobile touch targets at least 44px; spread tab bar icons out to enlarge each one's tap area. People have fat fingers. ([jain/crucial-ui-elements 1:29](https://youtu.be/gKM6b2EnW1k?t=89), [jain/mobile-app-ui 0:45](https://youtu.be/Gfsd8NNuD9g?t=45))
-- Make the most frequent action's target as large and as close to the thumb as possible. Action speed depends on target size and distance. ([jain/tiktok-ux 4:57](https://youtu.be/ixUq4HM4FNg?t=297))
+- Place important controls and frequent actions at the bottom and along the right side, inside the thumb zone; make the most frequent action's target as large and close to the thumb as possible. Speed depends on target size and distance; the right side serves the 70-80% who are right-handed. ([jain/spotify-wrapped-redesign 1:40], [jain/tiktok-ux 4:57])
+- Keep mobile touch targets at least 44px; spread tab bar icons out to enlarge each tap area. Fingers are imprecise. ([jain/crucial-ui-elements 1:29], [jain/mobile-app-ui 0:45])
 
 ## Mobile navigation
 
-- Don't make the tab bar's add button stick up in a circle; put it inline with other tabs unless it's truly the main action. Users tap other tabs far more than add; breaking out only suits a dominant main action. ([jain/crucial-ui-elements 0:34](https://youtu.be/gKM6b2EnW1k?t=34), [jain/mobile-app-ui 0:27](https://youtu.be/Gfsd8NNuD9g?t=27))
-- Use a bottom tab bar (often floating) when navigation consolidates to a few key icons; cap it at 5 links, 3 or 4 ideal. Keeps every tap target above 44px. ([jain/mobile-app-ui 0:27](https://youtu.be/Gfsd8NNuD9g?t=27))
-- When too many important nav items exist for a bottom bar, turn the sidebar into a full home page. Too many items to fit in a bottom bar. ([jain/mobile-app-ui 0:59](https://youtu.be/Gfsd8NNuD9g?t=59))
-- Balance a nav-list home page: recent items on top, counts/actions on the right, a big search bar or primary button at the bottom. So it doesn't feel lopsided. ([jain/mobile-app-ui 1:10](https://youtu.be/Gfsd8NNuD9g?t=70))
-- Use bottom sheets for secondary tasks, such as picking a template, to keep the user in context. Keeps context and is easy to navigate with gestures. ([jain/mobile-app-ui 4:06](https://youtu.be/Gfsd8NNuD9g?t=246))
+- Don't make the tab bar's add button stick up in a circle; keep it inline with the other tabs unless it is truly the main action. Users tap other tabs far more than add. ([jain/crucial-ui-elements 0:34], [jain/mobile-app-ui 0:27])
+- Give the active tab a distinct state (e.g. swap to a filled icon), and keep inactive tab icons clearly visible rather than dimmed to near-invisibility. The active indicator already shows the selection. ([jain/crucial-ui-elements 1:04])
+- Use a bottom tab bar (often floating) when navigation fits a few key icons: five links at most, three or four ideally. Keeps every tap target above 44px. ([jain/mobile-app-ui 0:27])
+- When there are too many important nav items for a bottom bar, turn the sidebar into a home page of links, balanced with recent items on top, counts on the right, and a big search bar or primary button at the bottom. A lopsided list feels unfinished. ([jain/mobile-app-ui 0:59])
+- Use bottom sheets for secondary tasks, such as picking a template, to keep the user in context. Keeps context and is easy to dismiss with a gesture. ([jain/mobile-app-ui 4:06])
 
 ## Mobile screen layout
 
-- Lay out each mobile section in one direction only: stack vertically or scroll horizontally off-page, never both; prefer horizontally scrolling cards over vertical stacks. Desktop can use two directions; mobile can't. ([jain/mobile-app-ui 2:28](https://youtu.be/Gfsd8NNuD9g?t=148), [jain/mobile-swipe-interactions 0:28](https://youtu.be/14h1VnkQvIc?t=28))
-- Make each mobile screen do one thing with one primary content block (home excepted); add a new page rather than a new layout. Mobile is so space-constrained; avoid clutter. ([jain/mobile-app-ui 2:03](https://youtu.be/Gfsd8NNuD9g?t=123))
-- Don't shrink type and spacing to cram content on mobile; keep them similar to desktop or larger. Normal apps keep type scale and spacing similar, even larger. ([jain/mobile-app-ui 1:32](https://youtu.be/Gfsd8NNuD9g?t=92))
-- Add page indicators below swipeable card carousels. ([jain/mobile-swipe-interactions 1:09](https://youtu.be/14h1VnkQvIc?t=69))
-- Treat the phone's edge as a horizon that shrinks items approaching it, signalling a swipeable spool of data. ([jain/mobile-swipe-interactions 1:25](https://youtu.be/14h1VnkQvIc?t=85))
-- Use scrolling instead of tap-to-advance for story-style content. Scrolling makes way more sense. ([jain/spotify-wrapped-redesign 1:20](https://youtu.be/goWOAFqJHpA?t=80))
+- Lay out each mobile section in one direction: stack vertically or scroll horizontally, never both. Use horizontal scrollers for browsable sets of similar cards; stack content users must read in full. Desktop can use two directions; mobile can't. ([jain/mobile-app-ui 2:28], [jain/mobile-swipe-interactions 0:28])
+- Don't shrink type and spacing to cram content on mobile; keep them similar to desktop or larger (base text ~17px on iOS versus ~13px on macOS). Text actually gets larger on smaller screens. ([jain/mobile-app-ui 1:32])
+- Make each mobile screen do one thing with one primary content block (home excepted); add a page rather than a new layout. Mobile is too space-constrained for more. ([jain/mobile-app-ui 2:03])
+- Build mobile screens from four blocks (cards, text/links, images, inputs), using cards to group content. Cards group content where mobile lacks room for white space. ([jain/mobile-app-ui 2:49])
 
 ## Gestures and feedback
 
-- Remove buttons that duplicate a gesture your audience already knows, like carousel arrows or tap-to-pause buttons. Visual clutter when the gesture is an established convention; keep buttons where the gesture isn't obvious. ([jain/beginner-mistakes 5:05](https://youtu.be/AH_ugxmLeUM?t=305), [jain/spotify-wrapped-redesign 2:04](https://youtu.be/goWOAFqJHpA?t=124))
-- Use swipes to replace buttons, reveal context or trigger actions like swipe-up-to-search, and teach users they exist. Once learned, swiping is faster and more seamless; swipes are everywhere in modern apps. ([jain/mobile-app-ui 5:32](https://youtu.be/Gfsd8NNuD9g?t=332), [jain/mobile-swipe-interactions 4:14](https://youtu.be/14h1VnkQvIc?t=254))
-- Pair swipe-only actions with a visible button or a long-press menu for the same action. Swipes are intuitive, but the uninitiated need other options. ([jain/mobile-swipe-interactions 1:50](https://youtu.be/14h1VnkQvIc?t=110))
-- Let users swipe to dismiss popovers, bottom sheets and pages, with buttons as a fallback. Quick and intuitive; buttons cover cases where it isn't obvious. ([jain/mobile-swipe-interactions 4:46](https://youtu.be/14h1VnkQvIc?t=286))
-- Reveal useful secondary actions on swipe left/right while keeping the primary action visible. ([jain/dashboard-flaws 3:38](https://youtu.be/Ksx9C2-3yMo?t=218))
-- Use swipe-to-confirm sliders for high-impact or irreversible actions like sending or purchasing. It's much easier to accidentally click a button than slide a slider across. ([jain/mobile-swipe-interactions 5:11](https://youtu.be/14h1VnkQvIc?t=311))
-- Make gestures show progress toward commit and stay reversible until release, as in pull-to-refresh and swipe-to-delete. Users can reverse their decision at any point. ([jain/software-must-lie 8:38](https://youtu.be/S8DcTJm8pYM?t=518))
-- On long press, blur the rest of the screen, slightly zoom the element, and show its actions or a preview. Long press is the mobile equivalent of right click. ([jain/mobile-app-ui 5:45](https://youtu.be/Gfsd8NNuD9g?t=345))
-- Skip hover states on mobile; add press states instead, such as a slightly darker gray on press. No hover on mobile; press feedback feels like pressing into something. ([jain/color-mistakes 6:40](https://youtu.be/EOcY3hPMQkk?t=400))
+- Remove buttons that duplicate a gesture users already know (carousel arrows, tap-to-pause); for less familiar swipe actions, also offer a visible button or a long-press menu. Duplicate controls are clutter, but uninitiated users need a visible path. ([jain/beginner-mistakes 5:05], [jain/mobile-swipe-interactions 1:50], [jain/spotify-wrapped-redesign 2:04])
+- Use swipes to replace buttons, reveal context or trigger actions (e.g. swipe up to search), and teach users the swipe exists. Once learned, swiping is faster. ([jain/mobile-app-ui 5:32], [jain/mobile-swipe-interactions 4:14])
+- Reveal useful secondary actions on swipe left or right while keeping the primary action visible. ([jain/dashboard-flaws 3:38])
+- Use swipe-to-confirm sliders for high-impact or irreversible actions like sending money or purchasing. It's far easier to tap a button by accident than to slide a slider across. ([jain/mobile-swipe-interactions 5:11])
+- Make gestures show progress toward commit and stay reversible until release, as in pull-to-refresh and swipe-to-delete. Users can back out at any point. ([jain/software-must-lie 8:38])
+- On long press, blur the rest of the screen, slightly enlarge the element, and show its actions or a preview. Long press is mobile's right-click. ([jain/mobile-app-ui 5:45])
+- Skip hover states on mobile; add press states instead, such as a slightly darker gray while pressed. There is no hover on touch. ([jain/color-mistakes 6:40])
 
 ## Contextual mobile actions
 
-- Show actions only when needed: hide the nav bar in editors, reveal task-specific actions, and reduce selection sheets to a confirm button and an X. Limited space means actions can't always be persistent. ([jain/mobile-app-ui 6:03](https://youtu.be/Gfsd8NNuD9g?t=363))
-- Keep the product's core action, such as share, immediately and always visible. That action is the reason the product succeeds. ([jain/spotify-wrapped-redesign 1:31](https://youtu.be/goWOAFqJHpA?t=91))
-- Make the plus button open a small menu or an input where users can immediately start typing. ([jain/mobile-app-ui 4:25](https://youtu.be/Gfsd8NNuD9g?t=265))
+- Show actions only when needed: hide the nav bar in editors, reveal task-specific actions, and reduce selection sheets to a confirm button and an X. Limited space means actions can't all be persistent. ([jain/mobile-app-ui 6:03])
+- Keep the product's core action (e.g. share) immediately and always visible. That action is why the product succeeds. ([jain/spotify-wrapped-redesign 1:31])
 
 ## Native-feeling desktop apps
 
-- Make a desktop app a system available where you need it, not a destination; design popovers, extra windows and notifications too. The best UX feels like it belongs on your computer, beyond the main window. ([jain/macos-apps 0:24](https://youtu.be/Vy0KKvZJRH8?t=24))
-- Open quick-capture panels with a global keyboard shortcut; have them appear on demand and get out of the way, like Spotlight or Raycast. Users are mid-task in other apps. ([jain/macos-apps 1:02](https://youtu.be/Vy0KKvZJRH8?t=62))
-- Keep utility windows minimal: drop the traffic lights; include only a drop area, an input and a few buttons. The window should stay out of the way. ([jain/macos-apps 1:27](https://youtu.be/Vy0KKvZJRH8?t=87))
-- Show keyboard shortcut hints on buttons. ([jain/macos-apps 1:37](https://youtu.be/Vy0KKvZJRH8?t=97))
-- Use the standard layout: top bar for global actions, sidebar for navigation, main content in the center. Apple's utility apps all share this layout. ([jain/macos-apps 2:42](https://youtu.be/Vy0KKvZJRH8?t=162))
-- Integrate the window traffic lights into the top bar or sidebar, and keep the top ~50px of a Mac window uncluttered. That area is used for window dragging and lets the UI breathe. ([jain/macos-apps 2:54](https://youtu.be/Vy0KKvZJRH8?t=174))
-- Design apps as containers for user content, not like landing pages with fixed content. Apps hold information users add and manipulate. ([jain/macos-apps 2:23](https://youtu.be/Vy0KKvZJRH8?t=143))
-- Keep utility apps simple and focused on doing one thing well. The UI can stay hyperfocused. ([jain/macos-apps 2:48](https://youtu.be/Vy0KKvZJRH8?t=168))
-- Support drag and drop of content both into and out of the app. Makes the experience feel effortless. ([jain/macos-apps 7:24](https://youtu.be/Vy0KKvZJRH8?t=444))
-- Provide a floating action bar or share button for common item actions like copy, find and delete. Keeps frequent actions easy to access. ([jain/macos-apps 7:52](https://youtu.be/Vy0KKvZJRH8?t=472))
+- Make a desktop app a system available where it's needed, not a destination: design its popovers, extra windows and notifications too, keep utility apps focused on one job, and treat the app as a container for user content rather than a fixed-content page. The best desktop UX feels like it belongs on the computer, beyond the main window. ([jain/macos-apps 0:24])
+- Open quick-capture panels with a global keyboard shortcut (like Spotlight or Raycast) and keep utility windows minimal: no traffic lights, just a drop area, an input and a few buttons. Users are mid-task in other apps; the window should get out of the way. ([jain/macos-apps 1:02])
+- Integrate the window traffic lights into the top bar or sidebar, and keep the top ~50px of a Mac window uncluttered. That strip is used for dragging the window. ([jain/macos-apps 2:54])
+- Show keyboard shortcut hints on buttons. ([jain/macos-apps 1:37])
+- Support drag and drop of content both into and out of the app. Makes the app feel native. ([jain/macos-apps 7:24])
+
+[jain/beginner-mistakes 5:05]: https://youtu.be/AH_ugxmLeUM?t=305
+[jain/color-mistakes 6:40]: https://youtu.be/EOcY3hPMQkk?t=400
+[jain/crucial-ui-elements 0:34]: https://youtu.be/gKM6b2EnW1k?t=34
+[jain/crucial-ui-elements 1:04]: https://youtu.be/gKM6b2EnW1k?t=64
+[jain/crucial-ui-elements 1:29]: https://youtu.be/gKM6b2EnW1k?t=89
+[jain/dashboard-flaws 3:38]: https://youtu.be/Ksx9C2-3yMo?t=218
+[jain/macos-apps 0:24]: https://youtu.be/Vy0KKvZJRH8?t=24
+[jain/macos-apps 1:02]: https://youtu.be/Vy0KKvZJRH8?t=62
+[jain/macos-apps 1:37]: https://youtu.be/Vy0KKvZJRH8?t=97
+[jain/macos-apps 2:54]: https://youtu.be/Vy0KKvZJRH8?t=174
+[jain/macos-apps 7:24]: https://youtu.be/Vy0KKvZJRH8?t=444
+[jain/mobile-app-ui 0:27]: https://youtu.be/Gfsd8NNuD9g?t=27
+[jain/mobile-app-ui 0:45]: https://youtu.be/Gfsd8NNuD9g?t=45
+[jain/mobile-app-ui 0:59]: https://youtu.be/Gfsd8NNuD9g?t=59
+[jain/mobile-app-ui 1:32]: https://youtu.be/Gfsd8NNuD9g?t=92
+[jain/mobile-app-ui 2:03]: https://youtu.be/Gfsd8NNuD9g?t=123
+[jain/mobile-app-ui 2:28]: https://youtu.be/Gfsd8NNuD9g?t=148
+[jain/mobile-app-ui 2:49]: https://youtu.be/Gfsd8NNuD9g?t=169
+[jain/mobile-app-ui 4:06]: https://youtu.be/Gfsd8NNuD9g?t=246
+[jain/mobile-app-ui 5:32]: https://youtu.be/Gfsd8NNuD9g?t=332
+[jain/mobile-app-ui 5:45]: https://youtu.be/Gfsd8NNuD9g?t=345
+[jain/mobile-app-ui 6:03]: https://youtu.be/Gfsd8NNuD9g?t=363
+[jain/mobile-swipe-interactions 0:28]: https://youtu.be/14h1VnkQvIc?t=28
+[jain/mobile-swipe-interactions 1:50]: https://youtu.be/14h1VnkQvIc?t=110
+[jain/mobile-swipe-interactions 4:14]: https://youtu.be/14h1VnkQvIc?t=254
+[jain/mobile-swipe-interactions 5:11]: https://youtu.be/14h1VnkQvIc?t=311
+[jain/software-must-lie 8:38]: https://youtu.be/S8DcTJm8pYM?t=518
+[jain/spotify-wrapped-redesign 1:31]: https://youtu.be/goWOAFqJHpA?t=91
+[jain/spotify-wrapped-redesign 1:40]: https://youtu.be/goWOAFqJHpA?t=100
+[jain/spotify-wrapped-redesign 2:04]: https://youtu.be/goWOAFqJHpA?t=124
+[jain/tiktok-ux 4:57]: https://youtu.be/ixUq4HM4FNg?t=297

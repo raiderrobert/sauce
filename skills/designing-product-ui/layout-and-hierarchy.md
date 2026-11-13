@@ -1,64 +1,106 @@
-# Layout and Hierarchy
+# Layout and hierarchy
 
-Kole Jain's heuristics for visual hierarchy, spacing, alignment, grids and section layout in product UI and landing pages.
+Visual hierarchy, spacing and grouping, alignment edges, grids and section layout for product UI and marketing pages.
 
-Each rule cites its source as `author/video timestamp`; the link opens the video at that moment. Full source details are in `references/bibliography.md`.
+Rules within a section are ordered by how many sources back them. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. Each citation (`author/video timestamp`) links to that moment in the source; full entries are in `references/bibliography.md`.
+
+Contents: Visual hierarchy · Spacing and grouping · Containers, edges and alignment · Grids and page structure · Layout variety and bento grids
 
 ## Visual hierarchy
 
-- Rank every text element and card detail by importance, then style and order accordingly: most important large, bold and on top; secondary info like dates smaller below. Otherwise key info blends in; the least important details only matter once everything else checks out. ([jain/every-ui-concept 1:07](https://youtu.be/EcbgbKtOELY?t=67), [jain/typography 5:39](https://youtu.be/7sUUzOCv47U?t=339), [jain/ui-cheat-codes 4:57](https://youtu.be/c1TvOcKdBVE?t=297))
-- Build hierarchy through contrast in weight and color/opacity, not just size, e.g. same 15px text with the secondary line at 55% opacity; make steps clearly distinct. Contrast creates hierarchy; lower opacity blends secondary text into the background. ([jain/every-ui-concept 1:16](https://youtu.be/EcbgbKtOELY?t=76), [jain/learn-ui-in-10-minutes 1:52](https://youtu.be/9WVt1CelBfg?t=112), [jain/typography 4:58](https://youtu.be/7sUUzOCv47U?t=298))
-- Don't overdo headline-to-subline contrast; avoid excessive text-size differences that let the headline overpower everything. Overdone hierarchy makes the headline dominate at the subline's expense; deliberate giant display text is the exception. ([jain/landing-page-levels 5:37](https://youtu.be/eMMiLeo_UGI?t=337), [jain/tesla-wannabe-redesign 4:32](https://youtu.be/V3Omp1hm0Sg?t=272))
-- Make an element stand out by changing its surroundings, or making it bigger, rather than adding more color or bolder text to it. Emphasis is the difference from neighbors; bigger elements draw attention and add variety. ([jain/awful-to-amazing 2:56](https://youtu.be/ulSOdTgoGeY?t=176), [jain/weirdly-perfect-ui 6:46](https://youtu.be/neE6wOuBIP8?t=406))
-- Give header sections one primary call to action; drop the second button or remove its background, and avoid many competing components. Two equally styled buttons compete; chaotic designs compete for attention and usually lose. ([jain/captivating-sections 0:12](https://youtu.be/tNMAFjzapOk?t=12), [jain/web-design-hacks 3:55](https://youtu.be/Lp6ey4AyDzA?t=235))
-- On pricing/plan cards, shrink the plan name and make the price large; put key values at the top, right-aligned, in an accent color. No one cares about the name; cost matters, and being different draws the eye. ([jain/every-ui-concept 1:23](https://youtu.be/EcbgbKtOELY?t=83), [jain/saas-vibe-code-mistakes 4:14](https://youtu.be/PDcQJOPby1k?t=254))
-- Break walls of text into bullets, tables, icons, diagrams and universal symbols; use icons and alignment (e.g. from → to) instead of text labels. Visuals register instantly without reading, like a stop sign. ([jain/every-ui-concept 1:32](https://youtu.be/EcbgbKtOELY?t=92), [jain/weirdly-perfect-ui 2:43](https://youtu.be/neE6wOuBIP8?t=163))
-- Let size alone carry large headings (no extra bold or opacity change); bold subheadings so they pop above paragraphs. Large size already gets the most attention; subheadings must be scannable. ([jain/typography 6:24](https://youtu.be/7sUUzOCv47U?t=384))
-- Design screens to be scanned, not read: users arrive with one question and hunt for the answer. Nobody reads a screen; nothing on a screen is ever fully consumed. ([jain/weirdly-perfect-ui 5:25](https://youtu.be/neE6wOuBIP8?t=325))
-- Fix dense content by differentiating it, not by adding white space. The problem is undifferentiated content; white space only makes things longer. ([jain/weirdly-perfect-ui 2:21](https://youtu.be/neE6wOuBIP8?t=141))
-- Contrast giant display text with very small nav text, placing the nav below the giant text. The size discrepancy and positioning make the giant text feel very important. ([jain/website-layouts 3:03](https://youtu.be/P2ksReDwWkE?t=183))
-- On pricing cards, if you move the button up near the price, make it an outline (stroke-only) button. A filled button moved up throws off the hierarchy. ([jain/crucial-ui-elements 4:46](https://youtu.be/gKM6b2EnW1k?t=286))
-- Drop section titles that are redundant when cards already have their own headers. ([jain/google-ai-redesign 2:15](https://youtu.be/pGYLZyBE32o?t=135))
+- Build hierarchy with weight and color contrast, not size alone: e.g. two lines both at 15px, the secondary line at ~55-70% opacity. Make each step clearly distinct. Size-only hierarchy is the common mistake; weight and color add differentiation. ([jain/every-ui-concept 1:16], [jain/learn-ui-in-10-minutes 1:52], [jain/typography 4:58], [jain/web-design-hacks 0:10])
+- Rank every text element and card detail by importance, then style and order to match: the most important item largest, boldest and on top; secondary details such as dates smaller and below. Otherwise key information blends in with minor details. ([jain/every-ui-concept 1:07], [jain/typography 5:39], [jain/ui-cheat-codes 4:57])
+- Don't overdo headline-to-subline size contrast; a headline that dwarfs everything starves the subline. Deliberate giant display text is the exception. Overdone contrast lets the headline overpower the rest. ([jain/landing-page-levels 5:37], [jain/tesla-wannabe-redesign 4:32])
+- Make an element stand out by changing its surroundings or its size rather than piling more color or weight onto it. Emphasis comes from difference with neighbors. ([jain/awful-to-amazing 2:56], [jain/weirdly-perfect-ui 6:46])
+- Give each header or hero section one primary call to action; make any second action an outline or text button, not an equal filled one. Two equally styled buttons compete, and chaotic layouts lose the user's attention. ([jain/captivating-sections 0:12], [jain/web-design-hacks 3:55])
+- Break walls of text into bullets, tables, icons and diagrams; e.g. show a change as 'old → new' with an arrow instead of 'From:' and 'To:' labels. Visual forms register instantly without reading, like a stop sign. ([jain/every-ui-concept 1:32], [jain/weirdly-perfect-ui 2:43])
+- **App UI:** Design product screens to be scanned: when content is dense, differentiate it (grouping, weight, alignment, icons) before adding white space. Users arrive with one question and hunt for the answer; extra space alone just makes undifferentiated content longer. ([jain/weirdly-perfect-ui 2:21])
 
-## Spacing scale and proximity grouping
+## Spacing and grouping
 
-- Make all spacing multiples of 4 (a 4px or 8px base grid), including signup/login modals; add space where labels feel cramped. Values split cleanly in half, giving consistency that looks noticeably more organized. ([jain/crucial-ui-elements 7:25](https://youtu.be/gKM6b2EnW1k?t=445), [jain/every-ui-concept 3:03](https://youtu.be/EcbgbKtOELY?t=183), [jain/ui-cheat-codes 6:05](https://youtu.be/c1TvOcKdBVE?t=365))
-- Group hero items by proximity: subtext 8px below heading, eyebrow 12px above, buttons 32px below, at least twice the heading-to-subtext gap. Grouping is hierarchy; large headings already carry extra space below their baseline. ([jain/every-ui-concept 2:50](https://youtu.be/EcbgbKtOELY?t=170), [jain/learn-ui-in-10-minutes 0:47](https://youtu.be/9WVt1CelBfg?t=47), [jain/vibe-coding-cant-fix 5:41](https://youtu.be/RCneB_MQ7qs?t=341))
-- Keep card padding generous and consistent across all cards and chips; show fewer items rather than cramming to fit. Keeps margins consistent with other modules and content not tightly packed. ([jain/beginner-mistakes 2:38](https://youtu.be/AH_ugxmLeUM?t=158), [jain/dashboard-ui 6:36](https://youtu.be/B7k5rOgmOGY?t=396), [jain/finance-dashboard-redesign 6:26](https://youtu.be/Yr2uIcFZDDQ?t=386))
-- Give text generous surrounding space within a clear grid so decorative elements read as context, not clutter. Restraint guides the user through the page. ([jain/boring-design-hacks 1:24](https://youtu.be/SfX43uIubj4?t=84), [jain/captivating-sections 0:32](https://youtu.be/tNMAFjzapOk?t=32))
-- For large dimensions, round to the nearest 5 or 10, or use exponentially larger steps on an 8px grid. The difference between 120 and 128 is imperceptible. ([jain/ui-cheat-codes 6:33](https://youtu.be/c1TvOcKdBVE?t=393))
-- Increase vertical spacing in stacked content; mobile needs more space than you think. Lets things breathe and group naturally. ([jain/beginner-mistakes 2:19](https://youtu.be/AH_ugxmLeUM?t=139))
-- Don't float giant text in excess whitespace; push related elements closer together to create hierarchy. Too much space makes the site feel disjointed, with elements floating alone. ([jain/tesla-wannabe-redesign 0:49](https://youtu.be/V3Omp1hm0Sg?t=49))
-- Keep rounded cards on a dark background very close together with precise spacing. ([jain/website-layouts 0:51](https://youtu.be/P2ksReDwWkE?t=51))
+- Make all spacing multiples of 4 (a 4px or 8px base), including modals and forms; add space where labels feel cramped. Values split cleanly in half, which looks noticeably more organized. ([jain/crucial-ui-elements 7:25], [jain/every-ui-concept 3:03], [jain/ui-cheat-codes 6:05])
+- Group by proximity with concrete gaps: e.g. hero subtext 8px below the heading, eyebrow 12px above it, buttons 32px below the subtext (at least twice the heading-to-subtext gap). Grouping is hierarchy; large headings already carry extra space below their baseline. ([jain/every-ui-concept 2:50], [jain/learn-ui-in-10-minutes 0:47], [jain/vibe-coding-cant-fix 5:41])
+- Keep card and chip padding generous and identical across a view; show fewer items rather than cramming more in. Consistent margins keep modules aligned and content from feeling packed. ([jain/beginner-mistakes 2:38], [jain/dashboard-ui 6:36], [jain/finance-dashboard-redesign 6:26])
+- For large dimensions, round to the nearest 5 or 10, or take exponentially larger steps on the 8px grid. The difference between 120 and 128 is imperceptible. ([jain/ui-cheat-codes 6:33])
+- **Marketing:** Don't leave giant text floating in excess white space; pull related elements closer so the gaps between groups create the hierarchy. Too much space makes a page feel disjointed. ([jain/tesla-wannabe-redesign 0:49])
 
 ## Containers, edges and alignment
 
-- Use more space, fewer containers and fewer divider lines; separate list items and columns with whitespace instead of cards or lines. People read distant things as unrelated and close things as related; separators add clutter. ([jain/ui-cheat-codes 5:40](https://youtu.be/c1TvOcKdBVE?t=340), [jain/web-design-hacks 1:19](https://youtu.be/Lp6ey4AyDzA?t=79))
-- Hold content together with strong alignment edges; dissolve cards into a single line or column edge, with sections grouping content. The column edge does the card's job; in compact UIs edges beat dividers and extra whitespace. ([jain/weirdly-perfect-ui 0:27](https://youtu.be/neE6wOuBIP8?t=27))
-- Wrap related items in a shared container when they must read as belonging together. Users infer relationships without instructions; use sparingly given the fewer-containers rule. ([jain/every-ui-concept 0:09](https://youtu.be/EcbgbKtOELY?t=9))
-- Align text hard left and numbers/prices hard right; center only content users aren't meant to read. Alignment lets users skip what they don't need to read. ([jain/weirdly-perfect-ui 0:17](https://youtu.be/neE6wOuBIP8?t=17))
-- Don't fill empty card space with more content; stack content against the card's edges and inner elements like avatar and name. Adding content to fill space ends up looking strange. ([jain/weirdly-perfect-ui 0:35](https://youtu.be/neE6wOuBIP8?t=35))
-- Manufacture new edges, like a divider, so buttons and avatar line up along one solid line for content below. Resolves unbalanced areas left after moving content. ([jain/weirdly-perfect-ui 1:16](https://youtu.be/neE6wOuBIP8?t=76))
-- In compact UIs (chat inputs, Kanban cards, sidebars), make every element border at least two edges. True of almost all well-built compact UIs. ([jain/weirdly-perfect-ui 1:24](https://youtu.be/neE6wOuBIP8?t=84))
-- In lists, let each row create the edge for the next; if large icons remove the bottom edge, add a subline. Every line creates a new edge for the next to stack onto. ([jain/weirdly-perfect-ui 1:39](https://youtu.be/neE6wOuBIP8?t=99))
+- Separate list items, columns and groups with spacing rather than containers and divider lines; add a container only when items must read as one unit, and use lines only when they are the intended visual style. Close things read as related and distant things as unrelated; extra separators add clutter. ([jain/every-ui-concept 0:09], [jain/slept-on-trends 4:01], [jain/ui-cheat-codes 5:26], [jain/web-design-hacks 1:19])
+- Align text hard left and numbers, prices and numeric table columns hard right; center only content users aren't meant to read. Alignment lets users skip what they don't need, and digits line up by place value. ([jain/dashboard-flaws 0:44], [jain/weirdly-perfect-ui 0:17])
+- **App UI:** In compact UIs (chat inputs, Kanban cards, sidebars, checklists), lock every element to at least two edges: the container's sides or lines formed by other elements. When an edge goes missing, manufacture one, e.g. a subline under a row with a large icon, or a divider that lines buttons up with the avatar. True of almost all well-built compact UIs; a shared column edge can do a card's job, and each row creates the edge the next one stacks onto. ([jain/weirdly-perfect-ui 0:27])
+- **App UI:** Don't fill empty card space with more content; place content against the card's edges and the edges inner elements create (e.g. stacked below the avatar-and-name row), and limit compact cards to a few buttons aligned to those edges. Filler content and buttons that ignore the edges make a card feel off. ([jain/weirdly-perfect-ui 0:35])
+- **App UI:** Stop row divider lines at the content edges; don't run them the full width of the screen. Full-width lines break the feeling of precision. ([jain/weirdly-perfect-ui 1:55])
 
 ## Grids and page structure
 
-- Follow grids strictly on dashboards; on custom landing pages treat them as guidelines, letting elements break slightly if balance holds and prioritizing whitespace. Dashboards use most or all of the screen; landing pages benefit more from breathing room. ([jain/beginner-mistakes 2:13](https://youtu.be/AH_ugxmLeUM?t=133), [jain/dashboard-ui 2:10](https://youtu.be/B7k5rOgmOGY?t=130), [jain/every-ui-concept 2:05](https://youtu.be/EcbgbKtOELY?t=125))
-- Use column grids for structured repeating content (12 desktop, 8 tablet, 4 mobile; or 3/2 columns) and align elements closely to them. Gives responsive guidelines; beginner UIs are packed too tight. ([jain/beginner-mistakes 2:03](https://youtu.be/AH_ugxmLeUM?t=123), [jain/every-ui-concept 2:22](https://youtu.be/EcbgbKtOELY?t=142))
-- Design desktop to real viewports (1920px wide, ~1000px visible) and fill above the fold with important content, not empty space. Oversized frames hide cut-off content; users must scroll for anything below. ([jain/finance-dashboard-redesign 0:41](https://youtu.be/Yr2uIcFZDDQ?t=41), [jain/skincare-redesign 3:22](https://youtu.be/BvbFPzLjWcU?t=202))
-- Follow layout conventions: content flows top-to-bottom, left-to-right, nav at top, CTAs eye-catching and easy to find. Users expect them; easier to extend and make responsive. ([jain/genius-designer 1:41](https://youtu.be/HE4rLEQpiXY?t=101))
-- Arrange cards to avoid awkward grid gaps that are hard to fill. ([jain/finance-dashboard-redesign 7:29](https://youtu.be/Yr2uIcFZDDQ?t=449))
-- Give sections adjusted background colors to separate them and add depth. ([jain/awful-to-amazing 4:02](https://youtu.be/ulSOdTgoGeY?t=242))
-- Frame page content with vertical lines running the page length. Builds structure and stays responsive on larger screens. ([jain/landing-page-levels 5:05](https://youtu.be/eMMiLeo_UGI?t=305))
-- Move purely decorative elements to the sides so the main content stays centered. They're only decoration. ([jain/google-ai-redesign 6:48](https://youtu.be/pGYLZyBE32o?t=408))
+- Follow the column grid strictly on dashboards; on custom landing pages treat it as a guide, letting elements break it slightly if balance holds and prioritizing white space. Dashboards use most of the screen; landing pages benefit more from breathing room. ([jain/beginner-mistakes 2:13], [jain/dashboard-ui 2:10], [jain/every-ui-concept 2:05])
+- Use column grids for structured, repeating content (12 columns desktop, 8 tablet, 4 mobile) and align elements closely to them. Gives responsive guidelines and stops content from being packed too tight. ([jain/beginner-mistakes 2:03], [jain/every-ui-concept 2:22])
+- Check layouts at real viewport sizes (e.g. 1920px wide with ~1000px visible on desktop) and put important content above the fold, not empty space. Oversized artboards hide content that will be cut off; anything below the fold requires a scroll. ([jain/finance-dashboard-redesign 0:41], [jain/skincare-redesign 3:22])
+- **Marketing:** On marketing pages, consider framing content with visible vertical grid lines that run the length of the page instead of floating cards. Builds structure and stays responsive on larger screens. ([jain/landing-page-levels 5:05], [jain/modern-layouts 6:03])
 
-## Layout variety, bento grids and breaking the box
+## Layout variety and bento grids
 
-- Break the box: let elements overlap section boundaries or extend off the page edge, e.g. a sliding card carousel. Makes layouts more interesting than strict rows and columns. ([jain/awful-to-amazing 1:22](https://youtu.be/ulSOdTgoGeY?t=82), [jain/google-ai-redesign 5:04](https://youtu.be/pGYLZyBE32o?t=304))
-- Start breaking the box with small changes like staggering cards up and down; don't take experiments too far. Hard to pull off without looking wonky; staggering adds movement. ([jain/awful-to-amazing 1:40](https://youtu.be/ulSOdTgoGeY?t=100), [jain/skincare-redesign 0:31](https://youtu.be/BvbFPzLjWcU?t=31))
-- Vary section layouts; don't alternate text-left/image-right down the page or reuse one layout for multiple sections. Template-like repetition makes the page feel undesigned. ([jain/google-ai-redesign 7:04](https://youtu.be/pGYLZyBE32o?t=424), [jain/landing-page-levels 0:35](https://youtu.be/eMMiLeo_UGI?t=35))
-- Use a bento grid instead of a plain row of four cards, but only when you have enough text and image content to fill it. Bento gives content room to breathe but is compact and needs a fair amount of content. ([jain/landing-page-levels 5:15](https://youtu.be/eMMiLeo_UGI?t=315), [jain/website-layouts 9:06](https://youtu.be/P2ksReDwWkE?t=546))
-- Plan bento content first and size boxes to it, e.g. vertical images need vertical boxes. Content planning often changes box sizes and layout. ([jain/tesla-wannabe-redesign 4:57](https://youtu.be/V3Omp1hm0Sg?t=297), [jain/website-layouts 8:34](https://youtu.be/P2ksReDwWkE?t=514))
-- When breaking the grid, cluster decorative elements to draw attention to the center, thinning out farther away. Off-grid placement needs to be very selective. ([jain/boring-design-hacks 1:28](https://youtu.be/SfX43uIubj4?t=88))
-- When stacked items line up too uniformly, flip an alternating item to add variety. Everything feels too lined up otherwise. ([jain/tesla-wannabe-redesign 7:04](https://youtu.be/V3Omp1hm0Sg?t=424))
+- **Marketing:** Vary section layouts down a page: mix full-screen sections, cards and multi-column sections; don't alternate text-left/image-right or reuse one layout for several sections. Template-like repetition makes the page feel undesigned and boring. ([jain/awful-to-amazing 0:54], [jain/google-ai-redesign 7:04], [jain/landing-page-levels 0:35], [jain/tesla-wannabe-redesign 4:48])
+- **Marketing:** Use a simple bento grid instead of a plain row of cards when there are many features and enough text and image content to fill it. Bento keeps everything visible without scrolling past it, but needs a fair amount of content; complex bentos are hard to build. ([jain/landing-page-levels 5:15], [jain/learn-ui-in-10-minutes 4:24], [jain/modern-layouts 5:44], [jain/website-layouts 9:06])
+- **Marketing:** Break the box selectively: let elements overlap section boundaries or run off the page edge (e.g. a sliding card carousel), starting with small moves like staggering cards up and down. More interesting than strict rows and columns, but easy to take too far and look wonky. ([jain/awful-to-amazing 1:22], [jain/google-ai-redesign 5:04], [jain/skincare-redesign 0:31])
+- **Marketing:** Plan bento content first and size the boxes to it, e.g. vertical images need vertical boxes. Content planning often changes box sizes and the layout. ([jain/tesla-wannabe-redesign 4:57], [jain/website-layouts 8:34])
+
+[jain/awful-to-amazing 0:54]: https://youtu.be/ulSOdTgoGeY?t=54
+[jain/awful-to-amazing 1:22]: https://youtu.be/ulSOdTgoGeY?t=82
+[jain/awful-to-amazing 2:56]: https://youtu.be/ulSOdTgoGeY?t=176
+[jain/beginner-mistakes 2:03]: https://youtu.be/AH_ugxmLeUM?t=123
+[jain/beginner-mistakes 2:13]: https://youtu.be/AH_ugxmLeUM?t=133
+[jain/beginner-mistakes 2:38]: https://youtu.be/AH_ugxmLeUM?t=158
+[jain/captivating-sections 0:12]: https://youtu.be/tNMAFjzapOk?t=12
+[jain/crucial-ui-elements 7:25]: https://youtu.be/gKM6b2EnW1k?t=445
+[jain/dashboard-flaws 0:44]: https://youtu.be/Ksx9C2-3yMo?t=44
+[jain/dashboard-ui 2:10]: https://youtu.be/B7k5rOgmOGY?t=130
+[jain/dashboard-ui 6:36]: https://youtu.be/B7k5rOgmOGY?t=396
+[jain/every-ui-concept 0:09]: https://youtu.be/EcbgbKtOELY?t=9
+[jain/every-ui-concept 1:07]: https://youtu.be/EcbgbKtOELY?t=67
+[jain/every-ui-concept 1:16]: https://youtu.be/EcbgbKtOELY?t=76
+[jain/every-ui-concept 1:32]: https://youtu.be/EcbgbKtOELY?t=92
+[jain/every-ui-concept 2:05]: https://youtu.be/EcbgbKtOELY?t=125
+[jain/every-ui-concept 2:22]: https://youtu.be/EcbgbKtOELY?t=142
+[jain/every-ui-concept 2:50]: https://youtu.be/EcbgbKtOELY?t=170
+[jain/every-ui-concept 3:03]: https://youtu.be/EcbgbKtOELY?t=183
+[jain/finance-dashboard-redesign 0:41]: https://youtu.be/Yr2uIcFZDDQ?t=41
+[jain/finance-dashboard-redesign 6:26]: https://youtu.be/Yr2uIcFZDDQ?t=386
+[jain/google-ai-redesign 5:04]: https://youtu.be/pGYLZyBE32o?t=304
+[jain/google-ai-redesign 7:04]: https://youtu.be/pGYLZyBE32o?t=424
+[jain/landing-page-levels 0:35]: https://youtu.be/eMMiLeo_UGI?t=35
+[jain/landing-page-levels 5:05]: https://youtu.be/eMMiLeo_UGI?t=305
+[jain/landing-page-levels 5:15]: https://youtu.be/eMMiLeo_UGI?t=315
+[jain/landing-page-levels 5:37]: https://youtu.be/eMMiLeo_UGI?t=337
+[jain/learn-ui-in-10-minutes 0:47]: https://youtu.be/9WVt1CelBfg?t=47
+[jain/learn-ui-in-10-minutes 1:52]: https://youtu.be/9WVt1CelBfg?t=112
+[jain/learn-ui-in-10-minutes 4:24]: https://youtu.be/9WVt1CelBfg?t=264
+[jain/modern-layouts 5:44]: https://youtu.be/VPeTgU7la34?t=344
+[jain/modern-layouts 6:03]: https://youtu.be/VPeTgU7la34?t=363
+[jain/skincare-redesign 0:31]: https://youtu.be/BvbFPzLjWcU?t=31
+[jain/skincare-redesign 3:22]: https://youtu.be/BvbFPzLjWcU?t=202
+[jain/slept-on-trends 4:01]: https://youtu.be/EHwZzWd-OnQ?t=241
+[jain/tesla-wannabe-redesign 0:49]: https://youtu.be/V3Omp1hm0Sg?t=49
+[jain/tesla-wannabe-redesign 4:32]: https://youtu.be/V3Omp1hm0Sg?t=272
+[jain/tesla-wannabe-redesign 4:48]: https://youtu.be/V3Omp1hm0Sg?t=288
+[jain/tesla-wannabe-redesign 4:57]: https://youtu.be/V3Omp1hm0Sg?t=297
+[jain/typography 4:58]: https://youtu.be/7sUUzOCv47U?t=298
+[jain/typography 5:39]: https://youtu.be/7sUUzOCv47U?t=339
+[jain/ui-cheat-codes 4:57]: https://youtu.be/c1TvOcKdBVE?t=297
+[jain/ui-cheat-codes 5:26]: https://youtu.be/c1TvOcKdBVE?t=326
+[jain/ui-cheat-codes 6:05]: https://youtu.be/c1TvOcKdBVE?t=365
+[jain/ui-cheat-codes 6:33]: https://youtu.be/c1TvOcKdBVE?t=393
+[jain/vibe-coding-cant-fix 5:41]: https://youtu.be/RCneB_MQ7qs?t=341
+[jain/web-design-hacks 0:10]: https://youtu.be/Lp6ey4AyDzA?t=10
+[jain/web-design-hacks 1:19]: https://youtu.be/Lp6ey4AyDzA?t=79
+[jain/web-design-hacks 3:55]: https://youtu.be/Lp6ey4AyDzA?t=235
+[jain/website-layouts 8:34]: https://youtu.be/P2ksReDwWkE?t=514
+[jain/website-layouts 9:06]: https://youtu.be/P2ksReDwWkE?t=546
+[jain/weirdly-perfect-ui 0:17]: https://youtu.be/neE6wOuBIP8?t=17
+[jain/weirdly-perfect-ui 0:27]: https://youtu.be/neE6wOuBIP8?t=27
+[jain/weirdly-perfect-ui 0:35]: https://youtu.be/neE6wOuBIP8?t=35
+[jain/weirdly-perfect-ui 1:55]: https://youtu.be/neE6wOuBIP8?t=115
+[jain/weirdly-perfect-ui 2:21]: https://youtu.be/neE6wOuBIP8?t=141
+[jain/weirdly-perfect-ui 2:43]: https://youtu.be/neE6wOuBIP8?t=163
+[jain/weirdly-perfect-ui 6:46]: https://youtu.be/neE6wOuBIP8?t=406
