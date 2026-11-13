@@ -2,7 +2,7 @@
 
 Dashboard layout, charts and chart styling, KPIs and stats, tables, lists and feeds, and pricing and comparison tables.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/data-and-dashboards.md`.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from a game-design principle (the principle is in the links file), untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/data-and-dashboards.md`.
 
 Contents: Dashboard layout · Charts · Chart styling and color · KPIs and stats · Tables · Lists and feeds · Pricing and comparison tables
 
@@ -25,7 +25,7 @@ Contents: Dashboard layout · Charts · Chart styling and color · KPIs and stat
 - Instead of a separate legend, put small 4×4px colored squares beside the labels in the series toggle. Round dots looked clunky; squares look clean. *Note: This still serves as the legend the rule above asks for; keep the text labels so series aren't identified by color alone (WCAG 1.4.1).* ([schoger/dashboard-with-ai 0:37:14])
 - **App UI:** If users need to compare business metrics against the previous period (e.g. last month's sales), show that period as a gray comparison line on the same chart. It is the usual comparison for business income. ([jain/crucial-ui-elements 2:56])
 - Match bar count to the data periods (7 days = 7 bars) and keep bar tops square. Extra bars make no sense, and rounded tops hide where the value ends. ([jain/beginner-mistakes 6:43])
-- **App UI:** When short-term data looks alarming, e.g. a portfolio drop, show a longer time horizon such as 5 years instead of 90 days. Zooming out turns a 'grand canyon' into a pothole and discourages fearful, harmful actions. *Note: Editorial: keep the shorter range available through the time-frame switch.* ([walter/designing-for-emotion 0:17:26])
+- **App UI:** When short-term data looks alarming, e.g. a portfolio drop, offer a longer time horizon, such as 5 years next to the 90-day view. Zooming out turns a 'grand canyon' into a pothole and discourages fearful, harmful actions. *Note: Editorial: keep the current range on screen; never switch to the longer range automatically.* ([walter/designing-for-emotion 0:17:26])
 
 ## Chart styling and color
 

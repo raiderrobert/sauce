@@ -1,6 +1,6 @@
 # Citation links: layout-and-hierarchy.md
 
-Link definitions for every citation label in `../../layout-and-hierarchy.md`. Read this only to turn a citation into a clickable link, for example in review output.
+Link definitions for every citation label in `../../layout-and-hierarchy.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
 [apple/design-foundations 10:09]: https://youtu.be/dGcqqA3Sl-o?t=609
 [apple/design-foundations 11:12]: https://youtu.be/dGcqqA3Sl-o?t=672

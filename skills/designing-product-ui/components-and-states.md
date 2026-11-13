@@ -2,7 +2,7 @@
 
 Component behavior and UI states: feedback, empty/loading/error states, buttons, chips, icons, cards, carousels, overlays, destructive actions, forms and AI interfaces.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/components-and-states.md`.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from a game-design principle (the principle is in the links file), untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/components-and-states.md`.
 
 Contents: Feedback and states · Empty, loading and error states · Buttons, chips and icons · Cards and carousels · Overlays, destructive actions and saving · Forms and inputs · AI interfaces · Search, menus and tabs
 
@@ -20,7 +20,7 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 
 ## Empty, loading and error states
 
-- Don't leave a list, dashboard or new object blank: show a message and a CTA that starts the first task, ideally with a custom illustration. Users aren't left staring at a blank screen and know the next step; illustrations add personality. ([jain/dashboard-ui 3:18], [jain/macos-apps 3:31], [jain/think-like-product-designer 0:42], [raroque/apps-feel-10x-better 2:49])
+- Don't leave a list, dashboard or new object blank: show a message and a CTA that starts the first task, with a custom illustration if the user supplied one. Users aren't left staring at a blank screen and know the next step; illustrations add personality. ([jain/dashboard-ui 3:18], [jain/macos-apps 3:31], [jain/think-like-product-designer 0:42], [raroque/apps-feel-10x-better 2:49])
 - On error, keep the user's input in the field for editing and offer likely fixes selectable in one step (e.g. the matching zip code for a city). Input is precious; low-effort recovery returns users to their workflow, and efficiency takes the most effort to score high on. ([nngroup/error-message-rubric 2:26], [nngroup/error-messages 1:00])
 - Detect likely mistakes and warn before they happen, e.g. an email that mentions an attachment but has none. The worst error messages are the ones that don't exist; prevention beats recovery. ([nngroup/error-messages 1:15], [saffer/microinteractions 22:18])
 - Keep loading indicators short, looping and fluid, and keep any decorative preloader short too, so users aren't waiting to see content (show an indicator only if a wait is still pending after a short threshold, and use an intro loader only to cover a real heavy-asset load; see also the wait rule in interaction-feel.md and the intro-loader rule in motion.md). People are impatient and the product should feel fast. ([jain/ai-startup-components 1:37], [jain/trendy-web-animations 1:57])

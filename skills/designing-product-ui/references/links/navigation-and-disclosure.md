@@ -1,6 +1,6 @@
 # Citation links: navigation-and-disclosure.md
 
-Link definitions for every citation label in `../../navigation-and-disclosure.md`. Read this only to turn a citation into a clickable link, for example in review output.
+Link definitions for every citation label in `../../navigation-and-disclosure.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
 [apple/design-foundations 2:03]: https://youtu.be/dGcqqA3Sl-o?t=123
 [apple/design-foundations 5:22]: https://youtu.be/dGcqqA3Sl-o?t=322
@@ -113,3 +113,9 @@ Link definitions for every citation label in `../../navigation-and-disclosure.md
 [vohra/acquired-feel-like-a-game ¶game-design-is-not]: https://www.acquired.fm/episodes/special-superhuman-part-ii-designing-software-to-feel-like-a-game-with-rahul-vohra#:~:text=Game%20design%20is%20not%20gamification.%20It
 [vohra/beyond-gamification 1:11]: https://youtu.be/zaxAdRlyZQ8?t=71
 [vohra/designing-for-flow ¶make-functions-visible-and]: https://blog.superhuman.com/how-to-design-for-flow/#:~:text=Make%20functions%20visible%2C%20and%20limit%20alternative
+
+## Source principles
+
+What each game-design source said, keyed by the first citation of the **From games** rule it backs. The rule in the topic file is the product-UI translation.
+
+- [valve/half-life-documentary 0:22:53]: Give each new enemy a scene where it's the sole focus, escalate threat gradually, and keep exposition in-game, adding cues where playtesters get lost.

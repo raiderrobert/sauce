@@ -2,7 +2,7 @@
 
 Marketing and SaaS landing pages: product visuals, hero sections, copy, section structure, social proof and footers. Pricing pages live in data-and-dashboards.md.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/landing-pages.md`.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from a game-design principle (the principle is in the links file), untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/landing-pages.md`.
 
 Contents: Product visuals · Hero sections · Copy · Page structure and footers · Social proof and trust
 

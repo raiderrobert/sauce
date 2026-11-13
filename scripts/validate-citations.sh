@@ -103,6 +103,17 @@ for bib_path in sorted(glob.glob("skills/*/references/bibliography.md")):
             for p in problems:
                 print(f"FAIL: {path}: [{label}] {p}")
                 errors += 1
+        principles = set(re.findall(rf"^- \[({LABEL})\]: \S", links, re.M))
+        for line in text.splitlines():
+            if line.startswith("- **From games:**"):
+                first = re.search(rf"\(\[({LABEL})\]", line)
+                if not first or first.group(1) not in principles:
+                    print(f"FAIL: {path}: From games rule has no source principle in {links_path}: {line[:70]}")
+                    errors += 1
+        for ref in re.findall(r"see also[^.;)]*?\b([a-z-]+\.md)", text):
+            if not os.path.exists(os.path.join(skill_dir, ref)):
+                print(f"FAIL: {path}: see-also names a missing file {ref}")
+                errors += 1
         all_defs.update(defs)
     skill_md = os.path.join(skill_dir, "SKILL.md")
     if os.path.exists(skill_md):

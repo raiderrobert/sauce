@@ -1,6 +1,6 @@
 # Citation links: landing-pages.md
 
-Link definitions for every citation label in `../../landing-pages.md`. Read this only to turn a citation into a clickable link, for example in review output.
+Link definitions for every citation label in `../../landing-pages.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
 [jain/awful-to-amazing 2:38]: https://youtu.be/ulSOdTgoGeY?t=158
 [jain/boring-design-hacks 0:27]: https://youtu.be/SfX43uIubj4?t=27

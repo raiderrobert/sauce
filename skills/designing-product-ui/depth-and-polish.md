@@ -2,7 +2,7 @@
 
 Shadows, borders, corner radii, icons, imagery, materials, gradients, texture and decorative touches that add depth and finish without clutter.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/depth-and-polish.md`.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from a game-design principle (the principle is in the links file), untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/depth-and-polish.md`.
 
 Contents: Restraint · Shadows and elevation · Surfaces, borders and corners · Icons · Imagery and text over images · Style and decoration · Materials and light · Gradients and texture
 
@@ -53,7 +53,7 @@ Contents: Restraint · Shadows and elevation · Surfaces, borders and corners ·
 
 - Pick one flavor and apply it to every corner, button and image: for a friendly feel, warm backgrounds, colorful visuals, well-rounded corners and large rounded buttons; for a modern, professional feel (as of 2026), much less rounded corners, less colorful premium imagery and subtle background noise. Match radius to the typeface too: with a squared-off font or less soft brand, cut it (e.g. 4px to 1px). The same layout feels completely different with a different flavor. *Note: Editorial: e.g. friendly radii around 16-24px with pill buttons; modern radii around 4-8px.* ([jain/crucial-ui-elements 3:35], [jain/learn-ui-in-10-minutes 5:39], [kennedy/advanced-design-tips 6:50], [kennedy/starting-a-ui-project 39:23])
 - **Marketing:** Match playfulness to the intended feel, e.g. blobs, doodles and fun colors for a playful consumer brand, realistic imagery for a professional tool such as invoicing; drop decorative shapes that look messy against a clean brand. Nailing the feel of a site matters as much as layout. ([jain/boring-design-hacks 1:55], [jain/google-ai-redesign 1:52])
-- **App UI:** Make illustrations distinctive: commission a base mascot from an illustrator and generate state variations, or iterate 30+ AI prompts mixing styles; consider animating empty-state illustrations. Custom art feels more original; anything two prompts can produce, anyone can, so it feels generic. ([raroque/apps-feel-10x-better 3:47], [raroque/apps-feel-premium 4:29])
+- **App UI:** If the user supplied a mascot or illustrations, keep them distinctive: generate state variations from the supplied base and consider animating empty-state illustrations. Otherwise recommend commissioning a base mascot from an illustrator, or iterating 30+ AI prompts mixing styles, rather than creating art yourself. Custom art feels more original; anything two prompts can produce, anyone can, so it feels generic. ([raroque/apps-feel-10x-better 3:47], [raroque/apps-feel-premium 4:29])
 
 ## Materials and light
 

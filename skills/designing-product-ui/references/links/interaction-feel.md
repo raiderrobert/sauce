@@ -1,6 +1,6 @@
 # Citation links: interaction-feel.md
 
-Link definitions for every citation label in `../../interaction-feel.md`. Read this only to turn a citation into a clickable link, for example in review output.
+Link definitions for every citation label in `../../interaction-feel.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
 [apple/designing-fluid-interfaces ¶by-combining-dynamic-behaviors]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=By%20combining%20dynamic%20behaviors%20for%20motion
 [apple/designing-fluid-interfaces ¶its-important-for-an]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=It%27s%20important%20for%20an%20interface%20to
@@ -18,6 +18,7 @@ Link definitions for every citation label in `../../interaction-feel.md`. Read t
 [eldh/invisible-details ¶some-product-and-engineering]: https://linear.app/now/invisible-details#:~:text=Some%20product%20and%20engineering%20managers%20take
 [eldh/invisible-details ¶you-can-take-almost]: https://linear.app/now/invisible-details#:~:text=You%20can%20take%20almost%20every%20action
 [freiberg/invisible-details ¶if-we-for-a]: https://rauno.me/craft/interaction-design#:~:text=if%20we%20for%20a%20moment%20consider
+[freiberg/invisible-details ¶sometimes-we-can-get]: https://rauno.me/craft/interaction-design#:~:text=Sometimes%20we%20can%20get%20away%20with
 [freiberg/invisible-details ¶the-selected-item-briefly]: https://rauno.me/craft/interaction-design#:~:text=the%20selected%20item%20briefly%20blinks%20the
 [freiberg/invisible-details ¶when-an-interface-makes]: https://rauno.me/craft/interaction-design#:~:text=When%20an%20interface%20makes%20use%20of
 [gmtk/game-feel-and-juice 2:40]: https://youtu.be/216_5nu4aVQ?t=160
@@ -34,6 +35,7 @@ Link definitions for every citation label in `../../interaction-feel.md`. Read t
 [kowalski/great-animations ¶a-good-tip-here]: https://emilkowal.ski/ui/great-animations#:~:text=A%20good%20tip%20here%20is%20to
 [kowalski/great-animations ¶fast-animations-improve-the]: https://emilkowal.ski/ui/great-animations#:~:text=Fast%20animations%20improve%20the%20perceived%20performance.
 [kowalski/you-dont-need-animations ¶a-fasterspinning-spinner-makes]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=a%20faster%2Dspinning%20spinner%20makes%20the%20app
+[kowalski/you-dont-need-animations ¶an-animation-would-make]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=an%20animation%20would%20make%20them%20feel
 [kowalski/you-dont-need-animations ¶if-it-animated-every]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=If%20it%20animated%20every%20time%20I
 [nijman/art-of-screenshake 11:43]: https://youtu.be/AJdEqssNZ-U?t=703
 [nijman/art-of-screenshake 13:07]: https://youtu.be/AJdEqssNZ-U?t=787
@@ -63,6 +65,7 @@ Link definitions for every citation label in `../../interaction-feel.md`. Read t
 [slack/incremental-boot ¶seeing-these-messages-is]: https://slack.engineering/getting-to-slack-faster-with-incremental-boot/#:~:text=Seeing%20these%20messages%20is%20certainly%20better
 [valve/half-life-documentary 0:14:14]: https://youtu.be/TbZ3HzvFEto?t=854
 [valve/half-life-documentary 0:16:36]: https://youtu.be/TbZ3HzvFEto?t=996
+[valve/half-life-documentary 0:39:48]: https://youtu.be/TbZ3HzvFEto?t=2388
 [vohra/acquired-feel-like-a-game ¶a-good-toy-is]: https://www.acquired.fm/episodes/special-superhuman-part-ii-designing-software-to-feel-like-a-game-with-rahul-vohra#:~:text=A%20good%20toy%20is%20an%20object
 [vohra/acquired-feel-like-a-game ¶find-the-lighttouch-ways]: https://www.acquired.fm/episodes/special-superhuman-part-ii-designing-software-to-feel-like-a-game-with-rahul-vohra#:~:text=find%20the%20light%2Dtouch%20ways%20to%20just
 [vohra/acquired-feel-like-a-game ¶hundred-milliseconds-response-times]: https://www.acquired.fm/episodes/special-superhuman-part-ii-designing-software-to-feel-like-a-game-with-rahul-vohra#:~:text=hundred%20milliseconds%20response%20times%2C%20instantaneous%20search%2C
@@ -71,12 +74,25 @@ Link definitions for every citation label in `../../interaction-feel.md`. Read t
 [vohra/acquired-feel-like-a-game ¶we-do-this-specifically]: https://www.acquired.fm/episodes/special-superhuman-part-ii-designing-software-to-feel-like-a-game-with-rahul-vohra#:~:text=We%20do%20this%20specifically%20to%20widen
 [vohra/beyond-gamification 11:38]: https://youtu.be/zaxAdRlyZQ8?t=698
 [vohra/beyond-gamification 13:10]: https://youtu.be/zaxAdRlyZQ8?t=790
+[vohra/beyond-gamification 13:25]: https://youtu.be/zaxAdRlyZQ8?t=805
 [vohra/beyond-gamification 5:00]: https://youtu.be/zaxAdRlyZQ8?t=300
 [vohra/beyond-gamification 8:02]: https://youtu.be/zaxAdRlyZQ8?t=482
 [vohra/beyond-gamification 8:29]: https://youtu.be/zaxAdRlyZQ8?t=509
 [vohra/beyond-gamification 9:07]: https://youtu.be/zaxAdRlyZQ8?t=547
+[vohra/designing-for-flow ¶in-superhuman-you-cant]: https://blog.superhuman.com/how-to-design-for-flow/#:~:text=In%20Superhuman%2C%20you%20can%27t%20see%20the
 [vohra/designing-for-flow ¶milliseconds-matter-they-may]: https://blog.superhuman.com/how-to-design-for-flow/#:~:text=Milliseconds%20matter.%20They%20may%20not%20seem
 [vohra/designing-for-flow ¶their-next-action-should]: https://blog.superhuman.com/how-to-design-for-flow/#:~:text=their%20next%20action%20should%20always%20be
 [walter/designing-for-emotion 0:45:26]: https://youtu.be/2umE6CHfHYc?t=2726
 [walter/designing-for-emotion 0:48:53]: https://youtu.be/2umE6CHfHYc?t=2933
 [walter/designing-for-emotion 0:52:22]: https://youtu.be/2umE6CHfHYc?t=3142
+
+## Source principles
+
+What each game-design source said, keyed by the first citation of the **From games** rule it backs. The rule in the topic file is the product-UI translation.
+
+- [gmtk/game-feel-and-juice 3:10]: Make it unmistakable that a hit landed, on the thing hit: impact effects, a hit animation, knockback, blocks reacting; aim for maximum output for minimum input.
+- [jonasson-purho/juice-it-or-lose-it 1:15]: Make misses and off-script attempts produce something: props break when shots miss, and text games reply in fun, unexpected ways to things players aren't supposed to try.
+- [valve/half-life-documentary 0:14:14]: Grab attention with a particle, sound or light before a scripted event, since players look in the wrong place.
+- [valve/half-life-documentary 0:39:48]: Soldiers call out cover and grenades: sound broadcasts the AI's hidden internal state.
+- [gmtk/game-feel-and-juice 4:21]: Leave bodies, blood, decals and shell casings in place so players see the aftermath of their actions, and respond to accumulated actions, like marines running away.
+- [gmtk/game-feel-and-juice 2:40]: Add screen shake on impacts, carefully; beyond random shake, kick the camera opposite the firing direction. It shows instantly that the player touched the world.

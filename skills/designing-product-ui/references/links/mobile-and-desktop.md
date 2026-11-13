@@ -1,6 +1,6 @@
 # Citation links: mobile-and-desktop.md
 
-Link definitions for every citation label in `../../mobile-and-desktop.md`. Read this only to turn a citation into a clickable link, for example in review output.
+Link definitions for every citation label in `../../mobile-and-desktop.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
 [apple/intuitive-search 3:22]: https://youtu.be/lx45sKEnZkU?t=202
 [apple/intuitive-search 7:57]: https://youtu.be/lx45sKEnZkU?t=477

@@ -1,6 +1,6 @@
 # Citation links: components-and-states.md
 
-Link definitions for every citation label in `../../components-and-states.md`. Read this only to turn a citation into a clickable link, for example in review output.
+Link definitions for every citation label in `../../components-and-states.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
 [apple/design-foundations 6:42]: https://youtu.be/dGcqqA3Sl-o?t=402
 [apple/designing-fluid-interfaces ¶but-we-shouldnt-confirm]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=But%2C%20we%20shouldn%27t%20confirm%20the%20tap

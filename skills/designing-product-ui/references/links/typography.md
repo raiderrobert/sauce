@@ -1,6 +1,6 @@
 # Citation links: typography.md
 
-Link definitions for every citation label in `../../typography.md`. Read this only to turn a citation into a clickable link, for example in review output.
+Link definitions for every citation label in `../../typography.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
 [apple/design-foundations 14:42]: https://youtu.be/dGcqqA3Sl-o?t=882
 [jain/color-mistakes 4:21]: https://youtu.be/EOcY3hPMQkk?t=261

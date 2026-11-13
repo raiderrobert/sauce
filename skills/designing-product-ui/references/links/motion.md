@@ -1,6 +1,6 @@
 # Citation links: motion.md
 
-Link definitions for every citation label in `../../motion.md`. Read this only to turn a citation into a clickable link, for example in review output.
+Link definitions for every citation label in `../../motion.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
 [apple/design-foundations 9:27]: https://youtu.be/dGcqqA3Sl-o?t=567
 [apple/designing-fluid-interfaces ¶because-you-can-discover]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=Because%20you%20can%20discover%20a%20new
@@ -118,3 +118,12 @@ Link definitions for every citation label in `../../motion.md`. Read this only t
 [saffer/microinteractions 15:10]: https://youtu.be/9CEtqnPdWoI?t=910
 [saffer/microinteractions 31:21]: https://youtu.be/9CEtqnPdWoI?t=1881
 [sakamoto/hearthstone-immersive-ui 10:33]: https://youtu.be/axkPXCNjOh8?t=633
+
+## Source principles
+
+What each game-design source said, keyed by the first citation of the **From games** rule it backs. The rule in the topic file is the product-UI translation.
+
+- [nijman/art-of-screenshake 32:19]: Designers get used to screen shake and keep adding more; Nuclear Throne added an option to disable it after players got nauseous. Don't add effects that physically hurt people.
+- [jonasson-purho/juice-it-or-lose-it 3:59]: When no tweening engine is available, move a value 10% of the remaining distance each frame; lerp the camera so it slightly lags the player.
+- [jonasson-purho/juice-it-or-lose-it 10:39]: Make destroyed blocks fall away, pushed in the ball's direction and spinning, and darken them so they don't blend with live blocks.
+- [gmtk/game-feel-and-juice 3:24]: Give objects physical reactions: guns kick back, landings kick up dust, a hit ball scales up and eases back, dragged cards tilt and swoosh.

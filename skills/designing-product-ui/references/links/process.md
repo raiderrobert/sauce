@@ -1,6 +1,6 @@
 # Citation links: process.md
 
-Link definitions for every citation label in `../../process.md`. Read this only to turn a citation into a clickable link, for example in review output.
+Link definitions for every citation label in `../../process.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
 [jain/captivating-sections 1:13]: https://youtu.be/tNMAFjzapOk?t=73
 [jain/crucial-ui-elements 0:05]: https://youtu.be/gKM6b2EnW1k?t=5

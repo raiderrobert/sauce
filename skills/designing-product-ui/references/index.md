@@ -28,15 +28,17 @@ Each rule in a topic file ends with one or more citation labels. The labels are 
 ## Adding a source
 
 1. Get the source text.
-   - For YouTube, get a timestamped transcript: `yt-dlp --skip-download --write-auto-subs --sub-langs en-orig,en --sub-format vtt <url>`, or the `yt-summarizer` tool, which prefers original-language English tracks. Confirm it is in the original language; some tools pick an auto-translated track.
+   - For YouTube, get a timestamped transcript: `yt-dlp --skip-download --write-auto-subs --sub-langs en-orig,en --sub-format vtt <url>`, or another transcript tool set to prefer the original-language English track. Confirm it is in the original language; some tools pick an auto-translated track.
    - For essays, papers and transcripts, save the text locally.
-2. Extract only advice the source states or explains. Do not turn something merely shown on screen into a rule. For game-design sources, write the product-UI rule as the rule, and record what the source said about games as its "Source principle"; the citation supports the principle, and the rule is marked **From games**.
+2. Extract only advice the source states or explains. Do not turn something merely shown on screen into a rule. For game-design sources, write the product-UI rule as the rule and mark it **From games**. Record what the source said about games under "Source principles" in `links/<topic>.md`, keyed by the rule's first citation; the citation supports the principle.
 3. Check every citation against the source before using it: the cited transcript line, or the quoted passage, must contain the advice. Then run `just validate-citations` from the repo root. It checks that every citation has a link definition, that video links match their timestamp and bibliography video, that web text links point at the bibliography URL with a `#:~:text=` fragment whose words match the slug, and that PDF links carry the cited page. It cannot check what the source says, so the manual check is still required.
 4. Add a bibliography entry, keyed `author/short-title`, in alphabetical order, and add each citation's link definition to `links/<topic>.md`.
 5. Merge each new rule into the topic file it belongs to. If it repeats an existing rule, add the citation to that rule instead of duplicating it. If it conflicts with one, keep both and say when each applies.
 6. Do not commit full transcripts or articles. Cite and summarize only.
 
 ## Testing
+
+Each scenario below was run once, so treat the results as indicative, not measured.
 
 Tested November 2026 with Claude Opus 5.5:
 
@@ -50,8 +52,9 @@ Tested November 2026 with Claude Opus 5.5:
   Straight chart lines are on the Core Checklist anyway, because the review without the skill missed them.
 - **Interaction feel (build mode).** An issue-tracker list with a create flow and keyboard shortcuts was built from the same prompt with and without the skill. Both used undo instead of a delete confirmation, row flashes and toasts. Only the build with the skill:
   - opened panels and menus instantly when triggered by the keyboard, and animated them out of the element that opened them only for pointer input. The other build animated every open the same way, including a 1.18× overshoot "pop" on status changes;
-  - acknowledged no-op input (arrowing past the last row, "Nothing to undo", re-picking the current status);
+  - gave a specific response to commands with nothing to do ("Nothing to undo", re-picking the current status). It also lit a faint edge cue when arrowing past the last row, which the skill now treats as optional (silence is fine at list boundaries);
   - blinked the chosen menu item before the menu faded, and flashed the done count when it rose;
   - listed features it would add but didn't build (bulk actions, a command palette), following the user-scope precedence rule.
 
   The first two gaps are on the Core Checklist.
+- **Interaction feel (review mode).** Given the issue-tracker build made without the skill, a review with the skill read the event handlers and CSS. It reported 6 findings under **Feels unresponsive**: keyboard-opened menus that animate, a scale-and-overshoot "pop" on the most frequent keyboard action, and others. It also found 3 accessibility blockers and 4 polish issues. All 10 inline citation links matched their definitions, and the 4 findings based on game principles were marked as translations.

@@ -1,6 +1,6 @@
 # Citation links: color.md
 
-Link definitions for every citation label in `../../color.md`. Read this only to turn a citation into a clickable link, for example in review output.
+Link definitions for every citation label in `../../color.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
 [apple/design-foundations 17:06]: https://youtu.be/dGcqqA3Sl-o?t=1026
 [apple/design-foundations 17:21]: https://youtu.be/dGcqqA3Sl-o?t=1041

@@ -1,6 +1,6 @@
 # Citation links: depth-and-polish.md
 
-Link definitions for every citation label in `../../depth-and-polish.md`. Read this only to turn a citation into a clickable link, for example in review output.
+Link definitions for every citation label in `../../depth-and-polish.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
 [apple/designing-fluid-interfaces ¶lifting-it-up-to]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=lifting%20it%20up%20to%20a%20separate
 [apple/explore-the-new-design 1:04]: https://youtu.be/nwyaB288qBA?t=64

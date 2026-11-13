@@ -1,6 +1,6 @@
 # Citation links: data-and-dashboards.md
 
-Link definitions for every citation label in `../../data-and-dashboards.md`. Read this only to turn a citation into a clickable link, for example in review output.
+Link definitions for every citation label in `../../data-and-dashboards.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
 [apple/principles-of-great-design 12:47]: https://youtu.be/Xa9L2yx_QH8?t=767
 [jain/60-30-10-rule 2:19]: https://youtu.be/66oOi9OLMCw?t=139
