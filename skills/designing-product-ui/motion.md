@@ -2,7 +2,7 @@
 
 Purpose, easing and timing, hover and press feedback, transitions, gestures, loaders and entrances, and scroll and ambient motion.
 
-Rules within a section are ordered by how many sources back them. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. Each citation (`author/video timestamp`) links to that moment in the source; full entries are in `references/bibliography.md`.
+Practitioner heuristics, not standards: accessibility requirements (WCAG contrast, keyboard access, `prefers-reduced-motion`) and the product's own design system take precedence. Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. *Note:* text is an uncited editorial caveat. Each citation (`author/video timestamp`) links to that moment in the source; the link definitions at the end of the file can be skipped, and full entries are in `references/bibliography.md`.
 
 Contents: Purpose and restraint · Easing and timing · Hover and press feedback · Transitions and overlays · Gestures and input timing · Loaders and entrances · Scroll and ambient motion
 
@@ -15,15 +15,16 @@ Contents: Purpose and restraint · Easing and timing · Hover and press feedback
 
 ## Easing and timing
 
-- Always apply easing; almost never use linear. Real objects speed up and slow down, so eased motion feels natural. ([jain/boring-design-hacks 3:40], [jain/mobile-swipe-interactions 0:44])
-- Use an exponential ease-in-out (e.g. cubic-bezier(0.87, 0, 0.13, 1), ~0.8-1.3s) for large movements like reveals, expansions and wipes; use a simple ease-in-out around 200ms for fades. Large movements need a strong curve; small fades need speed. ([jain/load-animations-code 5:32], [jain/load-animations-figma 4:55])
-- Tune the easing to set the tone (snappy, springy or slow and smooth); use a spring for pop-ups (e.g. ~500ms, stiffness 636, damping 24) rather than default easing. The easing defines how an animation feels. ([jain/micro-animations 3:06], [jain/mobile-swipe-interactions 0:51])
+- Always apply easing, almost never linear, and pick the curve for the tone: snappy, springy, or slow and smooth. Real objects speed up and slow down, so eased motion feels natural; the easing defines how an animation feels. ([jain/boring-design-hacks 3:40], [jain/mobile-swipe-interactions 0:44])
+- **App UI:** In app UI, fade and transition elements with a simple ease-in-out around 200ms, keeping most transitions within about 150-300ms. Small fades and state changes need speed; long curves make product screens feel slow. *Note: The 150-300ms bound is editorial; the source gives ~200ms for fades.* ([jain/load-animations-figma 4:55])
+- **Marketing:** On marketing pages and load sequences, move large elements (reveals, expansions, wipes) with an exponential ease-in-out, e.g. cubic-bezier(0.87, 0, 0.13, 1) over ~0.8-1.3s. Large movements need a strong curve. ([jain/load-animations-code 5:32], [jain/load-animations-figma 4:55])
+- **Marketing:** Use a spring rather than default easing for hover pop-ups, e.g. in the Motion library { type: 'spring', stiffness: 636, damping: 24 } (about 0.5s with a visible bounce). The spring is what makes the pop-up feel alive. ([jain/micro-animations 3:06])
 
 ## Hover and press feedback
 
 - **Marketing:** Add small, simple hover responses to interactive elements, including product visuals and bento cards; don't go overboard. They keep simple pages from feeling bland. ([jain/boring-design-hacks 5:21], [jain/landing-page-levels 6:35], [jain/modern-layouts 5:02])
 - **Marketing:** On marketing pages, give buttons a hover animation beyond a color shift, e.g. slide the label up to reveal a duplicate while a background fill expands. Looks polished without juggling many hover colors. ([jain/genius-designer 4:20], [jain/micro-animations 0:30], [jain/trendy-web-animations 2:46])
-- **Marketing:** On card hover, zoom (and optionally blur) the image and reveal extra text or the CTA. Compacts information and adds a premium feel. *Note: Also reveal on keyboard focus; on touch, keep the action reachable (menu or swipe).* ([jain/google-ai-redesign 4:41], [jain/tesla-wannabe-redesign 4:12])
+- **Marketing:** On card hover, zoom (and optionally blur) the image slightly; for revealing text or a CTA on hover, see navigation-and-disclosure.md. Adds a premium feel. ([jain/google-ai-redesign 4:41], [jain/tesla-wannabe-redesign 4:12])
 - **Marketing:** Use mouse-follow effects sparingly (the best use is pulling a CTA toward the cursor), and give every pointer-driven effect a touch fallback. Mouse-follow can be very annoying, and it doesn't exist on touch devices. ([jain/trendy-web-animations 4:54])
 - Shrink buttons slightly while pressed to confirm the click. ([jain/micro-animations 0:34])
 
@@ -33,13 +34,13 @@ Contents: Purpose and restraint · Easing and timing · Hover and press feedback
 - **App UI:** As a bottom sheet or popover rises, scale the background down slightly and move it down; reverse on dismiss. Reinforces that the sheet sits above the page. ([jain/mobile-app-ui 5:26], [jain/mobile-swipe-interactions 5:03])
 - **App UI:** Use motion direction to situate users: temporary actions slide up from the bottom, progress slides in from the side, and page transitions follow the swipe direction. Direction tells users where they are in the flow. ([jain/captivating-sections 4:58], [jain/mobile-swipe-interactions 3:19])
 - **App UI:** For swipe-back transitions, offset the background screen about 35% left and slide it right as the top screen leaves. Makes the transition feel continuous. ([jain/mobile-app-ui 5:17])
-- Transition between pages by zooming a shared image into the new page's hero rather than sliding a new page in. Creates continuity between screens. ([jain/mobile-swipe-interactions 4:03])
-- Add a brief filter: blur() to tab and section content transitions. A small change that makes switches feel much smoother. ([jain/landing-page-levels 8:36])
+- **Marketing:** On marketing pages and hero moments, transition by zooming a shared image into the next page's hero instead of sliding a new page in; app navigation follows the swipe direction instead. Creates continuity between screens. ([jain/mobile-swipe-interactions 4:03])
+- **Marketing:** Add a brief filter: blur() to tab and section content transitions. A small change that makes switches feel much smoother. ([jain/landing-page-levels 8:36])
 
 ## Gestures and input timing
 
 - **App UI:** Give swipes physical momentum: add a little bounce to swipe easing, and move remaining cards forward as the top card of a stack is dragged away. Rigid swiping feels unnatural. ([jain/micro-animations 6:48], [jain/mobile-swipe-interactions 0:33])
-- **App UI:** Make the primary interaction a single, decision-free gesture (e.g. swipe up), with auto-snapping and autoplay removing extra steps. Zero decisions per step keeps cognitive load minimal. ([jain/tiktok-ux 1:46])
+- **App UI:** Make the primary interaction a single, decision-free gesture (e.g. swipe up), with auto-snapping and autoplay removing extra steps. Zero decisions per step keeps cognitive load minimal. *Note: Give autoplaying media a visible pause control, and a tap or button alternative to the gesture.* ([jain/tiktok-ux 1:46])
 - **App UI:** Delay a single-click action only when it competes with a double-click action (e.g. open versus inline rename), and only if the secondary action is worth the delay. The first click would otherwise act before the double-click registers; non-competing clicks need no delay. ([jain/software-must-lie 1:11])
 - **App UI:** When dragging to reorder, show the predicted drop location and auto-scroll faster the closer the pointer is to the edge. A gradient of speed beats a binary on/off. ([jain/software-must-lie 4:14])
 
@@ -94,7 +95,6 @@ Contents: Purpose and restraint · Easing and timing · Hover and press feedback
 [jain/mobile-app-ui 5:26]: https://youtu.be/Gfsd8NNuD9g?t=326
 [jain/mobile-swipe-interactions 0:33]: https://youtu.be/14h1VnkQvIc?t=33
 [jain/mobile-swipe-interactions 0:44]: https://youtu.be/14h1VnkQvIc?t=44
-[jain/mobile-swipe-interactions 0:51]: https://youtu.be/14h1VnkQvIc?t=51
 [jain/mobile-swipe-interactions 3:19]: https://youtu.be/14h1VnkQvIc?t=199
 [jain/mobile-swipe-interactions 4:03]: https://youtu.be/14h1VnkQvIc?t=243
 [jain/mobile-swipe-interactions 5:03]: https://youtu.be/14h1VnkQvIc?t=303

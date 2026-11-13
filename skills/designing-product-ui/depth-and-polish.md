@@ -2,19 +2,19 @@
 
 Shadows, borders, corner radii, icons, imagery, gradients, texture and decorative touches that add depth and finish without clutter.
 
-Rules within a section are ordered by how many sources back them. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. Each citation (`author/video timestamp`) links to that moment in the source; full entries are in `references/bibliography.md`.
+Practitioner heuristics, not standards: accessibility requirements (WCAG contrast, keyboard access, `prefers-reduced-motion`) and the product's own design system take precedence. Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. *Note:* text is an uncited editorial caveat. Each citation (`author/video timestamp`) links to that moment in the source; the link definitions at the end of the file can be skipped, and full entries are in `references/bibliography.md`.
 
 Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imagery and text over images · Style and decoration · Gradients, texture and effects
 
 ## Restraint
 
 - Use the fewest elements and effects that communicate: apply shadows, glows and gradients sparingly (remove any that isn't clearly working) and don't fill every empty space with decorative illustration. Less visual noise reads as more professional; one extra element can tip a design into clutter. ([jain/beginner-mistakes 1:12], [jain/boring-design-hacks 1:11], [jain/ui-cheat-codes 6:01], [jain/web-design-hacks 5:29])
-- Don't nest cards inside cards or containers for structure; avoid borders on borders, stacked radii and extra background layers. Group with spacing or one simple border. Padding on padding cramps content and extra layers add clutter. ([jain/color-mistakes 2:21], [jain/mobile-app-ui 3:13], [jain/weirdly-perfect-ui 7:22])
-- Remove unnecessary strokes; when elements are already well grouped, dim the remaining borders significantly. Good grouping means borders needn't be strong. ([jain/beginner-mistakes 5:20], [jain/color-mistakes 4:27])
+- Don't nest cards inside cards; avoid borders on borders, stacked radii and extra background layers. Padding on padding cramps content and extra layers add clutter. For grouping with spacing, see layout-and-hierarchy.md. ([jain/color-mistakes 2:21], [jain/mobile-app-ui 3:13], [jain/weirdly-perfect-ui 7:22])
+- Dim the borders that remain once elements are well grouped, and remove strokes that add nothing. Good grouping means borders needn't be strong. ([jain/beginner-mistakes 5:20], [jain/color-mistakes 4:27])
 
 ## Shadows
 
-- Soften shadows: ~15-20% opacity (common defaults around 25% are too harsh) with a large blur. If a shadow is the first thing you notice, tone it down. Most shadows are too strong. ([jain/beginner-mistakes 1:37], [jain/every-ui-concept 6:25], [jain/web-design-hacks 6:14])
+- Soften shadows: lower the opacity and raise the blur. The 15-20% opacity figure was given against Figma's 25% default shadow. If a shadow is the first thing you notice, tone it down. Most shadows are too strong. *Note: In CSS, keep shadows soft and low-opacity (presets often sit near 5-10%), layered, with large blur.* ([jain/beginner-mistakes 1:37], [jain/every-ui-concept 6:25], [jain/web-design-hacks 6:14])
 - Scale shadow strength to elevation: lightest on cards, stronger on popovers and menus. For dark backgrounds see the dark-mode rule in color.md. Strength should reflect what sits above what. ([jain/every-ui-concept 6:33], [jain/web-design-hacks 6:14])
 - Tint subtle shadows (e.g. under popovers) a light gray rather than transparent black. Lower opacity alone still looks harsh. ([jain/animated-sidebar 0:50], [jain/beginner-mistakes 1:37])
 - Keep shadow x-offset at or below the y-offset, and blur at 1.3-2× the y-offset. ([jain/web-design-hacks 6:03])
@@ -35,7 +35,6 @@ Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imag
 ## Imagery and text over images
 
 - Put a linear gradient (or a subtle overlay) beneath text on photos rather than darkening the whole image; on image cards, let the image fill ~3/4 of the card height with a smooth gradient rising from its bottom. Text needs contrast, but full overlays don't do the image justice; smoother gradients look better. ([jain/crucial-ui-elements 4:03], [jain/every-ui-concept 8:44], [jain/skincare-redesign 4:39], [jain/website-layouts 2:03])
-- Use high-resolution images wherever they display large. Images make or break a page; small images pixelate when enlarged. ([jain/awful-to-amazing 2:03], [jain/learn-ui-in-10-minutes 1:20], [jain/tesla-wannabe-redesign 2:41], [jain/website-layouts 3:32])
 - Choose images that aren't busy behind text, and never put text or UI over the image's focal point; for full-screen heroes pick a zoomed-out shot that leaves room for overlays. Busy or crowded backgrounds make overlaid text chaotic and hard to read. ([jain/learn-ui-in-10-minutes 1:26], [jain/tesla-wannabe-redesign 2:49])
 - For a more modern image gradient, layer a progressive blur over it (backdrop-filter: blur() with a gradient mask-image). ([jain/every-ui-concept 8:57])
 - Keep image treatment consistent; don't place cut-out images next to images with backgrounds. Mixed treatments feel disjointed. ([jain/tesla-wannabe-redesign 3:57])
@@ -57,7 +56,6 @@ Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imag
 [jain/ai-startup-components 5:59]: https://youtu.be/If7iCPDy2vk?t=359
 [jain/animated-sidebar 0:38]: https://youtu.be/NtZeYmTMuo4?t=38
 [jain/animated-sidebar 0:50]: https://youtu.be/NtZeYmTMuo4?t=50
-[jain/awful-to-amazing 2:03]: https://youtu.be/ulSOdTgoGeY?t=123
 [jain/awful-to-amazing 2:22]: https://youtu.be/ulSOdTgoGeY?t=142
 [jain/beginner-mistakes 1:12]: https://youtu.be/AH_ugxmLeUM?t=72
 [jain/beginner-mistakes 1:37]: https://youtu.be/AH_ugxmLeUM?t=97
@@ -83,14 +81,12 @@ Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imag
 [jain/google-ai-redesign 3:12]: https://youtu.be/pGYLZyBE32o?t=192
 [jain/google-ai-redesign 5:25]: https://youtu.be/pGYLZyBE32o?t=325
 [jain/landing-page-levels 0:51]: https://youtu.be/eMMiLeo_UGI?t=51
-[jain/learn-ui-in-10-minutes 1:20]: https://youtu.be/9WVt1CelBfg?t=80
 [jain/learn-ui-in-10-minutes 1:26]: https://youtu.be/9WVt1CelBfg?t=86
 [jain/learn-ui-in-10-minutes 5:39]: https://youtu.be/9WVt1CelBfg?t=339
 [jain/mobile-app-ui 3:13]: https://youtu.be/Gfsd8NNuD9g?t=193
 [jain/modern-layouts 3:15]: https://youtu.be/VPeTgU7la34?t=195
 [jain/saas-vibe-code-mistakes 0:24]: https://youtu.be/PDcQJOPby1k?t=24
 [jain/skincare-redesign 4:39]: https://youtu.be/BvbFPzLjWcU?t=279
-[jain/tesla-wannabe-redesign 2:41]: https://youtu.be/V3Omp1hm0Sg?t=161
 [jain/tesla-wannabe-redesign 2:49]: https://youtu.be/V3Omp1hm0Sg?t=169
 [jain/tesla-wannabe-redesign 3:57]: https://youtu.be/V3Omp1hm0Sg?t=237
 [jain/ui-cheat-codes 1:39]: https://youtu.be/c1TvOcKdBVE?t=99
@@ -104,5 +100,4 @@ Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imag
 [jain/web-design-hacks 6:03]: https://youtu.be/Lp6ey4AyDzA?t=363
 [jain/web-design-hacks 6:14]: https://youtu.be/Lp6ey4AyDzA?t=374
 [jain/website-layouts 2:03]: https://youtu.be/P2ksReDwWkE?t=123
-[jain/website-layouts 3:32]: https://youtu.be/P2ksReDwWkE?t=212
 [jain/weirdly-perfect-ui 7:22]: https://youtu.be/neE6wOuBIP8?t=442

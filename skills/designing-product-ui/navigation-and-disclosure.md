@@ -2,7 +2,7 @@
 
 Progressive disclosure, sidebars and app navigation, page structure, onboarding and engagement, website nav bars and search.
 
-Rules within a section are ordered by how many sources back them. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. Each citation (`author/video timestamp`) links to that moment in the source; full entries are in `references/bibliography.md`.
+Practitioner heuristics, not standards: accessibility requirements (WCAG contrast, keyboard access, `prefers-reduced-motion`) and the product's own design system take precedence. Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. *Note:* text is an uncited editorial caveat. Each citation (`author/video timestamp`) links to that moment in the source; the link definitions at the end of the file can be skipped, and full entries are in `references/bibliography.md`.
 
 Contents: Progressive disclosure · Sidebar and app navigation · Page structure and wayfinding · Onboarding and engagement · Website nav bars and menus · Search
 
@@ -15,12 +15,12 @@ Contents: Progressive disclosure · Sidebar and app navigation · Page structure
 - Reduce options and explanation rather than piling on labels, comparisons and tooltips to clarify unclear UI. More options worsen decisions, and extra explanation makes the screen harder to read. ([jain/tiktok-ux 1:32], [jain/weirdly-perfect-ui 3:37])
 - **Marketing:** Relegate options irrelevant to most visitors (Enterprise, add-ons) to a small button that opens a lightbox, not a full section. Not useful to about 98% of visitors. ([jain/google-ai-redesign 4:53], [jain/tesla-wannabe-redesign 6:24])
 - **App UI:** Don't hide frequently needed content such as tasks behind a button; give it its own visible section. Users shouldn't have to click to see core information. ([jain/finance-dashboard-redesign 1:41])
-- Use a 'Load more' button instead of infinite scroll. Gives users control and lets them reach the footer. ([jain/genius-designer 4:07])
+- On lists with a footer or finite content, use a 'Load more' button instead of infinite scroll. Gives users control and lets them reach the footer. *Note: Endless feeds may infinite-scroll; keep footer links reachable elsewhere.* ([jain/genius-designer 4:07])
 
 ## Sidebar and app navigation
 
 - **App UI:** Use the standard app frame: persistent, global elements (navigation, profile, search, team, settings) in the sidebar, page-level actions in a top bar that changes with the current page, content in the center. The sidebar is the product's spine and frees vertical space; actions are contextual per page. ([jain/dashboard-ui 0:20], [jain/finance-dashboard-redesign 1:01], [jain/macos-apps 2:42], [jain/mobile-app-ui 0:51])
-- **App UI:** Give each sidebar link a recognizable icon and a short title; omit text labels only for universally known icons (home, bookmark, user) and use tooltips otherwise. Icons make a sidebar scannable and collapsible; whether labels are needed depends on how obscure the icons are. ([jain/animated-sidebar 0:25], [jain/beginner-mistakes 4:20], [jain/crucial-ui-elements 1:34], [jain/dashboard-ui 0:43])
+- **App UI:** Give each sidebar link a recognizable icon and a short title so the sidebar can collapse to icons; for when icons need visible labels or tooltips, see components-and-states.md. Icons make a sidebar scannable and collapsible. ([jain/animated-sidebar 0:25], [jain/beginner-mistakes 4:20], [jain/crucial-ui-elements 1:34], [jain/dashboard-ui 0:43])
 - **App UI:** Put an account card at the top of the sidebar: avatar, name and switcher chevrons, opening a popover of account links. Avoid gradient letter-circle avatars. A picture is identifiable and chevrons show it's clickable; gradient letter circles were an AI-generated cliché as of 2026. ([jain/dashboard-ui 0:35], [jain/saas-vibe-code-mistakes 1:39], [jain/vibe-coding-pro-ui 5:18])
 - **App UI:** Move rarely used links such as Settings and Help to the bottom of the sidebar, and drop needless group labels like 'Menu'. ([jain/dashboard-ui 1:03], [jain/vibe-coding-pro-ui 5:23])
 - **App UI:** Use tabs for related views (e.g. settings, billing) instead of more sidebar links. Keeps users in context; new sections become another tab as the product grows. ([jain/dashboard-ui 6:59], [jain/saas-vibe-code-mistakes 4:43])
@@ -43,15 +43,15 @@ Contents: Progressive disclosure · Sidebar and app navigation · Page structure
 - **App UI:** Show the app's value during onboarding (e.g. insights from the user's own data) before introducing gamification, and reassure users about safety when asking for a sensitive connection like a bank account. Demonstrates value before asking for engagement or trust. ([jain/gamifying-apps 4:28])
 - **App UI:** Teach keyboard shortcuts by having users press the key shortcut to dismiss onboarding, and provide a shortcut cheat sheet (e.g. in settings). Doing it teaches it; shortcuts are easy to forget. ([jain/macos-apps 8:34])
 - **App UI:** Show progress concretely: what's done and what's left (e.g. a course percentage or a profile-completion meter). Visible progress and the urge to complete drive users to finish. ([jain/gamifying-apps 0:42])
-- **App UI:** For gamification, center on one currency (XP, karma) that shows progress and unlocks features, and tie rewards to users' real goals. Progress and unlocks keep users going; meaningless rewards don't. ([jain/gamifying-apps 0:57])
-- **App UI:** Add leaderboards and public badges so users can compare with friends; normalize leaderboards to a local cohort when users' resources differ widely. Comparison motivates, but only when it's fair across currencies and incomes. ([jain/gamifying-apps 1:22])
+- **App UI:** If the product uses gamification, center it on one currency (XP, karma) that shows progress and unlocks features, and tie rewards to users' real goals. Progress and unlocks keep users going; meaningless rewards don't. ([jain/gamifying-apps 0:57])
+- **App UI:** If the product uses gamification, add leaderboards and public badges so users can compare with friends; normalize leaderboards to a local cohort when users' resources differ widely. Comparison motivates, but only when it's fair across currencies and incomes. ([jain/gamifying-apps 1:22])
 
 ## Website nav bars and menus
 
 - **Marketing:** Keep the navbar small and out of the way but give it hierarchy: let one element, like an outlined sign-up CTA, stand out. Flat menus don't draw the eye to the most important action. ([jain/landing-page-levels 1:26], [jain/learn-ui-in-10-minutes 1:11])
 - **Marketing:** Balance the nav bar: center the main links rather than weighting everything right; a search bar can even it out. Right-heavy menus unbalance the page. ([jain/landing-page-levels 1:36], [jain/skincare-redesign 4:16])
-- **Marketing:** Add images to dropdown and mega menus instead of plain lists of text links. Images give quick context before clicking. ([jain/modern-layouts 6:36], [jain/slept-on-trends 8:44])
 - **Marketing:** Use a mega menu only when there are enough destinations to fill it (e.g. several products or resource groups). With real depth, it signals the product is worth exploring; with few links it's empty. ([jain/landing-page-levels 6:08])
+- **Marketing:** Add images to dropdown and mega menus instead of plain lists of text links. Images give quick context before clicking. ([jain/modern-layouts 6:36], [jain/slept-on-trends 8:44])
 - Keep submenus open while the pointer heads toward them, using a hover-intent triangle based on pointer position and speed. Diagonal mouse moves otherwise close the submenu. ([jain/software-must-lie 3:02])
 
 ## Search

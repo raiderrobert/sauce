@@ -2,15 +2,15 @@
 
 Component behavior and UI states: feedback, empty/loading/error states, buttons, chips, icons, cards, carousels, overlays, destructive actions, forms and AI interfaces.
 
-Rules within a section are ordered by how many sources back them. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. Each citation (`author/video timestamp`) links to that moment in the source; full entries are in `references/bibliography.md`.
+Practitioner heuristics, not standards: accessibility requirements (WCAG contrast, keyboard access, `prefers-reduced-motion`) and the product's own design system take precedence. Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. *Note:* text is an uncited editorial caveat. Each citation (`author/video timestamp`) links to that moment in the source; the link definitions at the end of the file can be skipped, and full entries are in `references/bibliography.md`.
 
 Contents: Feedback and states · Empty, loading and error states · Buttons, chips and icons · Cards and carousels · Overlays, destructive actions and saving · Forms and inputs · AI interfaces
 
 ## Feedback and states
 
 - Give every action an immediate visible response: a pressed state on click, a spinner if it runs long, and a confirmation when done (e.g. a 'Copied' chip sliding up after copy). Keyboard shortcuts need visible feedback too. Without feedback, a slow action looks like the click didn't register. ([jain/beginner-mistakes 5:39], [jain/every-ui-concept 7:31], [jain/macos-apps 6:46], [jain/tiktok-ux 4:06])
-- Apply changes optimistically: show deletes or sends as done immediately and run the request in the background; where undo matters, briefly delay execution (e.g. a 5s send delay). Avoids awkward pauses while leaving time to undo. ([jain/dashboard-ui 7:45], [jain/macos-apps 1:57], [jain/software-must-lie 5:57])
-- Design hidden components and states as carefully as visible UI: drawers, modals, hover reveals, every tab's content, new-feature announcements. Dense products get much of their functionality from parts you can't see at first; these are the most often missed. *Note: Also reveal on keyboard focus; on touch, keep the action reachable (menu or swipe).* ([jain/beginner-mistakes 0:55], [jain/dashboard-flaws 5:00], [jain/modern-layouts 3:54])
+- Apply changes optimistically: show deletes or sends as done immediately and run the request in the background; where undo matters, briefly delay execution (e.g. a 5s send delay). Avoids awkward pauses while leaving time to undo. *Note: If the request fails, roll back the change and show an error message.* ([jain/dashboard-ui 7:45], [jain/macos-apps 1:57], [jain/software-must-lie 5:57])
+- Design hidden components and states as carefully as visible UI: drawers, modals, every tab's content, new-feature announcements. Dense products get much of their functionality from parts you can't see at first; these are the most often missed. ([jain/beginner-mistakes 0:55], [jain/dashboard-flaws 5:00], [jain/modern-layouts 3:54])
 - Design button states up front: default, hover, pressed, disabled, plus a loading state with spinner where needed. Otherwise state colors get picked at random at the end. ([jain/every-ui-concept 7:35], [jain/micro-animations 0:22])
 - Keep off and default states visually quiet and reserve color for changed or active states; mark the selected toggle option with a background highlight and gray out inactive options and default values in settings. Color is the signal that something changed; non-default values should catch the eye. ([jain/every-ui-concept 0:18], [jain/weirdly-perfect-ui 6:07])
 - Use toasts to confirm changes made in a modal and to surface warnings and errors without taking over the screen; give them loading and success states, not just a slide-up. Users can't see the page behind a modal, and warnings are frequently missed. ([jain/dashboard-ui 5:16], [jain/micro-animations 1:52])
@@ -32,18 +32,18 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 - Remove duplicate controls that do the same thing (e.g. two search bars); merge similar actions into one button with options (e.g. share slide, chapter or all). Two buttons that look like they do the same thing confuse users. ([jain/finance-dashboard-redesign 1:23], [jain/spotify-wrapped-redesign 6:14])
 - Use chips for breadcrumbs and categories, and let users swap a tag inline from its chip instead of a hidden menu. Chips are recognizable and expose functionality otherwise buried in a menu. ([jain/crucial-ui-elements 9:02], [jain/weirdly-perfect-ui 4:19])
 - **App UI:** Delay the first tooltip (~1s of hover), then show tooltips on adjacent items instantly. After one wait, assume the user wants information on nearby controls. ([jain/micro-animations 4:25], [jain/software-must-lie 3:36])
-- Distinguish chips from buttons: never the primary CTA color, always slimmer, with vertical padding a half or quarter of horizontal (e.g. 20px / 10px or 5px). Too little background looks wrong; too much turns the chip into a button. ([jain/crucial-ui-elements 9:18])
-- Set button horizontal padding so the width is about double the height. ([jain/every-ui-concept 7:21])
+- Distinguish chips from buttons: never the primary CTA color, always slimmer, with vertical padding a half or quarter of horizontal (e.g. 16px horizontal with 8px or 4px vertical). Too little background looks wrong; too much turns the chip into a button. ([jain/crucial-ui-elements 9:18])
+- Set button horizontal padding to about twice the vertical padding (e.g. 12px vertical, 24px horizontal) so the width follows the label. ([jain/every-ui-concept 7:21])
 - Use ghost buttons (no background until hover) for sidebar links and secondary actions beside a primary. ([jain/every-ui-concept 7:05])
 - **App UI:** Trigger buttons on release, not press, so users can cancel by moving off; open menus and popovers on press so users can press, drag and release on an item in one motion. Release-triggering gives every button a built-in cancel. ([jain/software-must-lie 7:46])
 - Size icons to the text's line height (e.g. 24px) and tighten the gap to the text next to them. Most icons are too large. ([jain/every-ui-concept 6:56])
 
 ## Cards and carousels
 
+- Use a carousel when you want to show every card but lack room, for about 3-10 items. Beyond 10 it's tedious to click through; choose another format. ([jain/skincare-redesign 4:31], [jain/website-layouts 7:49])
 - Show carousel dots for count and position with arrows beside them, but make the carousel draggable or give it large nav buttons rather than relying on tiny dots to navigate; keep controls legible over any image (e.g. on a dark blurred backing or below the image). Dots show how many items there are and where you are, but users can't be expected to hit tiny circles, and a new image can hide overlaid controls. ([jain/crucial-ui-elements 10:04], [jain/finance-dashboard-redesign 5:38], [jain/mobile-swipe-interactions 1:09], [jain/website-layouts 4:38])
 - Show minor card details as a single row of icons with values instead of labeled fields. Icons add context at a glance; labels make users read more and browse slower. ([jain/beginner-mistakes 3:43], [jain/ui-cheat-codes 5:11])
 - Place card titles above images and prefer standard image-plus-text cards over gradient-overlay cards when images vary. Overlay text only works with some images; standard cards always work. ([jain/crucial-ui-elements 4:23], [jain/tesla-wannabe-redesign 4:05])
-- Use a carousel when you want to show every card but lack room, for about 3-10 items. Beyond 10 it's tedious to click through; choose another format. ([jain/skincare-redesign 4:31], [jain/website-layouts 7:49])
 - On repeating cards, make the whole card the link (fade in an arrow on hover as the cue) and drop per-card CTA buttons; keep an explicit button only for a specific action like 'Try it out'. With many repeated cards, the whole card is the link anyway. ([jain/crucial-ui-elements 3:41])
 - Drop field labels the content already implies, but keep them where values could be confused, like check-in versus check-out dates. If the UI can't imply a label it isn't clear enough; confusable values still need one. ([jain/ui-cheat-codes 4:42])
 - Group related card data: stack paired fields (name over location) and right-align the secondary pair (price over rating). Makes the card read as structured information, not a flat list. ([jain/ui-cheat-codes 4:47])
@@ -55,15 +55,13 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 - Give the primary button in dialogs to the non-destructive action, except in an explicit delete confirmation: there Delete is the primary red button and Cancel has no fill (ghost or outline). Users learn to trust the primary button; once they chose to delete, Cancel shouldn't compete. ([jain/think-like-product-designer 3:38], [jain/web-design-hacks 4:24])
 - Don't interrupt with stacked pop-ups, content-blocking paywalls or repeated upsells; give every intrusive or optional feature an off switch. They make products annoying. ([jain/unhinged-ui-upgrades 0:00])
 - **App UI:** Skip confirmation modals for routine deletes: delete immediately and show an undo toast. Keep warning modals for truly irreversible actions, like a bulk email to 10,000 recipients or sending money. Confirmations make 99% of users confirm intended actions to protect 1%; undo protects everyone. ([jain/software-must-lie 5:35])
-- **App UI:** Autosave settings and editors instead of save/cancel buttons, and pair autosave with version history. Autosave removes cancel, so users need another way back. ([jain/software-must-lie 6:16])
-- **App UI:** Soft-delete items to a 'Recently deleted' list and remove them permanently after 30 days. ([jain/software-must-lie 5:49])
+- **App UI:** Autosave editors and low-risk settings instead of using save/cancel buttons, and pair autosave with version history. Autosave removes cancel, so users need another way back. *Note: Not for billing, permissions or validated forms; those need an explicit save.* ([jain/software-must-lie 6:16])
 
 ## Forms and inputs
 
 - Give signup screens a 'Create account' heading and a link to log in. Many people land on signup by mistake and need a way to log in. ([jain/crucial-ui-elements 7:10], [jain/learn-ui-in-10-minutes 6:37])
-- Put labels above inputs, never as the placeholder; use realistic example values as placeholders. Users halfway through typing forget what the field was; examples show what to enter. ([jain/crucial-ui-elements 6:54])
 - Give inputs a focus state, error states with a red border and message, and warning states for optional issues. Inputs need feedback even more than buttons do. ([jain/every-ui-concept 7:44])
-- Style input fields with an off-white background and a stroke at ~40% opacity. *Note: Keep input borders at 3:1 against the background.* ([jain/crucial-ui-elements 7:35])
+- Style input fields with an off-white background and a visible stroke. *Note: Keep input borders at 3:1 against the background.* ([jain/crucial-ui-elements 7:35])
 - **App UI:** After a create action, prompt the logical next step (e.g. add team members) with an option to skip. A container without its contents is useless. ([jain/think-like-product-designer 2:27])
 
 ## AI interfaces
@@ -95,7 +93,6 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 [jain/crucial-ui-elements 10:04]: https://youtu.be/gKM6b2EnW1k?t=604
 [jain/crucial-ui-elements 3:41]: https://youtu.be/gKM6b2EnW1k?t=221
 [jain/crucial-ui-elements 4:23]: https://youtu.be/gKM6b2EnW1k?t=263
-[jain/crucial-ui-elements 6:54]: https://youtu.be/gKM6b2EnW1k?t=414
 [jain/crucial-ui-elements 7:10]: https://youtu.be/gKM6b2EnW1k?t=430
 [jain/crucial-ui-elements 7:35]: https://youtu.be/gKM6b2EnW1k?t=455
 [jain/crucial-ui-elements 9:02]: https://youtu.be/gKM6b2EnW1k?t=542
@@ -131,7 +128,6 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 [jain/skincare-redesign 4:31]: https://youtu.be/BvbFPzLjWcU?t=271
 [jain/software-must-lie 3:36]: https://youtu.be/S8DcTJm8pYM?t=216
 [jain/software-must-lie 5:35]: https://youtu.be/S8DcTJm8pYM?t=335
-[jain/software-must-lie 5:49]: https://youtu.be/S8DcTJm8pYM?t=349
 [jain/software-must-lie 5:57]: https://youtu.be/S8DcTJm8pYM?t=357
 [jain/software-must-lie 6:16]: https://youtu.be/S8DcTJm8pYM?t=376
 [jain/software-must-lie 7:46]: https://youtu.be/S8DcTJm8pYM?t=466

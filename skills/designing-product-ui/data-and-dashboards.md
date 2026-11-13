@@ -2,7 +2,7 @@
 
 Dashboard layout, charts and chart color, KPIs and stats, tables and lists, and pricing and billing displays.
 
-Rules within a section are ordered by how many sources back them. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. Each citation (`author/video timestamp`) links to that moment in the source; full entries are in `references/bibliography.md`.
+Practitioner heuristics, not standards: accessibility requirements (WCAG contrast, keyboard access, `prefers-reduced-motion`) and the product's own design system take precedence. Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. **App UI** marks rules for product screens only, **Marketing** for landing pages and websites only; untagged rules apply to both. *Note:* text is an uncited editorial caveat. Each citation (`author/video timestamp`) links to that moment in the source; the link definitions at the end of the file can be skipped, and full entries are in `references/bibliography.md`.
 
 Contents: Dashboard layout · Charts · Chart color · KPIs and stats · Tables and lists · Pricing and billing
 
@@ -15,7 +15,7 @@ Contents: Dashboard layout · Charts · Chart color · KPIs and stats · Tables 
 
 ## Charts
 
-- Add horizontal grid lines and axis numbers to every chart, even small ones; always include a vertical axis on bar charts, and add vertical grid lines to time series. Without them charts look good but are nearly impossible to read. ([jain/beginner-mistakes 6:38], [jain/crucial-ui-elements 2:13], [jain/dashboard-ui 3:46])
+- Add horizontal grid lines and axis numbers to every full chart, even small ones; always include a vertical axis on bar charts, and add vertical grid lines to time series. Sparklines and KPI micro charts are exempt. Without them charts look good but are nearly impossible to read. ([jain/beginner-mistakes 6:38], [jain/crucial-ui-elements 2:13], [jain/dashboard-ui 3:46])
 - Prefer simple, familiar chart types, starting with a basic line chart; never invent unfamiliar or decorative charts. Simple charts convey far more useful information. ([jain/beginner-mistakes 6:51], [jain/dashboard-ui 3:39])
 - Draw line charts with straight segments between data points; never smooth, curve or fade the line, especially at the most recent data. Curves hide where the line's tip is; fading recent data hides what is happening now. ([jain/crucial-ui-elements 2:22], [jain/finance-dashboard-redesign 4:39])
 - Pick the chart type to fit the data, e.g. two-sided bars for income (up) versus expenses (down), a pie for credit utilization, a shaded map with listed values for geography. Data representation makes or breaks a dashboard. ([jain/finance-dashboard-redesign 6:57], [jain/saas-vibe-code-mistakes 5:20])
@@ -26,7 +26,7 @@ Contents: Dashboard layout · Charts · Chart color · KPIs and stats · Tables 
 
 ## Chart color
 
-- Use a ramp derived from the accent for single-series emphasis. For multi-series charts use distinguishable hues, not one brand ramp; e.g. in OKLCH hold chroma, step hue ~25-30° per series, and vary lightness enough to tell series apart. Brand-ramp series look too similar; OKLCH keeps perceived brightness even across hues. *Note: Don't rely on color alone; label series directly.* ([jain/60-30-10-rule 2:19], [jain/every-ui-concept 5:14])
+- Use a ramp derived from the accent for single-series emphasis. For multi-series charts use distinguishable hues, not one brand ramp; e.g. in OKLCH hold chroma, step hue at least ~40-60° per series, and vary lightness enough to tell series apart. Brand-ramp series look too similar; OKLCH keeps perceived brightness even across hues. *Note: The source steps hue 25-30°, too close for color-blind users; also label series directly.* ([jain/60-30-10-rule 2:19], [jain/every-ui-concept 5:14])
 
 ## KPIs and stats
 
@@ -38,7 +38,7 @@ Contents: Dashboard layout · Charts · Chart color · KPIs and stats · Tables 
 ## Tables and lists
 
 - Show only scan-critical fields on list items and overview data (e.g. location, rating, price); leave details for the detail page. Users scan with specifics and click in for details. ([jain/dashboard-ui 2:54], [jain/genius-designer 2:48])
-- Stack items in a single list rather than separate bordered cards, and separate rows with space, dividers or color; when rows must be tight, use subtle alternating row backgrounds instead of lines. A good list mostly comes down to separation; lists also make empty states easier. ([jain/dashboard-ui 3:12], [jain/ui-cheat-codes 5:54])
+- Show a collection as one list rather than separate bordered cards; when rows must be tight, use subtle alternating row backgrounds instead of divider lines. Lists also make empty states easier. For separating items with spacing, see layout-and-hierarchy.md. ([jain/dashboard-ui 3:12], [jain/ui-cheat-codes 5:54])
 - Show avatars wherever people are referenced in lists or activity logs. The eye links who did what faster than it reads a name. ([jain/dashboard-flaws 2:03], [jain/weirdly-perfect-ui 2:28])
 - **App UI:** Give tables search, filter and sort. Display is only half the job; the table should be a tool. ([jain/dashboard-ui 6:19])
 - **App UI:** In tables, truncate long cell text, render fixed-set values such as department or status as chips, and shade inactive or deactivated rows. Gives the other columns room and makes state visible at a glance. ([jain/dashboard-flaws 0:41])
