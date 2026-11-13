@@ -114,6 +114,13 @@ for bib_path in sorted(glob.glob("skills/*/references/bibliography.md")):
             if not os.path.exists(os.path.join(skill_dir, ref)):
                 print(f"FAIL: {path}: see-also names a missing file {ref}")
                 errors += 1
+        for ref, heading in re.findall(r"see also `?([a-z-]+\.md)`? § ([^;)*]+?)(?=[;)*]|\.\s|\.$|$)", text, re.M):
+            target = os.path.join(skill_dir, ref)
+            heads = re.findall(r"^## (.+)$", open(target).read(), re.M) if os.path.exists(target) else []
+            heading = heading.strip().rstrip(".")
+            if heading not in heads:
+                print(f"FAIL: {path}: see-also names a missing section {ref} § {heading}")
+                errors += 1
         all_defs.update(defs)
     skill_md = os.path.join(skill_dir, "SKILL.md")
     if os.path.exists(skill_md):

@@ -1,6 +1,6 @@
 ---
 name: designing-product-ui
-description: "Use when designing a new screen, choosing the visual design of a web app, SaaS product, dashboard, landing page, or mobile or desktop app, or when asked to redesign, restyle, polish, or make a UI look better, critique a mockup, give design or UX feedback, or do a design review or UX audit of a UI that looks ugly, generic, amateur, cluttered, or AI-generated, or feels sluggish to interact with, flat, or lifeless, or should feel snappier, more satisfying, or more premium. Gives cited, testable heuristics (spacing values, chart rules, dark-mode steps, state coverage) rather than an aesthetic direction, covering layout, hierarchy, typography, color, dark mode, icons, charts, tables, pricing pages, forms, empty states, navigation, onboarding, AI chat interfaces, animation, and interaction feel in apps (feedback, microinteractions, keyboard shortcuts, command menus, haptics, waits and loading, delight). Not for pure frontend logic, bug fixes, or building games."
+description: "Use when designing a new screen, choosing the visual design of a web app, SaaS product, dashboard, landing page, or mobile or desktop app, or when asked to redesign, restyle, polish, or make a UI look better, critique a mockup, give design or UX feedback, or do a design review or UX audit of a UI that looks ugly, generic, amateur, cluttered, or AI-generated, or feels sluggish to interact with, flat, or lifeless, or should feel snappier, more satisfying, or more premium. Gives cited, testable heuristics (spacing values, chart rules, dark-mode steps, state coverage) rather than an aesthetic direction, covering layout, hierarchy, typography, color, dark mode, icons, charts, tables, pricing pages, forms, navigation, onboarding, AI chat interfaces, animation, and interaction feel in apps (feedback, microinteractions, game feel, keyboard shortcuts, Cmd+K command palettes, haptics, waits and loading, delight). Not for pure frontend logic, bug fixes, or building games."
 ---
 
 # Designing Product UI
@@ -11,7 +11,7 @@ Concrete UI/UX heuristics, each cited to the source it came from (a video timest
 
 They are practitioner opinions, not standards. Precedence when they conflict:
 
-1. The user's stated scope. When a rule implies a feature, data or flourish the user didn't ask for (a comparison line, bulk actions, version history, a command menu, easter eggs, reward imagery, humorous copy, sound), propose it rather than build it.
+1. The user's stated scope. When a rule implies a feature, data or flourish the user didn't ask for (a comparison line, bulk actions, version history, a command menu, easter eggs, reward imagery, humorous copy, sound), propose it rather than build it. Fixing an existing feature that misbehaves (an undo that skips the last action, a shortcut that fails silently) is in scope; fix it.
 2. Accessibility requirements (WCAG contrast, keyboard access, `prefers-reduced-motion`) and platform guidelines.
 3. The product's existing design system.
 4. These rules.
@@ -22,7 +22,7 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 - Within a section, base rules come first, then refinements and exceptions. `references/bibliography.md` lists every source.
 - **App UI** tags rules for product screens only; **Marketing** tags rules for landing pages and websites only; untagged rules apply to both. **From games** marks a product-UI rule translated from a game-design principle; follow the rule. The principle the source stated is under "Source principles" in `references/links/<topic>.md`. *(Editorial.)* marks a rule with no source, such as the feedback budget.
 - *Note:* text is an editorial caveat (usually accessibility, a CSS translation, or how a game principle applies to apps) that the source did not state. Where it corrects a source number, follow the Note.
-- Each rule ends with citations: `[jain/dashboard-flaws 0:44]` for a video timestamp, `[freiberg/invisible-details ¶the-selected-item-briefly]` for a passage in an essay or transcript, or `[buell-norton/labor-illusion ¶p12]` for a PDF page. The links live in `references/links/<topic>.md`; when you need a clickable link, as in review output, grep the label there instead of reading the whole file.
+- Each rule ends with citations: `[jain/dashboard-flaws 0:44]` for a video timestamp, `[freiberg/invisible-details ¶the-selected-item-briefly]` for a passage in an essay or transcript, or `[buell-norton/labor-illusion ¶p2]` for a PDF page. The links live in `references/links/<topic>.md`; when you need a clickable link, as in review output, grep the label there instead of reading the whole file.
 
 ## Routing
 
@@ -58,7 +58,7 @@ Rules chosen because a capable model tends to skip them. Some come from with/wit
 - Soften shadows (lower opacity, much larger blur), and set a nested element's radius to the outer radius minus the gap. (`depth-and-polish.md`)
 - Skip confirmation modals for routine deletes: delete immediately and offer undo. (`components-and-states.md`)
 - Give every command the app defines (shortcuts, submit, undo) and every disabled control a specific response, even when there's nothing to do ("Nothing to undo"); never stack repeats. (`interaction-feel.md`)
-- Trigger wins: anything opened or changed by a keyboard shortcut appears without movement, even a modal (a color change or one blink is fine); animate pointer-opened panels and menus out of the element that opened them. (`interaction-feel.md`, `motion.md`)
+- Trigger wins: anything opened or changed by a keyboard shortcut appears without movement, even a modal (a color change or one blink is fine). Animate pointer-opened panels and dropdowns out of the element that opened them; context and command menus get no motion whatever the trigger. (`interaction-feel.md`, `motion.md`)
 - Place each action on a spectrum of explicitness: primary actions visible and labeled, minor ones revealed on hover or focus. (`navigation-and-disclosure.md`)
 - On landing pages, lead with one ~7-word headline saying exactly what the product does, and show the real product. (`landing-pages.md`)
 
@@ -69,14 +69,14 @@ Report each problem as one line: the element, what is wrong, the rule it breaks 
 Group by severity, in this order and most impactful first within each group. When a problem fits two groups, use the earlier one:
 
 - **Blocks use:** anything that stops a user from understanding or completing a task: accessibility failures, missing states, misleading signals (a destructive action that doesn't look destructive, an unreadable chart), broken hierarchy, navigation or disclosure.
-- **Feels unresponsive:** actions with no visible acknowledgement, slow or blocking feedback, motion on keyboard or high-frequency actions, unannounced changes. Judge feel from the running app or the event handlers and states in code; a screenshot can't show it. If you couldn't run or read it, say "feel not verified".
+- **Feels wrong:** feedback that misses the budget in either direction. Too little: actions with no visible acknowledgement, slow or blocking feedback. Too much: motion on keyboard or high-frequency actions, unannounced changes, confetti, sound or layered effects on routine actions or in a pro tool. Judge feel from the running app or the event handlers and states in code; a screenshot can't show it. If you couldn't run or read it, say "feel not verified".
 - **Looks unfinished:** everything else: spacing, typography, color harmony, depth, motion polish. Report the ten most visible; collapse the rest into one summary line.
 
 ```markdown
 - Blocks use: The Delete button is brand purple like Edit and Share, so it doesn't signal destruction. Breaks: color destructive actions red. [jain/60-30-10-rule 4:35](https://youtu.be/66oOi9OLMCw?t=275)
 - Blocks use: Body text is #999 on white, about 2.8:1. Breaks: text contrast. WCAG 1.4.3
-- Feels unresponsive: Pressing ⌘Z with nothing to undo does nothing visible. Breaks: give unsupported commands a specific response, not silence (translated from a game principle). [jonasson-purho/juice-it-or-lose-it 1:15](https://youtu.be/Fy0aCDmgnxg?t=75)
-- Feels unresponsive: The command menu slides in from the top on every ⌘K. Breaks: keyboard-opened surfaces appear instantly. [freiberg/invisible-details ¶it-feels-right-to](https://rauno.me/craft/interaction-design#:~:text=it%20feels%20right%20to%20not%20animate)
+- Feels wrong: Pressing ⌘Z with nothing to undo does nothing visible. Breaks: give unsupported commands a specific response, not silence (translated from a game principle). [jonasson-purho/juice-it-or-lose-it 1:15](https://youtu.be/Fy0aCDmgnxg?t=75)
+- Feels wrong: The command menu slides in from the top on every ⌘K. Breaks: keyboard-opened surfaces appear instantly. [freiberg/invisible-details ¶it-feels-right-to](https://rauno.me/craft/interaction-design#:~:text=it%20feels%20right%20to%20not%20animate)
 - Looks unfinished: Card padding varies between 12px and 20px across the row. Breaks: identical card padding within a view. [jain/beginner-mistakes 2:38](https://youtu.be/AH_ugxmLeUM?t=158)
 ```
 

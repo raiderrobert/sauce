@@ -57,4 +57,10 @@ Tested November 2026 with Claude Opus 5.5:
   - listed features it would add but didn't build (bulk actions, a command palette), following the user-scope precedence rule.
 
   The first two gaps are on the Core Checklist.
-- **Interaction feel (review mode).** Given the issue-tracker build made without the skill, a review with the skill read the event handlers and CSS. It reported 6 findings under **Feels unresponsive**: keyboard-opened menus that animate, a scale-and-overshoot "pop" on the most frequent keyboard action, and others. It also found 3 accessibility blockers and 4 polish issues. All 10 inline citation links matched their definitions, and the 4 findings based on game principles were marked as translations.
+- **Interaction feel (review mode).** Given the issue-tracker build made without the skill, a review with the skill read the event handlers and CSS. It reported 6 findings in the group then called **Feels unresponsive** (now **Feels wrong**): keyboard-opened menus that animate, a scale-and-overshoot "pop" on the most frequent keyboard action, and others. It also found 3 accessibility blockers and 4 polish issues. All 10 inline citation links matched their definitions, and the 4 findings based on game principles were marked as translations.
+- **Interaction feel (restraint).** The same issue tracker, described as used by an engineering team all day, was given the prompt "make it feel more satisfying and premium" with and without the skill. Neither run added confetti, sound or haptics. Only the run with the skill:
+  - gated motion on input source (keyboard-opened dialogs and menus stopped moving);
+  - removed the 1.18× overshoot pop, leaving routine status changes with one cue;
+  - rejected a command menu, a shortcut sheet and Done celebrations, citing the feedback budget and the user-scope rule.
+
+  The run without the skill went further on function: it made status changes undoable, which the run with the skill only proposed. The skill now says that fixing a misbehaving existing feature is in scope; only new features are proposed.

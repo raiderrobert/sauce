@@ -4,7 +4,6 @@ Link definitions for every citation label in `../../motion.md`. Grep a label her
 
 [apple/design-foundations 9:27]: https://youtu.be/dGcqqA3Sl-o?t=567
 [apple/designing-fluid-interfaces ¶because-you-can-discover]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=Because%20you%20can%20discover%20a%20new
-[apple/designing-fluid-interfaces ¶if-we-move-it]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=If%20we%20move%20it%20up%20to
 [apple/designing-fluid-interfaces ¶it-grows-from-the]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=it%20grows%20from%20the%20initial%20state
 [apple/designing-fluid-interfaces ¶it-should-have-a]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=It%20should%20have%20a%20consistent%20offscreen
 [apple/designing-fluid-interfaces ¶its-important-that-you]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=it%27s%20important%20that%20you%20treat%20behaviors
@@ -31,6 +30,7 @@ Link definitions for every citation label in `../../motion.md`. Grep a label her
 [freiberg/invisible-details ¶lightweight-actions-such-as]: https://rauno.me/craft/interaction-design#:~:text=Lightweight%20actions%2C%20such%20as%20displaying%20overlays%2C
 [freiberg/invisible-details ¶notice-how-the-gesture]: https://rauno.me/craft/interaction-design#:~:text=Notice%20how%20the%20gesture%20retains%20the
 [freiberg/invisible-details ¶object-permanence-creating-a]: https://rauno.me/craft/interaction-design#:~:text=Object%20permanence%2C%20creating%20a%20focal%20point%2C
+[freiberg/invisible-details ¶sometimes-we-can-get]: https://rauno.me/craft/interaction-design#:~:text=Sometimes%20we%20can%20get%20away%20with
 [freiberg/invisible-details ¶through-motion-this-helps]: https://rauno.me/craft/interaction-design#:~:text=Through%20motion%20this%20helps%20establish%20a
 [gmtk/game-feel-and-juice 3:24]: https://youtu.be/216_5nu4aVQ?t=204
 [jain/animated-sidebar 3:08]: https://youtu.be/NtZeYmTMuo4?t=188
@@ -97,11 +97,11 @@ Link definitions for every citation label in `../../motion.md`. Grep a label her
 [kowalski/great-animations ¶it-allows-the-user]: https://emilkowal.ski/ui/great-animations#:~:text=It%20allows%20the%20user%20to%20change
 [kowalski/great-animations ¶its-easy-to-start]: https://emilkowal.ski/ui/great-animations#:~:text=It%E2%80%99s%20easy%20to%20start%20adding%20animations
 [kowalski/great-animations ¶the-opacity-change-in]: https://emilkowal.ski/ui/great-animations#:~:text=The%20opacity%20change%20in%20exiting%20and
-[kowalski/great-animations ¶this-component-animates-opacity]: https://emilkowal.ski/ui/great-animations#:~:text=This%20component%20animates%20opacity%20only%20when
 [kowalski/great-animations ¶uses-ease-as-the]: https://emilkowal.ski/ui/great-animations#:~:text=uses%20ease%20as%20the%20easing%20type
 [kowalski/great-animations ¶you-should-try-to]: https://emilkowal.ski/ui/great-animations#:~:text=you%20should%20try%20to%20animate%20with
 [kowalski/great-animations ¶your-animations-should-also]: https://emilkowal.ski/ui/great-animations#:~:text=Your%20animations%20should%20also%20usually%20be
 [kowalski/you-dont-need-animations ¶a-180ms-dropdown-animation]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=A%20180ms%20dropdown%20animation%20feels%20more
+[kowalski/you-dont-need-animations ¶an-animation-would-make]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=an%20animation%20would%20make%20them%20feel
 [kowalski/you-dont-need-animations ¶another-purposeful-animation-is]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=Another%20purposeful%20animation%20is%20this%20subtle
 [kowalski/you-dont-need-animations ¶because-it-comes-from]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=Because%20it%20comes%20from%20and%20leaves
 [kowalski/you-dont-need-animations ¶before-you-start-animating]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=Before%20you%20start%20animating%2C%20ask%20yourself%3A

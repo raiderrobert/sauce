@@ -6,6 +6,7 @@ Link definitions for every citation label in `../../components-and-states.md`. G
 [apple/designing-fluid-interfaces ¶but-we-shouldnt-confirm]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=But%2C%20we%20shouldn%27t%20confirm%20the%20tap
 [apple/designing-fluid-interfaces ¶the-next-thing-to]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=The%20next%20thing%20to%20remember%20is
 [apple/intuitive-search 10:56]: https://youtu.be/lx45sKEnZkU?t=656
+[apple/intuitive-search 11:50]: https://youtu.be/lx45sKEnZkU?t=710
 [apple/intuitive-search 12:53]: https://youtu.be/lx45sKEnZkU?t=773
 [apple/intuitive-search 14:45]: https://youtu.be/lx45sKEnZkU?t=885
 [apple/intuitive-search 1:50]: https://youtu.be/lx45sKEnZkU?t=110
@@ -44,7 +45,6 @@ Link definitions for every citation label in `../../components-and-states.md`. G
 [jain/dashboard-ui 3:18]: https://youtu.be/B7k5rOgmOGY?t=198
 [jain/dashboard-ui 4:50]: https://youtu.be/B7k5rOgmOGY?t=290
 [jain/dashboard-ui 5:16]: https://youtu.be/B7k5rOgmOGY?t=316
-[jain/dashboard-ui 7:45]: https://youtu.be/B7k5rOgmOGY?t=465
 [jain/every-ui-concept 0:18]: https://youtu.be/EcbgbKtOELY?t=18
 [jain/every-ui-concept 6:56]: https://youtu.be/EcbgbKtOELY?t=416
 [jain/every-ui-concept 7:05]: https://youtu.be/EcbgbKtOELY?t=425
@@ -54,7 +54,6 @@ Link definitions for every citation label in `../../components-and-states.md`. G
 [jain/finance-dashboard-redesign 1:23]: https://youtu.be/Yr2uIcFZDDQ?t=83
 [jain/finance-dashboard-redesign 5:38]: https://youtu.be/Yr2uIcFZDDQ?t=338
 [jain/genius-designer 3:12]: https://youtu.be/HE4rLEQpiXY?t=192
-[jain/macos-apps 1:57]: https://youtu.be/Vy0KKvZJRH8?t=117
 [jain/macos-apps 3:31]: https://youtu.be/Vy0KKvZJRH8?t=211
 [jain/micro-animations 0:22]: https://youtu.be/ld1zhQMXxXU?t=22
 [jain/micro-animations 1:52]: https://youtu.be/ld1zhQMXxXU?t=112
@@ -68,7 +67,6 @@ Link definitions for every citation label in `../../components-and-states.md`. G
 [jain/software-must-lie 3:02]: https://youtu.be/S8DcTJm8pYM?t=182
 [jain/software-must-lie 3:36]: https://youtu.be/S8DcTJm8pYM?t=216
 [jain/software-must-lie 5:35]: https://youtu.be/S8DcTJm8pYM?t=335
-[jain/software-must-lie 5:57]: https://youtu.be/S8DcTJm8pYM?t=357
 [jain/software-must-lie 6:16]: https://youtu.be/S8DcTJm8pYM?t=376
 [jain/software-must-lie 7:46]: https://youtu.be/S8DcTJm8pYM?t=466
 [jain/spotify-wrapped-redesign 6:14]: https://youtu.be/goWOAFqJHpA?t=374
@@ -140,3 +138,5 @@ Link definitions for every citation label in `../../components-and-states.md`. G
 [schoger/wp-pusher-checkout 2:07]: https://youtu.be/5gdYHlYAKDY?t=127
 [slack/easter-eggs ¶replace-it-with-something]: https://www.slackstory.com/p/easter-eggs-in-slack#:~:text=replace%20it%20with%20something%20more%20helpful
 [slack/incremental-boot ¶we-enable-the-user]: https://slack.engineering/getting-to-slack-faster-with-incremental-boot/#:~:text=we%20enable%20the%20user%20interface%2C%20connect
+[vohra/acquired-feel-like-a-game ¶it-is-also-simultaneously]: https://www.acquired.fm/episodes/special-superhuman-part-ii-designing-software-to-feel-like-a-game-with-rahul-vohra#:~:text=it%20is%20also%20simultaneously%20searching%20in
+[vohra/beyond-gamification 9:07]: https://youtu.be/zaxAdRlyZQ8?t=547

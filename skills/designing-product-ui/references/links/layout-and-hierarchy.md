@@ -126,4 +126,6 @@ Link definitions for every citation label in `../../layout-and-hierarchy.md`. Gr
 [schoger/wss 3:53]: https://youtu.be/ZJj7uNdzPpM?t=233
 [schoger/wss 5:25]: https://youtu.be/ZJj7uNdzPpM?t=325
 [schoger/wss 7:29]: https://youtu.be/ZJj7uNdzPpM?t=449
+[vohra/beyond-gamification 13:25]: https://youtu.be/zaxAdRlyZQ8?t=805
 [vohra/designing-for-flow ¶if-i-had-to]: https://blog.superhuman.com/how-to-design-for-flow/#:~:text=If%20I%20had%20to%20remove%20just
+[vohra/designing-for-flow ¶in-superhuman-you-cant]: https://blog.superhuman.com/how-to-design-for-flow/#:~:text=In%20Superhuman%2C%20you%20can%27t%20see%20the
