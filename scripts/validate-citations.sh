@@ -80,6 +80,9 @@ for bib_path in sorted(glob.glob("skills/*/references/bibliography.md")):
             errors += 1
         body = re.sub(rf"^\[{LABEL}\]: \S+$", "", text, flags=re.M)
         uses = set(re.findall(rf"\[({LABEL})\](?!\()", body))
+        for loose in sorted(set(re.findall(r"\[([A-Za-z0-9-]+/[A-Za-z0-9-]+ [^\]]+)\](?!\()", body)) - uses):
+            print(f"FAIL: {path}: [{loose}] citation label does not parse")
+            errors += 1
         for label in sorted(uses | set(defs)):
             checked += 1
             key, locator = label.split(" ")

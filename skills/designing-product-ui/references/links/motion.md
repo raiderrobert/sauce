@@ -14,9 +14,12 @@ Link definitions for every citation label in `../../motion.md`. Read this only t
 [apple/designing-fluid-interfaces ¶the-content-uses-elasticity]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=the%20content%20uses%20elasticity%20to%20pull
 [apple/designing-fluid-interfaces ¶the-line-is-completely]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=The%20line%20is%20completely%20unbroken%2C%20and
 [apple/designing-fluid-interfaces ¶theres-less-mass-on]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=there%27s%20less%20mass%20on%20the%20photos%2C
+[apple/designing-fluid-interfaces ¶we-should-respect-the]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=We%20should%20respect%20the%20relative%20position%2C
 [apple/designing-fluid-interfaces ¶we-want-to-allow]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=we%20want%20to%20allow%20for%20constant
+[apple/designing-fluid-interfaces ¶you-actually-wouldnt-know]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=you%20actually%20wouldn%27t%20know%20the%20difference
 [apple/designing-fluid-interfaces ¶you-can-also-use]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=you%20can%20also%20use%20it%20for
 [apple/designing-fluid-interfaces ¶you-want-to-take]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=You%20want%20to%20take%20a%20small
+[apple/touch-on-mac 1:26]: https://youtu.be/2cq3ytwLrLk?t=86
 [freiberg/invisible-details ¶a-layer-slides-over]: https://rauno.me/craft/interaction-design#:~:text=A%20layer%20slides%20over%20from%20the
 [freiberg/invisible-details ¶exhibits-less-bounce-since]: https://rauno.me/craft/interaction-design#:~:text=exhibits%20less%20bounce%20since%20it%27s%20conceptually
 [freiberg/invisible-details ¶feeling-the-scale-delta]: https://rauno.me/craft/interaction-design#:~:text=feeling%20the%20scale%20delta%20applying%20immediately%2C
@@ -29,6 +32,7 @@ Link definitions for every citation label in `../../motion.md`. Read this only t
 [freiberg/invisible-details ¶notice-how-the-gesture]: https://rauno.me/craft/interaction-design#:~:text=Notice%20how%20the%20gesture%20retains%20the
 [freiberg/invisible-details ¶object-permanence-creating-a]: https://rauno.me/craft/interaction-design#:~:text=Object%20permanence%2C%20creating%20a%20focal%20point%2C
 [freiberg/invisible-details ¶through-motion-this-helps]: https://rauno.me/craft/interaction-design#:~:text=Through%20motion%20this%20helps%20establish%20a
+[gmtk/game-feel-and-juice 3:24]: https://youtu.be/216_5nu4aVQ?t=204
 [jain/animated-sidebar 3:08]: https://youtu.be/NtZeYmTMuo4?t=188
 [jain/awful-to-amazing 5:32]: https://youtu.be/ulSOdTgoGeY?t=332
 [jain/awful-to-amazing 6:44]: https://youtu.be/ulSOdTgoGeY?t=404
@@ -85,7 +89,7 @@ Link definitions for every citation label in `../../motion.md`. Read this only t
 [jain/vibe-coding-cant-fix 8:14]: https://youtu.be/RCneB_MQ7qs?t=494
 [jonasson-purho/juice-it-or-lose-it 10:39]: https://youtu.be/Fy0aCDmgnxg?t=639
 [jonasson-purho/juice-it-or-lose-it 3:59]: https://youtu.be/Fy0aCDmgnxg?t=239
-[jonasson-purho/juice-it-or-lose-it 4:33]: https://youtu.be/Fy0aCDmgnxg?t=273
+[jonasson-purho/juice-it-or-lose-it 5:58]: https://youtu.be/Fy0aCDmgnxg?t=358
 [kowalski/great-animations ¶a-good-tip-here]: https://emilkowal.ski/ui/great-animations#:~:text=A%20good%20tip%20here%20is%20to
 [kowalski/great-animations ¶before-you-add-an]: https://emilkowal.ski/ui/great-animations#:~:text=Before%20you%20add%20an%20animation%2C%20you
 [kowalski/great-animations ¶changes-in-web-apps]: https://emilkowal.ski/ui/great-animations#:~:text=Changes%20in%20web%20apps%20often%20occur
@@ -105,9 +109,12 @@ Link definitions for every citation label in `../../motion.md`. Read this only t
 [kowalski/you-dont-need-animations ¶how-often-users-will]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=How%20often%20users%20will%20see%20an
 [kowalski/you-dont-need-animations ¶unless-you-are-working]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=Unless%20you%20are%20working%20on%20marketing
 [nijman/art-of-screenshake 14:53]: https://youtu.be/AJdEqssNZ-U?t=893
+[nijman/art-of-screenshake 19:54]: https://youtu.be/AJdEqssNZ-U?t=1194
 [nijman/art-of-screenshake 32:19]: https://youtu.be/AJdEqssNZ-U?t=1939
 [nngroup/theory-of-user-delight ¶combine-this-with-flashy]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=Combine%20this%20with%20flashy%20animations%20which
+[ording/rubber-band ¶when-he-got-to]: https://www.cultofmac.com/news/bas-ording-rubber-band-effect-iphone#:~:text=when%20he%20got%20to%20the%20bottom
 [ording/rubber-band ¶when-he-selected-a]: https://www.cultofmac.com/news/bas-ording-rubber-band-effect-iphone#:~:text=When%20he%20selected%20a%20name%2C%20it
 [raroque/apps-feel-10x-better 0:52]: https://youtu.be/8mMH6Pq8qnE?t=52
 [saffer/microinteractions 15:10]: https://youtu.be/9CEtqnPdWoI?t=910
 [saffer/microinteractions 31:21]: https://youtu.be/9CEtqnPdWoI?t=1881
+[sakamoto/hearthstone-immersive-ui 10:33]: https://youtu.be/axkPXCNjOh8?t=633

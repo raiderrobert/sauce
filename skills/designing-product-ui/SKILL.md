@@ -7,7 +7,7 @@ description: "Use when designing a new screen, choosing the visual design of a w
 
 ## Overview
 
-Concrete UI/UX heuristics, each cited to the source and timestamp it came from. Use them to make design decisions while building, and as a checklist when reviewing a screen.
+Concrete UI/UX heuristics, each cited to the source it came from (a video timestamp, a passage in an essay or transcript, or a PDF page). Use them to make design decisions while building, and as a checklist when reviewing a screen.
 
 They are practitioner opinions, not standards. Precedence when they conflict:
 
@@ -19,10 +19,10 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 ## How the topic files work
 
 - Read each file whose topic the task touches; a single component often spans several (a button touches components, color, motion and interaction feel).
-- Within a section, base rules come first, then refinements and exceptions; rules backed by more distinct sources rank higher. `references/bibliography.md` lists every source.
+- Within a section, base rules come first, then refinements and exceptions. `references/bibliography.md` lists every source.
 - **App UI** tags rules for product screens only; **Marketing** tags rules for landing pages and websites only; untagged rules apply to both. **From games** marks a product-UI rule translated from a game-design principle; the cited "Source principle" after it is what the source said, and the rule is the translation to follow.
 - *Note:* text is an editorial caveat (usually accessibility, a CSS translation, or how a game principle applies to apps) that the source did not state. Where it corrects a source number, follow the Note.
-- Each rule ends with citations: `[jain/dashboard-flaws 0:44]` for a video timestamp, `[freiberg/invisible-details ¶the-selected-item-briefly]` for a passage in an essay or transcript, or `[buell-norton/labor-illusion ¶p12]` for a PDF page. The links live in `references/links/<topic>.md`; read that file only when you need a clickable link, as in review output.
+- Each rule ends with citations: `[jain/dashboard-flaws 0:44]` for a video timestamp, `[freiberg/invisible-details ¶the-selected-item-briefly]` for a passage in an essay or transcript, or `[buell-norton/labor-illusion ¶p12]` for a PDF page. The links live in `references/links/<topic>.md`; when you need a clickable link, as in review output, grep the label there instead of reading the whole file.
 
 ## Routing
 
@@ -35,8 +35,8 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 | Buttons, chips, icon labels and tooltips, forms and signup, inputs, cards, carousels, modals, popovers, toasts, delete and undo, autosave, AI chat and prompt interfaces, search fields and in-page menus or submenus, and empty, loading, error and success states | `./components-and-states.md` |
 | Dashboards, charts, KPIs, tables, lists, pricing pages and billing | `./data-and-dashboards.md` |
 | Sidebars, tabs (when to use them and how to mark the selected one), overflow menus, search placement and scope, what to show versus hide, onboarding and first run, gamification, website navbars, dropdowns and mega menus | `./navigation-and-disclosure.md` |
-| Animation, transitions, easing and durations, which surfaces animate and which don't, how menus and panels open, motion that shows where things came from, hover and press effects, drag and swipe feedback, loader animations, scroll effects | `./motion.md` |
-| How each action feels: acknowledging every click and keypress, speed and flow, keyboard shortcuts and command menus, how long a wait needs which indicator, proportional feedback, sound, haptics, delight and when to hold back | `./interaction-feel.md` |
+| Animation, transitions, easing and durations, which triggers and surfaces animate, how menus and panels open, motion that shows where things came from, hover and press effects, drag, swipe, touch tracking and rubber-banding, loader animations, scroll effects | `./motion.md` |
+| How each action feels: acknowledging clicks, keypresses and commands, speed, perceived performance and optimistic updates, flow, keyboard shortcuts and command menus, how long a wait needs which indicator, proportional feedback, sound, haptics, tone and personality, delight and when to hold back | `./interaction-feel.md` |
 | Mobile apps, gestures, thumb zones, tab bars, bottom sheets, macOS and desktop apps | `./mobile-and-desktop.md` |
 | Landing pages, heroes, marketing copy, footers, social proof (navbars are in navigation-and-disclosure) | `./landing-pages.md` |
 | How to approach the work: references, generated UI, reviewing at real size | `./process.md` |
@@ -57,14 +57,14 @@ Rules chosen because a capable model tends to skip them. Some come from with/wit
 - In dark mode, make each raised surface lighter, and space neutral steps about twice as far apart as in light mode. (`color.md`)
 - Soften shadows (lower opacity, much larger blur), and set a nested element's radius to the outer radius minus the gap. (`depth-and-polish.md`)
 - Skip confirmation modals for routine deletes: delete immediately and offer undo. (`components-and-states.md`)
-- Acknowledge every input, including no-ops: a key that can't act, an empty undo or a disabled control gets a brief, specific response, never silence. (`interaction-feel.md`)
-- Give keyboard-triggered and very frequent actions feedback without motion (a state change or brief highlight); animate pointer-opened panels and menus out of the element that opened them. (`interaction-feel.md`, `motion.md`)
+- Give every command the app defines (shortcuts, submit, undo) and every disabled control a specific response, even when there's nothing to do ("Nothing to undo"); never stack repeats. (`interaction-feel.md`)
+- Trigger wins: anything opened or changed by a keyboard shortcut appears without movement, even a modal (a color change or one blink is fine); animate pointer-opened panels and menus out of the element that opened them. (`interaction-feel.md`, `motion.md`)
 - Place each action on a spectrum of explicitness: primary actions visible and labeled, minor ones revealed on hover or focus. (`navigation-and-disclosure.md`)
 - On landing pages, lead with one ~7-word headline saying exactly what the product does, and show the real product. (`landing-pages.md`)
 
 ## Reviewing a screen
 
-Report each problem as one line: the element, what is wrong, the rule it breaks in your own words, and the rule's first citation as an inline link (copy the URL from `references/links/<topic>.md`). Rules are paraphrases, so don't quote them. If the violated part is a *Note:* (editorial, usually accessibility), cite the WCAG success criterion or write "editorial" instead of the source. For a **From games** rule, cite its source principle and add "(translated from a game principle)".
+Report each problem as one line: the element, what is wrong, the rule it breaks in your own words, and the rule's first citation as an inline link (grep the label in `references/links/<topic>.md` for its URL). Rules are paraphrases, so don't quote them. If the violated part is a *Note:* (editorial, usually accessibility), cite the WCAG success criterion or write "editorial" instead of the source. For a **From games** rule, cite its first citation (which supports the game principle) and add "(translated from a game principle)".
 
 Group by severity, in this order and most impactful first within each group. When a problem fits two groups, use the earlier one:
 

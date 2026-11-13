@@ -5,21 +5,24 @@ Where the rules in this skill come from. Read this when adding a new source or c
 | File | What it is |
 |------|------------|
 | `bibliography.md` | Every cited source, one entry per source, keyed by `author/short-title` |
+| `links/<topic>.md` | The link definition for every citation label in `../<topic>.md` |
 
 ## Citation format
 
-Each rule in a topic file ends with one or more reference-style citations, defined at the bottom of the same file. Videos are cited by timestamp; essays, papers and talk or podcast transcripts by a ¶ anchor built from the first words of the supporting passage:
+Each rule in a topic file ends with one or more citation labels. The labels are defined in `links/<topic>.md`, kept out of the topic file so that building with the skill doesn't load hundreds of URLs. Videos are cited by timestamp; essays, papers and talk or podcast transcripts by a ¶ anchor built from the first words of the supporting passage:
 
 ```markdown
+<!-- in motion.md -->
 - Make every transition interruptible. ([apple/designing-fluid-interfaces ¶we-want-to-allow], [freiberg/invisible-details ¶great-interactions-are-modeled])
 
+<!-- in references/links/motion.md -->
 [apple/designing-fluid-interfaces ¶we-want-to-allow]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=we%20want%20to%20allow%20for%20constant
 [freiberg/invisible-details ¶great-interactions-are-modeled]: https://rauno.me/craft/interaction-design#:~:text=Great%20interactions%20are%20modeled%20after%20properties
 ```
 
 - The label is the bibliography key plus a locator: a timestamp for video, ¶ and a slug of the passage's first words for web text, or ¶p and a page number for PDFs (linked with `#page=N`, since browsers can't highlight text inside a PDF).
 - Video links open the video at that moment. Web text links use a `#:~:text=` fragment built from the passage's exact words, so supporting browsers scroll to and highlight it. Pages that render their text with JavaScript may not scroll.
-- A rule backed by several sources lists each one, earliest timestamp per video. Rules with more distinct sources are listed first within their section.
+- A rule backed by several sources lists each one, earliest timestamp per video. Within a section, base rules come first, then refinements and exceptions. Source counts don't set the order: game citations support the principle rather than the rule, and many citations come from one author.
 - Text marked *Note:* is an editorial caveat (accessibility, a CSS or web translation) that the source did not state. It carries no citation.
 
 ## Adding a source
@@ -29,7 +32,7 @@ Each rule in a topic file ends with one or more reference-style citations, defin
    - For essays, papers and transcripts, save the text locally.
 2. Extract only advice the source states or explains. Do not turn something merely shown on screen into a rule. For game-design sources, write the product-UI rule as the rule, and record what the source said about games as its "Source principle"; the citation supports the principle, and the rule is marked **From games**.
 3. Check every citation against the source before using it: the cited transcript line, or the quoted passage, must contain the advice. Then run `just validate-citations` from the repo root. It checks that every citation has a link definition, that video links match their timestamp and bibliography video, that web text links point at the bibliography URL with a `#:~:text=` fragment whose words match the slug, and that PDF links carry the cited page. It cannot check what the source says, so the manual check is still required.
-4. Add a bibliography entry, keyed `author/short-title`, in alphabetical order.
+4. Add a bibliography entry, keyed `author/short-title`, in alphabetical order, and add each citation's link definition to `links/<topic>.md`.
 5. Merge each new rule into the topic file it belongs to. If it repeats an existing rule, add the citation to that rule instead of duplicating it. If it conflicts with one, keep both and say when each applies.
 6. Do not commit full transcripts or articles. Cite and summarize only.
 

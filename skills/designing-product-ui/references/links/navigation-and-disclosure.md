@@ -95,7 +95,6 @@ Link definitions for every citation label in `../../navigation-and-disclosure.md
 [saffer/microinteractions 18:30]: https://youtu.be/9CEtqnPdWoI?t=1110
 [saffer/microinteractions 28:23]: https://youtu.be/9CEtqnPdWoI?t=1703
 [saffer/microinteractions 30:06]: https://youtu.be/9CEtqnPdWoI?t=1806
-[sakamoto/hearthstone-immersive-ui 15:13]: https://youtu.be/axkPXCNjOh8?t=913
 [schoger/bad-about 6:46]: https://youtu.be/S6-q5BheEYU?t=406
 [schoger/bad-about 9:43]: https://youtu.be/S6-q5BheEYU?t=583
 [schoger/bad-about 9:55]: https://youtu.be/S6-q5BheEYU?t=595
@@ -111,4 +110,6 @@ Link definitions for every citation label in `../../navigation-and-disclosure.md
 [schoger/wss 7:02]: https://youtu.be/ZJj7uNdzPpM?t=422
 [slack/easter-eggs ¶include-features-in-the]: https://www.slackstory.com/p/easter-eggs-in-slack#:~:text=include%20features%20in%20the%20product%20that
 [valve/half-life-documentary 0:22:53]: https://youtu.be/TbZ3HzvFEto?t=1373
+[vohra/acquired-feel-like-a-game ¶game-design-is-not]: https://www.acquired.fm/episodes/special-superhuman-part-ii-designing-software-to-feel-like-a-game-with-rahul-vohra#:~:text=Game%20design%20is%20not%20gamification.%20It
+[vohra/beyond-gamification 1:11]: https://youtu.be/zaxAdRlyZQ8?t=71
 [vohra/designing-for-flow ¶make-functions-visible-and]: https://blog.superhuman.com/how-to-design-for-flow/#:~:text=Make%20functions%20visible%2C%20and%20limit%20alternative
