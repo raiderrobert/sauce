@@ -2,7 +2,7 @@
 
 Font choice and pairing, text color tiers and weights, type scale, letter spacing and line height, and display text.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/typography.md`.
 
 Contents: Font selection and pairing · Text color and weight · Type scale and sizes · Spacing, line height and line length · Uppercase and labels · Numbers and code · Display text
 
@@ -52,74 +52,3 @@ Contents: Font selection and pairing · Text color and weight · Type scale and 
 ## Display text
 
 - **Marketing:** Use a display font at very large sizes as a visual, storytelling element, like an image (e.g. Unbounded, Cabinet Grotesk or Oswald at ~290px), but only once or twice per page. A good display font can carry as much weight as an image; overuse dilutes it. ([jain/slept-on-trends 3:25], [jain/web-design-hacks 4:43], [jain/website-layouts 3:39])
-
-[apple/design-foundations 14:42]: https://youtu.be/dGcqqA3Sl-o?t=882
-[jain/color-mistakes 4:21]: https://youtu.be/EOcY3hPMQkk?t=261
-[jain/dashboard-ui 1:58]: https://youtu.be/B7k5rOgmOGY?t=118
-[jain/every-ui-concept 3:23]: https://youtu.be/EcbgbKtOELY?t=203
-[jain/every-ui-concept 3:49]: https://youtu.be/EcbgbKtOELY?t=229
-[jain/every-ui-concept 4:09]: https://youtu.be/EcbgbKtOELY?t=249
-[jain/every-ui-concept 4:14]: https://youtu.be/EcbgbKtOELY?t=254
-[jain/google-ai-redesign 7:01]: https://youtu.be/pGYLZyBE32o?t=421
-[jain/landing-page-levels 1:00]: https://youtu.be/eMMiLeo_UGI?t=60
-[jain/slept-on-trends 3:25]: https://youtu.be/EHwZzWd-OnQ?t=205
-[jain/typography 0:44]: https://youtu.be/7sUUzOCv47U?t=44
-[jain/typography 11:33]: https://youtu.be/7sUUzOCv47U?t=693
-[jain/typography 1:21]: https://youtu.be/7sUUzOCv47U?t=81
-[jain/typography 2:20]: https://youtu.be/7sUUzOCv47U?t=140
-[jain/typography 4:12]: https://youtu.be/7sUUzOCv47U?t=252
-[jain/typography 5:13]: https://youtu.be/7sUUzOCv47U?t=313
-[jain/typography 5:21]: https://youtu.be/7sUUzOCv47U?t=321
-[jain/typography 6:15]: https://youtu.be/7sUUzOCv47U?t=375
-[jain/typography 7:17]: https://youtu.be/7sUUzOCv47U?t=437
-[jain/typography 9:15]: https://youtu.be/7sUUzOCv47U?t=555
-[jain/typography 9:46]: https://youtu.be/7sUUzOCv47U?t=586
-[jain/ui-cheat-codes 0:32]: https://youtu.be/c1TvOcKdBVE?t=32
-[jain/vibe-coding-cant-fix 2:35]: https://youtu.be/RCneB_MQ7qs?t=155
-[jain/web-design-hacks 0:40]: https://youtu.be/Lp6ey4AyDzA?t=40
-[jain/web-design-hacks 0:52]: https://youtu.be/Lp6ey4AyDzA?t=52
-[jain/web-design-hacks 4:43]: https://youtu.be/Lp6ey4AyDzA?t=283
-[jain/website-layouts 3:03]: https://youtu.be/P2ksReDwWkE?t=183
-[jain/website-layouts 3:39]: https://youtu.be/P2ksReDwWkE?t=219
-[kennedy/advanced-design-tips 5:26]: https://youtu.be/6jiq5g_bXB8?t=326
-[kennedy/advanced-ui-tips 1:14]: https://youtu.be/-2vzMH8iqsg?t=74
-[kennedy/advanced-ui-tips 2:24]: https://youtu.be/-2vzMH8iqsg?t=144
-[kennedy/advanced-ui-tips 4:02]: https://youtu.be/-2vzMH8iqsg?t=242
-[kennedy/advanced-ui-tips 5:24]: https://youtu.be/-2vzMH8iqsg?t=324
-[kennedy/advanced-ui-tips 5:40]: https://youtu.be/-2vzMH8iqsg?t=340
-[kennedy/advanced-ui-tips 6:23]: https://youtu.be/-2vzMH8iqsg?t=383
-[kennedy/pairing-fonts 1:02]: https://youtu.be/zJH3SXlyi1A?t=62
-[kennedy/pairing-fonts 6:25]: https://youtu.be/zJH3SXlyi1A?t=385
-[kennedy/pairing-fonts 8:10]: https://youtu.be/zJH3SXlyi1A?t=490
-[kennedy/pairing-fonts 8:30]: https://youtu.be/zJH3SXlyi1A?t=510
-[kennedy/spendweek-redesign 1:32]: https://youtu.be/LHs6vx4QEE4?t=92
-[kennedy/spendweek-redesign 1:40]: https://youtu.be/LHs6vx4QEE4?t=100
-[kennedy/spendweek-redesign 2:04]: https://youtu.be/LHs6vx4QEE4?t=124
-[kennedy/spendweek-redesign 3:09]: https://youtu.be/LHs6vx4QEE4?t=189
-[kennedy/starting-a-ui-project 13:47]: https://youtu.be/JOQJO_V7sew?t=827
-[kennedy/starting-a-ui-project 22:29]: https://youtu.be/JOQJO_V7sew?t=1349
-[kennedy/starting-a-ui-project 38:30]: https://youtu.be/JOQJO_V7sew?t=2310
-[kennedy/timezones-redesign 3:32]: https://youtu.be/B4XHaboNMOI?t=212
-[kennedy/timezones-redesign 3:39]: https://youtu.be/B4XHaboNMOI?t=219
-[kennedy/wodify-redesign 2:36]: https://youtu.be/OdS7fOS7bTk?t=156
-[kennedy/wodify-redesign 5:27]: https://youtu.be/OdS7fOS7bTk?t=327
-[nngroup/better-tabs 4:00]: https://youtu.be/hPxrudx1iXg?t=240
-[nngroup/theory-of-user-delight ¶the-text-is-difficult]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=The%20text%20is%20difficult%20to%20scan
-[schoger/bad-about 3:30]: https://youtu.be/S6-q5BheEYU?t=210
-[schoger/bad-about 3:44]: https://youtu.be/S6-q5BheEYU?t=224
-[schoger/dashboard-with-ai 0:25:17]: https://youtu.be/lQCWuOT5ENQ?t=1517
-[schoger/dashboard-with-ai 0:41:36]: https://youtu.be/lQCWuOT5ENQ?t=2496
-[schoger/dashboard-with-ai 0:45:12]: https://youtu.be/lQCWuOT5ENQ?t=2712
-[schoger/designing-with-claude-code 0:09:27]: https://youtu.be/lkKGQVHrXzE?t=567
-[schoger/designing-with-claude-code 0:26:25]: https://youtu.be/lkKGQVHrXzE?t=1585
-[schoger/designing-with-claude-code 0:28:20]: https://youtu.be/lkKGQVHrXzE?t=1700
-[schoger/designing-with-claude-code 0:28:51]: https://youtu.be/lkKGQVHrXzE?t=1731
-[schoger/resolute 11:18]: https://youtu.be/BMHUKij1yUE?t=678
-[schoger/resolute 13:47]: https://youtu.be/BMHUKij1yUE?t=827
-[schoger/transistor 11:07]: https://youtu.be/ZT4WRRhacWk?t=667
-[schoger/transistor 1:48]: https://youtu.be/ZT4WRRhacWk?t=108
-[schoger/transistor 4:44]: https://youtu.be/ZT4WRRhacWk?t=284
-[schoger/tuple 1:44]: https://youtu.be/RC9cYdbQ-_c?t=104
-[schoger/tuple 2:34]: https://youtu.be/RC9cYdbQ-_c?t=154
-[schoger/wss 10:14]: https://youtu.be/ZJj7uNdzPpM?t=614
-[schoger/wss 9:43]: https://youtu.be/ZJj7uNdzPpM?t=583

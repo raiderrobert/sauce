@@ -1,6 +1,6 @@
 ---
 name: designing-product-ui
-description: "Use when designing a new screen, choosing the visual design of a web app, SaaS product, dashboard, landing page, or mobile or desktop app, or when asked to redesign, restyle, polish, or make a UI look better, critique a mockup, give design or UX feedback, or do a design review or UX audit of a UI that looks ugly, generic, amateur, cluttered, or AI-generated. Gives cited, testable heuristics (spacing values, chart rules, dark-mode steps, state coverage) rather than an aesthetic direction, covering layout, hierarchy, typography, color, dark mode, icons, charts, tables, pricing pages, forms, modals, sidebars, empty states, navigation, search, onboarding, AI chat interfaces, animation, and interaction feel in apps (feedback, microinteractions, haptics, waits and loading, delight). Not for pure frontend logic, bug fixes, or building games."
+description: "Use when designing a new screen, choosing the visual design of a web app, SaaS product, dashboard, landing page, or mobile or desktop app, or when asked to redesign, restyle, polish, or make a UI look better, critique a mockup, give design or UX feedback, or do a design review or UX audit of a UI that looks ugly, generic, amateur, cluttered, or AI-generated, or feels sluggish, janky, or unresponsive, or should feel snappier or more premium. Gives cited, testable heuristics (spacing values, chart rules, dark-mode steps, state coverage) rather than an aesthetic direction, covering layout, hierarchy, typography, color, dark mode, icons, charts, tables, pricing pages, forms, modals, sidebars, empty states, navigation, search, onboarding, AI chat interfaces, animation, and interaction feel in apps (feedback, microinteractions, keyboard shortcuts, command menus, haptics, waits and loading, delight). Not for pure frontend logic, bug fixes, or building games."
 ---
 
 # Designing Product UI
@@ -11,7 +11,7 @@ Concrete UI/UX heuristics, each cited to the source and timestamp it came from. 
 
 They are practitioner opinions, not standards. Precedence when they conflict:
 
-1. The user's stated scope. When a rule implies a feature or data the user didn't ask for (a comparison line, bulk actions, version history), propose it rather than build it.
+1. The user's stated scope. When a rule implies a feature or data the user didn't ask for (a comparison line, bulk actions, version history, a command menu, easter eggs, reward imagery), propose it rather than build it.
 2. Accessibility requirements (WCAG contrast, keyboard access, `prefers-reduced-motion`) and platform guidelines.
 3. The product's existing design system.
 4. These rules.
@@ -22,7 +22,7 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 - Within a section, base rules come first, then refinements and exceptions; rules backed by more distinct sources rank higher. `references/bibliography.md` lists every source.
 - **App UI** tags rules for product screens only; **Marketing** tags rules for landing pages and websites only; untagged rules apply to both. **From games** marks a product-UI rule translated from a game-design principle; the cited "Source principle" after it is what the source said, and the rule is the translation to follow.
 - *Note:* text is an editorial caveat (usually accessibility, a CSS translation, or how a game principle applies to apps) that the source did not state. Where it corrects a source number, follow the Note.
-- Each rule ends with citations: `[jain/dashboard-flaws 0:44]` for a video timestamp, or `[freiberg/invisible-details ¶the-selected-item-briefly]` for a passage in an essay, paper or talk transcript. The link definitions at the bottom of each file open the source at that moment or passage.
+- Each rule ends with citations: `[jain/dashboard-flaws 0:44]` for a video timestamp, `[freiberg/invisible-details ¶the-selected-item-briefly]` for a passage in an essay or transcript, or `[buell-norton/labor-illusion ¶p12]` for a PDF page. The links live in `references/links/<topic>.md`; read that file only when you need a clickable link, as in review output.
 
 ## Routing
 
@@ -32,11 +32,11 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 | Fonts, type scales, responsive type, line height, letter spacing, text tiers | `./typography.md` |
 | Palettes, accent use, neutrals, semantic colors, dark mode, contrast | `./color.md` |
 | Shadows, borders, corner radius, icon style and libraries, gradients, imagery, texture | `./depth-and-polish.md` |
-| Buttons, chips, icon labels and tooltips, forms and signup, inputs, cards, carousels, modals, popovers, toasts, delete and undo, autosave, AI chat and prompt interfaces, and empty, loading, error and success states | `./components-and-states.md` |
+| Buttons, chips, icon labels and tooltips, forms and signup, inputs, cards, carousels, modals, popovers, toasts, delete and undo, autosave, AI chat and prompt interfaces, search fields and in-page menus or submenus, and empty, loading, error and success states | `./components-and-states.md` |
 | Dashboards, charts, KPIs, tables, lists, pricing pages and billing | `./data-and-dashboards.md` |
-| Sidebars, tabs, overflow menus, search, what to show versus hide, onboarding and first run, gamification, website navbars, dropdowns and mega menus | `./navigation-and-disclosure.md` |
-| Animation, transitions, easing and durations, hover effects, drag and swipe feedback, loaders, scroll effects | `./motion.md` |
-| How each action feels: acknowledging every click and keypress, speed and flow, layered feedback, haptics, motion that shows where things came from, keyboard-shortcut feedback, waits and loading messages, delight and when to hold back | `./interaction-feel.md` |
+| Sidebars, tabs (when to use them and how to mark the selected one), overflow menus, search placement and scope, what to show versus hide, onboarding and first run, gamification, website navbars, dropdowns and mega menus | `./navigation-and-disclosure.md` |
+| Animation, transitions, easing and durations, which surfaces animate and which don't, how menus and panels open, motion that shows where things came from, hover and press effects, drag and swipe feedback, loader animations, scroll effects | `./motion.md` |
+| How each action feels: acknowledging every click and keypress, speed and flow, keyboard shortcuts and command menus, how long a wait needs which indicator, proportional feedback, sound, haptics, delight and when to hold back | `./interaction-feel.md` |
 | Mobile apps, gestures, thumb zones, tab bars, bottom sheets, macOS and desktop apps | `./mobile-and-desktop.md` |
 | Landing pages, heroes, marketing copy, footers, social proof (navbars are in navigation-and-disclosure) | `./landing-pages.md` |
 | How to approach the work: references, generated UI, reviewing at real size | `./process.md` |
@@ -64,9 +64,9 @@ Rules chosen because a capable model tends to skip them. Some come from with/wit
 
 ## Reviewing a screen
 
-Report each problem as one line: the element, what is wrong, the rule it breaks in your own words, and the rule's first citation as an inline link (copy the URL from the link definition at the bottom of the topic file). Rules are paraphrases, so don't quote them. If the violated part is a *Note:* (editorial, usually accessibility), cite the WCAG success criterion or write "editorial" instead of the source. For a **From games** rule, cite the source principle's citation and say the rule is a translation.
+Report each problem as one line: the element, what is wrong, the rule it breaks in your own words, and the rule's first citation as an inline link (copy the URL from `references/links/<topic>.md`). Rules are paraphrases, so don't quote them. If the violated part is a *Note:* (editorial, usually accessibility), cite the WCAG success criterion or write "editorial" instead of the source. For a **From games** rule, cite its source principle and add "(translated from a game principle)".
 
-Group by severity, in this order and most impactful first within each group:
+Group by severity, in this order and most impactful first within each group. When a problem fits two groups, use the earlier one:
 
 - **Blocks use:** anything that stops a user from understanding or completing a task: accessibility failures, missing states, misleading signals (a destructive action that doesn't look destructive, an unreadable chart), broken hierarchy, navigation or disclosure.
 - **Feels unresponsive:** actions with no visible acknowledgement, slow or blocking feedback, motion on keyboard or high-frequency actions, unannounced changes. Judge feel from the running app or the event handlers and states in code; a screenshot can't show it. If you couldn't run or read it, say "feel not verified".
@@ -75,6 +75,8 @@ Group by severity, in this order and most impactful first within each group:
 ```markdown
 - Blocks use: The Delete button is brand purple like Edit and Share, so it doesn't signal destruction. Breaks: color destructive actions red. [jain/60-30-10-rule 4:35](https://youtu.be/66oOi9OLMCw?t=275)
 - Blocks use: Body text is #999 on white, about 2.8:1. Breaks: text contrast. WCAG 1.4.3
+- Feels unresponsive: Pressing ⌘Z with nothing to undo does nothing visible. Breaks: give unsupported commands a specific response, not silence (translated from a game principle). [jonasson-purho/juice-it-or-lose-it 1:15](https://youtu.be/Fy0aCDmgnxg?t=75)
+- Feels unresponsive: The command menu slides in from the top on every ⌘K. Breaks: keyboard-opened surfaces appear instantly. [freiberg/invisible-details ¶it-feels-right-to](https://rauno.me/craft/interaction-design#:~:text=it%20feels%20right%20to%20not%20animate)
 - Looks unfinished: Card padding varies between 12px and 20px across the row. Breaks: identical card padding within a view. [jain/beginner-mistakes 2:38](https://youtu.be/AH_ugxmLeUM?t=158)
 ```
 

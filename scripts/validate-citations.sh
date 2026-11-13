@@ -66,11 +66,18 @@ for bib_path in sorted(glob.glob("skills/*/references/bibliography.md")):
     if not bib_urls:
         continue
     cited = set()
+    all_defs = {}
     for path in sorted(glob.glob(f"{skill_dir}/*.md")):
         if path.endswith("SKILL.md"):
             continue
         text = open(path).read()
-        defs = dict(re.findall(rf"^\[({LABEL})\]: (\S+)$", text, re.M))
+        links_path = os.path.join(skill_dir, "references", "links", os.path.basename(path))
+        links = open(links_path).read() if os.path.exists(links_path) else ""
+        pairs = re.findall(rf"^\[({LABEL})\]: (\S+)$", text + "\n" + links, re.M)
+        defs = dict(pairs)
+        for label in sorted({l for l, _ in pairs if [x for x, _ in pairs].count(l) > 1}):
+            print(f"FAIL: {links_path}: [{label}] defined more than once")
+            errors += 1
         body = re.sub(rf"^\[{LABEL}\]: \S+$", "", text, flags=re.M)
         uses = set(re.findall(rf"\[({LABEL})\](?!\()", body))
         for label in sorted(uses | set(defs)):
@@ -92,6 +99,14 @@ for bib_path in sorted(glob.glob("skills/*/references/bibliography.md")):
                     problems += check_video(locator, url, bib_urls[key])
             for p in problems:
                 print(f"FAIL: {path}: [{label}] {p}")
+                errors += 1
+        all_defs.update(defs)
+    skill_md = os.path.join(skill_dir, "SKILL.md")
+    if os.path.exists(skill_md):
+        for label, url in re.findall(rf"\[({LABEL})\]\((\S+?)\)", open(skill_md).read()):
+            checked += 1
+            if all_defs.get(label) != url:
+                print(f"FAIL: {skill_md}: [{label}] inline link does not match its definition")
                 errors += 1
     for key in sorted(set(bib_urls) - cited):
         print(f"FAIL: {bib_path}: [{key}] is never cited")

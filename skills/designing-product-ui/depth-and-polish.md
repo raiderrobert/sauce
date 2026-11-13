@@ -2,7 +2,7 @@
 
 Shadows, borders, corner radii, icons, imagery, materials, gradients, texture and decorative touches that add depth and finish without clutter.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/depth-and-polish.md`.
 
 Contents: Restraint · Shadows and elevation · Surfaces, borders and corners · Icons · Imagery and text over images · Style and decoration · Materials and light · Gradients and texture
 
@@ -58,7 +58,7 @@ Contents: Restraint · Shadows and elevation · Surfaces, borders and corners ·
 ## Materials and light
 
 - Build glass surfaces (e.g. a dark-mode tab bar; a common AI-startup style as of 2025) from a semi-transparent fill (about 20% fill opacity, not layer opacity), a subtle gradient, a background blur, a 1px border and a soft inner shadow; put contrast behind it so the blur shows. Reads as a polished, luxury glass effect; blur only works with a lowered fill opacity and only shows over contrasting content ('design judo'). *Note: In CSS, the background blur is backdrop-filter: blur().* ([jain/ai-startup-components 5:59], [jain/crucial-ui-elements 1:48], [kennedy/advanced-ui-tips 10:20])
-- Give key elements real-world materials, e.g. a frosted-glass input or a metallic button (light-to-slightly-darker same-hue gradient, dark text, darker bottom edge); Hearthstone uses gold and gems so items feel valuable. Materials aren't needed, so having them signals extra care; relatable physical objects make things feel valuable. *Note: In product UI, use material cues sparingly, e.g. for key actions or things users pay for or earn.* ([kennedy/advanced-ui-tips 9:59], [sakamoto/hearthstone-immersive-ui 8:43])
+- Give key elements real-world materials, e.g. a frosted-glass input or a metallic button (light-to-slightly-darker same-hue gradient, dark text, darker bottom edge). Materials aren't needed, so having them signals extra care. *Note: In product UI, use material cues sparingly, e.g. for key actions.* ([kennedy/advanced-ui-tips 9:59])
 - Light surfaces from the top: a top-edge sheen (thin white inner shadow, 0 blur, fairly opaque) and, for convexity, a white 100%-to-0% top-down gradient at ~10%. Only glass also gets a bottom sheen. The light source is at the top; an inner shadow is easier to implement in code than a stroke. *Note: In CSS, the sheen is box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.5) or similar.* ([kennedy/advanced-ui-tips 11:33])
 - Make dividers look inset: a darker top pixel and a lighter bottom pixel. The top angles away from the light and the bottom toward it, so the divider reads as indented. *Note: In CSS, e.g. a border-top darker and a border-bottom lighter than the surface.* ([kennedy/advanced-ui-tips 14:37])
 
@@ -67,99 +67,3 @@ Contents: Restraint · Shadows and elevation · Surfaces, borders and corners ·
 - **Marketing:** Behind a hero, add a very subtle background gradient or decorative pattern and darken or fade its edges (e.g. with a radial gradient mask) to pull attention to the center. Without it the section looks bland; subtlety is the name of the game. ([jain/modern-layouts 3:15], [jain/vibe-coding-cant-fix 6:07], [kennedy/advanced-ui-tips 16:11])
 - Add subtle noise texture to image or color backgrounds, sparingly and never across the whole site. Adds texture and helps text contrast; too much looks like TV static. ([jain/google-ai-redesign 3:12], [jain/vibe-coding-cant-fix 5:30])
 - **Marketing:** Build mesh gradients for a hero or section background, never the whole page, from 8-10 or more overlapping, semi-transparent, blurred circles. More overlapping layers give brighter, more vibrant results. *Note: In CSS, blur the circles with filter: blur(). The hero-or-section scope is editorial (see also the page-background rule in color.md).* ([jain/figma-web-effects 3:19])
-
-[apple/designing-fluid-interfaces ¶lifting-it-up-to]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=lifting%20it%20up%20to%20a%20separate
-[apple/explore-the-new-design 1:04]: https://youtu.be/nwyaB288qBA?t=64
-[jain/60-30-10-rule 1:36]: https://youtu.be/66oOi9OLMCw?t=96
-[jain/ai-startup-components 5:59]: https://youtu.be/If7iCPDy2vk?t=359
-[jain/animated-sidebar 0:38]: https://youtu.be/NtZeYmTMuo4?t=38
-[jain/animated-sidebar 0:50]: https://youtu.be/NtZeYmTMuo4?t=50
-[jain/awful-to-amazing 2:22]: https://youtu.be/ulSOdTgoGeY?t=142
-[jain/beginner-mistakes 1:12]: https://youtu.be/AH_ugxmLeUM?t=72
-[jain/beginner-mistakes 1:37]: https://youtu.be/AH_ugxmLeUM?t=97
-[jain/beginner-mistakes 3:10]: https://youtu.be/AH_ugxmLeUM?t=190
-[jain/beginner-mistakes 3:55]: https://youtu.be/AH_ugxmLeUM?t=235
-[jain/beginner-mistakes 4:36]: https://youtu.be/AH_ugxmLeUM?t=276
-[jain/beginner-mistakes 5:20]: https://youtu.be/AH_ugxmLeUM?t=320
-[jain/boring-design-hacks 1:11]: https://youtu.be/SfX43uIubj4?t=71
-[jain/boring-design-hacks 1:55]: https://youtu.be/SfX43uIubj4?t=115
-[jain/color-mistakes 2:21]: https://youtu.be/EOcY3hPMQkk?t=141
-[jain/color-mistakes 4:27]: https://youtu.be/EOcY3hPMQkk?t=267
-[jain/crucial-ui-elements 1:48]: https://youtu.be/gKM6b2EnW1k?t=108
-[jain/crucial-ui-elements 3:35]: https://youtu.be/gKM6b2EnW1k?t=215
-[jain/crucial-ui-elements 4:03]: https://youtu.be/gKM6b2EnW1k?t=243
-[jain/dashboard-ui 6:40]: https://youtu.be/B7k5rOgmOGY?t=400
-[jain/every-ui-concept 6:25]: https://youtu.be/EcbgbKtOELY?t=385
-[jain/every-ui-concept 6:33]: https://youtu.be/EcbgbKtOELY?t=393
-[jain/every-ui-concept 6:41]: https://youtu.be/EcbgbKtOELY?t=401
-[jain/every-ui-concept 8:44]: https://youtu.be/EcbgbKtOELY?t=524
-[jain/every-ui-concept 8:57]: https://youtu.be/EcbgbKtOELY?t=537
-[jain/figma-web-effects 3:19]: https://youtu.be/MZSm6MA8bww?t=199
-[jain/google-ai-redesign 1:52]: https://youtu.be/pGYLZyBE32o?t=112
-[jain/google-ai-redesign 3:12]: https://youtu.be/pGYLZyBE32o?t=192
-[jain/google-ai-redesign 5:25]: https://youtu.be/pGYLZyBE32o?t=325
-[jain/landing-page-levels 0:51]: https://youtu.be/eMMiLeo_UGI?t=51
-[jain/learn-ui-in-10-minutes 1:26]: https://youtu.be/9WVt1CelBfg?t=86
-[jain/learn-ui-in-10-minutes 5:39]: https://youtu.be/9WVt1CelBfg?t=339
-[jain/mobile-app-ui 3:13]: https://youtu.be/Gfsd8NNuD9g?t=193
-[jain/modern-layouts 3:15]: https://youtu.be/VPeTgU7la34?t=195
-[jain/saas-vibe-code-mistakes 0:24]: https://youtu.be/PDcQJOPby1k?t=24
-[jain/skincare-redesign 4:39]: https://youtu.be/BvbFPzLjWcU?t=279
-[jain/tesla-wannabe-redesign 2:49]: https://youtu.be/V3Omp1hm0Sg?t=169
-[jain/tesla-wannabe-redesign 3:57]: https://youtu.be/V3Omp1hm0Sg?t=237
-[jain/ui-cheat-codes 1:39]: https://youtu.be/c1TvOcKdBVE?t=99
-[jain/ui-cheat-codes 6:01]: https://youtu.be/c1TvOcKdBVE?t=361
-[jain/vibe-coding-cant-fix 5:30]: https://youtu.be/RCneB_MQ7qs?t=330
-[jain/vibe-coding-cant-fix 6:07]: https://youtu.be/RCneB_MQ7qs?t=367
-[jain/vibe-coding-pro-ui 3:23]: https://youtu.be/xHD01_Onac0?t=203
-[jain/web-design-hacks 2:00]: https://youtu.be/Lp6ey4AyDzA?t=120
-[jain/web-design-hacks 2:29]: https://youtu.be/Lp6ey4AyDzA?t=149
-[jain/web-design-hacks 5:29]: https://youtu.be/Lp6ey4AyDzA?t=329
-[jain/web-design-hacks 6:03]: https://youtu.be/Lp6ey4AyDzA?t=363
-[jain/web-design-hacks 6:14]: https://youtu.be/Lp6ey4AyDzA?t=374
-[jain/website-layouts 2:03]: https://youtu.be/P2ksReDwWkE?t=123
-[jain/weirdly-perfect-ui 7:22]: https://youtu.be/neE6wOuBIP8?t=442
-[kennedy/advanced-design-tips 1:16]: https://youtu.be/6jiq5g_bXB8?t=76
-[kennedy/advanced-design-tips 3:23]: https://youtu.be/6jiq5g_bXB8?t=203
-[kennedy/advanced-design-tips 6:50]: https://youtu.be/6jiq5g_bXB8?t=410
-[kennedy/advanced-ui-tips 10:20]: https://youtu.be/-2vzMH8iqsg?t=620
-[kennedy/advanced-ui-tips 11:33]: https://youtu.be/-2vzMH8iqsg?t=693
-[kennedy/advanced-ui-tips 13:56]: https://youtu.be/-2vzMH8iqsg?t=836
-[kennedy/advanced-ui-tips 14:37]: https://youtu.be/-2vzMH8iqsg?t=877
-[kennedy/advanced-ui-tips 16:11]: https://youtu.be/-2vzMH8iqsg?t=971
-[kennedy/advanced-ui-tips 9:59]: https://youtu.be/-2vzMH8iqsg?t=599
-[kennedy/starting-a-ui-project 39:23]: https://youtu.be/JOQJO_V7sew?t=2363
-[kennedy/timezones-redesign 5:30]: https://youtu.be/B4XHaboNMOI?t=330
-[kennedy/wodify-redesign 3:27]: https://youtu.be/OdS7fOS7bTk?t=207
-[nngroup/anatomy-of-good-icons 0:21]: https://youtu.be/9MRTqn9tRl8?t=21
-[nngroup/anatomy-of-good-icons 0:57]: https://youtu.be/9MRTqn9tRl8?t=57
-[raroque/ai-follow-my-designs 11:15]: https://youtu.be/18V3lFePdWU?t=675
-[raroque/ai-follow-my-designs 36:20]: https://youtu.be/18V3lFePdWU?t=2180
-[raroque/app-design-process 4:27]: https://youtu.be/H0czeRyXPxA?t=267
-[raroque/apps-feel-10x-better 3:47]: https://youtu.be/8mMH6Pq8qnE?t=227
-[raroque/apps-feel-10x-better 6:27]: https://youtu.be/8mMH6Pq8qnE?t=387
-[raroque/apps-feel-10x-better 7:43]: https://youtu.be/8mMH6Pq8qnE?t=463
-[raroque/apps-feel-premium 4:29]: https://youtu.be/MXLF8b15GhQ?t=269
-[sakamoto/hearthstone-immersive-ui 8:43]: https://youtu.be/axkPXCNjOh8?t=523
-[schoger/bad-about 5:57]: https://youtu.be/S6-q5BheEYU?t=357
-[schoger/bad-about 6:08]: https://youtu.be/S6-q5BheEYU?t=368
-[schoger/bad-about 6:24]: https://youtu.be/S6-q5BheEYU?t=384
-[schoger/dashboard-with-ai 0:01:56]: https://youtu.be/lQCWuOT5ENQ?t=116
-[schoger/dashboard-with-ai 0:05:58]: https://youtu.be/lQCWuOT5ENQ?t=358
-[schoger/dashboard-with-ai 0:07:55]: https://youtu.be/lQCWuOT5ENQ?t=475
-[schoger/designing-with-claude-code 0:05:51]: https://youtu.be/lkKGQVHrXzE?t=351
-[schoger/designing-with-claude-code 0:33:01]: https://youtu.be/lkKGQVHrXzE?t=1981
-[schoger/designing-with-claude-code 0:33:48]: https://youtu.be/lkKGQVHrXzE?t=2028
-[schoger/designing-with-claude-code 0:48:44]: https://youtu.be/lkKGQVHrXzE?t=2924
-[schoger/resolute 11:52]: https://youtu.be/BMHUKij1yUE?t=712
-[schoger/resolute 12:15]: https://youtu.be/BMHUKij1yUE?t=735
-[schoger/resolute 2:21]: https://youtu.be/BMHUKij1yUE?t=141
-[schoger/transistor 10:01]: https://youtu.be/ZT4WRRhacWk?t=601
-[schoger/transistor 6:38]: https://youtu.be/ZT4WRRhacWk?t=398
-[schoger/transistor 9:37]: https://youtu.be/ZT4WRRhacWk?t=577
-[schoger/tuple 3:16]: https://youtu.be/RC9cYdbQ-_c?t=196
-[schoger/wp-pusher-checkout 7:23]: https://youtu.be/5gdYHlYAKDY?t=443
-[schoger/wp-pusher-checkout 9:57]: https://youtu.be/5gdYHlYAKDY?t=597
-[schoger/wss 4:19]: https://youtu.be/ZJj7uNdzPpM?t=259
-[schoger/wss 4:45]: https://youtu.be/ZJj7uNdzPpM?t=285
-[schoger/wss 6:49]: https://youtu.be/ZJj7uNdzPpM?t=409

@@ -1,0 +1,50 @@
+# Citation links: mobile-and-desktop.md
+
+Link definitions for every citation label in `../../mobile-and-desktop.md`. Read this only to turn a citation into a clickable link, for example in review output.
+
+[apple/intuitive-search 3:22]: https://youtu.be/lx45sKEnZkU?t=202
+[apple/intuitive-search 7:57]: https://youtu.be/lx45sKEnZkU?t=477
+[apple/principles-of-great-design 9:46]: https://youtu.be/Xa9L2yx_QH8?t=586
+[apple/touch-on-mac 11:23]: https://youtu.be/2cq3ytwLrLk?t=683
+[apple/touch-on-mac 2:42]: https://youtu.be/2cq3ytwLrLk?t=162
+[apple/touch-on-mac 4:13]: https://youtu.be/2cq3ytwLrLk?t=253
+[apple/touch-on-mac 4:47]: https://youtu.be/2cq3ytwLrLk?t=287
+[apple/touch-on-mac 6:29]: https://youtu.be/2cq3ytwLrLk?t=389
+[apple/touch-on-mac 7:14]: https://youtu.be/2cq3ytwLrLk?t=434
+[apple/touch-on-mac 7:37]: https://youtu.be/2cq3ytwLrLk?t=457
+[apple/touch-on-mac 9:17]: https://youtu.be/2cq3ytwLrLk?t=557
+[freiberg/invisible-details ¶its-a-deliberate-attempt]: https://rauno.me/craft/interaction-design#:~:text=it%27s%20a%20deliberate%20attempt%20to%20conceal
+[freiberg/invisible-details ¶the-interface-needs-to]: https://rauno.me/craft/interaction-design#:~:text=the%20interface%20needs%20to%20first%20establish
+[jain/crucial-ui-elements 0:34]: https://youtu.be/gKM6b2EnW1k?t=34
+[jain/crucial-ui-elements 1:04]: https://youtu.be/gKM6b2EnW1k?t=64
+[jain/dashboard-flaws 3:38]: https://youtu.be/Ksx9C2-3yMo?t=218
+[jain/macos-apps 0:24]: https://youtu.be/Vy0KKvZJRH8?t=24
+[jain/macos-apps 1:02]: https://youtu.be/Vy0KKvZJRH8?t=62
+[jain/macos-apps 1:37]: https://youtu.be/Vy0KKvZJRH8?t=97
+[jain/macos-apps 2:54]: https://youtu.be/Vy0KKvZJRH8?t=174
+[jain/macos-apps 7:24]: https://youtu.be/Vy0KKvZJRH8?t=444
+[jain/mobile-app-ui 0:27]: https://youtu.be/Gfsd8NNuD9g?t=27
+[jain/mobile-app-ui 0:59]: https://youtu.be/Gfsd8NNuD9g?t=59
+[jain/mobile-app-ui 1:32]: https://youtu.be/Gfsd8NNuD9g?t=92
+[jain/mobile-app-ui 2:03]: https://youtu.be/Gfsd8NNuD9g?t=123
+[jain/mobile-app-ui 2:28]: https://youtu.be/Gfsd8NNuD9g?t=148
+[jain/mobile-app-ui 2:49]: https://youtu.be/Gfsd8NNuD9g?t=169
+[jain/mobile-app-ui 4:06]: https://youtu.be/Gfsd8NNuD9g?t=246
+[jain/mobile-app-ui 5:32]: https://youtu.be/Gfsd8NNuD9g?t=332
+[jain/mobile-app-ui 5:45]: https://youtu.be/Gfsd8NNuD9g?t=345
+[jain/mobile-app-ui 6:03]: https://youtu.be/Gfsd8NNuD9g?t=363
+[jain/mobile-swipe-interactions 0:28]: https://youtu.be/14h1VnkQvIc?t=28
+[jain/mobile-swipe-interactions 1:50]: https://youtu.be/14h1VnkQvIc?t=110
+[jain/mobile-swipe-interactions 4:14]: https://youtu.be/14h1VnkQvIc?t=254
+[jain/mobile-swipe-interactions 5:11]: https://youtu.be/14h1VnkQvIc?t=311
+[jain/software-must-lie 8:38]: https://youtu.be/S8DcTJm8pYM?t=518
+[jain/spotify-wrapped-redesign 1:31]: https://youtu.be/goWOAFqJHpA?t=91
+[jain/spotify-wrapped-redesign 1:40]: https://youtu.be/goWOAFqJHpA?t=100
+[jain/tiktok-ux 4:57]: https://youtu.be/ixUq4HM4FNg?t=297
+[kennedy/wodify-redesign 1:37]: https://youtu.be/OdS7fOS7bTk?t=97
+[kennedy/wodify-redesign 2:09]: https://youtu.be/OdS7fOS7bTk?t=129
+[nngroup/content-dispersion-mobile 1:02]: https://youtu.be/-3xbwQt4MGQ?t=62
+[raroque/app-design-process 9:37]: https://youtu.be/H0czeRyXPxA?t=577
+[schoger/dashboard-with-ai 0:04:25]: https://youtu.be/lQCWuOT5ENQ?t=265
+[schoger/wss 11:35]: https://youtu.be/ZJj7uNdzPpM?t=695
+[schoger/wss 12:30]: https://youtu.be/ZJj7uNdzPpM?t=750

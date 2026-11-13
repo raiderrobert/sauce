@@ -2,7 +2,7 @@
 
 Progressive disclosure, sidebars and app navigation, page structure, onboarding and engagement, website nav bars and search.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations (`author/source locator`, a timestamp or a ¶ quote anchor) link to that moment or passage; definitions are at the end of the file.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from the cited game-design Source principle, untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/navigation-and-disclosure.md`.
 
 Contents: Progressive disclosure · Sidebar and app navigation · Tabs · Page structure and wayfinding · Onboarding and engagement · Website nav bars and menus · Search
 
@@ -39,7 +39,7 @@ Contents: Progressive disclosure · Sidebar and app navigation · Tabs · Page s
 
 - Use tabs only for a few essential, clearly grouped views users needn't compare; show all at once, avoiding scrolling or multi-row tab lists, and treat more than seven as a warning sign. Users should see every option at a glance; each extra tab is another decision, and comparing means switching. ([apple/design-foundations 5:22], [nngroup/better-tabs 3:09], [nngroup/tabs-humble-powerful 1:46])
 - Use tabs only to switch views: not for actions like Add, not to scroll to page sections, and don't mix in-page and navigation tabs in one control. Users expect tabs to toggle the view and behave alike; put Add inside the section where it's used. ([apple/design-foundations 6:01], [nngroup/tabs-humble-powerful 4:40], [schoger/wss 0:51])
-- Mark the selected tab with two or more cues (high-contrast fill joined to the panel, 4px+ underline, bolder or darker label); keep unselected labels at accessible contrast. Users must spot the active tab instantly, especially with only two tabs; faded tabs get ignored. *Note: In CSS, reserve the bold label's width (e.g. a hidden bold copy) so selection doesn't shift tabs. For accessibility, expose selection with aria-selected.* ([nngroup/better-tabs 0:37])
+- Mark the selected tab with two or more cues (high-contrast fill joined to the panel, 4px+ underline, bolder or darker label); keep unselected labels at accessible contrast; keep unselected tabs neutral with a hover style, never color-coded per tab. Users must spot the active tab instantly, especially with only two tabs; faded tabs get ignored. *Note: In CSS, reserve the bold label's width (e.g. a hidden bold copy) so selection doesn't shift tabs. For accessibility, expose selection with aria-selected.* ([nngroup/better-tabs 0:37], [nngroup/tabs-humble-powerful 1:05], [schoger/resolute 10:12], [schoger/wss 7:02])
 
 ## Page structure and wayfinding
 
@@ -81,111 +81,3 @@ Contents: Progressive disclosure · Sidebar and app navigation · Tabs · Page s
 - Place search to signal its scope: one primary entry point (Search tab or sidebar item) for app-wide search; inline under a section's title, with descriptive placeholder, for that section only. Placement sets expectations; search placed over content it doesn't search misleads. *Note: For accessibility, placeholder text doesn't replace an accessible label for the field.* ([apple/intuitive-search 3:41])
 - **App UI:** On a Search tab, show a landing page of suggested categories when content is broad and people explore; open the keyboard immediately when people usually know what they want. Suggestions ground explorers in what's available; known-item seekers are never more than a tap away. ([apple/intuitive-search 6:20])
 - **App UI:** When search results look like browse, show the result count, the query, a clear X in the search bar and a back arrow. Distinguishes results from browsing. ([jain/macos-apps 6:22])
-
-[apple/design-foundations 2:03]: https://youtu.be/dGcqqA3Sl-o?t=123
-[apple/design-foundations 5:22]: https://youtu.be/dGcqqA3Sl-o?t=322
-[apple/design-foundations 6:01]: https://youtu.be/dGcqqA3Sl-o?t=361
-[apple/design-foundations 9:01]: https://youtu.be/dGcqqA3Sl-o?t=541
-[apple/designing-fluid-interfaces ¶you-can-clip-the]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=you%20can%20clip%20the%20content%20off
-[apple/intuitive-search 3:41]: https://youtu.be/lx45sKEnZkU?t=221
-[apple/intuitive-search 6:20]: https://youtu.be/lx45sKEnZkU?t=380
-[apple/principles-of-great-design 11:20]: https://youtu.be/Xa9L2yx_QH8?t=680
-[apple/touch-on-mac 13:05]: https://youtu.be/2cq3ytwLrLk?t=785
-[eldh/invisible-details ¶contextual-menus-are-also]: https://linear.app/now/invisible-details#:~:text=contextual%20menus%20are%20also%20a%20great
-[freiberg/invisible-details ¶double-tapping-the-scrollbar]: https://rauno.me/craft/interaction-design#:~:text=double%20tapping%20the%20scrollbar%20will%20place
-[jain/ai-startup-components 0:43]: https://youtu.be/If7iCPDy2vk?t=43
-[jain/ai-startup-components 1:28]: https://youtu.be/If7iCPDy2vk?t=88
-[jain/animated-sidebar 0:25]: https://youtu.be/NtZeYmTMuo4?t=25
-[jain/beginner-mistakes 0:30]: https://youtu.be/AH_ugxmLeUM?t=30
-[jain/beginner-mistakes 4:20]: https://youtu.be/AH_ugxmLeUM?t=260
-[jain/captivating-sections 4:22]: https://youtu.be/tNMAFjzapOk?t=262
-[jain/crucial-ui-elements 1:34]: https://youtu.be/gKM6b2EnW1k?t=94
-[jain/dashboard-flaws 2:32]: https://youtu.be/Ksx9C2-3yMo?t=152
-[jain/dashboard-flaws 2:59]: https://youtu.be/Ksx9C2-3yMo?t=179
-[jain/dashboard-flaws 3:50]: https://youtu.be/Ksx9C2-3yMo?t=230
-[jain/dashboard-flaws 3:56]: https://youtu.be/Ksx9C2-3yMo?t=236
-[jain/dashboard-flaws 5:52]: https://youtu.be/Ksx9C2-3yMo?t=352
-[jain/dashboard-ui 0:20]: https://youtu.be/B7k5rOgmOGY?t=20
-[jain/dashboard-ui 0:35]: https://youtu.be/B7k5rOgmOGY?t=35
-[jain/dashboard-ui 0:43]: https://youtu.be/B7k5rOgmOGY?t=43
-[jain/dashboard-ui 0:57]: https://youtu.be/B7k5rOgmOGY?t=57
-[jain/dashboard-ui 1:03]: https://youtu.be/B7k5rOgmOGY?t=63
-[jain/dashboard-ui 6:59]: https://youtu.be/B7k5rOgmOGY?t=419
-[jain/finance-dashboard-redesign 1:01]: https://youtu.be/Yr2uIcFZDDQ?t=61
-[jain/finance-dashboard-redesign 1:41]: https://youtu.be/Yr2uIcFZDDQ?t=101
-[jain/finance-dashboard-redesign 8:13]: https://youtu.be/Yr2uIcFZDDQ?t=493
-[jain/gamifying-apps 0:57]: https://youtu.be/jSxxAFxjxbU?t=57
-[jain/gamifying-apps 1:22]: https://youtu.be/jSxxAFxjxbU?t=82
-[jain/gamifying-apps 4:28]: https://youtu.be/jSxxAFxjxbU?t=268
-[jain/genius-designer 3:52]: https://youtu.be/HE4rLEQpiXY?t=232
-[jain/genius-designer 4:03]: https://youtu.be/HE4rLEQpiXY?t=243
-[jain/genius-designer 4:07]: https://youtu.be/HE4rLEQpiXY?t=247
-[jain/google-ai-redesign 4:53]: https://youtu.be/pGYLZyBE32o?t=293
-[jain/landing-page-levels 1:26]: https://youtu.be/eMMiLeo_UGI?t=86
-[jain/landing-page-levels 1:36]: https://youtu.be/eMMiLeo_UGI?t=96
-[jain/landing-page-levels 6:08]: https://youtu.be/eMMiLeo_UGI?t=368
-[jain/landing-page-levels 9:00]: https://youtu.be/eMMiLeo_UGI?t=540
-[jain/learn-ui-in-10-minutes 1:11]: https://youtu.be/9WVt1CelBfg?t=71
-[jain/learn-ui-in-10-minutes 7:00]: https://youtu.be/9WVt1CelBfg?t=420
-[jain/macos-apps 2:42]: https://youtu.be/Vy0KKvZJRH8?t=162
-[jain/macos-apps 3:41]: https://youtu.be/Vy0KKvZJRH8?t=221
-[jain/macos-apps 5:31]: https://youtu.be/Vy0KKvZJRH8?t=331
-[jain/macos-apps 6:22]: https://youtu.be/Vy0KKvZJRH8?t=382
-[jain/macos-apps 8:34]: https://youtu.be/Vy0KKvZJRH8?t=514
-[jain/micro-animations 7:04]: https://youtu.be/ld1zhQMXxXU?t=424
-[jain/mobile-app-ui 0:51]: https://youtu.be/Gfsd8NNuD9g?t=51
-[jain/mobile-app-ui 6:27]: https://youtu.be/Gfsd8NNuD9g?t=387
-[jain/modern-layouts 6:36]: https://youtu.be/VPeTgU7la34?t=396
-[jain/saas-vibe-code-mistakes 1:39]: https://youtu.be/PDcQJOPby1k?t=99
-[jain/saas-vibe-code-mistakes 1:51]: https://youtu.be/PDcQJOPby1k?t=111
-[jain/saas-vibe-code-mistakes 2:13]: https://youtu.be/PDcQJOPby1k?t=133
-[jain/saas-vibe-code-mistakes 4:43]: https://youtu.be/PDcQJOPby1k?t=283
-[jain/skincare-redesign 0:46]: https://youtu.be/BvbFPzLjWcU?t=46
-[jain/skincare-redesign 4:16]: https://youtu.be/BvbFPzLjWcU?t=256
-[jain/slept-on-trends 8:44]: https://youtu.be/EHwZzWd-OnQ?t=524
-[jain/software-must-lie 3:46]: https://youtu.be/S8DcTJm8pYM?t=226
-[jain/spotify-wrapped-redesign 2:37]: https://youtu.be/goWOAFqJHpA?t=157
-[jain/tesla-wannabe-redesign 1:55]: https://youtu.be/V3Omp1hm0Sg?t=115
-[jain/tesla-wannabe-redesign 2:05]: https://youtu.be/V3Omp1hm0Sg?t=125
-[jain/tesla-wannabe-redesign 6:24]: https://youtu.be/V3Omp1hm0Sg?t=384
-[jain/think-like-product-designer 0:40]: https://youtu.be/ADaQuZS04Rc?t=40
-[jain/tiktok-ux 1:10]: https://youtu.be/ixUq4HM4FNg?t=70
-[jain/tiktok-ux 1:32]: https://youtu.be/ixUq4HM4FNg?t=92
-[jain/vibe-coding-pro-ui 5:18]: https://youtu.be/xHD01_Onac0?t=318
-[jain/vibe-coding-pro-ui 5:23]: https://youtu.be/xHD01_Onac0?t=323
-[jain/weirdly-perfect-ui 1:07]: https://youtu.be/neE6wOuBIP8?t=67
-[jain/weirdly-perfect-ui 3:37]: https://youtu.be/neE6wOuBIP8?t=217
-[kennedy/wodify-redesign 2:26]: https://youtu.be/OdS7fOS7bTk?t=146
-[nngroup/better-tabs 0:37]: https://youtu.be/hPxrudx1iXg?t=37
-[nngroup/better-tabs 3:09]: https://youtu.be/hPxrudx1iXg?t=189
-[nngroup/buttons-vs-links 1:02]: https://youtu.be/hb_QYE2itO4?t=62
-[nngroup/hamburger-icon 0:43]: https://youtu.be/1au4Gff9cSo?t=43
-[nngroup/latch 0:39]: https://youtu.be/xdkPLINAUU0?t=39
-[nngroup/overflow-menu-icons 0:19]: https://youtu.be/Lo_miuSgQv8?t=19
-[nngroup/overflow-menu-icons 2:00]: https://youtu.be/Lo_miuSgQv8?t=120
-[nngroup/principles-stripe 2:50]: https://youtu.be/qooOXNmdCH4?t=170
-[nngroup/simplicity 1:28]: https://youtu.be/utnOhRSXkyw?t=88
-[nngroup/tabs-humble-powerful 1:46]: https://youtu.be/7ntSojFW5Jg?t=106
-[nngroup/tabs-humble-powerful 2:17]: https://youtu.be/7ntSojFW5Jg?t=137
-[nngroup/tabs-humble-powerful 4:40]: https://youtu.be/7ntSojFW5Jg?t=280
-[nngroup/theory-of-user-delight ¶advanced-options-appear-when]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=Advanced%20options%20appear%20when%20the%20user
-[nngroup/theory-of-user-delight ¶the-hidden-links-with]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=the%20hidden%20links%20with%20little%20information
-[saffer/microinteractions 16:02]: https://youtu.be/9CEtqnPdWoI?t=962
-[saffer/microinteractions 18:30]: https://youtu.be/9CEtqnPdWoI?t=1110
-[saffer/microinteractions 28:23]: https://youtu.be/9CEtqnPdWoI?t=1703
-[saffer/microinteractions 30:06]: https://youtu.be/9CEtqnPdWoI?t=1806
-[sakamoto/hearthstone-immersive-ui 15:13]: https://youtu.be/axkPXCNjOh8?t=913
-[schoger/bad-about 6:46]: https://youtu.be/S6-q5BheEYU?t=406
-[schoger/bad-about 9:43]: https://youtu.be/S6-q5BheEYU?t=583
-[schoger/bad-about 9:55]: https://youtu.be/S6-q5BheEYU?t=595
-[schoger/dashboard-with-ai 0:51:43]: https://youtu.be/lQCWuOT5ENQ?t=3103
-[schoger/designing-with-claude-code 0:18:42]: https://youtu.be/lkKGQVHrXzE?t=1122
-[schoger/resolute 12:31]: https://youtu.be/BMHUKij1yUE?t=751
-[schoger/resolute 12:56]: https://youtu.be/BMHUKij1yUE?t=776
-[schoger/resolute 9:28]: https://youtu.be/BMHUKij1yUE?t=568
-[schoger/transistor 4:04]: https://youtu.be/ZT4WRRhacWk?t=244
-[schoger/wp-pusher-checkout 4:04]: https://youtu.be/5gdYHlYAKDY?t=244
-[schoger/wss 0:51]: https://youtu.be/ZJj7uNdzPpM?t=51
-[slack/easter-eggs ¶include-features-in-the]: https://www.slackstory.com/p/easter-eggs-in-slack#:~:text=include%20features%20in%20the%20product%20that
-[valve/half-life-documentary 0:22:53]: https://youtu.be/TbZ3HzvFEto?t=1373
-[vohra/designing-for-flow ¶make-functions-visible-and]: https://blog.superhuman.com/how-to-design-for-flow/#:~:text=Make%20functions%20visible%2C%20and%20limit%20alternative
