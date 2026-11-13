@@ -20,38 +20,38 @@ Contents: Progressive disclosure · Sidebar and app navigation · Page structure
 ## Sidebar and app navigation
 
 - **App UI:** Use the standard app frame: persistent, global elements (navigation, profile, search, team, settings) in the sidebar, page-level actions in a top bar that changes with the current page, content in the center. The sidebar is the product's spine and frees vertical space; actions are contextual per page. ([jain/dashboard-ui 0:20], [jain/finance-dashboard-redesign 1:01], [jain/macos-apps 2:42], [jain/mobile-app-ui 0:51])
-- **App UI:** Give each sidebar link a recognizable icon and a short title so the sidebar can collapse to icons; for when icons need visible labels or tooltips, see components-and-states.md. Icons make a sidebar scannable and collapsible. ([jain/animated-sidebar 0:25], [jain/beginner-mistakes 4:20], [jain/crucial-ui-elements 1:34], [jain/dashboard-ui 0:43])
+- **App UI:** Give each sidebar link a recognizable icon and a short title so the sidebar can collapse to icons; for when icons need visible labels or tooltips, see also components-and-states.md. Icons make a sidebar scannable and collapsible. ([jain/animated-sidebar 0:25], [jain/beginner-mistakes 4:20], [jain/crucial-ui-elements 1:34], [jain/dashboard-ui 0:43])
 - **App UI:** Put an account card at the top of the sidebar: avatar, name and switcher chevrons, opening a popover of account links. Avoid gradient letter-circle avatars. A picture is identifiable and chevrons show it's clickable; gradient letter circles were an AI-generated cliché as of 2026. ([jain/dashboard-ui 0:35], [jain/saas-vibe-code-mistakes 1:39], [jain/vibe-coding-pro-ui 5:18])
 - **App UI:** Move rarely used links such as Settings and Help to the bottom of the sidebar, and drop needless group labels like 'Menu'. ([jain/dashboard-ui 1:03], [jain/vibe-coding-pro-ui 5:23])
 - **App UI:** Use tabs for related views (e.g. settings, billing) instead of more sidebar links. Keeps users in context; new sections become another tab as the product grows. ([jain/dashboard-ui 6:59], [jain/saas-vibe-code-mistakes 4:43])
-- **App UI:** Group navigation links by relevance, nest them into collapsible groups as they grow, and always show an active-state indicator. Navigation is about reducing cognitive load. ([jain/dashboard-ui 0:57])
+- **App UI:** Group navigation links by relevance and nest them into collapsible groups as they grow. Navigation is about reducing cognitive load. ([jain/dashboard-ui 0:57])
 - **App UI:** Expand a collapsed sidebar only after the pointer dwells at the edge. Avoids accidental pop-outs from fast mouse movement. ([jain/software-must-lie 3:46])
+- **App UI:** In app menus, separate keyboard shortcuts from item labels with alignment and type, e.g. right-aligned in secondary text. The structure tells users what is clickable and what is a hint. ([jain/captivating-sections 4:22])
 
 ## Page structure and wayfinding
 
-- **App UI:** With one main product, skip the generic home page and drop users straight into the product. Very effective; ChatGPT and Gemini did this as of 2026. ([jain/ai-startup-components 0:43], [jain/tesla-wannabe-redesign 2:05])
-- Integrate new features into existing UI rather than giving each its own page, and never build pages whose only purpose is redirecting elsewhere. Structure should make sense, not just look good. ([jain/dashboard-flaws 5:52], [jain/tesla-wannabe-redesign 1:55])
+- With one main product, skip the separate marketing landing page and open straight into the product interface (or, for a single-product marketing site, straight into that product's page). Very effective; ChatGPT and Gemini did this as of 2026. ([jain/ai-startup-components 0:43], [jain/tesla-wannabe-redesign 2:05])
+- Integrate new features into existing UI rather than giving each its own page, and never build pages whose only purpose is redirecting elsewhere, e.g. a single-section page whose only content is a link to the page with the real information. Structure should make sense, not just look good. ([jain/dashboard-flaws 5:52], [jain/tesla-wannabe-redesign 1:55])
 - Break long sequential content into chapters with a jump menu; skip section navigators on short pages. Users can skip to the part they want; short pages don't need it. ([jain/skincare-redesign 0:46], [jain/spotify-wrapped-redesign 2:37])
 
 ## Onboarding and engagement
 
 - **App UI:** Don't drop first-time users onto a fully loaded dashboard; design a first-login empty state that highlights the main action with an explanatory popover. They'll wonder where to start. ([jain/dashboard-flaws 3:50], [jain/mobile-app-ui 6:27])
 - **App UI:** Sequence onboarding: one tooltip on the most important action, then the next or a checklist; never a modal with six bullets explaining everything. Users aren't overwhelmed; modal content is forgotten the moment it closes. ([jain/dashboard-flaws 3:56])
-- **App UI:** Keep onboarding minimal (pick interests, shortest possible tutorial, then the core experience) and infer preferences from behavior rather than relying on stated answers. Figure out what users want before they do. ([jain/tiktok-ux 1:10])
+- **App UI:** In consumer feed or content apps, keep onboarding minimal (pick interests, shortest possible tutorial, then the core experience) and infer preferences from behavior rather than relying on stated answers. Figure out what users want before they do. ([jain/tiktok-ux 1:10])
 - **App UI:** Offer a skip button on optional onboarding steps, plus search or an 'Other' option next to preset choices. Some users won't fit the presets. ([jain/beginner-mistakes 0:30])
 - **App UI:** Ask team size early in onboarding and branch the flow; skip invite-teammates for individuals. It shapes every following step. ([jain/learn-ui-in-10-minutes 7:00])
 - **App UI:** Show the app's value during onboarding (e.g. insights from the user's own data) before introducing gamification, and reassure users about safety when asking for a sensitive connection like a bank account. Demonstrates value before asking for engagement or trust. ([jain/gamifying-apps 4:28])
 - **App UI:** Teach keyboard shortcuts by having users press the key shortcut to dismiss onboarding, and provide a shortcut cheat sheet (e.g. in settings). Doing it teaches it; shortcuts are easy to forget. ([jain/macos-apps 8:34])
-- **App UI:** Show progress concretely: what's done and what's left (e.g. a course percentage or a profile-completion meter). Visible progress and the urge to complete drive users to finish. ([jain/gamifying-apps 0:42])
-- **App UI:** If the product uses gamification, center it on one currency (XP, karma) that shows progress and unlocks features, and tie rewards to users' real goals. Progress and unlocks keep users going; meaningless rewards don't. ([jain/gamifying-apps 0:57])
-- **App UI:** If the product uses gamification, add leaderboards and public badges so users can compare with friends; normalize leaderboards to a local cohort when users' resources differ widely. Comparison motivates, but only when it's fair across currencies and incomes. ([jain/gamifying-apps 1:22])
+- **App UI:** In products that already use gamification, center it on one currency (XP, karma) that shows progress and unlocks features, and tie rewards to users' real goals. Progress and unlocks keep users going; meaningless rewards don't. ([jain/gamifying-apps 0:57])
+- **App UI:** In products that already use gamification, add leaderboards and public badges so users can compare with friends; normalize leaderboards to a local cohort when users' resources differ widely. Comparison motivates, but only when it's fair across currencies and incomes. ([jain/gamifying-apps 1:22])
 
 ## Website nav bars and menus
 
 - **Marketing:** Keep the navbar small and out of the way but give it hierarchy: let one element, like an outlined sign-up CTA, stand out. Flat menus don't draw the eye to the most important action. ([jain/landing-page-levels 1:26], [jain/learn-ui-in-10-minutes 1:11])
 - **Marketing:** Balance the nav bar: center the main links rather than weighting everything right; a search bar can even it out. Right-heavy menus unbalance the page. ([jain/landing-page-levels 1:36], [jain/skincare-redesign 4:16])
-- **Marketing:** Use a mega menu only when there are enough destinations to fill it (e.g. several products or resource groups). With real depth, it signals the product is worth exploring; with few links it's empty. ([jain/landing-page-levels 6:08])
 - **Marketing:** Add images to dropdown and mega menus instead of plain lists of text links. Images give quick context before clicking. ([jain/modern-layouts 6:36], [jain/slept-on-trends 8:44])
+- **Marketing:** Use a mega menu only when there are enough destinations to fill it (e.g. several products or resource groups). With real depth, it signals the product is worth exploring; with few links it's empty. ([jain/landing-page-levels 6:08])
 - Keep submenus open while the pointer heads toward them, using a hover-intent triangle based on pointer position and speed. Diagonal mouse moves otherwise close the submenu. ([jain/software-must-lie 3:02])
 
 ## Search
@@ -64,6 +64,7 @@ Contents: Progressive disclosure · Sidebar and app navigation · Page structure
 [jain/animated-sidebar 0:25]: https://youtu.be/NtZeYmTMuo4?t=25
 [jain/beginner-mistakes 0:30]: https://youtu.be/AH_ugxmLeUM?t=30
 [jain/beginner-mistakes 4:20]: https://youtu.be/AH_ugxmLeUM?t=260
+[jain/captivating-sections 4:22]: https://youtu.be/tNMAFjzapOk?t=262
 [jain/crucial-ui-elements 1:34]: https://youtu.be/gKM6b2EnW1k?t=94
 [jain/dashboard-flaws 2:32]: https://youtu.be/Ksx9C2-3yMo?t=152
 [jain/dashboard-flaws 2:59]: https://youtu.be/Ksx9C2-3yMo?t=179
@@ -79,7 +80,6 @@ Contents: Progressive disclosure · Sidebar and app navigation · Page structure
 [jain/finance-dashboard-redesign 1:01]: https://youtu.be/Yr2uIcFZDDQ?t=61
 [jain/finance-dashboard-redesign 1:41]: https://youtu.be/Yr2uIcFZDDQ?t=101
 [jain/finance-dashboard-redesign 8:13]: https://youtu.be/Yr2uIcFZDDQ?t=493
-[jain/gamifying-apps 0:42]: https://youtu.be/jSxxAFxjxbU?t=42
 [jain/gamifying-apps 0:57]: https://youtu.be/jSxxAFxjxbU?t=57
 [jain/gamifying-apps 1:22]: https://youtu.be/jSxxAFxjxbU?t=82
 [jain/gamifying-apps 4:28]: https://youtu.be/jSxxAFxjxbU?t=268

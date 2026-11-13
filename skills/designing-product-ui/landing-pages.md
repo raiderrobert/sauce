@@ -22,6 +22,7 @@ Contents: Product visuals · Hero sections · Copy · Page structure and footers
 - **Marketing:** Consider a type-in prompt or search bar as the hero CTA instead of a plain button. A user already engaged in an action is more likely to finish it. ([jain/google-ai-redesign 1:08])
 - **Marketing:** Keep contextual illustrations around a centered core message rather than stripping them for clarity. They explain the product without reading; without them the hero feels empty. ([jain/boring-design-hacks 0:27])
 - **Marketing:** Arrange 'scattered' hero images deliberately: larger elements lower, smaller on top, with a safe margin around the text. It should feel random but isn't. ([jain/vibe-coding-cant-fix 5:54])
+- **Marketing:** In text-only hero layouts, give the body text three or more lines. Shorter text leaves too much empty space. ([jain/website-layouts 11:29])
 
 ## Copy
 
@@ -33,7 +34,7 @@ Contents: Product visuals · Hero sections · Copy · Page structure and footers
 ## Page structure and footers
 
 - **Marketing:** Break text-heavy runs with a brand moment: a thin cropped photo or a wide landscape shot with an overlay, carrying one short statement set large and centered with lots of space. Acts as a spacer and creates impact. ([jain/awful-to-amazing 2:38], [jain/learn-ui-in-10-minutes 4:11], [jain/website-layouts 1:31])
-- **Marketing:** Build a logical top-to-bottom flow with smooth transitions between sections, and keep the page no longer than needed. Abrupt sections feel disconnected; good flow encourages scrolling. ([jain/landing-page-levels 3:49], [jain/tesla-wannabe-redesign 1:10])
+- **Marketing:** Build a logical top-to-bottom flow and keep the page no longer than needed: order sections so each answers the visitor's next question (e.g. what it is, how it works, proof, pricing, final CTA), and cut any section that repeats content already shown. Abrupt sections feel disconnected; good flow encourages scrolling. *Note: The section order is an editorial example.* ([jain/landing-page-levels 3:49], [jain/tesla-wannabe-redesign 1:10])
 - **Marketing:** Turn a static row of three cards into a clickable tabbed or multi-select section. Adds interactivity and variety and makes sections more compact. ([jain/landing-page-levels 5:23])
 - **Marketing:** Use stacked cards that slide up over each other to present 3-5 options in detail. ([jain/website-layouts 6:21])
 - **Marketing:** Size the footer to the links: with about five or fewer, center them with the logo above, socials below, copyright left and credits right; switch to a multi-column footer only beyond that. Giant multi-column footers look awful with few links. ([jain/crucial-ui-elements 7:57])
@@ -81,6 +82,7 @@ Contents: Product visuals · Hero sections · Copy · Page structure and footers
 [jain/vibe-coding-cant-fix 3:49]: https://youtu.be/RCneB_MQ7qs?t=229
 [jain/vibe-coding-cant-fix 3:57]: https://youtu.be/RCneB_MQ7qs?t=237
 [jain/vibe-coding-cant-fix 5:54]: https://youtu.be/RCneB_MQ7qs?t=354
+[jain/website-layouts 11:29]: https://youtu.be/P2ksReDwWkE?t=689
 [jain/website-layouts 1:31]: https://youtu.be/P2ksReDwWkE?t=91
 [jain/website-layouts 2:13]: https://youtu.be/P2ksReDwWkE?t=133
 [jain/website-layouts 6:21]: https://youtu.be/P2ksReDwWkE?t=381

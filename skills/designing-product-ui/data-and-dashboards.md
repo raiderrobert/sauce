@@ -8,7 +8,7 @@ Contents: Dashboard layout · Charts · Chart color · KPIs and stats · Tables 
 
 ## Dashboard layout
 
-- **App UI:** Make a dashboard do one thing well and let the data it must show drive its UI; cut bulky elements that give no real value. If it looks like it needs a PhD, simplify. Disorganized, overloaded dashboards are unusable. ([jain/dashboard-flaws 0:22], [jain/dashboard-ui 1:46], [jain/finance-dashboard-redesign 2:38])
+- **App UI:** Make each dashboard answer one primary question (e.g. 'how is revenue trending?') and let the data it must show drive its UI; cut bulky elements that give no real value. Disorganized, overloaded dashboards are unusable. ([jain/dashboard-flaws 0:22], [jain/dashboard-ui 1:46], [jain/finance-dashboard-redesign 2:38])
 - **App UI:** Rank each module as high, mid or low priority before arranging: put the most important information higher and farther left in the main area, low-priority information lower, and reserve the very top for page actions or simple navigation. The main area should reflect what matters most to the user. ([jain/dashboard-ui 2:20], [jain/finance-dashboard-redesign 3:44])
 - **App UI:** Add a summary view: a roll-up chart above time-based logs or tables, or a summary dashboard beside a click-through story format. Shows trends at a glance instead of hunting through timestamps or slides. ([jain/dashboard-flaws 2:10], [jain/spotify-wrapped-redesign 0:44])
 - **App UI:** Give every card enough context (amount, date, place) to be understood; merge small related widgets into the card they belong to, and remove cards that do nothing. Fragments and purposeless cards look useless; integrated, they make sense. ([jain/finance-dashboard-redesign 2:19], [jain/saas-vibe-code-mistakes 3:28])
@@ -32,15 +32,14 @@ Contents: Dashboard layout · Charts · Chart color · KPIs and stats · Tables 
 
 - **App UI:** Never repeat the same data: no duplicated KPI rows across pages, no chart restating percentages already shown. Repetition wastes space; duplicated KPI rows were a common tell of AI-generated UI as of 2026. ([jain/finance-dashboard-redesign 4:15], [jain/saas-vibe-code-mistakes 1:15])
 - **App UI:** Add color to dashboards through micro charts in KPI cards rather than colored buttons and icons, and put comparison text beneath stats (e.g. percent change from last year). The color then carries information, and a number needs a reference point. ([jain/saas-vibe-code-mistakes 0:55], [jain/spotify-wrapped-redesign 4:04])
-- **App UI:** Show progress as an actual percentage instead of a vague 'In progress' label, and use completed and incomplete status colors consistently. 'In progress' says nothing, and inconsistent status colors misrepresent progress. ([jain/vibe-coding-pro-ui 5:45])
+- **App UI:** Show progress concretely: an actual percentage, or what's done and what's left (e.g. a course percentage or a profile-completion meter), instead of a vague 'In progress' label; use completed and incomplete status colors consistently. 'In progress' says nothing; visible progress and the urge to complete drive users to finish, and inconsistent status colors misrepresent progress. *Note: Don't rely on color alone; pair it with an icon or text label (WCAG 1.4.1).* ([jain/gamifying-apps 0:42], [jain/vibe-coding-pro-ui 5:45])
 - **App UI:** On usage pages, prefer a simple two-column layout with small donut charts over a generic row of KPI cards. Generic KPI rows looked templated and AI-generated as of 2026. ([jain/saas-vibe-code-mistakes 3:40])
 
 ## Tables and lists
 
 - Show only scan-critical fields on list items and overview data (e.g. location, rating, price); leave details for the detail page. Users scan with specifics and click in for details. ([jain/dashboard-ui 2:54], [jain/genius-designer 2:48])
-- Show a collection as one list rather than separate bordered cards; when rows must be tight, use subtle alternating row backgrounds instead of divider lines. Lists also make empty states easier. For separating items with spacing, see layout-and-hierarchy.md. ([jain/dashboard-ui 3:12], [jain/ui-cheat-codes 5:54])
+- Show a collection as one list rather than separate bordered cards; when rows must be tight, use subtle alternating row backgrounds instead of divider lines. Lists also make empty states easier. For separating items with spacing, see also layout-and-hierarchy.md. ([jain/dashboard-ui 3:12], [jain/ui-cheat-codes 5:54])
 - Show avatars wherever people are referenced in lists or activity logs. The eye links who did what faster than it reads a name. ([jain/dashboard-flaws 2:03], [jain/weirdly-perfect-ui 2:28])
-- **App UI:** Give tables search, filter and sort. Display is only half the job; the table should be a tool. ([jain/dashboard-ui 6:19])
 - **App UI:** In tables, truncate long cell text, render fixed-set values such as department or status as chips, and shade inactive or deactivated rows. Gives the other columns room and makes state visible at a glance. ([jain/dashboard-flaws 0:41])
 - **App UI:** Show time-delineated data as a timeline rather than a time-sorted table, e.g. in a sidebar popout or second column. A timeline is much easier to follow. ([jain/dashboard-flaws 1:14])
 - Group list items by a meaningful key, such as due date, so any item can be found in about a second. Grouping makes density work for you. ([jain/weirdly-perfect-ui 2:33])
@@ -78,7 +77,6 @@ Contents: Dashboard layout · Charts · Chart color · KPIs and stats · Tables 
 [jain/dashboard-ui 3:25]: https://youtu.be/B7k5rOgmOGY?t=205
 [jain/dashboard-ui 3:39]: https://youtu.be/B7k5rOgmOGY?t=219
 [jain/dashboard-ui 3:46]: https://youtu.be/B7k5rOgmOGY?t=226
-[jain/dashboard-ui 6:19]: https://youtu.be/B7k5rOgmOGY?t=379
 [jain/every-ui-concept 1:23]: https://youtu.be/EcbgbKtOELY?t=83
 [jain/every-ui-concept 5:14]: https://youtu.be/EcbgbKtOELY?t=314
 [jain/finance-dashboard-redesign 2:19]: https://youtu.be/Yr2uIcFZDDQ?t=139
@@ -88,6 +86,7 @@ Contents: Dashboard layout · Charts · Chart color · KPIs and stats · Tables 
 [jain/finance-dashboard-redesign 4:15]: https://youtu.be/Yr2uIcFZDDQ?t=255
 [jain/finance-dashboard-redesign 4:39]: https://youtu.be/Yr2uIcFZDDQ?t=279
 [jain/finance-dashboard-redesign 6:57]: https://youtu.be/Yr2uIcFZDDQ?t=417
+[jain/gamifying-apps 0:42]: https://youtu.be/jSxxAFxjxbU?t=42
 [jain/genius-designer 2:48]: https://youtu.be/HE4rLEQpiXY?t=168
 [jain/saas-vibe-code-mistakes 0:55]: https://youtu.be/PDcQJOPby1k?t=55
 [jain/saas-vibe-code-mistakes 1:15]: https://youtu.be/PDcQJOPby1k?t=75

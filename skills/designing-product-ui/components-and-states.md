@@ -14,16 +14,17 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 - Design button states up front: default, hover, pressed, disabled, plus a loading state with spinner where needed. Otherwise state colors get picked at random at the end. ([jain/every-ui-concept 7:35], [jain/micro-animations 0:22])
 - Keep off and default states visually quiet and reserve color for changed or active states; mark the selected toggle option with a background highlight and gray out inactive options and default values in settings. Color is the signal that something changed; non-default values should catch the eye. ([jain/every-ui-concept 0:18], [jain/weirdly-perfect-ui 6:07])
 - Use toasts to confirm changes made in a modal and to surface warnings and errors without taking over the screen; give them loading and success states, not just a slide-up. Users can't see the page behind a modal, and warnings are frequently missed. ([jain/dashboard-ui 5:16], [jain/micro-animations 1:52])
-- Derive interaction states along the base color's scale: hover one step, pressed one step further, in a consistent direction for the theme. Make disabled desaturated, e.g. light gray with white text. Consistent steps keep states predictable; light gray reads as disabled in both themes. ([jain/color-mistakes 6:16])
-- Show selected and focus states with a brighter, heavier border plus a soft glow behind, e.g. box-shadow: 0 0 24px in the accent at low opacity. ([jain/animated-sidebar 6:08])
+- Derive interaction states along the base color's scale: hover one step, pressed one step further, in a consistent direction for the theme. Make disabled a muted fill with muted but still readable text, defined separately for each theme. Consistent steps keep states predictable. ([jain/color-mistakes 6:16])
+- Show selected states with a brighter, heavier border plus a soft glow behind, e.g. box-shadow: 0 0 24px in the accent at low opacity. *Note: Give keyboard focus a separate indicator that reaches 3:1 against adjacent colors and looks different from selected.* ([jain/animated-sidebar 6:08])
 
 ## Empty, loading and error states
 
 - Design beyond the happy path: give every screen empty, loading, success and error states. Never show a blank list, dashboard or new object; show a message and a CTA that starts the first task. Users aren't left staring at a blank screen and know the next step. ([jain/dashboard-ui 3:18], [jain/macos-apps 3:31], [jain/think-like-product-designer 0:42])
-- Keep functional loaders as short as the work allows, looping and fluid. A deliberate intro loader is a marketing device only (see motion.md). People are impatient and the product should feel fast. ([jain/ai-startup-components 1:37], [jain/trendy-web-animations 1:57])
+- Keep functional loaders as short as the work allows, looping and fluid. A deliberate intro loader is a marketing device only (see also motion.md). People are impatient and the product should feel fast. ([jain/ai-startup-components 1:37], [jain/trendy-web-animations 1:57])
 - **App UI:** For long-running actions (builds, deploys, integrations), show an informative loading state, then report success or error immediately. Users are never left guessing. ([jain/think-like-product-designer 1:28])
 - Use skeleton placeholders with a shimmer that match the final layout so content slots into place. The layout feels alive while loading. ([jain/ai-startup-components 4:45])
 - For no-results states, show imagery, say that nothing matched, suggest alternatives for likely typos, and offer an exit action. ([jain/mobile-app-ui 6:52])
+- **App UI:** After a create action, prompt the logical next step (e.g. add team members) with an option to skip. A container without its contents is useless. ([jain/think-like-product-designer 2:27])
 
 ## Buttons, chips and icons
 
@@ -40,10 +41,10 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 
 ## Cards and carousels
 
-- Use a carousel when you want to show every card but lack room, for about 3-10 items. Beyond 10 it's tedious to click through; choose another format. ([jain/skincare-redesign 4:31], [jain/website-layouts 7:49])
 - Show carousel dots for count and position with arrows beside them, but make the carousel draggable or give it large nav buttons rather than relying on tiny dots to navigate; keep controls legible over any image (e.g. on a dark blurred backing or below the image). Dots show how many items there are and where you are, but users can't be expected to hit tiny circles, and a new image can hide overlaid controls. ([jain/crucial-ui-elements 10:04], [jain/finance-dashboard-redesign 5:38], [jain/mobile-swipe-interactions 1:09], [jain/website-layouts 4:38])
+- Use a carousel when you want to show every card but lack room, for about 3-10 items. Beyond 10 it's tedious to click through; choose another format. ([jain/skincare-redesign 4:31], [jain/website-layouts 7:49])
 - Show minor card details as a single row of icons with values instead of labeled fields. Icons add context at a glance; labels make users read more and browse slower. ([jain/beginner-mistakes 3:43], [jain/ui-cheat-codes 5:11])
-- Place card titles above images and prefer standard image-plus-text cards over gradient-overlay cards when images vary. Overlay text only works with some images; standard cards always work. ([jain/crucial-ui-elements 4:23], [jain/tesla-wannabe-redesign 4:05])
+- Place card titles above images (spatially above, not overlaid on them) and prefer standard image-plus-text cards over gradient-overlay cards when images vary. Overlay text only works with some images; standard cards always work. ([jain/crucial-ui-elements 4:23], [jain/tesla-wannabe-redesign 4:05])
 - On repeating cards, make the whole card the link (fade in an arrow on hover as the cue) and drop per-card CTA buttons; keep an explicit button only for a specific action like 'Try it out'. With many repeated cards, the whole card is the link anyway. ([jain/crucial-ui-elements 3:41])
 - Drop field labels the content already implies, but keep them where values could be confused, like check-in versus check-out dates. If the UI can't imply a label it isn't clear enough; confusable values still need one. ([jain/ui-cheat-codes 4:42])
 - Group related card data: stack paired fields (name over location) and right-align the secondary pair (price over rating). Makes the card read as structured information, not a flat list. ([jain/ui-cheat-codes 4:47])
@@ -59,10 +60,8 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 
 ## Forms and inputs
 
-- Give signup screens a 'Create account' heading and a link to log in. Many people land on signup by mistake and need a way to log in. ([jain/crucial-ui-elements 7:10], [jain/learn-ui-in-10-minutes 6:37])
-- Give inputs a focus state, error states with a red border and message, and warning states for optional issues. Inputs need feedback even more than buttons do. ([jain/every-ui-concept 7:44])
+- Give inputs a warning state, distinct from the error state, for optional or non-blocking issues. Inputs need feedback even more than buttons do. ([jain/every-ui-concept 7:44])
 - Style input fields with an off-white background and a visible stroke. *Note: Keep input borders at 3:1 against the background.* ([jain/crucial-ui-elements 7:35])
-- **App UI:** After a create action, prompt the logical next step (e.g. add team members) with an option to skip. A container without its contents is useless. ([jain/think-like-product-designer 2:27])
 
 ## AI interfaces
 
@@ -93,7 +92,6 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 [jain/crucial-ui-elements 10:04]: https://youtu.be/gKM6b2EnW1k?t=604
 [jain/crucial-ui-elements 3:41]: https://youtu.be/gKM6b2EnW1k?t=221
 [jain/crucial-ui-elements 4:23]: https://youtu.be/gKM6b2EnW1k?t=263
-[jain/crucial-ui-elements 7:10]: https://youtu.be/gKM6b2EnW1k?t=430
 [jain/crucial-ui-elements 7:35]: https://youtu.be/gKM6b2EnW1k?t=455
 [jain/crucial-ui-elements 9:02]: https://youtu.be/gKM6b2EnW1k?t=542
 [jain/crucial-ui-elements 9:18]: https://youtu.be/gKM6b2EnW1k?t=558
@@ -114,7 +112,6 @@ Contents: Feedback and states · Empty, loading and error states · Buttons, chi
 [jain/finance-dashboard-redesign 1:23]: https://youtu.be/Yr2uIcFZDDQ?t=83
 [jain/finance-dashboard-redesign 5:38]: https://youtu.be/Yr2uIcFZDDQ?t=338
 [jain/genius-designer 3:12]: https://youtu.be/HE4rLEQpiXY?t=192
-[jain/learn-ui-in-10-minutes 6:37]: https://youtu.be/9WVt1CelBfg?t=397
 [jain/macos-apps 1:57]: https://youtu.be/Vy0KKvZJRH8?t=117
 [jain/macos-apps 3:31]: https://youtu.be/Vy0KKvZJRH8?t=211
 [jain/macos-apps 6:46]: https://youtu.be/Vy0KKvZJRH8?t=406

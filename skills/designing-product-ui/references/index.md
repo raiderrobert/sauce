@@ -25,7 +25,7 @@ Each rule in a topic file ends with one or more reference-style citations, defin
 
 1. Get a timestamped transcript. For YouTube: `yt-dlp --skip-download --write-auto-subs --sub-langs en-orig --sub-format vtt <url>`. Confirm the transcript is in the original language; some transcript tools pick an auto-translated track instead.
 2. Extract only advice the source states or explains. Do not turn something merely shown on screen into a rule.
-3. Check every timestamp against the transcript before citing it.
+3. Check every timestamp against the transcript before citing it: the cited line must contain the advice. Then run `just validate-citations` from the repo root; it checks that every citation has a link definition, that the link's `t=` matches the timestamp, and that the video ID matches the bibliography entry. It cannot check what the video says, so step 3's transcript check is still required.
 4. Add a bibliography entry, keyed `author/short-title`, in alphabetical order.
 5. Merge each new rule into the topic file it belongs to. If it repeats an existing rule, add the citation to that rule instead of duplicating it. If it conflicts with one, keep both and say when each applies.
 6. Do not commit full transcripts. Cite and summarize only.

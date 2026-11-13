@@ -9,13 +9,13 @@ Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imag
 ## Restraint
 
 - Use the fewest elements and effects that communicate: apply shadows, glows and gradients sparingly (remove any that isn't clearly working) and don't fill every empty space with decorative illustration. Less visual noise reads as more professional; one extra element can tip a design into clutter. ([jain/beginner-mistakes 1:12], [jain/boring-design-hacks 1:11], [jain/ui-cheat-codes 6:01], [jain/web-design-hacks 5:29])
-- Don't nest cards inside cards; avoid borders on borders, stacked radii and extra background layers. Padding on padding cramps content and extra layers add clutter. For grouping with spacing, see layout-and-hierarchy.md. ([jain/color-mistakes 2:21], [jain/mobile-app-ui 3:13], [jain/weirdly-perfect-ui 7:22])
+- Don't nest cards inside cards; avoid borders on borders, stacked radii and extra background layers. Padding on padding cramps content and extra layers add clutter. For grouping with spacing, see also layout-and-hierarchy.md. ([jain/color-mistakes 2:21], [jain/mobile-app-ui 3:13], [jain/weirdly-perfect-ui 7:22])
 - Dim the borders that remain once elements are well grouped, and remove strokes that add nothing. Good grouping means borders needn't be strong. ([jain/beginner-mistakes 5:20], [jain/color-mistakes 4:27])
 
 ## Shadows
 
-- Soften shadows: lower the opacity and raise the blur. The 15-20% opacity figure was given against Figma's 25% default shadow. If a shadow is the first thing you notice, tone it down. Most shadows are too strong. *Note: In CSS, keep shadows soft and low-opacity (presets often sit near 5-10%), layered, with large blur.* ([jain/beginner-mistakes 1:37], [jain/every-ui-concept 6:25], [jain/web-design-hacks 6:14])
-- Scale shadow strength to elevation: lightest on cards, stronger on popovers and menus. For dark backgrounds see the dark-mode rule in color.md. Strength should reflect what sits above what. ([jain/every-ui-concept 6:33], [jain/web-design-hacks 6:14])
+- Soften shadows: low opacity and a large blur. Most shadows are too strong. *Note: Source figure is 15-20% opacity against Figma's 25% default; in CSS that usually means about 5-10% black, layered.* ([jain/beginner-mistakes 1:37], [jain/every-ui-concept 6:25], [jain/web-design-hacks 6:14])
+- Scale shadow strength to elevation: lightest on cards, stronger on popovers and menus. For dark backgrounds, see also the dark-mode rule in color.md. Strength should reflect what sits above what. ([jain/every-ui-concept 6:33], [jain/web-design-hacks 6:14])
 - Tint subtle shadows (e.g. under popovers) a light gray rather than transparent black. Lower opacity alone still looks harsh. ([jain/animated-sidebar 0:50], [jain/beginner-mistakes 1:37])
 - Keep shadow x-offset at or below the y-offset, and blur at 1.3-2× the y-offset. ([jain/web-design-hacks 6:03])
 - Combine an inset and an outer box-shadow to make buttons feel raised and tactile. ([jain/every-ui-concept 6:41])
@@ -28,8 +28,8 @@ Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imag
 
 ## Icons
 
-- Use one icon library (e.g. Phosphor, Lucide or Feather) with matching fill, stroke width, corner style and size; never use emojis as UI icons. Mixed sources produce mismatched icons; swapping emojis for real icons immediately looks better. ([jain/beginner-mistakes 3:55], [jain/google-ai-redesign 5:25], [jain/saas-vibe-code-mistakes 0:24], [jain/vibe-coding-pro-ui 3:23], [jain/web-design-hacks 2:00])
-- Keep icons simple and match detail to size: more detail on large icons, less on small ones. An icon is a symbol, not a piece of art. ([jain/web-design-hacks 2:29])
+- Use one icon library (e.g. Phosphor or Lucide) with matching fill, stroke width, corner style and size; never use emojis as UI icons. Mixed sources produce mismatched icons; swapping emojis for real icons immediately looks better. ([jain/beginner-mistakes 3:55], [jain/google-ai-redesign 5:25], [jain/saas-vibe-code-mistakes 0:24], [jain/vibe-coding-pro-ui 3:23], [jain/web-design-hacks 2:00])
+- Keep icons simple and match detail to size: at UI sizes (16-24px) use simple glyphs from the icon library; reserve interior detail for large feature icons (about 48px and up). An icon is a symbol, not a piece of art. *Note: The pixel thresholds are editorial.* ([jain/web-design-hacks 2:29])
 - Mix icon styles only when they sit in visually separate areas serving different purposes. Separation lets different styles coexist. ([jain/beginner-mistakes 4:36])
 
 ## Imagery and text over images
@@ -42,7 +42,7 @@ Contents: Restraint · Shadows · Surfaces, borders and corners · Icons · Imag
 
 ## Style and decoration
 
-- **Marketing:** Match playfulness (blobs, doodles, realistic imagery) to the intended feel; drop decorative shapes that look messy against a clean brand. Nailing the feel of a site matters as much as layout. ([jain/boring-design-hacks 1:55], [jain/google-ai-redesign 1:52])
+- **Marketing:** Match playfulness to the intended feel, e.g. blobs, doodles and fun colors for a playful consumer brand, realistic imagery for a professional tool such as invoicing; drop decorative shapes that look messy against a clean brand. Nailing the feel of a site matters as much as layout. ([jain/boring-design-hacks 1:55], [jain/google-ai-redesign 1:52])
 - For a friendly feel use warm backgrounds, colorful visuals, rounded corners and large rounded buttons; for a modern, premium feel use tighter radii, less colorful premium imagery and subtle background noise. The same layout feels completely different with a different flavor. ([jain/crucial-ui-elements 3:35], [jain/learn-ui-in-10-minutes 5:39])
 
 ## Gradients, texture and effects

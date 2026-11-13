@@ -1,6 +1,6 @@
 ---
 name: designing-product-ui
-description: "Use when designing a new screen, choosing the visual design of a web app, SaaS product, dashboard, landing page, or mobile or desktop app, or reviewing or polishing a UI that looks generic, amateur, cluttered, or AI-generated. Gives cited, opinionated heuristics for layout, hierarchy, typography, color, dark mode, icons, charts, tables, pricing pages, forms, empty and loading states, navigation, search, onboarding, AI chat interfaces, and motion. Not for pure frontend logic or bug fixes."
+description: "Use when designing a new screen, choosing the visual design of a web app, SaaS product, dashboard, landing page, or mobile or desktop app, or when asked to make a UI look better, give design or UX feedback, or do a design review of a UI that looks ugly, generic, amateur, cluttered, or AI-generated. Gives cited, opinionated heuristics for spacing, layout, hierarchy, typography, color, dark mode, icons, charts, tables, pricing pages, forms, modals, sidebars, empty and loading states, navigation, search, onboarding, AI chat interfaces, and animation. Not for pure frontend logic or bug fixes."
 ---
 
 # Designing Product UI
@@ -15,11 +15,11 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 2. The product's existing design system.
 3. These rules.
 
-Last tested November 2026 with Claude Opus 5.5: reviewing a deliberately flawed dashboard, it reported 35 findings in the format below, all citing rules that exist.
+Last tested November 2026 with Claude Opus 5.5, in review mode only: given a deliberately flawed dashboard, it reported 35 findings in the format below, and every citation label matched a rule in the topic files. Not yet tested in build mode or against a no-skill baseline.
 
 ## How the topic files work
 
-- Read the sections of each file that the task touches; a single component often spans several files (a button touches components, color and motion). The link definitions at the end of each file can be skipped.
+- Read each file whose topic the task touches; a single component often spans several (a button touches components, color and motion).
 - Within a section, rules backed by more videos come first, and a base rule comes before its exceptions. All current sources are videos by one designer, so count reflects how often the advice recurs, not independent agreement.
 - **App UI** tags rules for product screens only; **Marketing** tags rules for landing pages and websites only; untagged rules apply to both.
 - Each rule ends with citations like `[jain/dashboard-flaws 0:44]`. The link definitions at the bottom of each file open the source at that moment.
@@ -32,12 +32,12 @@ Last tested November 2026 with Claude Opus 5.5: reviewing a deliberately flawed 
 | Fonts, type scales, responsive type, line height, letter spacing, text tiers | `./typography.md` |
 | Palettes, accent use, neutrals, semantic colors, dark mode, contrast | `./color.md` |
 | Shadows, borders, corner radius, icon style and libraries, gradients, imagery, texture | `./depth-and-polish.md` |
-| Buttons, forms and signup, inputs, cards, carousels, modals, popovers, tooltips, toasts, delete and undo, and empty, loading, error and success states | `./components-and-states.md` |
+| Buttons, chips, icon labels and tooltips, forms and signup, inputs, cards, carousels, modals, popovers, toasts, delete and undo, autosave, AI chat and prompt interfaces, and empty, loading, error and success states | `./components-and-states.md` |
 | Dashboards, charts, KPIs, tables, lists, pricing pages and billing | `./data-and-dashboards.md` |
-| Sidebars, tabs, menus, search, icon labels, what to show versus hide, onboarding and first run, AI chat and prompt interfaces | `./navigation-and-disclosure.md` |
-| Animation, transitions, easing, hover effects, loaders, scroll effects | `./motion.md` |
-| Mobile apps, gestures, thumb zones, macOS and desktop apps | `./mobile-and-desktop.md` |
-| Landing pages, heroes, marketing copy, social proof | `./landing-pages.md` |
+| Sidebars, tabs, overflow menus, search, what to show versus hide, onboarding and first run, gamification, website navbars, dropdowns and mega menus | `./navigation-and-disclosure.md` |
+| Animation, transitions, easing and durations, hover effects, drag and swipe feedback, loaders, scroll effects | `./motion.md` |
+| Mobile apps, gestures, thumb zones, tab bars, bottom sheets, macOS and desktop apps | `./mobile-and-desktop.md` |
+| Landing pages, heroes, marketing copy, footers, social proof (navbars are in navigation-and-disclosure) | `./landing-pages.md` |
 | How to approach the work: references, generated UI, reviewing at real size | `./process.md` |
 | Adding a new source, or the citation format | `./references/index.md` |
 | Full details of every cited source | `./references/bibliography.md` |
@@ -62,7 +62,7 @@ High-impact rules, each recurring in three or more videos. Check these first on 
 
 ## Reviewing a screen
 
-Report each problem as one line: the element, the rule it breaks, and the rule's citation. Group by severity:
+Report each problem as one line: the element, the rule it breaks, and the rule's first citation. For an accessibility failure, cite the WCAG success criterion instead (for example WCAG 1.4.3 for text contrast). Group by severity:
 
 - **Blocks use:** anything that stops a user from understanding or completing a task: accessibility failures, missing states, misleading signals (a destructive action that doesn't look destructive, an unreadable chart), broken hierarchy, navigation or disclosure.
 - **Looks unfinished:** everything else: spacing, typography, color harmony, depth, motion polish.
@@ -78,10 +78,10 @@ Tells that a UI was built by a beginner or generated without design review, beyo
 
 | Mistake | Fix |
 |---------|-----|
-| Nested cards, borders on borders, stacked radii | Group with spacing or one simple border |
-| Emojis as icons, or icons from mixed sets | One icon library with matching stroke, fill and size |
-| The same KPIs repeated across pages | Show each piece of data once, where it is used |
-| Two equal filled buttons in one hero or header | One primary action; make the second an outline or text button |
-| Centered paragraphs, lists or table data | Left-align text, right-align numbers; center only short display text |
-| Generated layout and colors accepted as is | Decide layout and color deliberately, then build |
-| Dark mode made by inverting light mode | Design dark mode as its own palette with lighter raised surfaces |
+| Nested cards, borders on borders, stacked radii | Group with spacing or one simple border (`depth-and-polish.md`) |
+| The same KPIs repeated across pages | Show each piece of data once, where it is used (`data-and-dashboards.md`) |
+| Two equal filled buttons in one hero or header | One primary action; make the second an outline or text button (`layout-and-hierarchy.md`) |
+| Centered paragraphs, lists or table data | Left-align text, right-align numbers; center only short display text (`layout-and-hierarchy.md`) |
+| Generated layout and colors accepted as is | Decide layout and color deliberately, then build (`process.md`) |
+| Disabled buttons that are unreadable, or focus that looks like selected | Muted but readable disabled text; a distinct focus ring at 3:1 (`components-and-states.md`) |
+| Status shown by color alone | Pair the color with an icon or label (`color.md`) |

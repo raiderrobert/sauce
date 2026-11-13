@@ -16,15 +16,14 @@ Contents: Font selection and pairing · Text color and weight · Type scale and 
 ## Text color and weight
 
 - Use two text tiers for most UI: primary text at full strength and one secondary tier at ~55-70% opacity on light backgrounds, verified at 4.5:1. Add a third, dimmer tier (dark gray, not black) only for metadata such as file details and labels. More tiers blur the hierarchy. *Note: The source range starts at 40%, which fails WCAG AA on white; 55-70% is an editorial adjustment.* ([jain/color-mistakes 4:21], [jain/typography 5:21], [jain/web-design-hacks 0:52])
-- Use at most two font weights, at least one weight step apart; avoid ultra-bold and ultra-thin for regular text. Too many weights look messy. ([jain/typography 5:13], [jain/web-design-hacks 0:40])
+- Use at most two font weights, at least two steps apart on the weight scale (e.g. 400 and 600, skipping 500); avoid ultra-bold and ultra-thin for regular text. Too many weights look messy. ([jain/typography 5:13], [jain/web-design-hacks 0:40])
 - Keep body paragraphs at full strength; don't give the smallest text the lowest contrast too. Small, low-contrast text is neither usable nor attractive. ([jain/typography 6:15])
-- **App UI:** In app menus, separate keyboard shortcuts from item labels with alignment and type, e.g. right-aligned in secondary text. The structure tells users what is clickable and what is a hint. ([jain/captivating-sections 4:22])
 
 ## Type scale and sizes
 
+- Keep text above size floors: body text 14-16px, metadata and dense tables no smaller than 12px, marketing nav links no smaller than 14px; native macOS apps may use the platform's 13px default body. A marketing header may set nav links small (at the 14px floor) beneath giant display text to make it feel more important. The size gap emphasizes the display text; below ~14px nav stops being readable. *Note: The body and metadata floors are editorial; the source gives only the ~14px nav floor.* ([jain/google-ai-redesign 7:01], [jain/website-layouts 3:03])
 - Derive font sizes from a ratio instead of eyeballing: header = body × 1.62 for a simple pair; for a multi-level scale from a 16px base, use √1.62 ≈ 1.27 per step. 1.62 per step grows too fast (the fifth size hits ~110px). ([jain/typography 7:17])
 - **App UI:** On dashboards and dense mobile screens use tighter steps, e.g. ∛1.62 ≈ 1.17 per step, and keep dashboard text at or below 24px. Dense screens fit more on screen, which shrinks the size range. ([jain/dashboard-ui 1:58], [jain/every-ui-concept 4:14], [jain/typography 9:15])
-- Avoid tiny text. The only exception is a marketing header that sets nav links small, no smaller than ~14px, beneath giant display text to make it feel more important. The size gap emphasizes the display text; below ~14px nav stops being readable. ([jain/google-ai-redesign 7:01], [jain/website-layouts 3:03])
 - Scale font sizes fluidly with CSS clamp() combining a rem term and a viewport term, e.g. clamp(2rem, 1rem + 4vw, 5rem), tuned for ~320px to 1920px viewports, instead of per-breakpoint sizes. Breakpoints get messy; the clamp() minimum and maximum stop sizes running away on the smallest and largest screens. *Note: The rem term keeps browser text zoom working; viewport-only sizes ignore it.* ([jain/typography 9:46])
 - **Marketing:** Use no more than six font sizes on a landing page or website. ([jain/every-ui-concept 4:09])
 
@@ -36,9 +35,7 @@ Contents: Font selection and pairing · Text color and weight · Type scale and 
 ## Display text
 
 - **Marketing:** Use a display font at very large sizes as a visual, storytelling element, like an image (e.g. Unbounded, Cabinet Grotesk or Oswald at ~290px), but only once or twice per page. A good display font can carry as much weight as an image; overuse dilutes it. ([jain/slept-on-trends 3:25], [jain/web-design-hacks 4:43], [jain/website-layouts 3:39])
-- **Marketing:** In text-only hero layouts, give the body text three or more lines. Shorter text leaves too much empty space. ([jain/website-layouts 11:29])
 
-[jain/captivating-sections 4:22]: https://youtu.be/tNMAFjzapOk?t=262
 [jain/color-mistakes 4:21]: https://youtu.be/EOcY3hPMQkk?t=261
 [jain/dashboard-ui 1:58]: https://youtu.be/B7k5rOgmOGY?t=118
 [jain/every-ui-concept 3:23]: https://youtu.be/EcbgbKtOELY?t=203
@@ -65,6 +62,5 @@ Contents: Font selection and pairing · Text color and weight · Type scale and 
 [jain/web-design-hacks 0:40]: https://youtu.be/Lp6ey4AyDzA?t=40
 [jain/web-design-hacks 0:52]: https://youtu.be/Lp6ey4AyDzA?t=52
 [jain/web-design-hacks 4:43]: https://youtu.be/Lp6ey4AyDzA?t=283
-[jain/website-layouts 11:29]: https://youtu.be/P2ksReDwWkE?t=689
 [jain/website-layouts 3:03]: https://youtu.be/P2ksReDwWkE?t=183
 [jain/website-layouts 3:39]: https://youtu.be/P2ksReDwWkE?t=219

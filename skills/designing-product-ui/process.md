@@ -14,21 +14,19 @@ Contents: Working from references · Generated UI · Review and polish
 ## Generated UI
 
 - Don't accept a generated default layout: decide layout and card design deliberately, since that's where generated UI is weakest, then fix fonts, alignment and color. These are the biggest changes for the least time. ([jain/saas-vibe-code-mistakes 1:22], [jain/vibe-coding-pro-ui 5:06])
-- Before generating or building UI, pin down its purpose and intended use and list the specific elements it needs (e.g. a sidebar with icons, a Gantt chart). Concrete context produces far more fitting UI. ([jain/vibe-coding-pro-ui 2:54])
+- When generating UI, list the specific elements it needs in the prompt (e.g. a sidebar with icons, a Gantt chart), not just its purpose. Concrete context produces far more fitting UI. ([jain/vibe-coding-pro-ui 2:54])
 
 ## Review and polish
 
-- Review designs at the real target size on the target device, accounting for browser chrome, to check text size, color and fonts. Judging a scaled-down preview leads to oversized type and spacing. ([jain/typography 12:09], [jain/web-design-hacks 6:24])
-- Polish many small details rather than hunting for one big change. The gap between good and great is almost never one thing. ([jain/landing-page-levels 7:21])
+- If a browser or screenshot tool is available, render the design at desktop (~1440px) and mobile (~390px) widths and inspect text size, color and fonts at that real size, accounting for browser chrome; otherwise state that the design was not visually verified. Judging a scaled-down preview leads to oversized type and spacing. ([jain/typography 12:09], [jain/web-design-hacks 6:24])
 - **Marketing:** Apply a 5-second test: could someone scrolling for five seconds understand the idea? ([jain/captivating-sections 1:13])
-- Tune animation timings by eye in the browser rather than trusting the first values. ([jain/load-animations-code 16:40])
+- Don't trust the first animation timing values: if a browser tool is available, play the animation at real speed or capture frames and adjust; otherwise state that timings were not visually verified. ([jain/load-animations-code 16:40])
 
 [jain/captivating-sections 1:13]: https://youtu.be/tNMAFjzapOk?t=73
 [jain/crucial-ui-elements 0:05]: https://youtu.be/gKM6b2EnW1k?t=5
 [jain/dashboard-flaws 4:20]: https://youtu.be/Ksx9C2-3yMo?t=260
 [jain/every-ui-concept 4:24]: https://youtu.be/EcbgbKtOELY?t=264
 [jain/google-ai-redesign 2:44]: https://youtu.be/pGYLZyBE32o?t=164
-[jain/landing-page-levels 7:21]: https://youtu.be/eMMiLeo_UGI?t=441
 [jain/load-animations-code 16:40]: https://youtu.be/d4MF6pdAZNw?t=1000
 [jain/saas-vibe-code-mistakes 1:22]: https://youtu.be/PDcQJOPby1k?t=82
 [jain/software-must-lie 4:32]: https://youtu.be/S8DcTJm8pYM?t=272

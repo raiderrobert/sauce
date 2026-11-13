@@ -8,12 +8,12 @@ Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures a
 
 ## Thumb reach
 
-- Place important controls and frequent actions at the bottom and along the right side, inside the thumb zone; make the most frequent action's target as large and close to the thumb as possible. Speed depends on target size and distance; the right side serves the 70-80% who are right-handed. ([jain/spotify-wrapped-redesign 1:40], [jain/tiktok-ux 4:57])
+- Place important controls and frequent actions at the bottom and along the right side, inside the thumb zone; make the most frequent action's target as large and close to the thumb as possible. Speed depends on target size and distance; the right side suits right-handed users, the majority. ([jain/spotify-wrapped-redesign 1:40], [jain/tiktok-ux 4:57])
 
 ## Mobile navigation
 
-- Use a bottom tab bar (often floating) when navigation fits a few key icons: five links at most, three or four ideally. Keeps every tap target above 44px. ([jain/mobile-app-ui 0:27])
 - Don't make the tab bar's add button stick up in a circle; keep it inline with the other tabs unless it is truly the main action. Users tap other tabs far more than add. ([jain/crucial-ui-elements 0:34], [jain/mobile-app-ui 0:27])
+- Use a bottom tab bar (often floating) when navigation fits a few key icons: five links at most, three or four ideally. Keeps every tap target above 44px. ([jain/mobile-app-ui 0:27])
 - Give the active tab a distinct state (e.g. swap to a filled icon), and keep inactive tab icons clearly visible rather than dimmed to near-invisibility. The active indicator already shows the selection. ([jain/crucial-ui-elements 1:04])
 - When there are too many important nav items for a bottom bar, turn the sidebar into a home page of links, balanced with recent items on top, counts on the right, and a big search bar or primary button at the bottom. A lopsided list feels unfinished. ([jain/mobile-app-ui 0:59])
 - Use bottom sheets for secondary tasks, such as picking a template, to keep the user in context. Keeps context and is easy to dismiss with a gesture. ([jain/mobile-app-ui 4:06])
