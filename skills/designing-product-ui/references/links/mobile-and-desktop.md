@@ -2,7 +2,6 @@
 
 Link definitions for every citation label in `../../mobile-and-desktop.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
-[apple/intuitive-search 3:22]: https://youtu.be/lx45sKEnZkU?t=202
 [apple/intuitive-search 7:57]: https://youtu.be/lx45sKEnZkU?t=477
 [apple/principles-of-great-design 9:46]: https://youtu.be/Xa9L2yx_QH8?t=586
 [apple/touch-on-mac 11:23]: https://youtu.be/2cq3ytwLrLk?t=683

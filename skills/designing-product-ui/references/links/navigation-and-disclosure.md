@@ -8,7 +8,7 @@ Link definitions for every citation label in `../../navigation-and-disclosure.md
 [apple/design-foundations 6:01]: https://youtu.be/dGcqqA3Sl-o?t=361
 [apple/design-foundations 9:01]: https://youtu.be/dGcqqA3Sl-o?t=541
 [apple/designing-fluid-interfaces ¶you-can-clip-the]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=you%20can%20clip%20the%20content%20off
-[apple/intuitive-search 3:41]: https://youtu.be/lx45sKEnZkU?t=221
+[apple/intuitive-search 3:22]: https://youtu.be/lx45sKEnZkU?t=202
 [apple/intuitive-search 6:20]: https://youtu.be/lx45sKEnZkU?t=380
 [apple/principles-of-great-design 11:20]: https://youtu.be/Xa9L2yx_QH8?t=680
 [apple/touch-on-mac 13:05]: https://youtu.be/2cq3ytwLrLk?t=785

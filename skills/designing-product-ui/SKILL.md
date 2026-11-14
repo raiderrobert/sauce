@@ -39,7 +39,7 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 | How each action feels: acknowledging clicks, keypresses and commands, speed and perceived performance, flow, keyboard shortcuts and command menus, how long a wait needs which indicator, optimistic updates, proportional feedback, sound, haptics, tone and personality, delight and when to hold back | `./interaction-feel.md` |
 | Mobile apps, gestures, thumb zones, tab bars, bottom sheets, responsive layouts and breakpoints, macOS and desktop apps | `./mobile-and-desktop.md` |
 | Landing pages, heroes, marketing copy, footers, social proof (navbars are in navigation-and-disclosure) | `./landing-pages.md` |
-| How to approach the work: references, generated UI, reviewing at real size | `./process.md` |
+| How to approach the work: references, generated UI, reviewing at real size, redesigning a tool people use daily | `./process.md` |
 | Adding a new source, or the citation format | `./references/index.md` |
 | Full details of every cited source | `./references/bibliography.md` |
 
@@ -58,7 +58,7 @@ Rules chosen because a capable model tends to skip them. Some come from with/wit
 - Soften shadows (lower opacity, blur about 1.3-2× the y-offset), and set a nested element's radius to the outer radius minus the gap. (`depth-and-polish.md`)
 - Skip confirmation modals for routine deletes: delete immediately and offer undo. (`components-and-states.md`)
 - Give every command the app defines (shortcuts, submit, undo) and every disabled control a specific response, even when there's nothing to do ("Nothing to undo"; list boundaries may stay silent); never stack repeats. (`interaction-feel.md`)
-- Trigger wins: anything opened or changed from the keyboard (any keydown, including Enter or Space on a focused control) appears without movement, even a modal (a color change, one blink or an opacity fade of 100ms or less is fine). Animate pointer-opened dropdowns and popovers, and views that expand from a content item, out of the element that opened them (sheets, drawers and pushed screens follow the direction rule in `motion.md`); context and command menus get no motion whatever the trigger. (`motion.md`, `interaction-feel.md`)
+- Trigger wins: anything opened or changed from the keyboard (any keydown, including Enter or Space on a focused control) appears without movement, even a modal (a color change, one blink or an opacity fade of 100ms or less is fine). Where motion is allowed, animate pointer-opened dropdowns and popovers, and views that expand from a content item, out of the element that opened them (sheets, drawers and pushed screens follow the direction rule in `motion.md`); context and command menus get no motion whatever the trigger. (`motion.md`, `interaction-feel.md`)
 - Place each action on a spectrum of explicitness: primary actions visible and labeled, minor ones revealed on hover or focus and also reachable from a menu (touch has no hover). (`navigation-and-disclosure.md`)
 - On landing pages, lead with one ~7-word headline saying exactly what the product does, and show the real product. (`landing-pages.md`)
 

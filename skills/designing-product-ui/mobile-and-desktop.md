@@ -12,13 +12,12 @@ Contents: Thumb reach · Mobile navigation · Mobile screen layout · Gestures a
 
 ## Mobile navigation
 
-- Use a bottom tab bar (often floating, as of 2026) when navigation fits a few key icons: five links at most, three or four ideally. Keeps every tap target above 44px. ([jain/mobile-app-ui 0:27])
+- Use a bottom tab bar (often floating, as of 2026) when navigation fits a few key icons: five links at most, three or four ideally. Keeps every tap target above 44px. *Note: For search placement on iOS, see also navigation-and-disclosure.md § Search.* ([jain/mobile-app-ui 0:27])
 - Give the active tab a distinct state (e.g. the theme color with a filled icon), and keep inactive tab icons clearly visible, at about 60-70% opacity with outline icons, rather than dimmed to near-invisibility (see also navigation-and-disclosure.md § Tabs). The active indicator already shows the selection; below that range inactive tabs look disabled. *Note: Check that dimmed labels still reach 4.5:1 contrast against the bar.* ([jain/crucial-ui-elements 1:04], [kennedy/spendweek-redesign 6:35], [raroque/apps-feel-10x-better 8:13])
 - Don't make the tab bar's add button stick up in a circle; keep it inline with the other tabs unless it is truly the main action. Users tap other tabs far more than add. ([jain/crucial-ui-elements 0:34], [jain/mobile-app-ui 0:27])
 - When there are too many important nav items for a bottom bar, turn the sidebar into a home page of links, balanced with recent items on top, counts on the right, and a big search bar or primary button at the bottom; it is a titled home screen, not a menu (see also navigation-and-disclosure.md § Page structure and wayfinding). A lopsided list feels unfinished. ([jain/mobile-app-ui 0:59])
-- **App UI:** On iOS, prefer putting search in the bottom toolbar (use the top toolbar when the bottom is occupied, e.g. by a sheet); for when a search screen opens the keyboard, see also navigation-and-disclosure.md § Search. In the bottom toolbar the field animates up over the keyboard, optimizing for reachability and keyboard input. ([apple/intuitive-search 3:22])
 - Use bottom sheets for secondary tasks, such as picking a template, to keep the user in context. Keeps context and is easy to dismiss with a gesture. ([jain/mobile-app-ui 4:06])
-- On mobile, keep the header condensed: move low-priority links (about, social) to the bottom, collapse page navigation into an expand/collapse menu, and for long sectioned content consider accordions over a dropdown. Users come for core details; a dropdown is compact, but with long content it means repeatedly scrolling back to the top. ([schoger/wss 11:35])
+- On mobile, keep the header condensed: move low-priority links (about, social) to the bottom, collapse page navigation into an expand/collapse menu, and for long sectioned content consider accordions over a dropdown (not for marketing specs; see also landing-pages.md § Copy). Users come for core details; a dropdown is compact, but with long content it means repeatedly scrolling back to the top. ([schoger/wss 11:35])
 
 ## Mobile screen layout
 
