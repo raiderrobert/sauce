@@ -2,15 +2,15 @@
 
 Marketing and SaaS landing pages: product visuals, hero sections, copy, section structure, social proof and footers. Pricing pages live in data-and-dashboards.md.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from a game-design principle (the principle is in the links file), untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. *(Editorial.)* = a rule with no source. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/landing-pages.md`.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from a game-design principle (the principle is in the links file), untagged = both. *Note:* = uncited editorial caveat, or a summary of where sources differ; follow it where it corrects a source number. "(source: X)" in a rule = the source's number where the rule differs; follow the rule. *(Editorial.)* = a rule with no source. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/landing-pages.md`.
 
 Contents: Product visuals · Hero sections · Copy · Page structure and footers · Social proof and trust
 
 ## Product visuals
 
-- **Marketing:** Show the real product (actual UI, lightly edited screenshots, even simple skewed product cards) instead of stock images or generic feature icons; don't bury what the product is in small text. Unrelated stock throws the page off; graphics elevate a page more than anything else. ([jain/captivating-sections 1:23], [jain/landing-page-levels 0:44], [jain/saas-vibe-code-mistakes 5:48])
+- **Marketing:** Show the real product (actual UI, lightly edited screenshots, even simple skewed product cards) instead of stock images or generic feature icons, from screenshots the user supplied (otherwise a labeled placeholder); don't bury what the product is in small text. Unrelated stock throws the page off; graphics elevate a page more than anything else. ([jain/captivating-sections 1:23], [jain/landing-page-levels 0:44], [jain/saas-vibe-code-mistakes 5:48])
 - **Marketing:** Use imagery that visibly relates to the audience's world, and show images of products or options so visitors can tell unfamiliar names apart, from imagery the user supplied (otherwise a labeled placeholder). Builds trust and explains options without reading, like a picture menu. ([jain/slept-on-trends 7:51], [jain/vibe-coding-cant-fix 0:58])
-- **Marketing:** Crop and zoom screenshots to the important parts, or better, craft visuals that show exactly what the product does. Curates what visitors see. ([jain/landing-page-levels 4:59])
+- **Marketing:** Crop and zoom screenshots to the important parts, or better, craft visuals that show exactly what the product does, from screenshots the user supplied (otherwise a labeled placeholder). Curates what visitors see. ([jain/landing-page-levels 4:59])
 - **Marketing:** Pick images for the layout's aspect ratio and expect heavy cropping; for cutout-text layouts, keep nothing important in the corner that gets cut off. ([jain/website-layouts 2:13])
 
 ## Hero sections
@@ -40,6 +40,6 @@ Contents: Product visuals · Hero sections · Copy · Page structure and footers
 
 ## Social proof and trust
 
-- **Marketing:** If the product has well-recognized customers, show a row of their logos: put only the most important in one row, or use a slow marquee whose edges fade out with a gradient and progressive blur. 41 of 50 software sites had one; visitors read logos as important companies using the product. ([jain/landing-page-levels 5:54], [jain/modern-layouts 0:38])
-- **Marketing:** If the product has testimonials, badges or a dedicated proof page, add them as social proof beyond the logo row. Strengthens the brand. ([jain/landing-page-levels 5:54], [jain/vibe-coding-cant-fix 3:57])
+- **Marketing:** If the product has well-recognized customers, show a row of their logos from logos the user supplied (otherwise a labeled placeholder): put only the most important in one row, or use a slow marquee whose edges fade out with a gradient and progressive blur. 41 of 50 software sites had one; visitors read logos as important companies using the product. ([jain/landing-page-levels 5:54], [jain/modern-layouts 0:38])
+- **Marketing:** If the product has testimonials, badges or a dedicated proof page, add them as social proof beyond the logo row, using only ones the user supplied (otherwise a labeled placeholder). Strengthens the brand. ([jain/landing-page-levels 5:54], [jain/vibe-coding-cant-fix 3:57])
 - **Marketing:** Include a privacy and security section for any product that handles user data, using only claims the user supplied; otherwise leave a labeled placeholder. Users need reassurance. ([jain/google-ai-redesign 5:32])

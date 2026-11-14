@@ -67,7 +67,6 @@ Link definitions for every citation label in `../../color.md`. Grep a label here
 [jain/weirdly-perfect-ui 6:54]: https://youtu.be/neE6wOuBIP8?t=414
 [kennedy/advanced-design-tips 4:03]: https://youtu.be/6jiq5g_bXB8?t=243
 [kennedy/advanced-design-tips 4:35]: https://youtu.be/6jiq5g_bXB8?t=275
-[kennedy/advanced-design-tips 5:53]: https://youtu.be/6jiq5g_bXB8?t=353
 [kennedy/advanced-ui-tips 10:41]: https://youtu.be/-2vzMH8iqsg?t=641
 [kennedy/spendweek-redesign 5:42]: https://youtu.be/LHs6vx4QEE4?t=342
 [kennedy/spendweek-redesign 6:03]: https://youtu.be/LHs6vx4QEE4?t=363
@@ -76,7 +75,6 @@ Link definitions for every citation label in `../../color.md`. Grep a label here
 [kennedy/starting-a-ui-project 26:36]: https://youtu.be/JOQJO_V7sew?t=1596
 [kennedy/starting-a-ui-project 38:45]: https://youtu.be/JOQJO_V7sew?t=2325
 [kennedy/starting-a-ui-project 40:24]: https://youtu.be/JOQJO_V7sew?t=2424
-[kennedy/timezones-redesign 5:53]: https://youtu.be/B4XHaboNMOI?t=353
 [kennedy/wodify-redesign 5:15]: https://youtu.be/OdS7fOS7bTk?t=315
 [kennedy/wodify-redesign 6:56]: https://youtu.be/OdS7fOS7bTk?t=416
 [nngroup/principles-stripe 3:06]: https://youtu.be/qooOXNmdCH4?t=186

@@ -2,7 +2,7 @@
 
 Dashboard layout, charts and chart styling, KPIs and stats, tables, lists and feeds, and pricing and comparison tables.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from a game-design principle (the principle is in the links file), untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. *(Editorial.)* = a rule with no source. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/data-and-dashboards.md`.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from a game-design principle (the principle is in the links file), untagged = both. *Note:* = uncited editorial caveat, or a summary of where sources differ; follow it where it corrects a source number. "(source: X)" in a rule = the source's number where the rule differs; follow the rule. *(Editorial.)* = a rule with no source. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/data-and-dashboards.md`.
 
 Contents: Dashboard layout · Charts · Chart styling and color · KPIs and stats · Tables · Lists and feeds · Pricing and comparison tables
 

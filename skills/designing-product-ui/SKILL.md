@@ -1,6 +1,6 @@
 ---
 name: designing-product-ui
-description: "Use when designing a new screen, choosing the visual design of a web app, SaaS product, dashboard, landing page, or mobile or desktop app, or when asked to redesign, restyle, polish, or make a UI look better, critique a mockup, give design or UX feedback, or do a design review or UX audit of a UI that looks ugly, generic, amateur, cluttered, or AI-generated, or feels sluggish to interact with, flat, or lifeless, or should feel snappier, more satisfying, or more premium. Gives cited, testable heuristics (spacing values, chart rules, dark-mode steps, state coverage) rather than an aesthetic direction, covering layout, hierarchy, typography, color, dark mode, icons, charts, tables, pricing pages, forms, navigation, onboarding, AI chat interfaces, animation, and interaction feel in apps (feedback, microinteractions, game feel, keyboard shortcuts, Cmd+K command palettes, haptics, waits and loading, delight). Not for pure frontend logic, bug fixes, or building games."
+description: "Use when designing a new screen, choosing the visual design of a web app, SaaS product, dashboard, landing page, or mobile or desktop app, or when asked to redesign, restyle, polish, or make a UI look better, critique a mockup, give design or UX feedback, or do a design review or UX audit of a UI that looks ugly, generic, amateur, cluttered, or AI-generated, or feels sluggish to interact with, flat, or lifeless, or should feel snappier, more satisfying, or more premium. Gives cited, testable heuristics rather than an aesthetic direction, covering layout, hierarchy, typography, color, dark mode, icons, charts, tables, pricing pages, forms, modals, sidebars, empty and loading states, search, navigation, onboarding, AI chat interfaces, animation, and interaction feel in apps (feedback, microinteractions, game feel, keyboard shortcuts, Cmd+K command palettes, haptics, waits, delight). Not for pure frontend logic, bugs unrelated to how the UI looks or responds, or building games."
 ---
 
 # Designing Product UI
@@ -21,7 +21,7 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 - Read each file whose topic the task touches; a single component often spans several (a button touches components, color, motion and interaction feel).
 - Within a section, base rules come first, then refinements and exceptions. `references/bibliography.md` lists every source.
 - **App UI** tags rules for product screens only; **Marketing** tags rules for landing pages and websites only; untagged rules apply to both. **From games** marks a product-UI rule translated from a game-design principle; follow the rule. The principle the source stated is under "Source principles" in `references/links/<topic>.md`. *(Editorial.)* marks a rule with no source, such as the feedback budget.
-- *Note:* text is an editorial caveat (usually accessibility, a CSS translation, or how a game principle applies to apps) that the source did not state. Where it corrects a source number, follow the Note.
+- *Note:* text is an editorial caveat (usually accessibility, a CSS translation, or how a game principle applies to apps) that the source did not state, or a summary of where sources differ. Where it corrects a source number, follow the Note. In a rule, "(source: X)" gives the source's number where the rule differs; follow the rule.
 - Each rule ends with citations: `[jain/dashboard-flaws 0:44]` for a video timestamp, `[freiberg/invisible-details ¶the-selected-item-briefly]` for a passage in an essay or transcript, or `[buell-norton/labor-illusion ¶p2]` for a PDF page. The links live in `references/links/<topic>.md`; when you need a clickable link, as in review output, grep the label there instead of reading the whole file.
 
 ## Routing
@@ -47,7 +47,7 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 
 Rules chosen because a capable model tends to skip them. Some come from with/without comparisons (see `references/index.md`); the rest are judgment. Check these on any screen; the routed file holds details and citations.
 
-- Use only assets, data and social proof the user supplied. Where a rule calls for a product screenshot, customer logos or testimonials and none were given, leave a labeled placeholder and say so; never invent them. (editorial)
+- Use only assets, social proof and claims the user supplied (logos, testimonials, customer counts, metrics presented as fact). Where a rule calls for a product screenshot, customer logos or testimonials and none were given, leave a labeled placeholder and say so; never invent them. Realistic sample data for reviewing a prototype is fine (`process.md`). (editorial)
 - Rank each dashboard module as high, mid or low priority before arranging; put the most important higher and farther left. (`data-and-dashboards.md`)
 - Draw line charts with straight segments, never smoothed or faded; give full charts grid lines and axis values, and a time-frame control when the data spans more than one useful time frame. (`data-and-dashboards.md`)
 - Show each piece of data once: no duplicated KPI rows across pages, no chart restating percentages already shown. (`data-and-dashboards.md`)
@@ -64,7 +64,7 @@ Rules chosen because a capable model tends to skip them. Some come from with/wit
 
 ## Reviewing a screen
 
-Report each problem as one line: the element, what is wrong, the rule it breaks in your own words, and the rule's first citation as an inline link (grep the label in `references/links/<topic>.md` for its URL). Rules are paraphrases, so don't quote them. If the violated part is a *Note:* (editorial, usually accessibility), cite the WCAG success criterion or write "editorial" instead of the source. For a **From games** rule, cite its first citation and add "(translated from a game principle)". For an *(Editorial.)* rule, write "editorial".
+Report each problem as one line: the element, what is wrong, the rule it breaks in your own words, and the rule's first citation as an inline link (grep the label in `references/links/<topic>.md` for its URL). Rules are paraphrases, so don't quote them. If the violated part is an editorial *Note:* (usually accessibility), cite the WCAG success criterion or write "editorial" instead of the source; if the Note summarizes where sources differ, cite the rule's first citation. For a **From games** rule, cite its first citation and add "(translated from a game principle)". For an *(Editorial.)* rule, write "editorial".
 
 Group by severity, in this order and most impactful first within each group. When a problem fits two groups, use the earlier one:
 
@@ -89,7 +89,7 @@ Tells that a UI was built by a beginner or generated without design review, beyo
 |---------|-----|
 | Nested cards, borders on borders, stacked radii | Group with spacing or one simple border; a control nested in a container follows the concentric radius rule (`depth-and-polish.md`) |
 | Two equal filled buttons in one hero or header | One primary action; make the second an outline, text or other secondary-style button (`layout-and-hierarchy.md`, `components-and-states.md`) |
-| Centered paragraphs, lists or table data | Left-align text, right-align numbers; center only short display text (`layout-and-hierarchy.md`) |
+| Centered paragraphs, lists or table data | Left-align text, right-align numbers in columns (stat blocks stay left-aligned); center only short display text (`layout-and-hierarchy.md`) |
 | The first layout that came to mind, built as is | Check the layout against how the content ranks and change it if it doesn't fit (`process.md`) |
 | Disabled buttons that are unreadable, or focus that looks like selected | Muted but readable disabled text; a distinct focus ring at 3:1 (`components-and-states.md`) |
 | Status shown by color alone | Pair the color with an icon or label (`color.md`) |

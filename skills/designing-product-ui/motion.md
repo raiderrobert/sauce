@@ -2,7 +2,7 @@
 
 Purpose, easing and timing, hover and press feedback, transitions, gestures, loaders and entrances, and scroll and ambient motion.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from a game-design principle (the principle is in the links file), untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. *(Editorial.)* = a rule with no source. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/motion.md`.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from a game-design principle (the principle is in the links file), untagged = both. *Note:* = uncited editorial caveat, or a summary of where sources differ; follow it where it corrects a source number. "(source: X)" in a rule = the source's number where the rule differs; follow the rule. *(Editorial.)* = a rule with no source. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/motion.md`.
 
 Contents: Purpose and restraint · Easing and timing · Springs and physics · Hover and press feedback · Transitions and overlays · Gestures and input timing · Loaders and entrances · Scroll and ambient motion
 

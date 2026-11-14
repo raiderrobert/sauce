@@ -32,6 +32,7 @@ Link definitions for every citation label in `../../typography.md`. Grep a label
 [jain/website-layouts 3:03]: https://youtu.be/P2ksReDwWkE?t=183
 [jain/website-layouts 3:39]: https://youtu.be/P2ksReDwWkE?t=219
 [kennedy/advanced-design-tips 5:26]: https://youtu.be/6jiq5g_bXB8?t=326
+[kennedy/advanced-design-tips 5:53]: https://youtu.be/6jiq5g_bXB8?t=353
 [kennedy/advanced-ui-tips 1:14]: https://youtu.be/-2vzMH8iqsg?t=74
 [kennedy/advanced-ui-tips 2:24]: https://youtu.be/-2vzMH8iqsg?t=144
 [kennedy/advanced-ui-tips 4:02]: https://youtu.be/-2vzMH8iqsg?t=242
@@ -52,6 +53,7 @@ Link definitions for every citation label in `../../typography.md`. Grep a label
 [kennedy/starting-a-ui-project 38:30]: https://youtu.be/JOQJO_V7sew?t=2310
 [kennedy/timezones-redesign 3:32]: https://youtu.be/B4XHaboNMOI?t=212
 [kennedy/timezones-redesign 3:39]: https://youtu.be/B4XHaboNMOI?t=219
+[kennedy/timezones-redesign 5:53]: https://youtu.be/B4XHaboNMOI?t=353
 [kennedy/wodify-redesign 2:36]: https://youtu.be/OdS7fOS7bTk?t=156
 [kennedy/wodify-redesign 5:27]: https://youtu.be/OdS7fOS7bTk?t=327
 [nngroup/better-tabs 4:00]: https://youtu.be/hPxrudx1iXg?t=240

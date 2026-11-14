@@ -23,6 +23,7 @@ Each rule in a topic file ends with one or more citation labels. The labels are 
 - The label is the bibliography key plus a locator: a timestamp for video, ¶ and a slug of the passage's first words for web text, or ¶p and a page number for PDFs (linked with `#page=N`, since browsers can't highlight text inside a PDF).
 - Video links open the video at that moment. Web text links use a `#:~:text=` fragment built from the passage's exact words, so supporting browsers scroll to and highlight it. Pages that render their text with JavaScript may not scroll.
 - A rule backed by several sources lists each one, earliest timestamp per video. Within a section, base rules come first, then refinements and exceptions. Source counts don't set the order: game citations support the principle rather than the rule, and many citations come from one author.
+- *(Editorial.)* marks a rule with no source, such as the Feedback budget in `interaction-feel.md`; it carries no citation.
 - Text marked *Note:* is an editorial caveat (accessibility, a CSS or web translation) that the source did not state. It carries no citation.
 
 ## Adding a source
@@ -36,31 +37,58 @@ Each rule in a topic file ends with one or more citation labels. The labels are 
 5. Merge each new rule into the topic file it belongs to. If it repeats an existing rule, add the citation to that rule instead of duplicating it. If it conflicts with one, keep both and say when each applies. Each recurring concept has one home file; elsewhere, mention it in one clause plus `see also <file>.md § <heading>` rather than restating it.
 6. Do not commit full transcripts or articles. Cite and summarize only.
 
+## Concept homes
+
+Each recurring concept has one home file that holds its rule. Other files mention it in one clause plus `see also <file>.md § <heading>` and don't restate it. Check this table before adding a rule, and update it when a concept moves.
+
+| Concept | Home |
+|---|---|
+| Feedback ladder, pro tools vs consumer apps | `interaction-feel.md` |
+| No motion, and trigger wins (keyboard-initiated) | `motion.md` |
+| Which surfaces animate (frequency lists) | `motion.md` |
+| Menu and panel motion | `motion.md` |
+| Overshoot and springs | `motion.md` |
+| Durations and easing | `motion.md` |
+| Press feedback: pressed state on touch-down | `interaction-feel.md` |
+| Press scale and release motion | `motion.md` |
+| Highlight or flash the changed element | `interaction-feel.md` |
+| Acknowledging input (no-ops, disabled, unsupported commands) | `interaction-feel.md` |
+| Wait and loading indicators: which indicator, and when (duration-keyed) | `interaction-feel.md` |
+| Skeleton and indicator appearance (shimmer, layout match, status message lifecycle) | `components-and-states.md` |
+| Optimistic updates | `interaction-feel.md` |
+| Undo vs confirmation | `components-and-states.md` |
+| Disabled state | `components-and-states.md` |
+| Focus vs selected | `components-and-states.md` |
+| Empty states | `components-and-states.md` |
+| Tabs | `navigation-and-disclosure.md` |
+| Search (placement, scope, prominence) | `navigation-and-disclosure.md` |
+| Search-as-you-type behavior | `components-and-states.md` |
+| Gamification, badges, leaderboards | `navigation-and-disclosure.md` |
+| Keyboard shortcuts and command menu | `interaction-feel.md` |
+| Haptics | `interaction-feel.md` |
+| Sound | `interaction-feel.md` |
+| Double-tap and double-click | `interaction-feel.md` |
+| Auto-advance and queues | `interaction-feel.md` |
+| Shadows | `depth-and-polish.md` |
+| Dark-mode depth and surfaces | `color.md` |
+| Icon color | `color.md` |
+| Destructive actions color | `color.md` |
+| Text tiers and secondary text | `typography.md` |
+| Spacing grid | `layout-and-hierarchy.md` |
+| Chart rules | `data-and-dashboards.md` |
+| Pricing (cards, pages, tables) | `data-and-dashboards.md` |
+| Use only supplied assets | `SKILL.md` (Core Checklist) |
+
 ## Testing
 
-Each scenario below was run once, so treat the results as indicative, not measured.
+Each scenario was run once with Claude Opus 5.5 (November 2026), so treat the results as indicative, not measured. Each compares the same prompt with and without the skill.
 
-Tested November 2026 with Claude Opus 5.5:
+| Scenario | Only the run with the skill |
+|---|---|
+| Review a deliberately flawed dashboard | Smoothed chart lines, missing time-frame control, nested radii, shadow values and module priority were flagged; every finding cited a real rule |
+| Build a B2B analytics dashboard | No delete confirmation (undo instead), shadow opacity 3-12% rather than 25-45%, range control and KPI sparklines, each figure shown once |
+| Build an issue tracker with a create flow and shortcuts | Keyboard-opened panels and menus appear without motion; pointer-opened ones grow from their trigger; commands with nothing to do get a specific response |
+| Review that issue tracker for feel | Keyboard-opened menus that animate and a 1.18× overshoot pop on the most frequent action were flagged; From-games citations were marked as translations |
+| "Make it feel more satisfying and premium" on a pro tool | Motion was gated on input source, the overshoot pop was removed, and a command menu, shortcut sheet and Done celebrations were proposed rather than built |
 
-- **Review mode.** Given a deliberately flawed dashboard, the review with the skill cited real rules for every finding. The review without it caught the obvious problems but missed smoothed chart lines, the missing time-frame control, nested corner radii, shadow values, module priority, and account placement. The Core Checklist in `SKILL.md` is built from those gaps.
-- **Build mode.** A B2B dashboard was built from the same prompt with and without the skill. Both used straight line segments, grid lines and undo. Only the build with the skill:
-  - deleted rows without a confirmation dialog;
-  - kept shadow opacity at 3-12% (the other build used 25-45%);
-  - added a 3/6/12-month range control, KPI sparklines and a prior-period comparison line. The skill now says to propose a comparison line rather than build it unasked, so a rerun should list it as a proposal;
-  - showed each figure once, with no total-revenue card that repeated the chart.
-
-  Straight chart lines are on the Core Checklist anyway, because the review without the skill missed them.
-- **Interaction feel (build mode).** An issue-tracker list with a create flow and keyboard shortcuts was built from the same prompt with and without the skill. Both used undo instead of a delete confirmation, row flashes and toasts. Only the build with the skill:
-  - opened panels and menus instantly when triggered by the keyboard, and animated them out of the element that opened them only for pointer input. The other build animated every open the same way, including a 1.18× overshoot "pop" on status changes;
-  - gave a specific response to commands with nothing to do ("Nothing to undo", re-picking the current status). It also lit a faint edge cue when arrowing past the last row, which the skill now treats as optional (silence is fine at list boundaries);
-  - blinked the chosen menu item before the menu faded, and flashed the done count when it rose;
-  - listed features it would add but didn't build (bulk actions, a command palette), following the user-scope precedence rule.
-
-  The first two gaps are on the Core Checklist.
-- **Interaction feel (review mode).** Given the issue-tracker build made without the skill, a review with the skill read the event handlers and CSS. It reported 6 findings in the group then called **Feels unresponsive** (now **Feels wrong**): keyboard-opened menus that animate, a scale-and-overshoot "pop" on the most frequent keyboard action, and others. It also found 3 accessibility blockers and 4 polish issues. All 10 inline citation links matched their definitions, and the 4 findings based on game principles were marked as translations.
-- **Interaction feel (restraint).** The same issue tracker, described as used by an engineering team all day, was given the prompt "make it feel more satisfying and premium" with and without the skill. Neither run added confetti, sound or haptics. Only the run with the skill:
-  - gated motion on input source (keyboard-opened dialogs and menus stopped moving);
-  - removed the 1.18× overshoot pop, leaving routine status changes with one cue;
-  - rejected a command menu, a shortcut sheet and Done celebrations, citing the feedback budget and the user-scope rule.
-
-  The run without the skill went further on function: it made status changes undoable, which the run with the skill only proposed. The skill now says that fixing a misbehaving existing feature is in scope; only new features are proposed.
+Neither run added confetti, sound or haptics in the restraint scenario. The Core Checklist favors the gaps above.
