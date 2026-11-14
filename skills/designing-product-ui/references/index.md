@@ -22,9 +22,9 @@ Each rule in a topic file ends with one or more citation labels. The labels are 
 
 - The label is the bibliography key plus a locator: a timestamp for video, ¶ and a slug of the passage's first words for web text, or ¶p and a page number for PDFs (linked with `#page=N`, since browsers can't highlight text inside a PDF).
 - Video links open the video at that moment. Web text links use a `#:~:text=` fragment built from the passage's exact words, so supporting browsers scroll to and highlight it. Pages that render their text with JavaScript may not scroll.
-- A rule backed by several sources lists each one, earliest timestamp per video. Within a section, base rules come first, then refinements and exceptions. Source counts don't set the order: game citations support the principle rather than the rule, and many citations come from one author.
 - *(Editorial.)* marks a rule with no source, such as the Feedback budget in `interaction-feel.md`; it carries no citation.
-- Text marked *Note:* is an editorial caveat (accessibility, a CSS or web translation) that the source did not state. It carries no citation.
+- A rule backed by several sources lists each one, with the earliest cited timestamp per video.
+- Text marked *Note:* is an editorial caveat (accessibility, a CSS translation, or how a game principle applies to apps) that the source did not state, or a summary of where sources differ. It carries no citation.
 
 ## Adding a source
 
