@@ -1,0 +1,126 @@
+# Citation links: motion.md
+
+Link definitions for every citation label in `../../motion.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
+
+[apple/design-foundations 9:27]: https://youtu.be/dGcqqA3Sl-o?t=567
+[apple/designing-fluid-interfaces ¶because-you-can-discover]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=Because%20you%20can%20discover%20a%20new
+[apple/designing-fluid-interfaces ¶it-grows-from-the]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=it%20grows%20from%20the%20initial%20state
+[apple/designing-fluid-interfaces ¶it-should-have-a]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=It%20should%20have%20a%20consistent%20offscreen
+[apple/designing-fluid-interfaces ¶its-important-that-you]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=it%27s%20important%20that%20you%20treat%20behaviors
+[apple/designing-fluid-interfaces ¶its-not-just-about]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=it%27s%20not%20just%20about%20framerate.%20It%27s
+[apple/designing-fluid-interfaces ¶not-get-in-the]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=not%20get%20in%20the%20way%20with
+[apple/designing-fluid-interfaces ¶so-we-recommend-starting]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=So%2C%20we%20recommend%20starting%20with%20100%25
+[apple/designing-fluid-interfaces ¶the-content-uses-elasticity]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=the%20content%20uses%20elasticity%20to%20pull
+[apple/designing-fluid-interfaces ¶the-line-is-completely]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=The%20line%20is%20completely%20unbroken%2C%20and
+[apple/designing-fluid-interfaces ¶theres-less-mass-on]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=there%27s%20less%20mass%20on%20the%20photos%2C
+[apple/designing-fluid-interfaces ¶we-should-respect-the]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=We%20should%20respect%20the%20relative%20position%2C
+[apple/designing-fluid-interfaces ¶we-want-to-allow]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=we%20want%20to%20allow%20for%20constant
+[apple/designing-fluid-interfaces ¶you-actually-wouldnt-know]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=you%20actually%20wouldn%27t%20know%20the%20difference
+[apple/designing-fluid-interfaces ¶you-can-also-use]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=you%20can%20also%20use%20it%20for
+[apple/designing-fluid-interfaces ¶you-want-to-take]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=You%20want%20to%20take%20a%20small
+[apple/touch-on-mac 1:26]: https://youtu.be/2cq3ytwLrLk?t=86
+[freiberg/invisible-details ¶a-layer-slides-over]: https://rauno.me/craft/interaction-design#:~:text=A%20layer%20slides%20over%20from%20the
+[freiberg/invisible-details ¶exhibits-less-bounce-since]: https://rauno.me/craft/interaction-design#:~:text=exhibits%20less%20bounce%20since%20it%27s%20conceptually
+[freiberg/invisible-details ¶feeling-the-scale-delta]: https://rauno.me/craft/interaction-design#:~:text=feeling%20the%20scale%20delta%20applying%20immediately%2C
+[freiberg/invisible-details ¶great-interaction-design-rewards]: https://rauno.me/craft/interaction-design#:~:text=Great%20interaction%20design%20rewards%20learning%20by
+[freiberg/invisible-details ¶great-interactions-are-modeled]: https://rauno.me/craft/interaction-design#:~:text=Great%20interactions%20are%20modeled%20after%20properties
+[freiberg/invisible-details ¶if-the-app-slides]: https://rauno.me/craft/interaction-design#:~:text=if%20the%20app%20slides%20in%20from
+[freiberg/invisible-details ¶it-doesnt-feel-like]: https://rauno.me/craft/interaction-design#:~:text=It%20doesn%27t%20feel%20like%20you%27re%20doing
+[freiberg/invisible-details ¶it-feels-right-to]: https://rauno.me/craft/interaction-design#:~:text=it%20feels%20right%20to%20not%20animate
+[freiberg/invisible-details ¶lightweight-actions-such-as]: https://rauno.me/craft/interaction-design#:~:text=Lightweight%20actions%2C%20such%20as%20displaying%20overlays%2C
+[freiberg/invisible-details ¶notice-how-the-gesture]: https://rauno.me/craft/interaction-design#:~:text=Notice%20how%20the%20gesture%20retains%20the
+[freiberg/invisible-details ¶object-permanence-creating-a]: https://rauno.me/craft/interaction-design#:~:text=Object%20permanence%2C%20creating%20a%20focal%20point%2C
+[freiberg/invisible-details ¶sometimes-we-can-get]: https://rauno.me/craft/interaction-design#:~:text=Sometimes%20we%20can%20get%20away%20with
+[freiberg/invisible-details ¶through-motion-this-helps]: https://rauno.me/craft/interaction-design#:~:text=Through%20motion%20this%20helps%20establish%20a
+[gmtk/game-feel-and-juice 3:24]: https://youtu.be/216_5nu4aVQ?t=204
+[jain/animated-sidebar 3:08]: https://youtu.be/NtZeYmTMuo4?t=188
+[jain/awful-to-amazing 5:32]: https://youtu.be/ulSOdTgoGeY?t=332
+[jain/awful-to-amazing 6:44]: https://youtu.be/ulSOdTgoGeY?t=404
+[jain/boring-design-hacks 2:50]: https://youtu.be/SfX43uIubj4?t=170
+[jain/boring-design-hacks 3:15]: https://youtu.be/SfX43uIubj4?t=195
+[jain/boring-design-hacks 3:40]: https://youtu.be/SfX43uIubj4?t=220
+[jain/boring-design-hacks 3:48]: https://youtu.be/SfX43uIubj4?t=228
+[jain/boring-design-hacks 5:08]: https://youtu.be/SfX43uIubj4?t=308
+[jain/boring-design-hacks 5:21]: https://youtu.be/SfX43uIubj4?t=321
+[jain/captivating-sections 2:22]: https://youtu.be/tNMAFjzapOk?t=142
+[jain/captivating-sections 2:52]: https://youtu.be/tNMAFjzapOk?t=172
+[jain/captivating-sections 4:06]: https://youtu.be/tNMAFjzapOk?t=246
+[jain/captivating-sections 4:58]: https://youtu.be/tNMAFjzapOk?t=298
+[jain/crucial-ui-elements 10:25]: https://youtu.be/gKM6b2EnW1k?t=625
+[jain/dashboard-ui 7:23]: https://youtu.be/B7k5rOgmOGY?t=443
+[jain/genius-designer 3:32]: https://youtu.be/HE4rLEQpiXY?t=212
+[jain/genius-designer 4:20]: https://youtu.be/HE4rLEQpiXY?t=260
+[jain/google-ai-redesign 4:41]: https://youtu.be/pGYLZyBE32o?t=281
+[jain/landing-page-levels 6:35]: https://youtu.be/eMMiLeo_UGI?t=395
+[jain/landing-page-levels 8:36]: https://youtu.be/eMMiLeo_UGI?t=516
+[jain/load-animations-code 16:07]: https://youtu.be/d4MF6pdAZNw?t=967
+[jain/load-animations-code 5:32]: https://youtu.be/d4MF6pdAZNw?t=332
+[jain/load-animations-code 6:02]: https://youtu.be/d4MF6pdAZNw?t=362
+[jain/load-animations-code 6:58]: https://youtu.be/d4MF6pdAZNw?t=418
+[jain/load-animations-figma 0:01]: https://youtu.be/nl8OFGdx75w?t=1
+[jain/load-animations-figma 1:17]: https://youtu.be/nl8OFGdx75w?t=77
+[jain/load-animations-figma 4:55]: https://youtu.be/nl8OFGdx75w?t=295
+[jain/micro-animations 0:30]: https://youtu.be/ld1zhQMXxXU?t=30
+[jain/micro-animations 0:34]: https://youtu.be/ld1zhQMXxXU?t=34
+[jain/micro-animations 2:59]: https://youtu.be/ld1zhQMXxXU?t=179
+[jain/micro-animations 3:06]: https://youtu.be/ld1zhQMXxXU?t=186
+[jain/micro-animations 6:48]: https://youtu.be/ld1zhQMXxXU?t=408
+[jain/mobile-app-ui 5:17]: https://youtu.be/Gfsd8NNuD9g?t=317
+[jain/mobile-app-ui 5:26]: https://youtu.be/Gfsd8NNuD9g?t=326
+[jain/mobile-swipe-interactions 0:33]: https://youtu.be/14h1VnkQvIc?t=33
+[jain/mobile-swipe-interactions 0:44]: https://youtu.be/14h1VnkQvIc?t=44
+[jain/mobile-swipe-interactions 3:19]: https://youtu.be/14h1VnkQvIc?t=199
+[jain/mobile-swipe-interactions 4:03]: https://youtu.be/14h1VnkQvIc?t=243
+[jain/mobile-swipe-interactions 5:03]: https://youtu.be/14h1VnkQvIc?t=303
+[jain/modern-layouts 4:24]: https://youtu.be/VPeTgU7la34?t=264
+[jain/modern-layouts 5:02]: https://youtu.be/VPeTgU7la34?t=302
+[jain/software-must-lie 4:14]: https://youtu.be/S8DcTJm8pYM?t=254
+[jain/tesla-wannabe-redesign 4:12]: https://youtu.be/V3Omp1hm0Sg?t=252
+[jain/think-like-product-designer 0:47]: https://youtu.be/ADaQuZS04Rc?t=47
+[jain/tiktok-ux 1:46]: https://youtu.be/ixUq4HM4FNg?t=106
+[jain/trendy-web-animations 0:06]: https://youtu.be/ZsP20PN14O0?t=6
+[jain/trendy-web-animations 0:40]: https://youtu.be/ZsP20PN14O0?t=40
+[jain/trendy-web-animations 1:34]: https://youtu.be/ZsP20PN14O0?t=94
+[jain/trendy-web-animations 2:46]: https://youtu.be/ZsP20PN14O0?t=166
+[jain/trendy-web-animations 4:06]: https://youtu.be/ZsP20PN14O0?t=246
+[jain/trendy-web-animations 4:54]: https://youtu.be/ZsP20PN14O0?t=294
+[jain/vibe-coding-cant-fix 7:27]: https://youtu.be/RCneB_MQ7qs?t=447
+[jain/vibe-coding-cant-fix 7:37]: https://youtu.be/RCneB_MQ7qs?t=457
+[jain/vibe-coding-cant-fix 8:14]: https://youtu.be/RCneB_MQ7qs?t=494
+[jonasson-purho/juice-it-or-lose-it 10:39]: https://youtu.be/Fy0aCDmgnxg?t=639
+[jonasson-purho/juice-it-or-lose-it 3:59]: https://youtu.be/Fy0aCDmgnxg?t=239
+[jonasson-purho/juice-it-or-lose-it 5:58]: https://youtu.be/Fy0aCDmgnxg?t=358
+[kowalski/great-animations ¶a-good-tip-here]: https://emilkowal.ski/ui/great-animations#:~:text=A%20good%20tip%20here%20is%20to
+[kowalski/great-animations ¶before-you-add-an]: https://emilkowal.ski/ui/great-animations#:~:text=Before%20you%20add%20an%20animation%2C%20you
+[kowalski/great-animations ¶i-highly-suggest-playing]: https://emilkowal.ski/ui/great-animations#:~:text=I%20highly%20suggest%20playing%20around%20with
+[kowalski/great-animations ¶it-allows-the-user]: https://emilkowal.ski/ui/great-animations#:~:text=It%20allows%20the%20user%20to%20change
+[kowalski/great-animations ¶its-easy-to-start]: https://emilkowal.ski/ui/great-animations#:~:text=It%E2%80%99s%20easy%20to%20start%20adding%20animations
+[kowalski/great-animations ¶the-opacity-change-in]: https://emilkowal.ski/ui/great-animations#:~:text=The%20opacity%20change%20in%20exiting%20and
+[kowalski/great-animations ¶uses-ease-as-the]: https://emilkowal.ski/ui/great-animations#:~:text=uses%20ease%20as%20the%20easing%20type
+[kowalski/great-animations ¶you-should-try-to]: https://emilkowal.ski/ui/great-animations#:~:text=you%20should%20try%20to%20animate%20with
+[kowalski/great-animations ¶your-animations-should-also]: https://emilkowal.ski/ui/great-animations#:~:text=Your%20animations%20should%20also%20usually%20be
+[kowalski/you-dont-need-animations ¶a-180ms-dropdown-animation]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=A%20180ms%20dropdown%20animation%20feels%20more
+[kowalski/you-dont-need-animations ¶an-animation-would-make]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=an%20animation%20would%20make%20them%20feel
+[kowalski/you-dont-need-animations ¶another-purposeful-animation-is]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=Another%20purposeful%20animation%20is%20this%20subtle
+[kowalski/you-dont-need-animations ¶because-it-comes-from]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=Because%20it%20comes%20from%20and%20leaves
+[kowalski/you-dont-need-animations ¶before-you-start-animating]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=Before%20you%20start%20animating%2C%20ask%20yourself%3A
+[kowalski/you-dont-need-animations ¶how-often-users-will]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=How%20often%20users%20will%20see%20an
+[kowalski/you-dont-need-animations ¶unless-you-are-working]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=Unless%20you%20are%20working%20on%20marketing
+[nijman/art-of-screenshake 14:53]: https://youtu.be/AJdEqssNZ-U?t=893
+[nijman/art-of-screenshake 19:54]: https://youtu.be/AJdEqssNZ-U?t=1194
+[nijman/art-of-screenshake 32:19]: https://youtu.be/AJdEqssNZ-U?t=1939
+[nngroup/theory-of-user-delight ¶combine-this-with-flashy]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=Combine%20this%20with%20flashy%20animations%20which
+[ording/rubber-band ¶when-he-got-to]: https://www.cultofmac.com/news/bas-ording-rubber-band-effect-iphone#:~:text=when%20he%20got%20to%20the%20bottom
+[ording/rubber-band ¶when-he-selected-a]: https://www.cultofmac.com/news/bas-ording-rubber-band-effect-iphone#:~:text=When%20he%20selected%20a%20name%2C%20it
+[raroque/apps-feel-10x-better 0:52]: https://youtu.be/8mMH6Pq8qnE?t=52
+[saffer/microinteractions 31:21]: https://youtu.be/9CEtqnPdWoI?t=1881
+[sakamoto/hearthstone-immersive-ui 10:33]: https://youtu.be/axkPXCNjOh8?t=633
+
+## Source principles
+
+What each game-design source said, keyed by the first citation of the **From games** rule it backs. The rule in the topic file is the product-UI translation.
+
+- [nijman/art-of-screenshake 32:19]: Designers get used to screen shake and keep adding more; Nuclear Throne added an option to disable it after players got nauseous. Don't add effects that physically hurt people.
+- [jonasson-purho/juice-it-or-lose-it 3:59]: When no tweening engine is available, move a value 10% of the remaining distance each frame; lerp the camera so it slightly lags the player.
+- [jonasson-purho/juice-it-or-lose-it 10:39]: Make destroyed blocks fall away, pushed in the ball's direction and spinning, and darken them so they don't blend with live blocks.
+- [gmtk/game-feel-and-juice 3:24]: Give objects physical reactions: guns kick back, landings kick up dust, a hit ball scales up and eases back, dragged cards tilt and swoosh.
