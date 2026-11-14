@@ -52,7 +52,6 @@ Link definitions for every citation label in `../../data-and-dashboards.md`. Gre
 [jain/vibe-coding-pro-ui 5:45]: https://youtu.be/xHD01_Onac0?t=345
 [jain/weirdly-perfect-ui 2:28]: https://youtu.be/neE6wOuBIP8?t=148
 [jain/weirdly-perfect-ui 2:33]: https://youtu.be/neE6wOuBIP8?t=153
-[kennedy/spendweek-redesign 9:31]: https://youtu.be/LHs6vx4QEE4?t=571
 [kennedy/timezones-redesign 1:46]: https://youtu.be/B4XHaboNMOI?t=106
 [kennedy/timezones-redesign 7:19]: https://youtu.be/B4XHaboNMOI?t=439
 [nngroup/comparison-tables 0:00]: https://youtu.be/POsaV2YzRr8?t=0

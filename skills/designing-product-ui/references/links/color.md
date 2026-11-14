@@ -75,7 +75,6 @@ Link definitions for every citation label in `../../color.md`. Grep a label here
 [kennedy/spendweek-redesign 7:28]: https://youtu.be/LHs6vx4QEE4?t=448
 [kennedy/spendweek-redesign 9:02]: https://youtu.be/LHs6vx4QEE4?t=542
 [kennedy/starting-a-ui-project 26:36]: https://youtu.be/JOQJO_V7sew?t=1596
-[kennedy/starting-a-ui-project 37:47]: https://youtu.be/JOQJO_V7sew?t=2267
 [kennedy/starting-a-ui-project 38:45]: https://youtu.be/JOQJO_V7sew?t=2325
 [kennedy/starting-a-ui-project 40:24]: https://youtu.be/JOQJO_V7sew?t=2424
 [kennedy/timezones-redesign 5:53]: https://youtu.be/B4XHaboNMOI?t=353
@@ -86,6 +85,7 @@ Link definitions for every citation label in `../../color.md`. Grep a label here
 [schoger/bad-about 11:35]: https://youtu.be/S6-q5BheEYU?t=695
 [schoger/bad-about 12:02]: https://youtu.be/S6-q5BheEYU?t=722
 [schoger/bad-about 7:34]: https://youtu.be/S6-q5BheEYU?t=454
+[schoger/dashboard-with-ai 0:01:56]: https://youtu.be/lQCWuOT5ENQ?t=116
 [schoger/dashboard-with-ai 0:02:31]: https://youtu.be/lQCWuOT5ENQ?t=151
 [schoger/dashboard-with-ai 0:05:00]: https://youtu.be/lQCWuOT5ENQ?t=300
 [schoger/dashboard-with-ai 0:09:15]: https://youtu.be/lQCWuOT5ENQ?t=555
@@ -108,4 +108,3 @@ Link definitions for every citation label in `../../color.md`. Grep a label here
 [schoger/tuple 9:06]: https://youtu.be/RC9cYdbQ-_c?t=546
 [schoger/wp-pusher-checkout 8:16]: https://youtu.be/5gdYHlYAKDY?t=496
 [schoger/wp-pusher-checkout 9:07]: https://youtu.be/5gdYHlYAKDY?t=547
-[schoger/wss 1:42]: https://youtu.be/ZJj7uNdzPpM?t=102

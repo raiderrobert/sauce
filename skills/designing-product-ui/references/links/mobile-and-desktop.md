@@ -41,10 +41,11 @@ Link definitions for every citation label in `../../mobile-and-desktop.md`. Grep
 [jain/spotify-wrapped-redesign 1:31]: https://youtu.be/goWOAFqJHpA?t=91
 [jain/spotify-wrapped-redesign 1:40]: https://youtu.be/goWOAFqJHpA?t=100
 [jain/tiktok-ux 4:57]: https://youtu.be/ixUq4HM4FNg?t=297
+[kennedy/spendweek-redesign 6:35]: https://youtu.be/LHs6vx4QEE4?t=395
 [kennedy/wodify-redesign 1:37]: https://youtu.be/OdS7fOS7bTk?t=97
 [kennedy/wodify-redesign 2:09]: https://youtu.be/OdS7fOS7bTk?t=129
 [nngroup/content-dispersion-mobile 1:02]: https://youtu.be/-3xbwQt4MGQ?t=62
-[raroque/app-design-process 9:37]: https://youtu.be/H0czeRyXPxA?t=577
+[raroque/apps-feel-10x-better 8:13]: https://youtu.be/8mMH6Pq8qnE?t=493
 [schoger/dashboard-with-ai 0:04:25]: https://youtu.be/lQCWuOT5ENQ?t=265
 [schoger/wss 11:35]: https://youtu.be/ZJj7uNdzPpM?t=695
 [schoger/wss 12:30]: https://youtu.be/ZJj7uNdzPpM?t=750

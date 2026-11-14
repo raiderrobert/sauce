@@ -91,6 +91,7 @@ Link definitions for every citation label in `../../navigation-and-disclosure.md
 [nngroup/tabs-humble-powerful 4:40]: https://youtu.be/7ntSojFW5Jg?t=280
 [nngroup/theory-of-user-delight ¶advanced-options-appear-when]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=Advanced%20options%20appear%20when%20the%20user
 [nngroup/theory-of-user-delight ¶the-hidden-links-with]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=the%20hidden%20links%20with%20little%20information
+[raroque/app-design-process 9:37]: https://youtu.be/H0czeRyXPxA?t=577
 [saffer/microinteractions 16:02]: https://youtu.be/9CEtqnPdWoI?t=962
 [saffer/microinteractions 18:30]: https://youtu.be/9CEtqnPdWoI?t=1110
 [saffer/microinteractions 28:23]: https://youtu.be/9CEtqnPdWoI?t=1703

@@ -20,6 +20,7 @@ Link definitions for every citation label in `../../typography.md`. Grep a label
 [jain/typography 5:13]: https://youtu.be/7sUUzOCv47U?t=313
 [jain/typography 5:21]: https://youtu.be/7sUUzOCv47U?t=321
 [jain/typography 6:15]: https://youtu.be/7sUUzOCv47U?t=375
+[jain/typography 6:24]: https://youtu.be/7sUUzOCv47U?t=384
 [jain/typography 7:17]: https://youtu.be/7sUUzOCv47U?t=437
 [jain/typography 9:15]: https://youtu.be/7sUUzOCv47U?t=555
 [jain/typography 9:46]: https://youtu.be/7sUUzOCv47U?t=586
@@ -45,6 +46,7 @@ Link definitions for every citation label in `../../typography.md`. Grep a label
 [kennedy/spendweek-redesign 1:40]: https://youtu.be/LHs6vx4QEE4?t=100
 [kennedy/spendweek-redesign 2:04]: https://youtu.be/LHs6vx4QEE4?t=124
 [kennedy/spendweek-redesign 3:09]: https://youtu.be/LHs6vx4QEE4?t=189
+[kennedy/spendweek-redesign 9:31]: https://youtu.be/LHs6vx4QEE4?t=571
 [kennedy/starting-a-ui-project 13:47]: https://youtu.be/JOQJO_V7sew?t=827
 [kennedy/starting-a-ui-project 22:29]: https://youtu.be/JOQJO_V7sew?t=1349
 [kennedy/starting-a-ui-project 38:30]: https://youtu.be/JOQJO_V7sew?t=2310

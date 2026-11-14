@@ -32,11 +32,11 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 | Fonts, type scales, responsive type, line height, letter spacing, text tiers | `./typography.md` |
 | Palettes, accent use, neutrals, semantic colors, dark mode, contrast | `./color.md` |
 | Shadows, borders, corner radius, icon style and libraries, gradients, imagery, texture | `./depth-and-polish.md` |
-| Buttons, chips, icon labels and tooltips, forms and signup, inputs, cards, carousels, modals, popovers, toasts, delete and undo, optimistic updates, autosave, AI chat and prompt interfaces, search fields and in-page menus or submenus, and empty, loading, error and success states | `./components-and-states.md` |
+| Buttons, chips, icon labels and tooltips, forms and signup, inputs, cards, carousels, modals, popovers, toasts, delete and undo, autosave, AI chat and prompt interfaces, search fields and in-page menus or submenus, and empty, loading, error and success states | `./components-and-states.md` |
 | Dashboards, charts, KPIs, tables, lists, pricing pages and billing | `./data-and-dashboards.md` |
 | Sidebars, tabs (when to use them and how to mark the selected one), overflow menus, search placement and scope, what to show versus hide, onboarding and first run, gamification, website navbars, dropdowns and mega menus | `./navigation-and-disclosure.md` |
 | Animation, transitions, easing and durations, which triggers and surfaces animate, how menus and panels open, motion that shows where things came from, hover and press effects, drag, swipe, touch tracking and rubber-banding, loader animations, scroll effects | `./motion.md` |
-| How each action feels: acknowledging clicks, keypresses and commands, speed and perceived performance, flow, keyboard shortcuts and command menus, how long a wait needs which indicator, proportional feedback, sound, haptics, tone and personality, delight and when to hold back | `./interaction-feel.md` |
+| How each action feels: acknowledging clicks, keypresses and commands, speed and perceived performance, flow, keyboard shortcuts and command menus, how long a wait needs which indicator, optimistic updates, proportional feedback, sound, haptics, tone and personality, delight and when to hold back | `./interaction-feel.md` |
 | Mobile apps, gestures, thumb zones, tab bars, bottom sheets, responsive layouts and breakpoints, macOS and desktop apps | `./mobile-and-desktop.md` |
 | Landing pages, heroes, marketing copy, footers, social proof (navbars are in navigation-and-disclosure) | `./landing-pages.md` |
 | How to approach the work: references, generated UI, reviewing at real size | `./process.md` |
@@ -49,16 +49,16 @@ Rules chosen because a capable model tends to skip them. Some come from with/wit
 
 - Use only assets, data and social proof the user supplied. Where a rule calls for a product screenshot, customer logos or testimonials and none were given, leave a labeled placeholder and say so; never invent them. (editorial)
 - Rank each dashboard module as high, mid or low priority before arranging; put the most important higher and farther left. (`data-and-dashboards.md`)
-- Draw line charts with straight segments, never smoothed or faded; give full charts grid lines, axis values and a time-frame control. (`data-and-dashboards.md`)
-- Show each piece of data once: no KPI repeated across cards, pages or the sidebar. (`data-and-dashboards.md`)
-- Build hierarchy with weight and color/opacity contrast before size; large headings rely on size, not extra bold. (`layout-and-hierarchy.md`)
-- Tint grays, borders and dark surfaces toward the brand hue; a white or near-white page is fine in light mode. (`color.md`)
+- Draw line charts with straight segments, never smoothed or faded; give full charts grid lines and axis values, and a time-frame control when the data spans more than one useful time frame. (`data-and-dashboards.md`)
+- Show each piece of data once: no duplicated KPI rows across pages, no chart restating percentages already shown. (`data-and-dashboards.md`)
+- Build hierarchy with weight and color/opacity contrast before size; large headings rely on size, not extra bold. (`layout-and-hierarchy.md`, `typography.md`)
+- Tint grays, borders and dark surfaces toward the brand hue, but keep grays neutral beside a warm primary such as orange; a white or near-white page is fine in light mode. (`color.md`)
 - In product UI stay almost entirely neutral with a tiny accent, used for the primary action and active or selected states. (`color.md`)
 - In dark mode, make each raised surface lighter, and space neutral steps about twice as far apart as in light mode. (`color.md`)
-- Soften shadows (lower opacity, much larger blur), and set a nested element's radius to the outer radius minus the gap. (`depth-and-polish.md`)
+- Soften shadows (lower opacity, blur about 1.3-2× the y-offset), and set a nested element's radius to the outer radius minus the gap. (`depth-and-polish.md`)
 - Skip confirmation modals for routine deletes: delete immediately and offer undo. (`components-and-states.md`)
 - Give every command the app defines (shortcuts, submit, undo) and every disabled control a specific response, even when there's nothing to do ("Nothing to undo"); never stack repeats. (`interaction-feel.md`)
-- Trigger wins: anything opened or changed by a keyboard shortcut appears without movement, even a modal (a color change or one blink is fine). Animate pointer-opened panels and dropdowns out of the element that opened them; context and command menus get no motion whatever the trigger. (`interaction-feel.md`, `motion.md`)
+- Trigger wins: anything opened or changed from the keyboard (any keydown, including Enter or Space on a focused control) appears without movement, even a modal (a color change, one blink or an opacity fade of 100ms or less is fine). Animate pointer-opened panels and dropdowns out of the element that opened them; context and command menus get no motion whatever the trigger. (`motion.md`, `interaction-feel.md`)
 - Place each action on a spectrum of explicitness: primary actions visible and labeled, minor ones revealed on hover or focus. (`navigation-and-disclosure.md`)
 - On landing pages, lead with one ~7-word headline saying exactly what the product does, and show the real product. (`landing-pages.md`)
 
@@ -68,12 +68,12 @@ Report each problem as one line: the element, what is wrong, the rule it breaks 
 
 Group by severity, in this order and most impactful first within each group. When a problem fits two groups, use the earlier one:
 
-- **Blocks use:** anything that stops a user from understanding or completing a task: accessibility failures, missing states, misleading signals (a destructive action that doesn't look destructive, an unreadable chart), broken hierarchy, navigation or disclosure.
+- **Blocks use:** anything that stops a user from understanding or completing a task: accessibility failures, missing states, misleading signals (a primary destructive action, such as Delete in a confirmation, that doesn't look destructive, an unreadable chart), broken hierarchy, navigation or disclosure.
 - **Feels wrong:** feedback that misses the budget in either direction. Too little: actions with no visible acknowledgement, slow or blocking feedback. Too much: motion on keyboard or high-frequency actions, unannounced changes, confetti, sound or layered effects on routine actions or in a pro tool. Judge feel from the running app or the event handlers and states in code; a screenshot can't show it. If you couldn't run or read it, say "feel not verified".
 - **Looks unfinished:** everything else: spacing, typography, color harmony, depth, motion polish. Report the ten most visible; collapse the rest into one summary line.
 
 ```markdown
-- Blocks use: The Delete button is brand purple like Edit and Share, so it doesn't signal destruction. Breaks: color destructive actions red. [jain/60-30-10-rule 4:35](https://youtu.be/66oOi9OLMCw?t=275)
+- Blocks use: The Delete button in the delete confirmation is brand purple, so it doesn't signal destruction. Breaks: color a primary destructive action red, never the brand color. [jain/60-30-10-rule 4:35](https://youtu.be/66oOi9OLMCw?t=275)
 - Blocks use: Body text is #999 on white, about 2.8:1. Breaks: text contrast. WCAG 1.4.3
 - Feels wrong: Pressing ⌘Z with nothing to undo does nothing visible. Breaks: give unsupported commands a specific response, not silence (translated from a game principle). [jonasson-purho/juice-it-or-lose-it 1:15](https://youtu.be/Fy0aCDmgnxg?t=75)
 - Feels wrong: The command menu slides in from the top on every ⌘K. Breaks: keyboard-opened surfaces appear instantly. [freiberg/invisible-details ¶it-feels-right-to](https://rauno.me/craft/interaction-design#:~:text=it%20feels%20right%20to%20not%20animate)
@@ -89,6 +89,6 @@ Tells that a UI was built by a beginner or generated without design review, beyo
 | Nested cards, borders on borders, stacked radii | Group with spacing or one simple border (`depth-and-polish.md`) |
 | Two equal filled buttons in one hero or header | One primary action; make the second an outline or text button (`layout-and-hierarchy.md`) |
 | Centered paragraphs, lists or table data | Left-align text, right-align numbers; center only short display text (`layout-and-hierarchy.md`) |
-| The first layout that came to mind, built as is | Choose the layout and card design and state why before building (`process.md`) |
+| The first layout that came to mind, built as is | Check the layout against how the content ranks and change it if it doesn't fit (`process.md`) |
 | Disabled buttons that are unreadable, or focus that looks like selected | Muted but readable disabled text; a distinct focus ring at 3:1 (`components-and-states.md`) |
 | Status shown by color alone | Pair the color with an icon or label (`color.md`) |
