@@ -86,9 +86,9 @@ Each scenario was run once with Claude Opus 5.5 (November 2026), so treat the re
 | Scenario | Only the run with the skill |
 |---|---|
 | Review a deliberately flawed dashboard | Smoothed chart lines, missing time-frame control, nested radii, shadow values and module priority were flagged; every finding cited a real rule |
-| Build a B2B analytics dashboard | No delete confirmation (undo instead), shadow opacity 3-12% rather than 25-45%, range control and KPI sparklines, each figure shown once |
+| Build a B2B analytics dashboard | No delete confirmation (undo instead), soft shadows (3-18% opacity across two runs, versus 25-45% without the skill), a range control, each figure shown once, and modules ranked before layout |
 | Build an issue tracker with a create flow and shortcuts | Keyboard-opened panels and menus appear without motion; pointer-opened ones grow from their trigger; commands with nothing to do get a specific response |
 | Review that issue tracker for feel | Keyboard-opened menus that animate and a 1.18× overshoot pop on the most frequent action were flagged; From-games citations were marked as translations |
 | "Make it feel more satisfying and premium" on a pro tool | Motion was gated on input source, the overshoot pop was removed, and a command menu, shortcut sheet and Done celebrations were proposed rather than built |
 
-Neither run added confetti, sound or haptics in the restraint scenario. The Core Checklist favors the gaps above.
+Neither run added confetti, sound or haptics in the restraint scenario. The Core Checklist favors the gaps above. Rerun after the contradiction cleanup, all three with-skill results held. One gap remains: in both restraint runs, the run with the skill left ⌘Z unable to undo a status change, while the run without the skill fixed it. The scope rule that says to fix misbehaving existing features didn't trigger there.
