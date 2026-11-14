@@ -2,7 +2,6 @@
 
 Link definitions for every citation label in `../../mobile-and-desktop.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
-[apple/intuitive-search 3:22]: https://youtu.be/lx45sKEnZkU?t=202
 [apple/intuitive-search 7:57]: https://youtu.be/lx45sKEnZkU?t=477
 [apple/principles-of-great-design 9:46]: https://youtu.be/Xa9L2yx_QH8?t=586
 [apple/touch-on-mac 11:23]: https://youtu.be/2cq3ytwLrLk?t=683
@@ -20,7 +19,6 @@ Link definitions for every citation label in `../../mobile-and-desktop.md`. Grep
 [jain/dashboard-flaws 3:38]: https://youtu.be/Ksx9C2-3yMo?t=218
 [jain/macos-apps 0:24]: https://youtu.be/Vy0KKvZJRH8?t=24
 [jain/macos-apps 1:02]: https://youtu.be/Vy0KKvZJRH8?t=62
-[jain/macos-apps 1:37]: https://youtu.be/Vy0KKvZJRH8?t=97
 [jain/macos-apps 2:54]: https://youtu.be/Vy0KKvZJRH8?t=174
 [jain/macos-apps 7:24]: https://youtu.be/Vy0KKvZJRH8?t=444
 [jain/mobile-app-ui 0:27]: https://youtu.be/Gfsd8NNuD9g?t=27
@@ -41,10 +39,11 @@ Link definitions for every citation label in `../../mobile-and-desktop.md`. Grep
 [jain/spotify-wrapped-redesign 1:31]: https://youtu.be/goWOAFqJHpA?t=91
 [jain/spotify-wrapped-redesign 1:40]: https://youtu.be/goWOAFqJHpA?t=100
 [jain/tiktok-ux 4:57]: https://youtu.be/ixUq4HM4FNg?t=297
+[kennedy/spendweek-redesign 6:35]: https://youtu.be/LHs6vx4QEE4?t=395
 [kennedy/wodify-redesign 1:37]: https://youtu.be/OdS7fOS7bTk?t=97
 [kennedy/wodify-redesign 2:09]: https://youtu.be/OdS7fOS7bTk?t=129
 [nngroup/content-dispersion-mobile 1:02]: https://youtu.be/-3xbwQt4MGQ?t=62
-[raroque/app-design-process 9:37]: https://youtu.be/H0czeRyXPxA?t=577
+[raroque/apps-feel-10x-better 8:13]: https://youtu.be/8mMH6Pq8qnE?t=493
 [schoger/dashboard-with-ai 0:04:25]: https://youtu.be/lQCWuOT5ENQ?t=265
 [schoger/wss 11:35]: https://youtu.be/ZJj7uNdzPpM?t=695
 [schoger/wss 12:30]: https://youtu.be/ZJj7uNdzPpM?t=750

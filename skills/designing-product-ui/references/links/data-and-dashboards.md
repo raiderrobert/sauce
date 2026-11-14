@@ -51,15 +51,12 @@ Link definitions for every citation label in `../../data-and-dashboards.md`. Gre
 [jain/ui-cheat-codes 5:54]: https://youtu.be/c1TvOcKdBVE?t=354
 [jain/vibe-coding-pro-ui 5:45]: https://youtu.be/xHD01_Onac0?t=345
 [jain/weirdly-perfect-ui 2:28]: https://youtu.be/neE6wOuBIP8?t=148
-[jain/weirdly-perfect-ui 2:33]: https://youtu.be/neE6wOuBIP8?t=153
-[kennedy/spendweek-redesign 9:31]: https://youtu.be/LHs6vx4QEE4?t=571
 [kennedy/timezones-redesign 1:46]: https://youtu.be/B4XHaboNMOI?t=106
 [kennedy/timezones-redesign 7:19]: https://youtu.be/B4XHaboNMOI?t=439
 [nngroup/comparison-tables 0:00]: https://youtu.be/POsaV2YzRr8?t=0
 [nngroup/comparison-tables 0:35]: https://youtu.be/POsaV2YzRr8?t=35
 [raroque/app-design-process 5:13]: https://youtu.be/H0czeRyXPxA?t=313
 [raroque/app-design-process 8:14]: https://youtu.be/H0czeRyXPxA?t=494
-[saffer/microinteractions 18:41]: https://youtu.be/9CEtqnPdWoI?t=1121
 [schoger/bad-about 3:10]: https://youtu.be/S6-q5BheEYU?t=190
 [schoger/dashboard-with-ai 0:24:15]: https://youtu.be/lQCWuOT5ENQ?t=1455
 [schoger/dashboard-with-ai 0:26:08]: https://youtu.be/lQCWuOT5ENQ?t=1568

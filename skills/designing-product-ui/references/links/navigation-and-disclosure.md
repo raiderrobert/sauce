@@ -2,23 +2,22 @@
 
 Link definitions for every citation label in `../../navigation-and-disclosure.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
+[apple/design-foundations 11:12]: https://youtu.be/dGcqqA3Sl-o?t=672
 [apple/design-foundations 2:03]: https://youtu.be/dGcqqA3Sl-o?t=123
 [apple/design-foundations 5:22]: https://youtu.be/dGcqqA3Sl-o?t=322
 [apple/design-foundations 6:01]: https://youtu.be/dGcqqA3Sl-o?t=361
 [apple/design-foundations 9:01]: https://youtu.be/dGcqqA3Sl-o?t=541
 [apple/designing-fluid-interfaces ¶you-can-clip-the]: https://developer.apple.com/videos/play/wwdc2018/803/#:~:text=you%20can%20clip%20the%20content%20off
-[apple/intuitive-search 3:41]: https://youtu.be/lx45sKEnZkU?t=221
+[apple/intuitive-search 3:22]: https://youtu.be/lx45sKEnZkU?t=202
 [apple/intuitive-search 6:20]: https://youtu.be/lx45sKEnZkU?t=380
 [apple/principles-of-great-design 11:20]: https://youtu.be/Xa9L2yx_QH8?t=680
 [apple/touch-on-mac 13:05]: https://youtu.be/2cq3ytwLrLk?t=785
-[eldh/invisible-details ¶contextual-menus-are-also]: https://linear.app/now/invisible-details#:~:text=contextual%20menus%20are%20also%20a%20great
 [freiberg/invisible-details ¶double-tapping-the-scrollbar]: https://rauno.me/craft/interaction-design#:~:text=double%20tapping%20the%20scrollbar%20will%20place
 [jain/ai-startup-components 0:43]: https://youtu.be/If7iCPDy2vk?t=43
 [jain/ai-startup-components 1:28]: https://youtu.be/If7iCPDy2vk?t=88
 [jain/animated-sidebar 0:25]: https://youtu.be/NtZeYmTMuo4?t=25
 [jain/beginner-mistakes 0:30]: https://youtu.be/AH_ugxmLeUM?t=30
 [jain/beginner-mistakes 4:20]: https://youtu.be/AH_ugxmLeUM?t=260
-[jain/captivating-sections 4:22]: https://youtu.be/tNMAFjzapOk?t=262
 [jain/crucial-ui-elements 1:34]: https://youtu.be/gKM6b2EnW1k?t=94
 [jain/dashboard-flaws 2:32]: https://youtu.be/Ksx9C2-3yMo?t=152
 [jain/dashboard-flaws 2:59]: https://youtu.be/Ksx9C2-3yMo?t=179
@@ -74,6 +73,7 @@ Link definitions for every citation label in `../../navigation-and-disclosure.md
 [jain/vibe-coding-pro-ui 5:18]: https://youtu.be/xHD01_Onac0?t=318
 [jain/vibe-coding-pro-ui 5:23]: https://youtu.be/xHD01_Onac0?t=323
 [jain/weirdly-perfect-ui 1:07]: https://youtu.be/neE6wOuBIP8?t=67
+[jain/weirdly-perfect-ui 2:33]: https://youtu.be/neE6wOuBIP8?t=153
 [jain/weirdly-perfect-ui 3:37]: https://youtu.be/neE6wOuBIP8?t=217
 [kennedy/wodify-redesign 2:26]: https://youtu.be/OdS7fOS7bTk?t=146
 [nngroup/better-tabs 0:37]: https://youtu.be/hPxrudx1iXg?t=37
@@ -91,6 +91,7 @@ Link definitions for every citation label in `../../navigation-and-disclosure.md
 [nngroup/tabs-humble-powerful 4:40]: https://youtu.be/7ntSojFW5Jg?t=280
 [nngroup/theory-of-user-delight ¶advanced-options-appear-when]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=Advanced%20options%20appear%20when%20the%20user
 [nngroup/theory-of-user-delight ¶the-hidden-links-with]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=the%20hidden%20links%20with%20little%20information
+[raroque/app-design-process 9:37]: https://youtu.be/H0czeRyXPxA?t=577
 [saffer/microinteractions 16:02]: https://youtu.be/9CEtqnPdWoI?t=962
 [saffer/microinteractions 18:30]: https://youtu.be/9CEtqnPdWoI?t=1110
 [saffer/microinteractions 28:23]: https://youtu.be/9CEtqnPdWoI?t=1703

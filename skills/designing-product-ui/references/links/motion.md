@@ -92,7 +92,6 @@ Link definitions for every citation label in `../../motion.md`. Grep a label her
 [jonasson-purho/juice-it-or-lose-it 5:58]: https://youtu.be/Fy0aCDmgnxg?t=358
 [kowalski/great-animations ¶a-good-tip-here]: https://emilkowal.ski/ui/great-animations#:~:text=A%20good%20tip%20here%20is%20to
 [kowalski/great-animations ¶before-you-add-an]: https://emilkowal.ski/ui/great-animations#:~:text=Before%20you%20add%20an%20animation%2C%20you
-[kowalski/great-animations ¶changes-in-web-apps]: https://emilkowal.ski/ui/great-animations#:~:text=Changes%20in%20web%20apps%20often%20occur
 [kowalski/great-animations ¶i-highly-suggest-playing]: https://emilkowal.ski/ui/great-animations#:~:text=I%20highly%20suggest%20playing%20around%20with
 [kowalski/great-animations ¶it-allows-the-user]: https://emilkowal.ski/ui/great-animations#:~:text=It%20allows%20the%20user%20to%20change
 [kowalski/great-animations ¶its-easy-to-start]: https://emilkowal.ski/ui/great-animations#:~:text=It%E2%80%99s%20easy%20to%20start%20adding%20animations
@@ -105,7 +104,6 @@ Link definitions for every citation label in `../../motion.md`. Grep a label her
 [kowalski/you-dont-need-animations ¶another-purposeful-animation-is]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=Another%20purposeful%20animation%20is%20this%20subtle
 [kowalski/you-dont-need-animations ¶because-it-comes-from]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=Because%20it%20comes%20from%20and%20leaves
 [kowalski/you-dont-need-animations ¶before-you-start-animating]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=Before%20you%20start%20animating%2C%20ask%20yourself%3A
-[kowalski/you-dont-need-animations ¶having-a-toast-suddenly]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=Having%20a%20toast%20suddenly%20appear%20would
 [kowalski/you-dont-need-animations ¶how-often-users-will]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=How%20often%20users%20will%20see%20an
 [kowalski/you-dont-need-animations ¶unless-you-are-working]: https://emilkowal.ski/ui/you-dont-need-animations#:~:text=Unless%20you%20are%20working%20on%20marketing
 [nijman/art-of-screenshake 14:53]: https://youtu.be/AJdEqssNZ-U?t=893
@@ -115,7 +113,6 @@ Link definitions for every citation label in `../../motion.md`. Grep a label her
 [ording/rubber-band ¶when-he-got-to]: https://www.cultofmac.com/news/bas-ording-rubber-band-effect-iphone#:~:text=when%20he%20got%20to%20the%20bottom
 [ording/rubber-band ¶when-he-selected-a]: https://www.cultofmac.com/news/bas-ording-rubber-band-effect-iphone#:~:text=When%20he%20selected%20a%20name%2C%20it
 [raroque/apps-feel-10x-better 0:52]: https://youtu.be/8mMH6Pq8qnE?t=52
-[saffer/microinteractions 15:10]: https://youtu.be/9CEtqnPdWoI?t=910
 [saffer/microinteractions 31:21]: https://youtu.be/9CEtqnPdWoI?t=1881
 [sakamoto/hearthstone-immersive-ui 10:33]: https://youtu.be/axkPXCNjOh8?t=633
 

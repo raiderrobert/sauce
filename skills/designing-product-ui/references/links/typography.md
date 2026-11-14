@@ -20,6 +20,7 @@ Link definitions for every citation label in `../../typography.md`. Grep a label
 [jain/typography 5:13]: https://youtu.be/7sUUzOCv47U?t=313
 [jain/typography 5:21]: https://youtu.be/7sUUzOCv47U?t=321
 [jain/typography 6:15]: https://youtu.be/7sUUzOCv47U?t=375
+[jain/typography 6:24]: https://youtu.be/7sUUzOCv47U?t=384
 [jain/typography 7:17]: https://youtu.be/7sUUzOCv47U?t=437
 [jain/typography 9:15]: https://youtu.be/7sUUzOCv47U?t=555
 [jain/typography 9:46]: https://youtu.be/7sUUzOCv47U?t=586
@@ -31,6 +32,7 @@ Link definitions for every citation label in `../../typography.md`. Grep a label
 [jain/website-layouts 3:03]: https://youtu.be/P2ksReDwWkE?t=183
 [jain/website-layouts 3:39]: https://youtu.be/P2ksReDwWkE?t=219
 [kennedy/advanced-design-tips 5:26]: https://youtu.be/6jiq5g_bXB8?t=326
+[kennedy/advanced-design-tips 5:53]: https://youtu.be/6jiq5g_bXB8?t=353
 [kennedy/advanced-ui-tips 1:14]: https://youtu.be/-2vzMH8iqsg?t=74
 [kennedy/advanced-ui-tips 2:24]: https://youtu.be/-2vzMH8iqsg?t=144
 [kennedy/advanced-ui-tips 4:02]: https://youtu.be/-2vzMH8iqsg?t=242
@@ -45,11 +47,13 @@ Link definitions for every citation label in `../../typography.md`. Grep a label
 [kennedy/spendweek-redesign 1:40]: https://youtu.be/LHs6vx4QEE4?t=100
 [kennedy/spendweek-redesign 2:04]: https://youtu.be/LHs6vx4QEE4?t=124
 [kennedy/spendweek-redesign 3:09]: https://youtu.be/LHs6vx4QEE4?t=189
+[kennedy/spendweek-redesign 9:31]: https://youtu.be/LHs6vx4QEE4?t=571
 [kennedy/starting-a-ui-project 13:47]: https://youtu.be/JOQJO_V7sew?t=827
 [kennedy/starting-a-ui-project 22:29]: https://youtu.be/JOQJO_V7sew?t=1349
 [kennedy/starting-a-ui-project 38:30]: https://youtu.be/JOQJO_V7sew?t=2310
 [kennedy/timezones-redesign 3:32]: https://youtu.be/B4XHaboNMOI?t=212
 [kennedy/timezones-redesign 3:39]: https://youtu.be/B4XHaboNMOI?t=219
+[kennedy/timezones-redesign 5:53]: https://youtu.be/B4XHaboNMOI?t=353
 [kennedy/wodify-redesign 2:36]: https://youtu.be/OdS7fOS7bTk?t=156
 [kennedy/wodify-redesign 5:27]: https://youtu.be/OdS7fOS7bTk?t=327
 [nngroup/better-tabs 4:00]: https://youtu.be/hPxrudx1iXg?t=240

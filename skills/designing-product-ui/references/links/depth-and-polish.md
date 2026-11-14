@@ -26,6 +26,7 @@ Link definitions for every citation label in `../../depth-and-polish.md`. Grep a
 [jain/every-ui-concept 6:25]: https://youtu.be/EcbgbKtOELY?t=385
 [jain/every-ui-concept 6:33]: https://youtu.be/EcbgbKtOELY?t=393
 [jain/every-ui-concept 6:41]: https://youtu.be/EcbgbKtOELY?t=401
+[jain/every-ui-concept 6:56]: https://youtu.be/EcbgbKtOELY?t=416
 [jain/every-ui-concept 8:44]: https://youtu.be/EcbgbKtOELY?t=524
 [jain/every-ui-concept 8:57]: https://youtu.be/EcbgbKtOELY?t=537
 [jain/figma-web-effects 3:19]: https://youtu.be/MZSm6MA8bww?t=199
@@ -50,7 +51,6 @@ Link definitions for every citation label in `../../depth-and-polish.md`. Grep a
 [jain/web-design-hacks 2:29]: https://youtu.be/Lp6ey4AyDzA?t=149
 [jain/web-design-hacks 5:29]: https://youtu.be/Lp6ey4AyDzA?t=329
 [jain/web-design-hacks 6:03]: https://youtu.be/Lp6ey4AyDzA?t=363
-[jain/web-design-hacks 6:14]: https://youtu.be/Lp6ey4AyDzA?t=374
 [jain/website-layouts 2:03]: https://youtu.be/P2ksReDwWkE?t=123
 [jain/weirdly-perfect-ui 7:22]: https://youtu.be/neE6wOuBIP8?t=442
 [kennedy/advanced-design-tips 1:16]: https://youtu.be/6jiq5g_bXB8?t=76
@@ -62,6 +62,7 @@ Link definitions for every citation label in `../../depth-and-polish.md`. Grep a
 [kennedy/advanced-ui-tips 14:37]: https://youtu.be/-2vzMH8iqsg?t=877
 [kennedy/advanced-ui-tips 16:11]: https://youtu.be/-2vzMH8iqsg?t=971
 [kennedy/advanced-ui-tips 9:59]: https://youtu.be/-2vzMH8iqsg?t=599
+[kennedy/starting-a-ui-project 37:47]: https://youtu.be/JOQJO_V7sew?t=2267
 [kennedy/starting-a-ui-project 39:23]: https://youtu.be/JOQJO_V7sew?t=2363
 [kennedy/timezones-redesign 5:30]: https://youtu.be/B4XHaboNMOI?t=330
 [kennedy/wodify-redesign 3:27]: https://youtu.be/OdS7fOS7bTk?t=207
@@ -77,7 +78,6 @@ Link definitions for every citation label in `../../depth-and-polish.md`. Grep a
 [schoger/bad-about 5:57]: https://youtu.be/S6-q5BheEYU?t=357
 [schoger/bad-about 6:08]: https://youtu.be/S6-q5BheEYU?t=368
 [schoger/bad-about 6:24]: https://youtu.be/S6-q5BheEYU?t=384
-[schoger/dashboard-with-ai 0:01:56]: https://youtu.be/lQCWuOT5ENQ?t=116
 [schoger/dashboard-with-ai 0:05:58]: https://youtu.be/lQCWuOT5ENQ?t=358
 [schoger/dashboard-with-ai 0:07:55]: https://youtu.be/lQCWuOT5ENQ?t=475
 [schoger/designing-with-claude-code 0:05:51]: https://youtu.be/lkKGQVHrXzE?t=351
@@ -85,7 +85,6 @@ Link definitions for every citation label in `../../depth-and-polish.md`. Grep a
 [schoger/designing-with-claude-code 0:33:48]: https://youtu.be/lkKGQVHrXzE?t=2028
 [schoger/designing-with-claude-code 0:48:44]: https://youtu.be/lkKGQVHrXzE?t=2924
 [schoger/resolute 11:52]: https://youtu.be/BMHUKij1yUE?t=712
-[schoger/resolute 12:15]: https://youtu.be/BMHUKij1yUE?t=735
 [schoger/resolute 2:21]: https://youtu.be/BMHUKij1yUE?t=141
 [schoger/transistor 10:01]: https://youtu.be/ZT4WRRhacWk?t=601
 [schoger/transistor 6:38]: https://youtu.be/ZT4WRRhacWk?t=398
@@ -93,6 +92,7 @@ Link definitions for every citation label in `../../depth-and-polish.md`. Grep a
 [schoger/tuple 3:16]: https://youtu.be/RC9cYdbQ-_c?t=196
 [schoger/wp-pusher-checkout 7:23]: https://youtu.be/5gdYHlYAKDY?t=443
 [schoger/wp-pusher-checkout 9:57]: https://youtu.be/5gdYHlYAKDY?t=597
+[schoger/wss 1:42]: https://youtu.be/ZJj7uNdzPpM?t=102
 [schoger/wss 4:19]: https://youtu.be/ZJj7uNdzPpM?t=259
 [schoger/wss 4:45]: https://youtu.be/ZJj7uNdzPpM?t=285
 [schoger/wss 6:49]: https://youtu.be/ZJj7uNdzPpM?t=409

@@ -46,7 +46,6 @@ Link definitions for every citation label in `../../components-and-states.md`. G
 [jain/dashboard-ui 4:50]: https://youtu.be/B7k5rOgmOGY?t=290
 [jain/dashboard-ui 5:16]: https://youtu.be/B7k5rOgmOGY?t=316
 [jain/every-ui-concept 0:18]: https://youtu.be/EcbgbKtOELY?t=18
-[jain/every-ui-concept 6:56]: https://youtu.be/EcbgbKtOELY?t=416
 [jain/every-ui-concept 7:05]: https://youtu.be/EcbgbKtOELY?t=425
 [jain/every-ui-concept 7:21]: https://youtu.be/EcbgbKtOELY?t=441
 [jain/every-ui-concept 7:35]: https://youtu.be/EcbgbKtOELY?t=455
@@ -88,7 +87,6 @@ Link definitions for every citation label in `../../components-and-states.md`. G
 [jain/weirdly-perfect-ui 4:19]: https://youtu.be/neE6wOuBIP8?t=259
 [jain/weirdly-perfect-ui 6:07]: https://youtu.be/neE6wOuBIP8?t=367
 [kennedy/advanced-ui-tips 10:59]: https://youtu.be/-2vzMH8iqsg?t=659
-[kennedy/spendweek-redesign 6:35]: https://youtu.be/LHs6vx4QEE4?t=395
 [kennedy/timezones-redesign 1:59]: https://youtu.be/B4XHaboNMOI?t=119
 [kennedy/timezones-redesign 6:43]: https://youtu.be/B4XHaboNMOI?t=403
 [kennedy/wodify-redesign 3:51]: https://youtu.be/OdS7fOS7bTk?t=231
@@ -109,7 +107,6 @@ Link definitions for every citation label in `../../components-and-states.md`. G
 [nngroup/principles-stripe 1:29]: https://youtu.be/qooOXNmdCH4?t=89
 [nngroup/theory-of-user-delight ¶everything-looks-misleadingly-clickable]: https://www.nngroup.com/articles/theory-user-delight/#:~:text=Everything%20looks%20misleadingly%20clickable%2C%20and%20the
 [raroque/apps-feel-10x-better 2:49]: https://youtu.be/8mMH6Pq8qnE?t=169
-[raroque/apps-feel-10x-better 8:13]: https://youtu.be/8mMH6Pq8qnE?t=493
 [saffer/microinteractions 15:34]: https://youtu.be/9CEtqnPdWoI?t=934
 [saffer/microinteractions 22:18]: https://youtu.be/9CEtqnPdWoI?t=1338
 [saffer/microinteractions 23:03]: https://youtu.be/9CEtqnPdWoI?t=1383

@@ -12,6 +12,7 @@ Link definitions for every citation label in `../../interaction-feel.md`. Grep a
 [apple/touch-on-mac 3:10]: https://youtu.be/2cq3ytwLrLk?t=190
 [buell-norton/labor-illusion ¶p2]: https://www.hbs.edu/ris/Publication%20Files/Norton_Michael_The%20labor%20illusion%20How%20operational_f4269b70-3732-4fc4-8113-72d0c47533e0.pdf#page=2
 [buell-norton/labor-illusion ¶p3]: https://www.hbs.edu/ris/Publication%20Files/Norton_Michael_The%20labor%20illusion%20How%20operational_f4269b70-3732-4fc4-8113-72d0c47533e0.pdf#page=3
+[eldh/invisible-details ¶contextual-menus-are-also]: https://linear.app/now/invisible-details#:~:text=contextual%20menus%20are%20also%20a%20great
 [eldh/invisible-details ¶some-product-and-engineering]: https://linear.app/now/invisible-details#:~:text=Some%20product%20and%20engineering%20managers%20take
 [eldh/invisible-details ¶you-can-take-almost]: https://linear.app/now/invisible-details#:~:text=You%20can%20take%20almost%20every%20action
 [freiberg/invisible-details ¶the-selected-item-briefly]: https://rauno.me/craft/interaction-design#:~:text=the%20selected%20item%20briefly%20blinks%20the
@@ -20,8 +21,10 @@ Link definitions for every citation label in `../../interaction-feel.md`. Grep a
 [gmtk/game-feel-and-juice 3:10]: https://youtu.be/216_5nu4aVQ?t=190
 [gmtk/game-feel-and-juice 4:21]: https://youtu.be/216_5nu4aVQ?t=261
 [jain/beginner-mistakes 5:39]: https://youtu.be/AH_ugxmLeUM?t=339
+[jain/captivating-sections 4:22]: https://youtu.be/tNMAFjzapOk?t=262
 [jain/dashboard-ui 7:45]: https://youtu.be/B7k5rOgmOGY?t=465
 [jain/every-ui-concept 7:31]: https://youtu.be/EcbgbKtOELY?t=451
+[jain/macos-apps 1:37]: https://youtu.be/Vy0KKvZJRH8?t=97
 [jain/macos-apps 1:57]: https://youtu.be/Vy0KKvZJRH8?t=117
 [jain/macos-apps 6:46]: https://youtu.be/Vy0KKvZJRH8?t=406
 [jain/software-must-lie 1:11]: https://youtu.be/S8DcTJm8pYM?t=71

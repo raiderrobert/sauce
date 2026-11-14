@@ -3,11 +3,9 @@
 Link definitions for every citation label in `../../layout-and-hierarchy.md`. Grep a label here to turn a citation into a clickable link, for example in review output.
 
 [apple/design-foundations 10:09]: https://youtu.be/dGcqqA3Sl-o?t=609
-[apple/design-foundations 11:12]: https://youtu.be/dGcqqA3Sl-o?t=672
 [apple/design-foundations 14:14]: https://youtu.be/dGcqqA3Sl-o?t=854
 [apple/design-foundations 9:50]: https://youtu.be/dGcqqA3Sl-o?t=590
 [apple/explore-the-new-design 1:10]: https://youtu.be/nwyaB288qBA?t=70
-[apple/intuitive-search 8:24]: https://youtu.be/lx45sKEnZkU?t=504
 [apple/principles-of-great-design 12:12]: https://youtu.be/Xa9L2yx_QH8?t=732
 [apple/principles-of-great-design 12:36]: https://youtu.be/Xa9L2yx_QH8?t=756
 [jain/awful-to-amazing 0:54]: https://youtu.be/ulSOdTgoGeY?t=54
