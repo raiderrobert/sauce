@@ -32,7 +32,7 @@ They are practitioner opinions, not standards. Precedence when they conflict:
 | Fonts, type scales, responsive type, line height, letter spacing, text tiers | `./typography.md` |
 | Palettes, accent use, neutrals, semantic colors, dark mode, contrast | `./color.md` |
 | Shadows, borders, corner radius, icon style and libraries, gradients, imagery, texture | `./depth-and-polish.md` |
-| Buttons, chips, icon labels and tooltips, forms and signup, inputs, cards, carousels, modals, popovers, toasts, delete and undo, autosave, AI chat and prompt interfaces, search fields and in-page menus or submenus, and empty, loading, error and success states | `./components-and-states.md` |
+| Buttons, chips, icon labels and tooltips, forms and signup, inputs, cards, carousels, modals, popovers, toasts, delete and undo, autosave, AI chat and prompt interfaces, search fields and in-page menus or submenus, hover, pressed, disabled, focus and selected states, and empty, loading, error and success states | `./components-and-states.md` |
 | Dashboards, charts, KPIs, tables, lists, pricing pages and billing | `./data-and-dashboards.md` |
 | Sidebars, tabs (when to use them and how to mark the selected one), overflow menus, search placement and scope, what to show versus hide, onboarding and first run, gamification, website navbars, dropdowns and mega menus | `./navigation-and-disclosure.md` |
 | Animation, transitions, easing and durations, which triggers and surfaces animate, how menus and panels open, motion that shows where things came from, hover and press effects, drag, swipe, touch tracking and rubber-banding, loader animations, scroll effects | `./motion.md` |
@@ -58,7 +58,7 @@ Rules chosen because a capable model tends to skip them. Some come from with/wit
 - Soften shadows (lower opacity, blur about 1.3-2× the y-offset), and set a nested element's radius to the outer radius minus the gap. (`depth-and-polish.md`)
 - Skip confirmation modals for routine deletes: delete immediately and offer undo. (`components-and-states.md`)
 - Give every command the app defines (shortcuts, submit, undo) and every disabled control a specific response, even when there's nothing to do ("Nothing to undo"; list boundaries may stay silent); never stack repeats. (`interaction-feel.md`)
-- Trigger wins: anything opened or changed from the keyboard (any keydown, including Enter or Space on a focused control) appears without movement, even a modal (a color change, one blink or an opacity fade of 100ms or less is fine). Where motion is allowed, animate pointer-opened dropdowns and popovers, and views that expand from a content item, out of the element that opened them (sheets, drawers and pushed screens follow the direction rule in `motion.md`); context and command menus get no motion whatever the trigger. (`motion.md`, `interaction-feel.md`)
+- Trigger wins: anything opened or changed from the keyboard (any keydown, including Enter or Space on a focused control) appears without movement, even a modal. (`motion.md`, for the allowed fades and which surfaces and menus animate)
 - Place each action on a spectrum of explicitness: primary actions visible and labeled, minor ones revealed on hover or focus and also reachable from a menu (touch has no hover). (`navigation-and-disclosure.md`)
 - On landing pages, lead with one ~7-word headline saying exactly what the product does, and show the real product. (`landing-pages.md`)
 
@@ -77,6 +77,7 @@ Group by severity, in this order and most impactful first within each group. Whe
 - Blocks use: Body text is #999 on white, about 2.8:1. Breaks: text contrast. WCAG 1.4.3
 - Feels wrong: Pressing ⌘Z with nothing to undo does nothing visible. Breaks: give unsupported commands a specific response, not silence (translated from a game principle). [jonasson-purho/juice-it-or-lose-it 1:15](https://youtu.be/Fy0aCDmgnxg?t=75)
 - Feels wrong: The command menu slides in from the top on every ⌘K. Breaks: keyboard-opened surfaces appear instantly. [freiberg/invisible-details ¶it-feels-right-to](https://rauno.me/craft/interaction-design#:~:text=it%20feels%20right%20to%20not%20animate)
+- Feels wrong: Confetti fires on every task check in an issue tracker. Breaks: routine clicks get one small cue. editorial
 - Looks unfinished: Card padding varies between 12px and 20px across the row. Breaks: identical card padding within a view. [jain/beginner-mistakes 2:38](https://youtu.be/AH_ugxmLeUM?t=158)
 ```
 
@@ -86,7 +87,7 @@ Tells that a UI was built by a beginner or generated without design review, beyo
 
 | Mistake | Fix |
 |---------|-----|
-| Nested cards, borders on borders, stacked radii | Group with spacing or one simple border (`depth-and-polish.md`) |
+| Nested cards, borders on borders, stacked radii | Group with spacing or one simple border; a control nested in a container follows the concentric radius rule (`depth-and-polish.md`) |
 | Two equal filled buttons in one hero or header | One primary action; make the second an outline, text or other secondary-style button (`layout-and-hierarchy.md`, `components-and-states.md`) |
 | Centered paragraphs, lists or table data | Left-align text, right-align numbers; center only short display text (`layout-and-hierarchy.md`) |
 | The first layout that came to mind, built as is | Check the layout against how the content ranks and change it if it doesn't fit (`process.md`) |

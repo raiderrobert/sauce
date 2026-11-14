@@ -113,7 +113,6 @@ Link definitions for every citation label in `../../motion.md`. Grep a label her
 [ording/rubber-band ¶when-he-got-to]: https://www.cultofmac.com/news/bas-ording-rubber-band-effect-iphone#:~:text=when%20he%20got%20to%20the%20bottom
 [ording/rubber-band ¶when-he-selected-a]: https://www.cultofmac.com/news/bas-ording-rubber-band-effect-iphone#:~:text=When%20he%20selected%20a%20name%2C%20it
 [raroque/apps-feel-10x-better 0:52]: https://youtu.be/8mMH6Pq8qnE?t=52
-[saffer/microinteractions 15:10]: https://youtu.be/9CEtqnPdWoI?t=910
 [saffer/microinteractions 31:21]: https://youtu.be/9CEtqnPdWoI?t=1881
 [sakamoto/hearthstone-immersive-ui 10:33]: https://youtu.be/axkPXCNjOh8?t=633
 

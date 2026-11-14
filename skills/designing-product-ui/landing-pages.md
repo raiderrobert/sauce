@@ -9,7 +9,7 @@ Contents: Product visuals · Hero sections · Copy · Page structure and footers
 ## Product visuals
 
 - **Marketing:** Show the real product (actual UI, lightly edited screenshots, even simple skewed product cards) instead of stock images or generic feature icons; don't bury what the product is in small text. Unrelated stock throws the page off; graphics elevate a page more than anything else. ([jain/captivating-sections 1:23], [jain/landing-page-levels 0:44], [jain/saas-vibe-code-mistakes 5:48])
-- **Marketing:** Use imagery that visibly relates to the audience's world, and show images of products or options so visitors can tell unfamiliar names apart. Builds trust and explains options without reading, like a picture menu. ([jain/slept-on-trends 7:51], [jain/vibe-coding-cant-fix 0:58])
+- **Marketing:** Use imagery that visibly relates to the audience's world, and show images of products or options so visitors can tell unfamiliar names apart, from imagery the user supplied (otherwise a labeled placeholder). Builds trust and explains options without reading, like a picture menu. ([jain/slept-on-trends 7:51], [jain/vibe-coding-cant-fix 0:58])
 - **Marketing:** Crop and zoom screenshots to the important parts, or better, craft visuals that show exactly what the product does. Curates what visitors see. ([jain/landing-page-levels 4:59])
 - **Marketing:** Pick images for the layout's aspect ratio and expect heavy cropping; for cutout-text layouts, keep nothing important in the corner that gets cut off. ([jain/website-layouts 2:13])
 
@@ -32,7 +32,7 @@ Contents: Product visuals · Hero sections · Copy · Page structure and footers
 
 ## Page structure and footers
 
-- **Marketing:** Break text-heavy runs with a brand moment: a thin cropped photo or a wide landscape shot with an overlay, carrying one short statement set large and centered with lots of space. Acts as a spacer and creates impact. ([jain/awful-to-amazing 2:38], [jain/learn-ui-in-10-minutes 4:11], [jain/website-layouts 1:31])
+- **Marketing:** Break text-heavy runs with a brand moment: a thin cropped photo or a wide landscape shot with an overlay, from photos the user supplied (otherwise a labeled placeholder), carrying one short statement set large and centered with lots of space. Acts as a spacer and creates impact. ([jain/awful-to-amazing 2:38], [jain/learn-ui-in-10-minutes 4:11], [jain/website-layouts 1:31])
 - **Marketing:** Build a logical top-to-bottom flow and keep the page no longer than needed: order sections so each answers the visitor's next question (e.g. what it is, how it works, proof, pricing, final CTA), and cut any section that repeats content already shown. Abrupt sections feel disconnected; good flow encourages scrolling. *Note: The section order is an editorial example.* ([jain/landing-page-levels 3:49], [jain/tesla-wannabe-redesign 1:10])
 - **Marketing:** Turn a static row of three cards into a clickable tabbed or multi-select section. Adds interactivity and variety and makes sections more compact. ([jain/landing-page-levels 5:23])
 - **Marketing:** Use stacked cards that slide up over each other to present 3-5 options in detail. ([jain/website-layouts 6:21])
@@ -42,4 +42,4 @@ Contents: Product visuals · Hero sections · Copy · Page structure and footers
 
 - **Marketing:** If the product has well-recognized customers, show a row of their logos: put only the most important in one row, or use a slow marquee whose edges fade out with a gradient and progressive blur. 41 of 50 software sites had one; visitors read logos as important companies using the product. ([jain/landing-page-levels 5:54], [jain/modern-layouts 0:38])
 - **Marketing:** If the product has testimonials, badges or a dedicated proof page, add them as social proof beyond the logo row. Strengthens the brand. ([jain/landing-page-levels 5:54], [jain/vibe-coding-cant-fix 3:57])
-- **Marketing:** Include a privacy and security section for any product that handles user data. Users need reassurance. ([jain/google-ai-redesign 5:32])
+- **Marketing:** Include a privacy and security section for any product that handles user data, using only claims the user supplied; otherwise leave a labeled placeholder. Users need reassurance. ([jain/google-ai-redesign 5:32])

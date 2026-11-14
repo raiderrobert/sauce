@@ -25,7 +25,6 @@ Link definitions for every citation label in `../../color.md`. Grep a label here
 [jain/color-mistakes 0:46]: https://youtu.be/EOcY3hPMQkk?t=46
 [jain/color-mistakes 0:56]: https://youtu.be/EOcY3hPMQkk?t=56
 [jain/color-mistakes 1:09]: https://youtu.be/EOcY3hPMQkk?t=69
-[jain/color-mistakes 1:12]: https://youtu.be/EOcY3hPMQkk?t=72
 [jain/color-mistakes 1:40]: https://youtu.be/EOcY3hPMQkk?t=100
 [jain/color-mistakes 1:48]: https://youtu.be/EOcY3hPMQkk?t=108
 [jain/color-mistakes 1:52]: https://youtu.be/EOcY3hPMQkk?t=112
