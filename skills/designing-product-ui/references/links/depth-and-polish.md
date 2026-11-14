@@ -85,7 +85,6 @@ Link definitions for every citation label in `../../depth-and-polish.md`. Grep a
 [schoger/designing-with-claude-code 0:33:48]: https://youtu.be/lkKGQVHrXzE?t=2028
 [schoger/designing-with-claude-code 0:48:44]: https://youtu.be/lkKGQVHrXzE?t=2924
 [schoger/resolute 11:52]: https://youtu.be/BMHUKij1yUE?t=712
-[schoger/resolute 12:15]: https://youtu.be/BMHUKij1yUE?t=735
 [schoger/resolute 2:21]: https://youtu.be/BMHUKij1yUE?t=141
 [schoger/transistor 10:01]: https://youtu.be/ZT4WRRhacWk?t=601
 [schoger/transistor 6:38]: https://youtu.be/ZT4WRRhacWk?t=398

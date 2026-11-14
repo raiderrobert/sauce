@@ -20,7 +20,6 @@ Link definitions for every citation label in `../../mobile-and-desktop.md`. Grep
 [jain/dashboard-flaws 3:38]: https://youtu.be/Ksx9C2-3yMo?t=218
 [jain/macos-apps 0:24]: https://youtu.be/Vy0KKvZJRH8?t=24
 [jain/macos-apps 1:02]: https://youtu.be/Vy0KKvZJRH8?t=62
-[jain/macos-apps 1:37]: https://youtu.be/Vy0KKvZJRH8?t=97
 [jain/macos-apps 2:54]: https://youtu.be/Vy0KKvZJRH8?t=174
 [jain/macos-apps 7:24]: https://youtu.be/Vy0KKvZJRH8?t=444
 [jain/mobile-app-ui 0:27]: https://youtu.be/Gfsd8NNuD9g?t=27

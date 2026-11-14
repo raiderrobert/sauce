@@ -53,13 +53,13 @@ Rules chosen because a capable model tends to skip them. Some come from with/wit
 - Show each piece of data once: no duplicated KPI rows across pages, no chart restating percentages already shown. (`data-and-dashboards.md`)
 - Build hierarchy with weight and color/opacity contrast before size; large headings rely on size, not extra bold. (`layout-and-hierarchy.md`, `typography.md`)
 - Tint grays, borders and dark surfaces toward the brand hue, but keep grays neutral beside a warm primary such as orange; a white or near-white page is fine in light mode. (`color.md`)
-- In product UI stay almost entirely neutral with a tiny accent, used for the primary action and active or selected states. (`color.md`)
+- In product UI stay almost entirely neutral with a tiny accent, used mainly for the primary action and active or selected states, and sparingly for the one most important data type. (`color.md`)
 - In dark mode, make each raised surface lighter, and space neutral steps about twice as far apart as in light mode. (`color.md`)
 - Soften shadows (lower opacity, blur about 1.3-2× the y-offset), and set a nested element's radius to the outer radius minus the gap. (`depth-and-polish.md`)
 - Skip confirmation modals for routine deletes: delete immediately and offer undo. (`components-and-states.md`)
-- Give every command the app defines (shortcuts, submit, undo) and every disabled control a specific response, even when there's nothing to do ("Nothing to undo"); never stack repeats. (`interaction-feel.md`)
-- Trigger wins: anything opened or changed from the keyboard (any keydown, including Enter or Space on a focused control) appears without movement, even a modal (a color change, one blink or an opacity fade of 100ms or less is fine). Animate pointer-opened panels and dropdowns out of the element that opened them; context and command menus get no motion whatever the trigger. (`motion.md`, `interaction-feel.md`)
-- Place each action on a spectrum of explicitness: primary actions visible and labeled, minor ones revealed on hover or focus. (`navigation-and-disclosure.md`)
+- Give every command the app defines (shortcuts, submit, undo) and every disabled control a specific response, even when there's nothing to do ("Nothing to undo"; list boundaries may stay silent); never stack repeats. (`interaction-feel.md`)
+- Trigger wins: anything opened or changed from the keyboard (any keydown, including Enter or Space on a focused control) appears without movement, even a modal (a color change, one blink or an opacity fade of 100ms or less is fine). Animate pointer-opened dropdowns and popovers, and views that expand from a content item, out of the element that opened them (sheets, drawers and pushed screens follow the direction rule in `motion.md`); context and command menus get no motion whatever the trigger. (`motion.md`, `interaction-feel.md`)
+- Place each action on a spectrum of explicitness: primary actions visible and labeled, minor ones revealed on hover or focus and also reachable from a menu (touch has no hover). (`navigation-and-disclosure.md`)
 - On landing pages, lead with one ~7-word headline saying exactly what the product does, and show the real product. (`landing-pages.md`)
 
 ## Reviewing a screen
@@ -69,7 +69,7 @@ Report each problem as one line: the element, what is wrong, the rule it breaks 
 Group by severity, in this order and most impactful first within each group. When a problem fits two groups, use the earlier one:
 
 - **Blocks use:** anything that stops a user from understanding or completing a task: accessibility failures, missing states, misleading signals (a primary destructive action, such as Delete in a confirmation, that doesn't look destructive, an unreadable chart), broken hierarchy, navigation or disclosure.
-- **Feels wrong:** feedback that misses the budget in either direction. Too little: actions with no visible acknowledgement, slow or blocking feedback. Too much: motion on keyboard or high-frequency actions, unannounced changes, confetti, sound or layered effects on routine actions or in a pro tool. Judge feel from the running app or the event handlers and states in code; a screenshot can't show it. If you couldn't run or read it, say "feel not verified".
+- **Feels wrong:** feedback that misses the budget in either direction. Too little: actions with no visible acknowledgement, unannounced changes, slow or blocking feedback. Too much: motion on keyboard or high-frequency actions, confetti or layered effects on routine actions or in a pro tool, sound the product didn't already have and the user didn't ask for. Judge feel from the running app or the event handlers and states in code; a screenshot can't show it. If you couldn't run or read it, say "feel not verified".
 - **Looks unfinished:** everything else: spacing, typography, color harmony, depth, motion polish. Report the ten most visible; collapse the rest into one summary line.
 
 ```markdown
@@ -87,7 +87,7 @@ Tells that a UI was built by a beginner or generated without design review, beyo
 | Mistake | Fix |
 |---------|-----|
 | Nested cards, borders on borders, stacked radii | Group with spacing or one simple border (`depth-and-polish.md`) |
-| Two equal filled buttons in one hero or header | One primary action; make the second an outline or text button (`layout-and-hierarchy.md`) |
+| Two equal filled buttons in one hero or header | One primary action; make the second an outline, text or other secondary-style button (`layout-and-hierarchy.md`, `components-and-states.md`) |
 | Centered paragraphs, lists or table data | Left-align text, right-align numbers; center only short display text (`layout-and-hierarchy.md`) |
 | The first layout that came to mind, built as is | Check the layout against how the content ranks and change it if it doesn't fit (`process.md`) |
 | Disabled buttons that are unreadable, or focus that looks like selected | Muted but readable disabled text; a distinct focus ring at 3:1 (`components-and-states.md`) |

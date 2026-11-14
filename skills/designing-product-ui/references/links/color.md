@@ -93,6 +93,7 @@ Link definitions for every citation label in `../../color.md`. Grep a label here
 [schoger/dashboard-with-ai 0:54:34]: https://youtu.be/lQCWuOT5ENQ?t=3274
 [schoger/designing-with-claude-code 0:03:18]: https://youtu.be/lkKGQVHrXzE?t=198
 [schoger/designing-with-claude-code 0:05:07]: https://youtu.be/lkKGQVHrXzE?t=307
+[schoger/resolute 12:15]: https://youtu.be/BMHUKij1yUE?t=735
 [schoger/resolute 5:08]: https://youtu.be/BMHUKij1yUE?t=308
 [schoger/resolute 7:20]: https://youtu.be/BMHUKij1yUE?t=440
 [schoger/resolute 8:13]: https://youtu.be/BMHUKij1yUE?t=493

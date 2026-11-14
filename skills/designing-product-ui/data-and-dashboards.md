@@ -2,7 +2,7 @@
 
 Dashboard layout, charts and chart styling, KPIs and stats, tables, lists and feeds, and pricing and comparison tables.
 
-Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from a game-design principle (the principle is in the links file), untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/data-and-dashboards.md`.
+Practitioner heuristics; the user's scope, accessibility and the product's design system take precedence. **App UI** = product screens only, **Marketing** = landing pages and websites only, **From games** = a product-UI rule translated from a game-design principle (the principle is in the links file), untagged = both. *Note:* = uncited editorial caveat; follow it where it corrects a source number. *(Editorial.)* = a rule with no source. Citations are `author/source locator` (a timestamp, a ¶ passage anchor, or ¶p and a PDF page); their links are in `references/links/data-and-dashboards.md`.
 
 Contents: Dashboard layout · Charts · Chart styling and color · KPIs and stats · Tables · Lists and feeds · Pricing and comparison tables
 
@@ -12,7 +12,6 @@ Contents: Dashboard layout · Charts · Chart styling and color · KPIs and stat
 - **App UI:** If users need trends from time-based logs or tables, add a roll-up chart above them; if content uses a click-through story format, add a summary dashboard beside it. Shows trends at a glance instead of hunting through timestamps or slides. ([apple/principles-of-great-design 12:47], [jain/dashboard-flaws 2:10], [jain/spotify-wrapped-redesign 0:44])
 - **App UI:** Rank each module as high, mid or low priority before arranging: put the most important information higher and farther left in the main area, low-priority information lower, and reserve the very top for page actions or simple navigation. The main area should reflect what matters most to the user. ([jain/dashboard-ui 2:20], [jain/finance-dashboard-redesign 3:44])
 - **App UI:** Give every card enough context (amount, date, place) to be understood; merge small related widgets into the card they belong to, and remove cards that do nothing. Fragments and purposeless cards look useless; integrated, they make sense. ([jain/finance-dashboard-redesign 2:19], [jain/saas-vibe-code-mistakes 3:28])
-- **App UI:** Make entry points such as app icons or widgets show real data, not static placeholders like a weather icon that always reads 73 and sunny. An entry point should bring the data forward. ([saffer/microinteractions 18:41])
 
 ## Charts
 
@@ -47,7 +46,7 @@ Contents: Dashboard layout · Charts · Chart styling and color · KPIs and stat
 ## Tables
 
 - Give table headers a 2px bottom border, rows liberal padding (e.g. about 60px tall), and no outer padding so the first and last columns reach the table's edge. Liberal padding gives everything more room to breathe. *Note: Editorial: the 60px came from a plan-comparison table; dense product tables often use 40-48px rows.* ([schoger/dashboard-with-ai 0:43:19], [schoger/resolute 3:59], [schoger/wss 8:11])
-- **App UI:** In tables, truncate long cell text, render fixed-set values such as department or status as chips, and shade inactive or deactivated rows. Gives the other columns room and makes state visible at a glance. ([jain/dashboard-flaws 0:41])
+- **App UI:** In tables, truncate long cell text, render fixed-set values such as department or status as badges (see also components-and-states.md § Buttons, chips and icons), and shade inactive or deactivated rows. Gives the other columns room and makes state visible at a glance. ([jain/dashboard-flaws 0:41])
 - Attach a table's 'show more' link to it with a border and subtle gray background, using dark bold text instead of a blue link. Gray marks it as a de-emphasized table extension; dark bold text still looks clickable. ([schoger/resolute 5:22])
 - Don't give tables a fixed height with an inner scrollbar; remove the max height so rows scroll with the page. Fitting a table to the viewport creates an awkward nested scrollbar. *Note: Editorial: a sticky header keeps column labels visible on long pages.* ([schoger/wss 0:56])
 
@@ -58,8 +57,7 @@ Contents: Dashboard layout · Charts · Chart styling and color · KPIs and stat
 - Show avatars wherever people are referenced in lists or activity logs. The eye links who did what faster than it reads a name. *Note: Editorial: when there is no photo, fall back to flat neutral initials, not a gradient letter circle.* ([jain/dashboard-flaws 2:03], [jain/weirdly-perfect-ui 2:28])
 - Use one date format across sections (e.g. month, day and year), and flag converted times that fall on another day with a small '+1 day' marker. The marker draws attention to the day difference. ([kennedy/timezones-redesign 7:19], [schoger/resolute 6:52])
 - **App UI:** Show time-delineated data as a timeline rather than a time-sorted table, e.g. in a sidebar popout or second column. A timeline is much easier to follow. ([jain/dashboard-flaws 1:14])
-- **App UI:** In a narrow event list, stack timestamp and status on line one and the description on line two, showing severity as a small colored square; details on click-through. Status stays visible at a glance and looks cleaner than a table with text badges. *Note: Color alone can't carry severity (WCAG 1.4.1): give the square a text alternative or distinct shape, and show the label in the detail view. In wide tables, use status chips instead (see Tables).* ([schoger/dashboard-with-ai 0:40:50])
-- Group list items by a meaningful key, such as due date, so any item can be found in about a second. Grouping makes density work for you. ([jain/weirdly-perfect-ui 2:33])
+- **App UI:** In a narrow event list, stack timestamp and status on line one and the description on line two, showing severity as a small colored square; details on click-through. Status stays visible at a glance and looks cleaner than a table with text badges. *Note: Color alone can't carry severity (WCAG 1.4.1): give the square a text alternative or distinct shape, and show the label in the detail view. In wide tables, use status badges instead (see Tables).* ([schoger/dashboard-with-ai 0:40:50])
 - **App UI:** Don't group search results by type if grouping breaks relevance order. The order matters; grouping can push the best match down. ([raroque/app-design-process 5:13])
 - **App UI:** If users need to act on many list items at once, allow multi-select that reveals a contextual bulk-actions button. Real applications need to manage data efficiently. ([jain/dashboard-ui 3:25])
 
