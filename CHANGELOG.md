@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.14](https://github.com/raiderrobert/sauce/compare/v0.1.13...v0.1.14) (2026-11-14)
+
+
+### Features
+
+* add interaction feel and product-UI sources to designing-product-ui ([#39](https://github.com/raiderrobert/sauce/issues/39)) ([a80f3de](https://github.com/raiderrobert/sauce/commit/a80f3de1d3dde0886f56c61f6d716e830b942145))
+
 ## [0.1.13](https://github.com/raiderrobert/sauce/compare/v0.1.12...v0.1.13) (2026-11-13)
 
 
